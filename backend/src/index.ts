@@ -1,6 +1,6 @@
 import express, {Request, Response} from 'express'
 import dotenv from 'dotenv'
-import Logger from './Utils/Logger'
+import { query } from './Services/Database'
 
 dotenv.config()
 
@@ -10,10 +10,10 @@ app.use(express.json())
 
 app.all("/", (req: Request, res: Response) => {
     res.status(200).send('Api is running')
-    Logger.error('Ocorreu um erro teste')
+    query("SELECT * FROM teste")
 })
 
-app.listen(3000, () => {
-    console.log(process.env.debug)
-    console.log('Api is running on port 3000')
+
+app.listen(process.env.PORT, () => {
+    console.log(`Api is running on port ${process.env.PORT}`)
 })

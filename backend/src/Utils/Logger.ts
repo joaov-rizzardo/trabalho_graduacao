@@ -1,37 +1,55 @@
 import winston from "winston"
 
-export default winston.createLogger({
-    levels: getLoggerLevels(),
+export const ErrorLogger =  winston.createLogger({
     format: getLoggerFormat(),
-    transports: getLoggerTransports()
+    transports: [
+        new winston.transports.Console({
+            level: 'error'
+        }),
+        new winston.transports.File({
+            filename: `logs/error.log`,
+            level: 'error'
+        }),
+    ]
 })
+
+export const WarningLogger = winston.createLogger({
+    format: getLoggerFormat(),
+    transports: [
+        new winston.transports.File({
+            filename: `logs/warning.log`,
+            level: 'warn'
+        }),
+    ]
+})
+
+export const HTTPLogger = winston.createLogger({
+    format: getLoggerFormat(),
+    transports: [
+        new winston.transports.File({
+            filename: `logs/http.log`,
+            level: 'http'
+        })
+    ]
+})
+
+export const DatabaseLogger = winston.createLogger({
+    format: getLoggerFormat(),
+    transports: [
+        new winston.transports.File({
+            filename: `logs/database.log`,
+            level: 'error'
+        })
+    ]
+})
+
 
 function getLoggerFormat(){
     return winston.format.combine(
         winston.format.timestamp({format: "YYYY-MM-DD HH:mm:ss"}),
-        winston.format.printf((info) => `[${info.timestamp}] ${info.message}`)
+        winston.format.printf((info) => `[${info.timestamp}] ${info.level} - ${info.message}`)
     )
 }
 
-function getLoggerTransports(){
-    const logsDir = 'logs/'
-    return [
-        new winston.transports.Console({level: 'error'}),
-        new winston.transports.File({filename: `${logsDir}error.log`, level: "error"}),
-        new winston.transports.File({filename: `${logsDir}warning.log`, level: "warning"}),
-        new winston.transports.File({filename: `${logsDir}info.log`, level: "info"}),
-        new winston.transports.File({filename: `${logsDir}http.log`,level: "http"}),
-        new winston.transports.File({filename: `${logsDir}debug.log`, level: "debug"})
-    ]
-}
 
-function getLoggerLevels(){
-    return {
-        error: 0,
-        warning: 1,
-        info: 2,
-        http: 3,
-        debug: 4
-    }
-}
 

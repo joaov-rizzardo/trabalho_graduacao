@@ -1,0 +1,85 @@
+[2023-04-05 22:12:39] error - Table 'bd_teste.teste' doesn't exist
+[2023-04-05 22:13:00] error - Error: Table 'bd_teste.teste' doesn't exist
+    at PromisePoolConnection.execute (C:\Projetos\trabalho_graduacao\backend\node_modules\mysql2\promise.js:111:22)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:7:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-04-05 22:14:59] error - Error: Table 'bd_teste.teste' doesn't exist
+    at PromisePoolConnection.execute (C:\Projetos\trabalho_graduacao\backend\node_modules\mysql2\promise.js:111:22)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:7:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-04-05 22:15:06] error - Error: Table 'bd_teste.teste' doesn't exist
+    at PromisePoolConnection.execute (C:\Projetos\trabalho_graduacao\backend\node_modules\mysql2\promise.js:111:22)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:7:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-04-05 22:15:55] error - Error: Table 'bd_teste.teste' doesn't exist
+    at PromisePoolConnection.execute (C:\Projetos\trabalho_graduacao\backend\node_modules\mysql2\promise.js:111:22)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:7:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-04-05 22:16:24] error - Error: Table 'bd_teste.teste' doesn't exist
+    at PromisePoolConnection.execute (C:\Projetos\trabalho_graduacao\backend\node_modules\mysql2\promise.js:111:22)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:7:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-04-05 22:16:51] error - Error: Table 'bd_teste.teste' doesn't exist
+    at PromisePoolConnection.execute (C:\Projetos\trabalho_graduacao\backend\node_modules\mysql2\promise.js:111:22)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:7:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-04-05 22:17:15] error - Error: Table 'bd_teste.teste' doesn't exist
+    at PromisePoolConnection.execute (C:\Projetos\trabalho_graduacao\backend\node_modules\mysql2\promise.js:111:22)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:7:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-04-05 22:17:32] error - Error: Table 'bd_teste.teste' doesn't exist
+    at PromisePoolConnection.execute (C:\Projetos\trabalho_graduacao\backend\node_modules\mysql2\promise.js:111:22)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:7:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-04-05 22:20:54] error - Error: Table 'bd_teste.teste' doesn't exist
+    at PromisePoolConnection.execute (C:\Projetos\trabalho_graduacao\backend\node_modules\mysql2\promise.js:111:22)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:9:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-04-05 22:21:25] error - Error: Table 'bd_teste.teste' doesn't exist
+    at PromisePoolConnection.execute (C:\Projetos\trabalho_graduacao\backend\node_modules\mysql2\promise.js:111:22)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:9:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-04-05 22:21:43] error - Error: Table 'bd_teste.teste' doesn't exist
+    at PromisePoolConnection.execute (C:\Projetos\trabalho_graduacao\backend\node_modules\mysql2\promise.js:111:22)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:9:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-04-05 23:10:40] error - Error: Table 'bd_teste.teste' doesn't exist
+    at PromisePoolConnection.execute (C:\Projetos\trabalho_graduacao\backend\node_modules\mysql2\promise.js:111:22)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:7:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-04-05 23:11:07] error - Error: Table 'bd_teste.teste' doesn't exist
+    at PromisePoolConnection.execute (C:\Projetos\trabalho_graduacao\backend\node_modules\mysql2\promise.js:111:22)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:7:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-04-05 23:13:39] error - Error: Table 'bd_teste.teste' doesn't exist
+    at PromisePoolConnection.execute (C:\Projetos\trabalho_graduacao\backend\node_modules\mysql2\promise.js:111:22)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:7:33
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:5:58)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)

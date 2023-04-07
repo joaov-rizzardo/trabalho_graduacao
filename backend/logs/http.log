@@ -1,4 +1,8 @@
-[2023-04-05 09:34:15] http - Um log http
-[2023-04-05 09:39:50] http - Um log http
-[2023-04-05 09:40:07] http - Um log http
-[2023-04-05 18:45:47] http - Um log http
+[2023-04-06 19:14:52] Method: GET URL: /goal Status-Code: 200 Reponse-Size: 23 Response-Time: 2.832 ms
+
+[2023-04-06 19:15:00] Method: GET URL: /goal Status-Code: 200 Reponse-Size: 23 Response-Time: 0.775 ms
+
+[2023-04-06 19:15:01] Method: GET URL: /goal Status-Code: 200 Reponse-Size: 23 Response-Time: 0.367 ms
+
+[2023-04-06 19:15:01] Method: GET URL: /goal Status-Code: 200 Reponse-Size: 23 Response-Time: 0.233 ms
+

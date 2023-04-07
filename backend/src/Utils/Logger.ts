@@ -28,7 +28,7 @@ export const HTTPLogger = winston.createLogger({
     transports: [
         new winston.transports.File({
             filename: `logs/http.log`,
-            level: 'http'
+            level: 'info'
         })
     ]
 })
@@ -47,7 +47,7 @@ export const DatabaseLogger = winston.createLogger({
 function getLoggerFormat(){
     return winston.format.combine(
         winston.format.timestamp({format: "YYYY-MM-DD HH:mm:ss"}),
-        winston.format.printf((info) => `[${info.timestamp}] ${info.level} - ${info.message}`)
+        winston.format.printf((info) => `[${info.timestamp}] ${info.message}`)
     )
 }
 

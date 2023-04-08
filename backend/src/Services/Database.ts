@@ -6,7 +6,7 @@ export async function query(sql: string, params?: any[]){
     const currentStackTrace = new Error().stack
     try{
         const connection = await getDatabaseConnection()
-        return await connection.execute(sql, params)
+        return await connection.query(sql, params)
     }catch(error: any){
         DatabaseLogger.error(formatMessageAndStackTrace(error.message, currentStackTrace))
         return false

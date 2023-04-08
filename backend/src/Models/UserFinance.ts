@@ -1,4 +1,4 @@
-import UserFinanceDAO, { UserFinanceDAOType } from "../DAO/UserFinanceDAO"
+import UserFinanceDAO from "../DAO/UserFinanceDAO"
 
 export interface UserFinanceTypeFields {
     userId: number,
@@ -6,21 +6,12 @@ export interface UserFinanceTypeFields {
     totalSavings: number,
     currentSavings: number
 }
-
-export interface UserFinanceType extends UserFinanceTypeFields{
-    UserFinanceDAO: UserFinanceDAOType
-    save: () => Promise<void>,
-    incrementBalance: (value: number) => void,
-    decrementBalance: (value: number) => void,
-    convertToObject: () => object
-}
-
-export default class UserFinance implements UserFinanceType {
-    private userId
-    private balance
-    private totalSavings
-    private currentSavings
-    private UserFinanceDAO
+export default class UserFinance {
+    private userId: number
+    private balance: number
+    private totalSavings: number
+    private currentSavings: number
+    private UserFinanceDAO: UserFinanceDAO
 
     constructor({userId, balance, totalSavings, currentSavings}: UserFinanceTypeFields){
         this.userId = userId
@@ -30,8 +21,8 @@ export default class UserFinance implements UserFinanceType {
         this.UserFinanceDAO = new UserFinanceDAO()
     }
 
-    async save() {
-        this.UserFinanceDAO.replace({
+    public async save() {
+        await this.UserFinanceDAO.replace({
             userId: this.userId,
             balance: this.balance,
             totalSavings: this.totalSavings,
@@ -56,6 +47,10 @@ export default class UserFinance implements UserFinanceType {
         }
     }
 
-    static getFinancesByUserId(userId: number)
+    static async getInstanceByUserId(userId: number){
+        const financeDAO = new UserFinanceDAO()
+        const recoveredFinance = await financeDAO.getFinancesByUserId(userId)
+        return new this(recoveredFinance)
+    }
 
 }

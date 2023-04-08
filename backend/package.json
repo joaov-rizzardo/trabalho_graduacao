@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node-dev src/index.ts",
+    "teste": "ts-node-dev src/Scripts/testeClasses.ts",
     "build": "tsc"
   },
   "keywords": [],

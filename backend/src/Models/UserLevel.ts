@@ -77,4 +77,15 @@ export default class UserLevel {
         //  Fórmula de cálculo -> 0.1x²+25x+200
         this.xpToNextLevel =  (this.currentLevel * this.currentLevel) + 25*this.currentLevel + 200
     }
+
+    static async getInstanceByUserId(userId: number){
+        const userLevelDAO = new UserLevelDAO()
+        const recoveredLevel = await userLevelDAO.getLevelByUserId(userId)
+        return new this({
+            userId: recoveredLevel.userId,
+            currentLevel: recoveredLevel.currentLevel,
+            currentXp: recoveredLevel.currentXp,
+            points: recoveredLevel.points
+        })
+    }
 }

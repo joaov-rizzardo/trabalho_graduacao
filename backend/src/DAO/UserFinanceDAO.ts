@@ -1,4 +1,4 @@
-import { FieldPacket, OkPacket, RowDataPacket } from "mysql2"
+import { FieldPacket } from "mysql2"
 import { query } from "../Services/Database"
 
 export type UserFinanceDAOType = {
@@ -26,8 +26,8 @@ export default class UserFinanceDAO implements UserFinanceDAOType {
     
     public async getFinancesByUserId(userId: number){
         const response = await query("SELECT * FROM UserFinances WHERE userId = ?", [userId]) as [UserFinanceTableType[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error('Não foi possível buscar realizar a busca no banco de dados')
+        if(!response){
+            throw new Error('Não foi possível realizar a busca da finança no banco de dados')
         }
         const recoveredFinance = response[0][0]
         if(!recoveredFinance){

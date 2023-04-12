@@ -50,7 +50,12 @@ export default class UserFinance {
     static async getInstanceByUserId(userId: number){
         const financeDAO = new UserFinanceDAO()
         const recoveredFinance = await financeDAO.getFinancesByUserId(userId)
-        return new this(recoveredFinance)
+        return new this({
+            userId: recoveredFinance.userId,
+            balance: recoveredFinance.balance,
+            totalSavings: recoveredFinance.totalSavings,
+            currentSavings: recoveredFinance.currentSavings
+        })
     }
 
 }

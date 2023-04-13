@@ -9,3 +9,14 @@
     at Generator.next (<anonymous>)
     at C:\Projetos\trabalho_graduacao\backend\src\Scripts\testeClasses.ts:8:71
     at new Promise (<anonymous>)
+[2023-04-12 19:57:11] Access denied for user 'root'@'localhost' (using password: YES)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:6:31
+    at Generator.next (<anonymous>)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:4:12)
+    at query (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:17:12)
+    at C:\Projetos\trabalho_graduacao\backend\src\Scripts\testeClasses.ts:9:33
+    at Generator.next (<anonymous>)
+    at C:\Projetos\trabalho_graduacao\backend\src\Scripts\testeClasses.ts:8:71
+    at new Promise (<anonymous>)

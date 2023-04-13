@@ -13,6 +13,15 @@ export async function query(sql: string, params?: any[]){
     }
 }
 
+export type ResultSetHeaderType = {
+    fieldCount: number,
+    affectedRows: number,
+    insertId: number,
+    info: string,
+    serverStatus: number,
+    warningStatus: number
+}
+
 async function getDatabaseConnection(): Promise<PoolConnection> {
     const pool = createPool({
         host: process.env.DB_HOST,

@@ -1,26 +1,29 @@
+import UserDAO from "../DAO/UserDAO"
+
 export type UserType = {
-    id: number,
+    userId?: number,
     username: string,
     password: string,
     email: string,
     name: string,
     lastName: string,
     selectedAvatar: number,
-    createdAt: string
+    createdAt?: string
 }
 
 export default class User {
-    private id: number
+    private userId?: number
     private username: string
     private password: string
     private email: string
     private name: string
     private lastName: string
     private selectedAvatar: number
-    private createdAt: string
+    private createdAt?: string
+    private UserDAO: UserDAO
 
     constructor(instanceParams: UserType){
-        this.id = instanceParams.id
+        this.userId = instanceParams.userId
         this.username = instanceParams.username
         this.password = instanceParams.password
         this.email = instanceParams.email
@@ -28,5 +31,64 @@ export default class User {
         this.lastName = instanceParams.lastName
         this.selectedAvatar = instanceParams.selectedAvatar
         this.createdAt = instanceParams.createdAt
+        this.UserDAO = new UserDAO()
+    }
+
+    public async save(){
+        if(this.isCreated()){
+            await this.UserDAO.update({
+                userId: this.userId,
+                username: this.username,
+                password: this.password,
+                email: this.email,
+                name: this.name,
+                lastName: this.lastName,
+                selectedAvatar: this.selectedAvatar
+            })
+        }else{
+            const insertedId = await this.UserDAO.insertAndReturnId({
+                username: this.username,
+                password: this.password,
+                email: this.email,
+                name: this.name,
+                lastName: this.lastName,
+                selectedAvatar: this.selectedAvatar
+            })
+            this.userId = insertedId
+        }
+    }
+
+    private isCreated(){
+        return this.userId !== undefined
+    }
+
+    public convertToObject(){
+        return {
+            userId: this.userId,
+            username: this.username,
+            password: this.password,
+            email: this.email,
+            name: this.name,
+            lastName: this.lastName,
+            selectedAvatar: this.selectedAvatar,
+            createdAt: this.createdAt
+        }
+    }
+    
+    public async updateProfile(){
+        if(this.userId === undefined){
+            throw new Error('O perfil não pode ser atualizado, o usuário ainda não foi inserido no banco de dados')
+        }
+        await this.UserDAO.updateProfile({
+            userId: this.userId,
+            email: this.email,
+            name: this.name,
+            lastName: this.lastName
+        })
+    }
+
+    public static async getInstanceByUserId(userId: number){
+        const userDAO = new UserDAO()
+        return new this(await userDAO.getUserById(userId))
     }
 }

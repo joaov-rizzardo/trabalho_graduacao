@@ -1,11 +1,6 @@
 import { FieldPacket } from "mysql2"
 import { query } from "../Services/Database"
 
-export type UserFinanceDAOType = {
-    replace: ({}: UserFinanceTableType) => Promise<void>
-    getFinancesByUserId: (userId: number) => Promise<UserFinanceTableType>
-}
-
 export type UserFinanceTableType = {
     userId: number
     balance: number,
@@ -13,7 +8,7 @@ export type UserFinanceTableType = {
     currentSavings: number
 }
 
-export default class UserFinanceDAO implements UserFinanceDAOType {
+export default class UserFinanceDAO {
 
     public async replace({userId, balance, totalSavings, currentSavings}: UserFinanceTableType) {
         const response = await query("REPLACE INTO UserFinances SET userId = ?, balance = ?, totalSavings = ?, currentSavings = ?", [

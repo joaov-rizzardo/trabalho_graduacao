@@ -8,12 +8,7 @@ export type UserLevelTableType = {
     points: number
 }
 
-export type UserLevelDAOType =  {
-    replace: ({}: UserLevelTableType) => Promise<void>
-    getLevelByUserId: (userId: number) => Promise<UserLevelTableType>
-}
-
-export default class UserLevelDAO implements UserLevelDAOType{
+export default class UserLevelDAO{
     public async replace({userId, currentLevel, currentXp, points}: UserLevelTableType){
         const response = await query("REPLACE INTO UserLevel SET userId = ?, currentLevel = ?, currentXp = ?, points = ?", [
             userId,

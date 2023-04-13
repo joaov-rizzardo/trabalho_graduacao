@@ -6,6 +6,7 @@ export interface UserFinanceTypeFields {
     totalSavings: number,
     currentSavings: number
 }
+
 export default class UserFinance {
     private userId: number
     private balance: number

@@ -37,16 +37,16 @@ export default class User {
     public async save(){
         if(this.isCreated()){
             await this.UserDAO.update({
-                userId: this.userId,
+                userId: this.userId!,
                 username: this.username,
                 password: this.password,
                 email: this.email,
                 name: this.name,
                 lastName: this.lastName,
-                selectedAvatar: this.selectedAvatar
+                selectedAvatar: this.selectedAvatar,
             })
         }else{
-            const insertedId = await this.UserDAO.insertAndReturnId({
+            this.userId  = await this.UserDAO.insertAndReturnId({
                 username: this.username,
                 password: this.password,
                 email: this.email,
@@ -54,7 +54,6 @@ export default class User {
                 lastName: this.lastName,
                 selectedAvatar: this.selectedAvatar
             })
-            this.userId = insertedId
         }
     }
 

@@ -21,7 +21,7 @@ export default class UserFinanceDAO {
     
     public async getFinancesByUserId(userId: number){
         const response = await query("SELECT * FROM UserFinances WHERE userId = ?", [userId]) as [UserFinanceTableType[], FieldPacket[]] | false
-        if(!response){
+        if(response === false){
             throw new Error('Não foi possível realizar a busca da finança no banco de dados')
         }
         const recoveredFinance = response[0][0]

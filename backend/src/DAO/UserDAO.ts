@@ -3,19 +3,38 @@ import { ResultSetHeaderType } from './../Services/Database';
 import { query } from "../Services/Database"
 
 export type UserTableType = {
-    userId?: number
+    userId: number
     username: string
     password: string
     email: string
     name: string
     lastName: string
     selectedAvatar: number
-    createdAt?: string
+    createdAt: string
+}
+
+type UserUpdateType = {
+    userId: number
+    username: string
+    password: string
+    email: string
+    name: string
+    lastName: string
+    selectedAvatar: number
+}
+
+type UserInsertType = {
+    username: string
+    password: string
+    email: string
+    name: string
+    lastName: string
+    selectedAvatar: number
 }
 
 export default class UserDAO {
 
-    public async insertAndReturnId(user: UserTableType){
+    public async insertAndReturnId(user: UserInsertType){
         const response = await query(`
             INSERT INTO 
                 User 
@@ -45,7 +64,7 @@ export default class UserDAO {
         return insertedId
     }
 
-    public async update(user: UserTableType){
+    public async update(user: UserUpdateType){
         if(user.userId === undefined){
             throw new Error('Não foi possível atualizar o usuário, o ID não foi informado')
         }

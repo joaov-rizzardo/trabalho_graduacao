@@ -65,7 +65,7 @@ export default class Avatar {
         return new this(recoveredAvatar)
     }
 
-    private isCreated(): boolean{
+    public isCreated(): boolean{
         return this.avatarId !== undefined
     }
 

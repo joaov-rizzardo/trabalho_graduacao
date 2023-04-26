@@ -54,13 +54,10 @@ export default class UserDAO {
                 user.selectedAvatar
             ]
         ) as [ResultSetHeaderType, undefined] | false
-        
         if(!response){
             throw new Error('Não foi possível realizar a inserção do usuário no banco de dados')
         }
-
         const insertedId = response[0].insertId
-
         return insertedId
     }
 

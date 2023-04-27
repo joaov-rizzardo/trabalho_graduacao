@@ -1,4 +1,5 @@
 import GoalDAO from "../DAO/GoalDAO"
+import getCurrentStringDatetime from "../Utils/DateUtils"
 
 type GoalFieldsType = {
     goalId?: number
@@ -38,5 +39,62 @@ export default class Goal {
         this.isCompleted = params.isCompleted
         this.completedAt = params.completedAt
         this.goalDAO = new GoalDAO()
+    }
+
+    public goalIsCompleted(){
+        return this.isCompleted
+    }
+
+    public goalIsCanceled(){
+        return this.isCanceled
+    }
+
+    public incrementProgress(quantity: number){
+        if(this.goalIsCompleted()){
+            throw new Error('A meta já foi completa, não é possível realizar o investimento')
+        }
+        if(this.goalIsCanceled()){
+            throw new Error('A meta está cancelada, não é possível investir na mesma')
+        }
+        this.progressValue += quantity
+        if(this.progressValue > this.value){
+            this.progressValue -= quantity
+            throw new Error('O valor incrementado na meta excede seu valor total')
+        }
+        if(this.progressValue === this.value){
+            this.complete()
+        }
+    }
+
+    public decrementProgress(quantity: number){
+        if(this.goalIsCompleted()){
+            throw new Error('A meta já foi completa, portanto não é possível recuperar os investimentos')
+        }
+        if(quantity > this.progressValue){
+            throw new Error('O valor decrementado é maior que o valor de progresso da meta')
+        }
+        this.progressValue -= quantity
+    }
+
+    public cancelAndRecoverInvestments(){
+        if(this.goalIsCompleted()){
+            throw new Error('A meta já foi completa e não pode mais ser cancelada')
+        }
+        this.isCanceled = true
+        this.canceledAt = getCurrentStringDatetime()
+        const recoveredInvestments = this.progressValue
+        this.decrementProgress(recoveredInvestments)
+        return recoveredInvestments
+    }
+
+    public reclaimRewards(){
+        if(!this.goalIsCompleted()){
+            throw new Error('Não foi possível obter as recompensas, a meta ainda não foi concluída')
+        }
+    }
+
+    private complete(){
+        this.isCompleted = true
+        this.completedAt = getCurrentStringDatetime()
     }
 }

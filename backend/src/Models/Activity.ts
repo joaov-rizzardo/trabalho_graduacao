@@ -48,6 +48,12 @@ export default class Activity {
         }
     }
 
+    public static async getInstanceById(activityId: number){
+        const activityDao = new ActivityDAO()
+        const recoveredActivity = await activityDao.findById(activityId)
+        return new this(recoveredActivity)
+    }
+
     private isCreated(){
         return this.activityId !== undefined
     }

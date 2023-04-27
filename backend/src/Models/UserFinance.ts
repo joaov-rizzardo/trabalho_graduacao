@@ -12,18 +12,18 @@ export default class UserFinance {
     private balance: number
     private totalSavings: number
     private currentSavings: number
-    private UserFinanceDAO: UserFinanceDAO
+    private userFinanceDAO: UserFinanceDAO
 
     constructor({userId, balance, totalSavings, currentSavings}: UserFinanceTypeFields){
         this.userId = userId
         this.balance = balance
         this.totalSavings = totalSavings
         this.currentSavings = currentSavings
-        this.UserFinanceDAO = new UserFinanceDAO()
+        this.userFinanceDAO = new UserFinanceDAO()
     }
 
     public async save() {
-        await this.UserFinanceDAO.replace({
+        await this.userFinanceDAO.replace({
             userId: this.userId,
             balance: this.balance,
             totalSavings: this.totalSavings,

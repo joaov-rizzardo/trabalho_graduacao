@@ -20,7 +20,7 @@ export default class User {
     private lastName: string
     private selectedAvatar: number
     private createdAt?: string
-    private UserDAO: UserDAO
+    private userDAO: UserDAO
 
     constructor(instanceParams: UserType){
         this.userId = instanceParams.userId
@@ -31,12 +31,12 @@ export default class User {
         this.lastName = instanceParams.lastName
         this.selectedAvatar = instanceParams.selectedAvatar
         this.createdAt = instanceParams.createdAt
-        this.UserDAO = new UserDAO()
+        this.userDAO = new UserDAO()
     }
 
     public async save(){
         if(this.isCreated()){
-            await this.UserDAO.update({
+            await this.userDAO.update({
                 userId: this.userId!,
                 username: this.username,
                 password: this.password,
@@ -46,7 +46,7 @@ export default class User {
                 selectedAvatar: this.selectedAvatar,
             })
         }else{
-            this.userId  = await this.UserDAO.insertAndReturnId({
+            this.userId  = await this.userDAO.insertAndReturnId({
                 username: this.username,
                 password: this.password,
                 email: this.email,
@@ -78,7 +78,7 @@ export default class User {
         if(this.userId === undefined){
             throw new Error('O perfil não pode ser atualizado, o usuário ainda não foi inserido no banco de dados')
         }
-        await this.UserDAO.updateProfile({
+        await this.userDAO.updateProfile({
             userId: this.userId,
             email: this.email,
             name: this.name,

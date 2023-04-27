@@ -13,19 +13,19 @@ export default class UserLevel {
     private currentXp: number = 0
     private points: number = 0
     private xpToNextLevel: number = 0
-    private UserLevelDAO: UserLevelDAO
+    private userLevelDAO: UserLevelDAO
 
     constructor({userId, currentLevel, currentXp, points}: UserLevelFieldsType){
         this.userId = userId
         this.currentLevel = currentLevel
         this.currentXp = currentXp
         this.points = points
-        this.UserLevelDAO = new UserLevelDAO()
+        this.userLevelDAO = new UserLevelDAO()
         this.calculateNeededXp()
     }
 
     public async save(){
-        await this.UserLevelDAO.replace({
+        await this.userLevelDAO.replace({
             userId: this.userId,
             currentLevel: this.currentLevel,
             currentXp: this.currentXp,

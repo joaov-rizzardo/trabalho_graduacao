@@ -41,6 +41,33 @@ export default class Goal {
         this.goalDAO = new GoalDAO()
     }
 
+    public async save(){
+        if(this.isCreated()){
+            await this.goalDAO.update({
+                goalId: this.goalId!,
+                userId: this.userId,
+                description: this.description,
+                value: this.value,
+                progressValue: this.progressValue,
+                createdAt: this.createdAt,
+                isCanceled: this.isCanceled,
+                canceledAt: this.canceledAt,
+                isCompleted: this.isCompleted,
+                completedAt: this.completedAt
+            })
+        }else{
+            this.goalId = await this.goalDAO.insertAndReturnId({
+                userId: this.userId,
+                description: this.description,
+                value: this.value,
+                progressValue: this.progressValue,
+                createdAt: this.createdAt,
+                isCanceled: this.isCanceled,
+                isCompleted: this.isCompleted
+            })
+        }
+    }
+
     public goalIsCompleted(){
         return this.isCompleted
     }
@@ -93,8 +120,33 @@ export default class Goal {
         }
     }
 
+    public convertToObject(){
+        return {
+            goalId: this.goalId,
+            userId: this.userId,
+            description: this.description,
+            value: this.value,
+            progressValue: this.progressValue,
+            createdAt: this.createdAt,
+            isCanceled: this.isCanceled,
+            canceledAt: this.canceledAt,
+            isCompleted: this.isCompleted,
+            completedAt: this.completedAt
+        }
+    }
+
+    public static async getInstanceById(goalId: number){
+        const goalDAO = new GoalDAO
+        const goalData = await goalDAO.findById(goalId)
+        return new this(goalData)
+    }
+
     private complete(){
         this.isCompleted = true
         this.completedAt = getCurrentStringDatetime()
+    }
+
+    private isCreated(){
+        return this.goalId !== undefined
     }
 }

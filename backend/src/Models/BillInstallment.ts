@@ -39,13 +39,58 @@ export default class BillInstallment {
         this.checkIfIsExpired()
     }
 
-    public async save(){
+    get isPaid(){
+        return this.isPayed
+    }
 
+    public async save(){
+        if(this.isCreated()){
+            await this.billDAO.updateInstallment({
+                installmentId: this.installmentId!,
+                billId: this.billId,
+                installmentNumber: this.installmentNumber,
+                value: this.value,
+                dueDate: this.dueDate,
+                isPayed: this.isPayed,
+                payedAt: this.payedAt,
+                createdAt: this.createdAt,
+            })
+        }else{
+            this.installmentId = await this.billDAO.insertInstallmentAndReturnId({
+                billId: this.billId,
+                installmentNumber: this.installmentNumber,
+                value: this.value,
+                dueDate: this.dueDate,
+                isPayed: this.isPayed,
+                payedAt: this.payedAt,
+                createdAt: this.createdAt
+            })
+        }
+    }
+
+    public convertToObject(){
+        return {
+            installmentId: this.installmentId,
+            billId: this.billId,
+            installmentNumber: this.installmentNumber,
+            value: this.value,
+            dueDate: this.dueDate,
+            isPayed: this.isPayed,
+            payedAt: this.payedAt,
+            createdAt: this.createdAt,
+            isExpired: this.isExpired
+        }
     }
 
     public pay(){
         this.isPayed = true
         this.payedAt = getCurrentStringDatetime()
+    }
+
+    public static async getInstanceById(installmentId: number){
+        const billDAO = new BillDAO()
+        const installmentData = await billDAO.getInstallmentById(installmentId)
+        return new this(installmentData)
     }
 
     private checkIfIsExpired(){

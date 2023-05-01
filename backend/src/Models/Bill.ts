@@ -1,5 +1,7 @@
 
+import BillDAO from "../DAO/BillDAO"
 import { BillEnum } from "../Enums/BillEnum"
+import getCurrentStringDatetime from "../Utils/DateUtils"
 import BillInstallment from "./BillInstallment"
 
 type BillType = {
@@ -30,6 +32,7 @@ export default class Bill {
     private createdAt: string
     private isCanceled: boolean
     private canceledAt?: string
+    private billDAO: BillDAO
 
     constructor(params: BillType){
         this.biilId = params.biilId
@@ -44,5 +47,45 @@ export default class Bill {
         this.createdAt = params.createdAt
         this.isCanceled = params.isCanceled
         this.canceledAt = params.canceledAt
+        this.billDAO = new BillDAO()
+    }
+
+    public async save(){
+        if(this.isCreated()){
+
+        }else{
+            await this.billDAO.updateBill({
+                billId: this.biilId!,
+                userId: this.userId,
+                typeId: this.billType,
+                description: this.description,
+                value: this.value,
+                installments: this.installmentsQuantity,
+                paymentDay: this.paymentDay,
+                firstDueDate: this.firstDueDate,
+                createdAt: this.createdAt,
+                isCanceled: this.isCanceled,
+                canceledAt: this.canceledAt
+            })
+        }
+    }
+
+    public isPayed(){
+        let isPayed = true
+        this.installments.forEach(installment => {
+            if(!installment.isPaid){
+                isPayed = false
+            }
+        })
+        return isPayed
+    }
+
+    public cancel(){
+        this.isCanceled = true
+        this.canceledAt = getCurrentStringDatetime()
+    }
+
+    private isCreated(){
+        return this.biilId !== undefined
     }
 }

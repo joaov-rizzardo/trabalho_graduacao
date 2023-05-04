@@ -1,14 +1,9 @@
 import dotenv from 'dotenv'
 import { query } from '../Services/Database'
+import { BillEnum } from '../Enums/BillEnum'
 
 dotenv.config()
 
-select()
+const x = "V"
 
-async function select(){
-    const response = await query('SELECT * FROM User WHERE userId = 1')
-    if(response !== false){
-        console.log(response)
-    }
-    
-}
+console.log(BillEnum[x])

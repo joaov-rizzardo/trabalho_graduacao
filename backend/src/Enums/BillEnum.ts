@@ -1,4 +1,4 @@
 export enum BillEnum {
-    'F' = 'Fixo',
-    'V' = 'Variável'
+    F = 'Fixo',
+    V = 'Variável'
 }

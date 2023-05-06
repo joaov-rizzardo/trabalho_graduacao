@@ -3,7 +3,7 @@ export type TransactionType = {
     description: string
     value: number
     isCanceled: boolean
-    canceledAt: string
+    canceledAt?: string
 }
 
 export default class Transaction {
@@ -11,7 +11,7 @@ export default class Transaction {
     protected description: string
     protected value: number
     protected isCanceled: boolean
-    protected canceledAt: string
+    protected canceledAt?: string
     
     constructor(params: TransactionType){
         this.userId = params.userId

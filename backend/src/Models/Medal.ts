@@ -22,6 +22,23 @@ export default class Medal {
         this.medalDAO = new MedalDAO()
     }
 
+    public async save(){
+        if(this.isCreated()){
+            await this.medalDAO.update({
+                medalId: this.medalId!,
+                name: this.name,
+                filename: this.filename,
+                createdAt: this.createdAt
+            })
+        }else{
+            this.medalId = await this.medalDAO.insertAndReturnId({
+                name: this.name,
+                filename: this.filename,
+                createdAt: this.createdAt
+            })
+        }
+    }
+
     public convertToObject(){
         return {
             medalId: this.medalId,
@@ -33,8 +50,14 @@ export default class Medal {
 
     public async reclaimToUser(userId: number){
         if(this.isCreated()){
-
+            await this.medalDAO.insertMedalToUser(userId, this.medalId!)
         }
+    }
+
+    public static async getInstanceById(medalId: number){
+        const medalDAO = new MedalDAO()
+        const medalData = await medalDAO.findMedalById(medalId)
+        return new this(medalData)
     }
 
     private isCreated(){

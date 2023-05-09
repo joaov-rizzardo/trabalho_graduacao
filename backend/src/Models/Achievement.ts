@@ -5,7 +5,6 @@ import Medal from "./Medal"
 type AchievementType = {
     achievementId?: number
     typeKey: keyof typeof AchievementTypeEnum
-    typeDescription: AchievementTypeEnum
     name: string
     description: string
     xpReward: number
@@ -31,7 +30,7 @@ export default class Achievement {
     constructor(params: AchievementType){
         this.achievementId = params.achievementId
         this.typeKey = params.typeKey
-        this.typeDescription = params.typeDescription
+        this.typeDescription = AchievementTypeEnum[params.typeKey]
         this.name = params.name
         this.description = params.description
         this.xpReward = params.xpReward
@@ -44,9 +43,28 @@ export default class Achievement {
 
     public async save(){
         if(this.isCreated()){
-
+            await this.achievementDAO.update({
+                achievementId: this.achievementId!,
+                typeId: this.typeKey,
+                name: this.name,
+                description: this.description,
+                xpReward: this.xpReward,
+                pointReward: this.pointReward,
+                medalReward: this.medalReward?.getId,
+                goal: this.goal,
+                createdAt: this.createdAt
+            })
         }else {
-            
+            this.achievementId = await this.achievementDAO.insertAndReturnId({
+                typeId: this.typeKey,
+                name: this.name,
+                description: this.description,
+                xpReward: this.xpReward,
+                pointReward: this.pointReward,
+                medalReward: this.medalReward?.getId,
+                goal: this.goal,
+                createdAt: this.createdAt
+            })
         }
     }
 
@@ -71,6 +89,22 @@ export default class Achievement {
             goal: this.goal,
             createdAt: this.createdAt
         }
+    }
+
+    public static async getInstanceById(achievementId: number){
+        const achievementDAO = new AchievementDAO()
+        const achievementData = await achievementDAO.findById(achievementId)
+        return new this({
+            achievementId: achievementData.achievementId,
+            typeKey: achievementData.typeId,
+            name: achievementData.name,
+            description: achievementData.description,
+            xpReward: achievementData.xpReward,
+            pointReward: achievementData.pointReward,
+            medalReward: achievementData.medalReward !== undefined ? await Medal.getInstanceById(achievementData.medalReward) : achievementData.medalReward,
+            goal: achievementData.goal,
+            createdAt: achievementData.createdAt
+        })
     }
 
     private isCreated(){

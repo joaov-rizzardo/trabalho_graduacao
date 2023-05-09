@@ -63,4 +63,8 @@ export default class Medal {
     private isCreated(){
         return this.medalId !== undefined
     }
+
+    get getId(){
+        return this.medalId
+    }
 }

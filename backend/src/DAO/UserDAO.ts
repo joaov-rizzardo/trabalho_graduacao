@@ -74,7 +74,7 @@ export default class UserDAO {
                 email = ?,
                 name = ?,
                 lastName = ?,
-                selectAvatar = ?
+                selectedAvatar = ?
             WHERE
                 userId = ?`,
             [

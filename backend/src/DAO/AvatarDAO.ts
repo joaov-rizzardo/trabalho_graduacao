@@ -99,4 +99,30 @@ export default class AvatarDAO {
             createdAt: recoveredAvatar.createdAt
         }
     }
+
+    public async getUserAvatars(userId: number){
+        const response = await query(`
+            SELECT
+                a.avatarId,
+                a.name,
+                a.createdAt
+            FROM
+                Avatar as a
+            INNER JOIN
+                UserAvatars as u ON u.avatarId = a.avatarId
+            WHERE
+                u.userId = ?
+        `, [userId]) as [AvatarTableFields[], FieldPacket[]] | false
+        if(response === false){
+            throw new Error('Não foi possível recuperar o avatar buscado')
+        }
+        const recoveredAvatar = response[0]
+        return recoveredAvatar.map(avatar => {
+            return {
+                avatarId: avatar.avatarId,
+                name: avatar.name,
+                createdAt: avatar.createdAt
+            }
+        })
+    }
 }

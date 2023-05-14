@@ -39,6 +39,22 @@ export default class UserFinance {
         this.balance -= value
     }
 
+    public incrementTotalSavings(value: number){
+        this.totalSavings += value
+    }
+
+    public decrementTotalSavings(value: number){
+        this.totalSavings -= value
+    }
+
+    public incrementCurrentSavings(value: number){
+        this.currentSavings += value
+    }
+
+    public decrementCurrentSavings(value: number){
+        this.currentSavings -= value
+    }
+
     public convertToObject(){
         return {
             userId: this.userId,

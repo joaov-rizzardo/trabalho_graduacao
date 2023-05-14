@@ -3,6 +3,13 @@ import { query } from "../Services/Database"
 
 export type UserFinanceTableType = {
     userId: number
+    balance: string,
+    totalSavings: string
+    currentSavings: string
+}
+
+export type UserFinanceReplaceType = {
+    userId: number
     balance: number,
     totalSavings: number
     currentSavings: number
@@ -10,7 +17,7 @@ export type UserFinanceTableType = {
 
 export default class UserFinanceDAO {
 
-    public async replace({userId, balance, totalSavings, currentSavings}: UserFinanceTableType) {
+    public async replace({userId, balance, totalSavings, currentSavings}: UserFinanceReplaceType) {
         const response = await query("REPLACE INTO UserFinances SET userId = ?, balance = ?, totalSavings = ?, currentSavings = ?", [
             userId, balance, totalSavings, currentSavings
         ])
@@ -30,9 +37,9 @@ export default class UserFinanceDAO {
         }
         return {
             userId: recoveredFinance.userId,
-            balance: recoveredFinance.balance,
-            totalSavings: recoveredFinance.totalSavings,
-            currentSavings: recoveredFinance.currentSavings
+            balance: parseFloat(recoveredFinance.balance),
+            totalSavings: parseFloat(recoveredFinance.totalSavings),
+            currentSavings: parseFloat(recoveredFinance.currentSavings)
         }
     }
 }

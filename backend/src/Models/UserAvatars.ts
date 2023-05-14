@@ -1,3 +1,4 @@
+import AvatarDAO from "../DAO/AvatarDAO"
 import Avatar from "./Avatar"
 
 export type UserAvatarsType = {
@@ -27,7 +28,18 @@ export default class UserAvatars {
         }
         if(!this.userAlreadyOwned(avatar.getAvatarId()!)){
             await avatar.reclaimToUser(this.userId)
+            this.avatars.push(avatar)
+            this.avatarIds.push(avatar.getAvatarId()!)
         }
+    }
+
+    public static async getInstanceByUserId(userId: number){
+        const avatarDAO = new AvatarDAO()
+        const userAvatars = await avatarDAO.getUserAvatars(userId)
+        return new this ({
+            userId: userId,
+            avatars: userAvatars.map(avatar => new Avatar(avatar))
+        })
     }
 
     private userAlreadyOwned(avatarId: number){

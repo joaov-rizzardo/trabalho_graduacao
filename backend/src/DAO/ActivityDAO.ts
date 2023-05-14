@@ -29,7 +29,7 @@ export default class ActivityDAO {
             SET
                 userId = ?,
                 description = ?,
-                createAt = ?,
+                createdAt = ?
             `,
             [
                 userId, description, createdAt

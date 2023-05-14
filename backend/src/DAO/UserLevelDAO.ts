@@ -2,6 +2,13 @@ import { FieldPacket } from "mysql2/promise"
 import { query } from "../Services/Database"
 
 export type UserLevelTableType = {
+    userId: string
+    currentLevel: string
+    currentXp: string
+    points: string
+}
+
+export type UserLevelReplaceType = {
     userId: number
     currentLevel: number
     currentXp: number
@@ -9,7 +16,7 @@ export type UserLevelTableType = {
 }
 
 export default class UserLevelDAO{
-    public async replace({userId, currentLevel, currentXp, points}: UserLevelTableType){
+    public async replace({userId, currentLevel, currentXp, points}: UserLevelReplaceType){
         const response = await query("REPLACE INTO UserLevel SET userId = ?, currentLevel = ?, currentXp = ?, points = ?", [
             userId,
             currentLevel,
@@ -31,10 +38,10 @@ export default class UserLevelDAO{
             throw new Error(`Nenhuma informação de level foi encontrada para o usuário informado: ${userId}`)
         }
         return {
-            userId: recoveredLevel.userId,
-            currentLevel: recoveredLevel.currentLevel,
-            currentXp: recoveredLevel.currentXp,
-            points: recoveredLevel.points
+            userId: parseInt(recoveredLevel.userId),
+            currentLevel: parseInt(recoveredLevel.currentLevel),
+            currentXp: parseInt(recoveredLevel.currentXp),
+            points: parseInt(recoveredLevel.points)
         }
     }
 }

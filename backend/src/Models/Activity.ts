@@ -10,7 +10,7 @@ type ActivityFieldsType = {
 export default class Activity {
     private activityId?: number
     private userId: number
-    private description: string
+    public description: string
     private createdAt: string
     private activityDAO: ActivityDAO
 

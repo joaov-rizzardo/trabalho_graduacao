@@ -9,7 +9,7 @@ export type AvatarType = {
 
 export default class Avatar {
     private avatarId?: number
-    private name: string
+    public name: string
     private createdAt: string
     private avatarDAO: AvatarDAO
 

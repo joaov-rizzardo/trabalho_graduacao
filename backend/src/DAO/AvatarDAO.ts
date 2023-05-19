@@ -125,4 +125,19 @@ export default class AvatarDAO {
             }
         })
     }
+
+    public static async getAllAvatars(){
+        const response = await query(`SELECT avatarId, name, createdAt FROM Avatar`, ) as [AvatarTableFields[], FieldPacket[]] | false
+        if(response === false){
+            throw new Error('Não foi possível recuperar o avatar buscado')
+        }
+        const recoveredsAvatar = response[0]
+        return recoveredsAvatar.map(avatar => {
+            return {
+                avatarId: avatar.avatarId,
+                name: avatar.name,
+                createdAt: avatar.createdAt
+            }
+        })
+    }
 }

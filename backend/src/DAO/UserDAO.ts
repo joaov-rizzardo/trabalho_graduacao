@@ -115,12 +115,10 @@ export default class UserDAO {
         if(!response){
             throw new Error('Não foi possível recuperar o usuário do banco de dados')
         }
-
         const userData = response[0][0]
         if(!userData){
             throw new Error(`Nenhum usuário foi encontrado para o ID: ${userId}`)
         }
-
         return {
             userId: userData.userId,
             username: userData.username,
@@ -131,6 +129,26 @@ export default class UserDAO {
             selectedAvatar: userData.selectedAvatar,
             createdAt: userData.createdAt
         }
-        
+    }
+
+    public async getUserByField(field: string, value: string){
+        const response = await query(`SELECT * FROM User WHERE ${field} = ?`, [value]) as [UserTableType[], FieldPacket[]] | false
+        if(!response){
+            throw new Error('Não foi possível recuperar o usuário do banco de dados')
+        }
+        const userData = response[0][0]
+        if(!userData){
+            return false
+        }
+        return {
+            userId: userData.userId,
+            username: userData.username,
+            password: userData.password,
+            email: userData.email,
+            name: userData.name,
+            lastName: userData.lastName,
+            selectedAvatar: userData.selectedAvatar,
+            createdAt: userData.createdAt
+        }
     }
 }

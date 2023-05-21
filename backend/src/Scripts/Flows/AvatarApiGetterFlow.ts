@@ -23,13 +23,14 @@ export default async function handleSearchForNewAvatars(args: Args){
         }catch(error: any){
             ErrorLogger.error(error.message)
         }
-    }, 6000)
+    }, 72000)
 }
 
 async function findAndSaveByAvatarName(avatarName: string){
     const imageStream = await getAvatarImageStreamFromAPI(avatarName)
     uploadImageStreamToAvatarsDirectory(imageStream, avatarName)
     await saveAvatarOnDatabase(avatarName)
+    console.log(`Avatar ${avatarName} adicionado na base de dados`)
 }
 
 async function saveAvatarOnDatabase(avatarName: string){

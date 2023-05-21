@@ -14,6 +14,7 @@ export default async function sweepAvatarDirectory(args: Args){
                 createdAt: getCurrentStringDatetime()
             })
             await avatar.save()
+            avatarsOnDatabase.push(avatarName)
         }
     }
 }

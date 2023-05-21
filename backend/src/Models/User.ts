@@ -1,4 +1,5 @@
 import UserDAO from "../DAO/UserDAO"
+import UserPasswordEncrypter from "./UserPasswordEncrypter"
 
 export type UserType = {
     userId?: number,
@@ -46,6 +47,7 @@ export default class User {
                 selectedAvatar: this.selectedAvatar,
             })
         }else{
+            await this.encryptPassword()
             this.userId  = await this.userDAO.insertAndReturnId({
                 username: this.username,
                 password: this.password,
@@ -90,4 +92,10 @@ export default class User {
         const userDAO = new UserDAO()
         return new this(await userDAO.getUserById(userId))
     }
+
+    private async encryptPassword(){
+        const encrypter = new UserPasswordEncrypter()
+        this.password = await encrypter.encryptPassword(this.password)
+    }
+
 }

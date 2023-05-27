@@ -69,4 +69,8 @@ export default class Avatar {
         return this.avatarId !== undefined
     }
 
+    public static async getAllAvatarsIds(){
+        const allAvatars = await AvatarDAO.getAllAvatars()
+        return allAvatars.map(avatar => avatar.avatarId)
+    }
 }

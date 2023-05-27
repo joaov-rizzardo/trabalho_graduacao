@@ -1,6 +1,9 @@
 import { formatMessageAndStackTrace } from '../Utils/StackTrace';
 import { DatabaseLogger } from './../Utils/Logger';
-import { createPool, PoolConnection } from 'mysql2/promise'
+import { createPool, Pool, PoolConnection } from 'mysql2/promise'
+
+let pool: Pool | null = null;
+
 export async function startTransaction(){
     await query('START TRANSACTION')
 }
@@ -15,16 +18,19 @@ export async function rollbackTransaction(){
 
 export async function query(sql: string, params?: any[]){
     const currentStackTrace = new Error().stack
+    let connection = null
     try{
-        const connection = await getDatabaseConnection()
+        connection = await getConnectionFromPool()
         return await connection.query(sql, params)
     }catch(error: any){
         DatabaseLogger.error(formatMessageAndStackTrace(error.message, currentStackTrace))
         return false
+    }finally{
+        if(connection !== null){
+            connection.release()
+        }
     }
 }
-
-
 
 export type ResultSetHeaderType = {
     fieldCount: number,
@@ -35,15 +41,17 @@ export type ResultSetHeaderType = {
     warningStatus: number
 }
 
-async function getDatabaseConnection(): Promise<PoolConnection> {
-    const pool = createPool({
+async function getConnectionFromPool(): Promise<PoolConnection> {
+    if (!pool) {
+      pool = createPool({
         host: process.env.DB_HOST,
         user: process.env.DB_USER,
         password: process.env.DB_PASSWORD,
         database: process.env.DB_DATABASE,
         waitForConnections: true,
         connectionLimit: 10,
-        queueLimit: 10
-    })
-    return await pool.getConnection()
-}
+        queueLimit: 10,
+      });
+    }
+    return await pool.getConnection();
+  }

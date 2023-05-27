@@ -7,14 +7,23 @@ import { getCurrentAvatarsOnDirectory } from "../Utils/AvatarUtils";
 export default async function sweepAvatarDirectory(args: Args){
     const avatarsOnDatabase = (await AvatarDAO.getAllAvatars()).map(avatar => avatar.name)
     const avatarsOnDirectory = getCurrentAvatarsOnDirectory()
-    for await (const avatarName of avatarsOnDirectory){
+    for (const avatarName of avatarsOnDirectory){
         if(!avatarsOnDatabase.includes(avatarName)){
-            const avatar = new Avatar({
-                name: avatarName,
-                createdAt: getCurrentStringDatetime()
-            })
-            await avatar.save()
-            avatarsOnDatabase.push(avatarName)
+            try {
+                console.log(avatarName)
+                await createAvatarOnDatabase(avatarName)
+                avatarsOnDatabase.push(avatarName)
+            }catch(error: any){
+                console.log(error)
+            }
         }
     }
+}
+
+async function createAvatarOnDatabase(avatarName: string){
+    const avatar = new Avatar({
+        name: avatarName,
+        createdAt: getCurrentStringDatetime()
+    })
+    await avatar.save()
 }

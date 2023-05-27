@@ -58,8 +58,16 @@ CREATE TABLE IF NOT EXISTS Achievements (
     pointReward TINYINT NOT NULL DEFAULT 0,
     medalReward TINYINT,
     goal INT NOT NULL,
-    createAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    createdAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (medalReward) REFERENCES Medals (medalId)
+);
+
+CREATE TABLE IF NOT EXISTS UserAchievements(
+    userId BIGINT NOT NULL,
+    achievementId SMALLINT NOT NULL,
+    earnedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (userId) REFERENCES User(userId),
+    FOREIGN KEY (achievementId) REFERENCES Achievements(achievementId)
 );
 
 CREATE TABLE IF NOT EXISTS UserBills (

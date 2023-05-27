@@ -59,6 +59,10 @@ export default class User {
         }
     }
 
+    get getId(){
+        return this.userId
+    }
+
     private isCreated(){
         return this.userId !== undefined
     }

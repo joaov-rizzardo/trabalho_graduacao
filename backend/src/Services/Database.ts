@@ -1,6 +1,17 @@
 import { formatMessageAndStackTrace } from '../Utils/StackTrace';
 import { DatabaseLogger } from './../Utils/Logger';
 import { createPool, PoolConnection } from 'mysql2/promise'
+export async function startTransaction(){
+    await query('START TRANSACTION')
+}
+
+export async function commitTransaction(){
+    await query('COMMIT')
+}
+
+export async function rollbackTransaction(){
+    await query('ROLLBACK')
+}
 
 export async function query(sql: string, params?: any[]){
     const currentStackTrace = new Error().stack
@@ -12,6 +23,8 @@ export async function query(sql: string, params?: any[]){
         return false
     }
 }
+
+
 
 export type ResultSetHeaderType = {
     fieldCount: number,

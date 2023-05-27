@@ -4,6 +4,7 @@ import UserDAO from '../DAO/UserDAO'
 import { default400Response } from '../Utils/DefaultResponses'
 import getCurrentStringDatetime from '../Utils/DateUtils'
 import User from '../Models/User'
+import { commitTransaction, rollbackTransaction, startTransaction } from '../Services/Database'
 
 const userDAO = new UserDAO()
 const errors: string[] = []
@@ -20,6 +21,7 @@ export default async function signUp(req: Request, res: Response){
         if(hasErrors()){
             return res.status(400).send(default400Response(errors))
         }
+        await startTransaction()
         const user = new User({
             username: body.username,
             password: body.password,
@@ -29,7 +31,10 @@ export default async function signUp(req: Request, res: Response){
             selectedAvatar: 0,
             createdAt: getCurrentStringDatetime()
         })
+        await user.save()
+        await commitTransaction()
     }catch(error: any){
+        await rollbackTransaction()
         ErrorLogger.error(error.message)
     }
 }

@@ -17,3 +17,7 @@ export const signInValidators = [
     body('password').isLength({min: 8}).withMessage('The password field must be 8 characters'),
 ]
 
+export const checkTokenValidators = [
+    body('token').notEmpty().withMessage("The token field cannot be empty")
+]
+

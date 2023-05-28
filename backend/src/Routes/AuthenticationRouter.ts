@@ -1,8 +1,9 @@
 import {Router, Request, Response} from 'express'
 import signUp from '../Controllers/SignUpController'
-import { signInValidators, signUpValidators } from '../Validators/AuthenticationValidators'
+import { checkTokenValidators, signInValidators, signUpValidators } from '../Validators/AuthenticationValidators'
 import checkExpressValidations from '../Middlewares/DefaultExpressValidationsChecker'
 import signIn from '../Controllers/SignInController'
+import checkTokenFlow from '../Controllers/TokenValidatorController'
 
 const authenticationRouter = Router()
 
@@ -12,5 +13,6 @@ authenticationRouter.all('/', (req: Request, res: Response) => {
 
 authenticationRouter.post('/signup', signUpValidators, checkExpressValidations, signUp)
 authenticationRouter.post('/signin', signInValidators, checkExpressValidations, signIn)
+authenticationRouter.post('/checkToken', checkTokenValidators, checkExpressValidations, checkTokenFlow)
 
 export default authenticationRouter

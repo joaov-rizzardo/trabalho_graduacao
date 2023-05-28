@@ -14,8 +14,8 @@ export default class JWTAuthenticator {
 
     public checkToken(token: string){
         try {
-            const decryptedToken = verify(token, this.secretKey)
-            return decryptedToken
+            verify(token, this.secretKey)
+            return true
         }catch(error){
             return false
         }

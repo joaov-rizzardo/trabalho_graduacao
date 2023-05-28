@@ -10,3 +10,10 @@ export const signUpValidators = [
     body('email').notEmpty().isEmail().withMessage('The email field must be of email type')
 ]
 
+export const signInValidators = [
+    body('username').notEmpty().isString().withMessage('The username field cannot be empty'),
+    body('username').isLength({min: 8}).withMessage('The username field must be 8 characters'),
+    body('password').notEmpty().isString().withMessage('The password field cannot be empty'),
+    body('password').isLength({min: 8}).withMessage('The password field must be 8 characters'),
+]
+

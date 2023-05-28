@@ -63,10 +63,6 @@ export default class User {
         return this.userId
     }
 
-    private isCreated(){
-        return this.userId !== undefined
-    }
-
     public convertToObject(){
         return {
             userId: this.userId,
@@ -78,6 +74,11 @@ export default class User {
             selectedAvatar: this.selectedAvatar,
             createdAt: this.createdAt
         }
+    }
+
+    public async checkPassword(password: string){
+        const encrypter = new UserPasswordEncrypter()
+        return await encrypter.checkPassword(password, this.password)
     }
     
     public async updateProfile(){
@@ -102,4 +103,7 @@ export default class User {
         this.password = await encrypter.encryptPassword(this.password)
     }
 
+    private isCreated(){
+        return this.userId !== undefined
+    }
 }

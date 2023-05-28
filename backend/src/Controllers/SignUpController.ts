@@ -8,10 +8,8 @@ import { commitTransaction, rollbackTransaction, startTransaction } from '../Ser
 import UserFinance from '../Models/UserFinance'
 import UserLevel from '../Models/UserLevel'
 import UserAvatars from '../Models/UserAvatars'
-import AvatarDAO from '../DAO/AvatarDAO'
 
 const userDAO = new UserDAO()
-const errors: string[] = []
 
 type createUserType = {
     username: string,
@@ -24,19 +22,15 @@ type createUserType = {
 export default async function signUp(req: Request, res: Response){
     try {
         const body = req.body
-        const userId = await createNewUser({
+        const createResult = await createNewUser({
             username: body.username,
             password: body.password,
             email: body.email,
             name: body.name,
             lastName: body.lastName
         })
-        if(userId === false){
-            if(hasErrors()){
-                return res.status(400).send(default400Response(errors))
-            }else {
-                throw new Error("Usuário não foi criado, e nenhum erro de validação foi obtido")
-            }
+        if(createResult.ok === false){
+            return res.status(400).send(default400Response(createResult.errors))
         }else{
             return res.status(201).send(default201Response('The user has been created'))
         }
@@ -46,20 +40,19 @@ export default async function signUp(req: Request, res: Response){
     }
 }
 
-export async function createNewUser(params: createUserType): Promise<false|number>{
+export async function createNewUser(params: createUserType){
     try {
-        if(!checkUserAvailability({...params})){
-            return false
+        const errors = await checkUserAvailability({...params})
+        if(errors.length !== 0){
+            return { ok: false, errors: errors, userId: false}
         }
         await startTransaction()
         const userId = await createUserAndReturnId({...params})
-        await Promise.all([
-            createUserFinances(userId),
-            createUserLevel(userId),
-            reclaimInnitialsAvatarsToUser(userId)
-        ])
+        await createUserFinances(userId)
+        await createUserLevel(userId)
+        await reclaimInnitialsAvatarsToUser(userId)
         await commitTransaction()
-        return userId
+        return { ok: true, errors: [], userId: userId}
     }catch(error: any){
         await rollbackTransaction()
         throw new Error(error)
@@ -97,7 +90,7 @@ async function createUserFinances(userId: number){
 async function createUserLevel(userId: number){
     const userLevel = new UserLevel({
         userId: userId,
-        currentLevel: 0,
+        currentLevel: 1,
         currentXp: 0,
         points: 0
     })
@@ -113,16 +106,14 @@ async function reclaimInnitialsAvatarsToUser(userId: number){
 }
 
 async function checkUserAvailability(params: createUserType){
-    if(! await isAvailableUsername(params.username)){
+    const errors = []
+    if(await isAvailableUsername(params.username) === false){
         errors.push('The username is not available')
     }
-    if(! await isAvailableEmail(params.email)){
+    if(await isAvailableEmail(params.email) === false){
         errors.push('The email is not available')
     }
-    if(hasErrors()){
-        return false
-    }
-    return true
+    return errors
 }
 
 async function isAvailableUsername(username: string){
@@ -141,8 +132,4 @@ async function isAvailableEmail(email: string){
     }else{
         return false
     }
-}
-
-function hasErrors(){
-    return errors.length !== 0
 }

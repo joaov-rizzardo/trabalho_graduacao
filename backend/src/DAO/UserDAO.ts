@@ -10,6 +10,7 @@ export type UserTableType = {
     name: string
     lastName: string
     selectedAvatar: number
+    isValidatedEmail: boolean
     createdAt: string
 }
 
@@ -20,6 +21,7 @@ type UserUpdateType = {
     email: string
     name: string
     lastName: string
+    isValidatedEmail: boolean
     selectedAvatar: number
 }
 
@@ -29,6 +31,7 @@ type UserInsertType = {
     email: string
     name: string
     lastName: string
+    isValidatedEmail: boolean
     selectedAvatar: number
 }
 
@@ -44,14 +47,16 @@ export default class UserDAO {
                 email = ?, 
                 name = ?,
                 lastName = ?,
-                selectedAvatar = ?`,
+                selectedAvatar = ?,
+                isValidatedEmail = ?`,
             [
                 user.username, 
                 user.password, 
                 user.email, 
                 user.name, 
                 user.lastName, 
-                user.selectedAvatar
+                user.selectedAvatar,
+                user.isValidatedEmail
             ]
         ) as [ResultSetHeaderType, undefined] | false
         if(!response){
@@ -74,7 +79,8 @@ export default class UserDAO {
                 email = ?,
                 name = ?,
                 lastName = ?,
-                selectedAvatar = ?
+                selectedAvatar = ?,
+                isValidatedEmail = ?
             WHERE
                 userId = ?`,
             [
@@ -84,6 +90,7 @@ export default class UserDAO {
                 user.name, 
                 user.lastName, 
                 user.selectedAvatar,
+                user.isValidatedEmail,
                 user.userId
             ]
         )
@@ -117,7 +124,7 @@ export default class UserDAO {
         }
         const userData = response[0][0]
         if(!userData){
-            throw new Error(`Nenhum usuário foi encontrado para o ID: ${userId}`)
+            return false
         }
         return {
             userId: userData.userId,
@@ -127,6 +134,7 @@ export default class UserDAO {
             name: userData.name,
             lastName: userData.lastName,
             selectedAvatar: userData.selectedAvatar,
+            isValidatedEmail: userData.isValidatedEmail,
             createdAt: userData.createdAt
         }
     }
@@ -148,6 +156,7 @@ export default class UserDAO {
             name: userData.name,
             lastName: userData.lastName,
             selectedAvatar: userData.selectedAvatar,
+            isValidatedEmail: userData.isValidatedEmail,
             createdAt: userData.createdAt
         }
     }

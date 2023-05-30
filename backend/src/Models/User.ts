@@ -9,6 +9,7 @@ export type UserType = {
     name: string,
     lastName: string,
     selectedAvatar: number,
+    isValidatedEmail: boolean,
     createdAt?: string
 }
 
@@ -20,6 +21,7 @@ export default class User {
     private name: string
     private lastName: string
     private selectedAvatar: number
+    private isValidatedEmail: boolean
     private createdAt?: string
     private userDAO: UserDAO
 
@@ -31,6 +33,7 @@ export default class User {
         this.name = instanceParams.name
         this.lastName = instanceParams.lastName
         this.selectedAvatar = instanceParams.selectedAvatar
+        this.isValidatedEmail = instanceParams.isValidatedEmail
         this.createdAt = instanceParams.createdAt
         this.userDAO = new UserDAO()
     }
@@ -45,6 +48,7 @@ export default class User {
                 name: this.name,
                 lastName: this.lastName,
                 selectedAvatar: this.selectedAvatar,
+                isValidatedEmail: this.isValidatedEmail
             })
         }else{
             await this.encryptPassword()
@@ -54,7 +58,8 @@ export default class User {
                 email: this.email,
                 name: this.name,
                 lastName: this.lastName,
-                selectedAvatar: this.selectedAvatar
+                selectedAvatar: this.selectedAvatar,
+                isValidatedEmail: this.isValidatedEmail
             })
         }
     }
@@ -72,6 +77,7 @@ export default class User {
             name: this.name,
             lastName: this.lastName,
             selectedAvatar: this.selectedAvatar,
+            isValidatedEmail: this.isValidatedEmail,
             createdAt: this.createdAt
         }
     }
@@ -95,7 +101,11 @@ export default class User {
 
     public static async getInstanceByUserId(userId: number){
         const userDAO = new UserDAO()
-        return new this(await userDAO.getUserById(userId))
+        const user = await userDAO.getUserById(userId)
+        if(user === false){
+            throw new Error(`Não foi possível recuperar o usuário pelo ID: ${userId}`)
+        }
+        return new this(user)
     }
 
     private async encryptPassword(){

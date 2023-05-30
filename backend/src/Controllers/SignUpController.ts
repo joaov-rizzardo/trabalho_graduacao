@@ -67,6 +67,7 @@ async function createUserAndReturnId(params: createUserType): Promise<number>{
         name: params.name,
         lastName: params.lastName,
         selectedAvatar: 0,
+        isValidatedEmail: false,
         createdAt: getCurrentStringDatetime()
     })
     await user.save()

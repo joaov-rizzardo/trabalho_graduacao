@@ -99,6 +99,10 @@ export default class User {
         })
     }
 
+    public validateEmail(){
+        this.isValidatedEmail = true
+    }
+
     public static async getInstanceByUserId(userId: number){
         const userDAO = new UserDAO()
         const user = await userDAO.getUserById(userId)

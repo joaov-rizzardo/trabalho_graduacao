@@ -1,42 +1,34 @@
 import { createTransport } from "nodemailer"
-
-export type MailSenderType = {
-    sourceEmail: string
-    sourceEmailPassword: string
-    service: string
-    destinationEmail: string
-    subject: string
-    contentText?: string
-    contentHTML?: string
-}
-
 export default class MailSender {
     private sourceEmail: string
     private sourceEmailPassword: string
     private service: string
     private destinationEmail: string
-    private subject: string
-    private contentText?: string
-    private contentHTML?: string
 
-    constructor(params: MailSenderType){
-        this.sourceEmail = params.sourceEmail
-        this.sourceEmailPassword = params.sourceEmailPassword
-        this.service = params.service
-        this.destinationEmail = params.destinationEmail
-        this.subject = params.subject
-        this.contentText = params.contentText
-        this.contentHTML = params.contentHTML
+    constructor(destinationEmail: string){
+        if(process.env.SOURCE_EMAIL === undefined){
+            throw new Error('Email de origem não foi definido')
+        }
+        if(process.env.SOURCE_EMAIL_PASSOWORD === undefined){
+            throw new Error('Senha do email de origem não foi definida')
+        }
+        if(process.env.EMAIL_SERVICE === undefined){
+            throw new Error('Serviço de email não definido')
+        }
+        this.sourceEmail = process.env.SOURCE_EMAIL
+        this.sourceEmailPassword = process.env.SOURCE_EMAIL_PASSOWORD
+        this.service = process.env.EMAIL_SERVICE
+        this.destinationEmail = destinationEmail
     }
     
-    public async sendEmail(){
+    public async sendEmail({subject, contentText, contentHTML}: {subject: string, contentText?: string, contentHTML?: string}){
         const transporter = this.createTransporter()
         await transporter.sendMail({
             from: this.sourceEmail,
             to: this.destinationEmail,
-            subject: this.subject,
-            text: this.contentText,
-            html: this.contentHTML
+            subject: subject,
+            text: contentText,
+            html: contentHTML
         })
     }
 

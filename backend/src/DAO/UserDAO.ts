@@ -160,4 +160,26 @@ export default class UserDAO {
             createdAt: userData.createdAt
         }
     }
+
+    public async insertEmailVerificationCodeToUser({userId, code, sentAt}: {userId: number, code: string, sentAt: string}){
+        const response = await query(`INSERT INTO UserEmailCodes SET userId = ?, code = ?, sentAt = ?`, 
+            [userId, code, sentAt]
+        ) as [ResultSetHeaderType, undefined] | false
+        if(!response){
+            throw new Error('Não foi possível realizar a inserção do código de verificação no banco de dados')
+        }
+    }
+
+    public async getLastSentCode(userId: number){
+        const response = await query(`SELECT code FROM UserEmailCodes WHERE userId = ? ORDER BY sentAt DESC LIMIT 1`, [userId]) as [{code: string}[], FieldPacket[]] | false
+        if(!response){
+            throw new Error('Não foi possível recuperar o código de verificação do banco de dados')
+        }
+        const responseData = response[0][0]
+        if(!responseData){
+            return false
+        }else{
+            return responseData.code
+        }
+    }
 }

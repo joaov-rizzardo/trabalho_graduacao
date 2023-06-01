@@ -21,3 +21,10 @@ export const checkTokenValidators = [
     body('token').notEmpty().withMessage("The token field cannot be empty")
 ]
 
+export const checkVerificationCodeValidators = [
+    body('userId').notEmpty().withMessage("The userId field cannot be empty"),
+    body('userId').isNumeric().withMessage("The userId field must be of numeric type"),
+    body('code').isLength({min: 5, max: 5}).withMessage("The userField must be 5 characters"),
+    body('code').isString().withMessage("The code field must be of numeric type")
+]
+

@@ -43,7 +43,6 @@ export const DatabaseLogger = winston.createLogger({
     ]
 })
 
-
 function getLoggerFormat(){
     return winston.format.combine(
         winston.format.timestamp({format: "YYYY-MM-DD HH:mm:ss"}),

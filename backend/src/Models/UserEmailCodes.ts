@@ -1,4 +1,7 @@
 import UserDAO from "../DAO/UserDAO"
+import getCurrentStringDatetime from "../Utils/DateUtils"
+import { ErrorLogger } from "../Utils/Logger"
+import MailSender from "./MailSender"
 
 export default class UserEmailCodes {
     private userId: number
@@ -10,7 +13,41 @@ export default class UserEmailCodes {
     }
 
     public async sendRandomUserCode(){
-        
+        try{
+            const userDao = new UserDAO()
+            const randomCode = this.generateRandomCode()
+            const mailSender = new MailSender(this.email)
+            await mailSender.sendEmail({
+                subject: 'Código de Verificação',
+                contentText: `Segue o código para verificação do email: ${randomCode}`
+            })
+            await userDao.insertEmailVerificationCodeToUser({
+                userId: this.userId,
+                code: randomCode,
+                sentAt: getCurrentStringDatetime()
+            })
+        }catch(error: any){
+            ErrorLogger.error(error.message)
+            throw new Error(error)
+        }
+    }
+
+    public async checkLastCodeSent(code: string): Promise<boolean> {
+        try {
+            const userDao = new UserDAO()
+            const lastCode = await userDao.getLastSentCode(this.userId)
+            if(lastCode === false){
+                return false
+            }
+            if(code === lastCode){
+                return true
+            }else{
+                return false
+            }
+        }catch(error: any){
+            ErrorLogger.error(error.message)
+            return false
+        }
     }
 
     private generateRandomCode(){

@@ -1,0 +1,20 @@
+[2023-05-31 20:16:14] Method: POST URL: /authentication/signup Status-Code: 201 Reponse-Size: 39 Response-Time: 319.428 ms
+
+[2023-05-31 20:19:39] Method: POST URL: /authentication/sendVerificationCode?userId=1 Status-Code: 404 Reponse-Size: 175 Response-Time: 2.074 ms
+
+[2023-05-31 20:20:05] Method: POST URL: /authentication/sendVerificationCode?userId=1 Status-Code: 404 Reponse-Size: 175 Response-Time: 1.117 ms
+
+[2023-05-31 20:20:55] Method: POST URL: /authentication/sendVerificationCode/1 Status-Code: 200 Reponse-Size: 49 Response-Time: 7770.961 ms
+
+[2023-05-31 20:24:44] Method: POST URL: /authentication/checkVerificationCode Status-Code: 400 Reponse-Size: 88 Response-Time: 2.165 ms
+
+[2023-05-31 20:24:52] Method: POST URL: /authentication/checkVerificationCode Status-Code: 400 Reponse-Size: 88 Response-Time: 1.885 ms
+
+[2023-05-31 20:25:07] Method: POST URL: /authentication/checkVerificationCode Status-Code: 500 Reponse-Size: 70 Response-Time: 48.888 ms
+
+[2023-05-31 21:00:35] Method: POST URL: /authentication/checkVerificationCode Status-Code: 500 Reponse-Size: 70 Response-Time: 60.788 ms
+
+[2023-05-31 21:01:33] Method: POST URL: /authentication/checkVerificationCode Status-Code: 200 Reponse-Size: 16 Response-Time: 52.760 ms
+
+[2023-05-31 21:08:24] Method: POST URL: /authentication/checkVerificationCode Status-Code: 200 Reponse-Size: 16 Response-Time: 123.056 ms
+

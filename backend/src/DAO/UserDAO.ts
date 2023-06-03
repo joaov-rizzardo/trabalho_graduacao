@@ -171,7 +171,7 @@ export default class UserDAO {
     }
 
     public async getLastSentCode(userId: number){
-        const response = await query(`SELECT code FROM UserEmailCodes WHERE userId = ? ORDER BY sentAt DESC LIMIT 1`, [userId]) as [{code: string}[], FieldPacket[]] | false
+        const response = await query(`SELECT code, sentAt FROM UserEmailCodes WHERE userId = ? ORDER BY sentAt DESC LIMIT 1`, [userId]) as [{code: string, sentAt: string}[], FieldPacket[]] | false
         if(!response){
             throw new Error('Não foi possível recuperar o código de verificação do banco de dados')
         }
@@ -179,7 +179,10 @@ export default class UserDAO {
         if(!responseData){
             return false
         }else{
-            return responseData.code
+            return {
+                code: responseData.code,
+                sentAt: responseData.sentAt
+            }
         }
     }
 }

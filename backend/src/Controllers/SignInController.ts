@@ -39,6 +39,7 @@ export async function authenticateUser(username: string, password: string): Prom
     if(userData === false){
         return {ok: false, errors: ['No user found'], user: false}
     }
+    console.log(new Date(userData.createdAt) > new Date())
     const user = new User(userData)
     if(await user.checkPassword(password) === false){
         return {ok: false, errors: ['Incorrect password'], user: false}

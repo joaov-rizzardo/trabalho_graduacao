@@ -35,8 +35,12 @@ export default class UserEmailCodes {
     public async checkLastCodeSent(code: string): Promise<boolean> {
         try {
             const userDao = new UserDAO()
-            const lastCode = await userDao.getLastSentCode(this.userId)
-            if(lastCode === false){
+            const response = await userDao.getLastSentCode(this.userId)
+            if(response === false){
+                return false
+            }
+            const {code: lastCode, sentAt} = response
+            if(this.isExpiredCode(sentAt)){
                 return false
             }
             if(code === lastCode){
@@ -68,5 +72,18 @@ export default class UserEmailCodes {
             userId: user.userId,
             email: user.email
         })
+    }
+
+    private isExpiredCode(date: string){
+        const codeDate = new Date()
+        const currentDate = new Date()
+        const timeDiffInMilliseconds = currentDate.getTime() - codeDate.getTime()
+        const timeDiffInMinutes = timeDiffInMilliseconds/60000
+        const maxTimeToExpireInMinutes = 5
+        if(timeDiffInMinutes >= maxTimeToExpireInMinutes){
+            return true
+        }else{
+            return false
+        }
     }
 }

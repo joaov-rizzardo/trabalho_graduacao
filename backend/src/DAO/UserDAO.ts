@@ -100,17 +100,17 @@ export default class UserDAO {
         }
     }
 
-    public async updateProfile(profileInfo: {userId: number, email: string, name: string, lastName: string}){
+    public async updateProfile(profileInfo: {userId: number, name: string, lastName: string, selectedAvatar: number}){
         const response = await query(`
             UPDATE
                 User
             SET
-                email = ?,
                 name = ?,
-                lastName = ?
+                lastName = ?,
+                selectedAvatar = ?
             WHERE
                 userId = ?`,
-            [profileInfo.email, profileInfo.name, profileInfo.lastName, profileInfo.userId]
+            [profileInfo.name, profileInfo.lastName, profileInfo.selectedAvatar, profileInfo.userId]
         )
         if(!response){
             throw new Error('Não foi possível atualizar o perfil no banco de dados')

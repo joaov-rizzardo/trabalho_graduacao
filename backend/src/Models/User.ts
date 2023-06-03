@@ -13,6 +13,12 @@ export type UserType = {
     createdAt?: string
 }
 
+type updateProfileType = {
+    name?: string,
+    lastName?: string,
+    selectedAvatar?: number
+}
+
 export default class User {
     private userId?: number
     private username: string
@@ -87,15 +93,24 @@ export default class User {
         return await encrypter.checkPassword(password, this.password)
     }
     
-    public async updateProfile(){
+    public async updateProfile({name, lastName, selectedAvatar}: updateProfileType){
         if(this.userId === undefined){
             throw new Error('O perfil não pode ser atualizado, o usuário ainda não foi inserido no banco de dados')
         }
+        if(name !== undefined){
+            this.name = name
+        }
+        if(lastName !== undefined){
+            this.lastName = lastName
+        }
+        if(selectedAvatar !== undefined){
+            this.selectedAvatar = selectedAvatar
+        }
         await this.userDAO.updateProfile({
             userId: this.userId,
-            email: this.email,
             name: this.name,
-            lastName: this.lastName
+            lastName: this.lastName,
+            selectedAvatar: this.selectedAvatar
         })
     }
 

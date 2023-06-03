@@ -1,11 +1,12 @@
 CREATE TABLE IF NOT EXISTS User(
     userId BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(20) NOT NULL,
-    password VARCHAR(30) NOT NULL,
+    password VARCHAR(100) NOT NULL,
     email VARCHAR(80) NOT NULL,
     name VARCHAR(20) NOT NULL,
     lastName VARCHAR(20) NOT NULL,
     selectedAvatar INT,
+    isValidatedEmail BOOLEAN NOT NULL,
     createdAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     KEY idx_username (username)
 );
@@ -154,5 +155,12 @@ CREATE TABLE IF NOT EXISTS UserSpendings (
 CREATE TABLE IF NOT EXISTS UserLogin (
     userId BIGINT NOT NULL,
     loginAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (userId) REFERENCES User(userId)
+);
+
+CREATE TABLE IF NOT EXISTS UserEmailCodes (
+    userId BIGINT NOT NULL,
+    code VARCHAR(5) NOT NULL,
+    sentAt DATETIME NOT NULL,
     FOREIGN KEY (userId) REFERENCES User(userId)
 );

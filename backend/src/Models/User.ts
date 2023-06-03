@@ -118,6 +118,11 @@ export default class User {
         this.isValidatedEmail = true
     }
 
+    public async changePassword(newPassword: string){
+        this.password = newPassword
+        await this.encryptPassword()
+    }
+
     public static async getInstanceByUserId(userId: number){
         const userDAO = new UserDAO()
         const user = await userDAO.getUserById(userId)

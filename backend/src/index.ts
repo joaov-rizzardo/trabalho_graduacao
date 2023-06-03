@@ -28,6 +28,10 @@ app.use('/bill', billRouter)
 app.use('/goal', goalRouter)
 app.use('/management', managementRouter)
 
+app.use((req: Request, res: Response) => {
+    res.status(404).send({message: 'The requested route not exists'})
+})
+
 
 app.listen(process.env.PORT, () => {
     console.log(`Api is running on port ${process.env.PORT}`)

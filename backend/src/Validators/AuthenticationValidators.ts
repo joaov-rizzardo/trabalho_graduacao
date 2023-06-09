@@ -28,3 +28,8 @@ export const checkVerificationCodeValidators = [
     body('code').isString().withMessage("The code field must be of numeric type")
 ]
 
+export const checkPasswordValidators = [
+    body('password').notEmpty().withMessage('The password field cannot be empty'),
+    body('password').isString().withMessage('The password field must be a string type')
+]
+

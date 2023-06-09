@@ -10,7 +10,6 @@ import managementRouter from './Routes/ManagementRouter'
 import morganMiddleware from './Middlewares/MorganMiddleware'
 
 dotenv.config()
-
 const app = express()
 
 app.use(express.json())

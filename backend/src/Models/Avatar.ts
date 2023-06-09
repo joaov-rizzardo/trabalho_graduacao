@@ -28,6 +28,11 @@ export default class Avatar {
         return this.avatarId
     }
 
+    
+    public get getAvatarName(){
+        return this.name
+    }
+
     public convertToObject(){
         return {
             avatarId: this.avatarId,

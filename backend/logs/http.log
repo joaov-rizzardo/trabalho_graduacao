@@ -44,3 +44,77 @@
 
 [2023-06-03 14:39:32] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 507 Response-Time: 119.355 ms
 
+[2023-06-08 10:51:42] Method: POST URL: /authentication/checkPassword/1 Status-Code: 404 Reponse-Size: 44 Response-Time: 9.856 ms
+
+[2023-06-08 10:52:17] Method: POST URL: /authentication/checkPassword/1 Status-Code: 200 Reponse-Size: 17 Response-Time: 362.026 ms
+
+[2023-06-08 10:52:22] Method: POST URL: /authentication/checkPassword/1 Status-Code: 400 Reponse-Size: 88 Response-Time: 2.002 ms
+
+[2023-06-08 10:52:32] Method: POST URL: /authentication/checkPassword/1 Status-Code: 200 Reponse-Size: 17 Response-Time: 79.539 ms
+
+[2023-06-08 10:52:50] Method: POST URL: /authentication/checkPassword/1 Status-Code: 200 Reponse-Size: 17 Response-Time: 83.136 ms
+
+[2023-06-08 10:53:48] Method: POST URL: /authentication/checkPassword/1 Status-Code: 200 Reponse-Size: 16 Response-Time: 123.410 ms
+
+[2023-06-08 11:02:12] Method: POST URL: /profile/updateProfile/1 Status-Code: 400 Reponse-Size: 88 Response-Time: 109.807 ms
+
+[2023-06-08 11:02:27] Method: POST URL: /profile/updateProfile/1 Status-Code: 200 Reponse-Size: 42 Response-Time: 79.994 ms
+
+[2023-06-08 11:13:31] Method: GET URL: /profile/avatar/86 Status-Code: 404 Reponse-Size: 44 Response-Time: 5.435 ms
+
+[2023-06-08 11:14:49] Method: GET URL: /profile/avatar/86 Status-Code: 403 Reponse-Size: 1082 Response-Time: 61.249 ms
+
+[2023-06-08 11:15:12] Method: GET URL: /profile/avatar/86 Status-Code: 403 Reponse-Size: 1083 Response-Time: 44.304 ms
+
+[2023-06-08 11:29:43] Method: GET URL: /profile/avatar/86 Status-Code: 403 Reponse-Size: 1083 Response-Time: 44.700 ms
+
+[2023-06-08 11:30:01] Method: GET URL: /profile/avatar/86 Status-Code: 403 Reponse-Size: 1083 Response-Time: 59.673 ms
+
+[2023-06-08 11:31:34] Method: GET URL: /profile/avatar/86 Status-Code: 403 Reponse-Size: 1083 Response-Time: 42.664 ms
+
+[2023-06-08 11:31:55] Method: GET URL: /Assets/Avatars Status-Code: 404 Reponse-Size: 44 Response-Time: 2.064 ms
+
+[2023-06-08 11:31:55] Method: GET URL: /favicon.ico Status-Code: 404 Reponse-Size: 44 Response-Time: 0.380 ms
+
+[2023-06-08 11:34:16] Method: GET URL: /profile/avatar/86 Status-Code: 403 Reponse-Size: 1083 Response-Time: 55.459 ms
+
+[2023-06-08 11:35:29] Method: GET URL: /profile/avatar/86 Status-Code: 200 Reponse-Size: 73017 Response-Time: 52.451 ms
+
+[2023-06-08 11:35:45] Method: GET URL: /profile/avatar/15 Status-Code: 200 Reponse-Size: 76984 Response-Time: 44.132 ms
+
+[2023-06-08 11:35:49] Method: GET URL: /profile/avatar/23 Status-Code: 200 Reponse-Size: 78009 Response-Time: 20.834 ms
+
+[2023-06-08 11:35:52] Method: GET URL: /profile/avatar/45 Status-Code: 200 Reponse-Size: 64595 Response-Time: 25.037 ms
+
+[2023-06-08 11:36:39] Method: GET URL: /profile/avatar/86 Status-Code: 200 Reponse-Size: 73017 Response-Time: 41.916 ms
+
+[2023-06-08 11:37:01] Method: GET URL: /profile/avatar/45 Status-Code: 304 Reponse-Size: - Response-Time: 44.490 ms
+
+[2023-06-08 11:37:05] Method: GET URL: /profile/avatar/113 Status-Code: 200 Reponse-Size: 67698 Response-Time: 20.772 ms
+
+[2023-06-08 11:53:48] Method: GET URL: /profile/avatar/215 Status-Code: 200 Reponse-Size: 69206 Response-Time: 86.992 ms
+
+[2023-06-08 13:00:14] Method: GET URL: /profile/avatar/110 Status-Code: 200 Reponse-Size: 56783 Response-Time: 29.971 ms
+
+[2023-06-08 15:35:17] Method: GET URL: /profile/avatar/110 Status-Code: 304 Reponse-Size: - Response-Time: 11.551 ms
+
+[2023-06-08 15:35:24] Method: GET URL: /profile/avatar/150 Status-Code: 200 Reponse-Size: 74124 Response-Time: 30.878 ms
+
+[2023-06-08 15:35:27] Method: GET URL: /profile/avatar/22 Status-Code: 200 Reponse-Size: 60459 Response-Time: 98.199 ms
+
+[2023-06-08 15:35:30] Method: GET URL: /profile/avatar/7 Status-Code: 200 Reponse-Size: 72991 Response-Time: 20.968 ms
+
+[2023-06-08 16:45:19] Method: GET URL: /profile/avatar/85 Status-Code: 200 Reponse-Size: 76815 Response-Time: 15.383 ms
+
+[2023-06-08 16:45:23] Method: GET URL: /profile/avatar/36 Status-Code: 200 Reponse-Size: 65232 Response-Time: 27.201 ms
+
+[2023-06-08 16:45:26] Method: GET URL: /profile/avatar/25 Status-Code: 200 Reponse-Size: 68530 Response-Time: 36.148 ms
+
+[2023-06-08 18:20:00] Method: GET URL: /profile/avatar/150 Status-Code: 304 Reponse-Size: - Response-Time: 36.171 ms
+
+[2023-06-08 19:03:57] Method: GET URL: /profile/userAvatars/1 Status-Code: 200 Reponse-Size: 2 Response-Time: 16.872 ms
+
+[2023-06-08 19:04:32] Method: GET URL: /profile/userAvatars/1 Status-Code: 200 Reponse-Size: 2 Response-Time: 24.208 ms
+
+[2023-06-08 19:04:54] Method: GET URL: /profile/userAvatars/1 Status-Code: 200 Reponse-Size: 347 Response-Time: 48.603 ms
+

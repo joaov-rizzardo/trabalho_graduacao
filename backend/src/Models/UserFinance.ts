@@ -36,6 +36,9 @@ export default class UserFinance {
     }
 
     public decrementBalance(value: number){
+        if(value > this.balance){
+            throw new Error('O valor decrementado é maior que o disponível')
+        }
         this.balance -= value
     }
 
@@ -44,6 +47,9 @@ export default class UserFinance {
     }
 
     public decrementTotalSavings(value: number){
+        if(value > this.totalSavings){
+            throw new Error('O valor decrementado é maior que o disponível')
+        }
         this.totalSavings -= value
     }
 
@@ -52,6 +58,9 @@ export default class UserFinance {
     }
 
     public decrementCurrentSavings(value: number){
+        if(value > this.currentSavings){
+            throw new Error('O valor decrementado é maior que o disponível')
+        }
         this.currentSavings -= value
     }
 

@@ -12,6 +12,7 @@ export default class Transaction {
     protected value: number
     protected isCanceled: boolean
     protected canceledAt?: string
+    protected enableRewards: boolean
     
     constructor(params: TransactionType){
         this.userId = params.userId
@@ -19,5 +20,6 @@ export default class Transaction {
         this.value = params.value
         this.isCanceled = params.isCanceled
         this.canceledAt = params.canceledAt
+        this.enableRewards = false
     }
 }

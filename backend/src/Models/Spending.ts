@@ -52,11 +52,14 @@ export default class Spending extends Transaction {
                 isCanceled: this.isCanceled,
                 canceledAt: this.canceledAt
             })
+            this.enableRewards = true
         }
     }
 
     public reclaimRewards(){
-        
+        if(this.enableRewards === false){
+            throw new Error('As recompensas para o lançamento do gasto não podem ser recuperadas no momento')
+        }
     }
 
     public convertToObject(){
@@ -76,6 +79,14 @@ export default class Spending extends Transaction {
     public cancelSpending(){
         this.isCanceled = true
         this.canceledAt = getCurrentStringDatetime()
+    }
+
+    public get getValue(){
+        return this.value
+    }
+
+    public get getUserId(){
+        return this.userId
     }
 
     public static async getInstanceById(spendingId: number){

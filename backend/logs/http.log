@@ -118,3 +118,31 @@
 
 [2023-06-08 19:04:54] Method: GET URL: /profile/userAvatars/1 Status-Code: 200 Reponse-Size: 347 Response-Time: 48.603 ms
 
+[2023-06-11 11:50:44] Method: POST URL: /transactions/spending/create Status-Code: 404 Reponse-Size: 44 Response-Time: 11.348 ms
+
+[2023-06-11 11:51:06] Method: POST URL: /transaction/spending/create Status-Code: 404 Reponse-Size: 44 Response-Time: 7.127 ms
+
+[2023-06-11 11:51:45] Method: POST URL: /transaction/spending/create Status-Code: 400 Reponse-Size: 122 Response-Time: 3.121 ms
+
+[2023-06-11 11:51:55] Method: POST URL: /transaction/spending/create Status-Code: 404 Reponse-Size: 44 Response-Time: 1.071 ms
+
+[2023-06-11 11:52:08] Method: POST URL: /transaction/spending/create Status-Code: 400 Reponse-Size: 105 Response-Time: 0.856 ms
+
+[2023-06-11 11:52:24] Method: POST URL: /transaction/spending/create Status-Code: 404 Reponse-Size: 44 Response-Time: 10.463 ms
+
+[2023-06-11 11:52:43] Method: POST URL: /transaction/spending/create Status-Code: 400 Reponse-Size: 105 Response-Time: 8.158 ms
+
+[2023-06-11 11:52:50] Method: POST URL: /transaction/spending/create Status-Code: 400 Reponse-Size: 105 Response-Time: 1.737 ms
+
+[2023-06-11 11:52:54] Method: POST URL: /transaction/spending/create Status-Code: 404 Reponse-Size: 44 Response-Time: 2.025 ms
+
+[2023-06-11 11:52:58] Method: POST URL: /transaction/spending/create Status-Code: 400 Reponse-Size: 98 Response-Time: 0.848 ms
+
+[2023-06-11 11:53:01] Method: POST URL: /transaction/spending/create Status-Code: 400 Reponse-Size: 98 Response-Time: 1.024 ms
+
+[2023-06-11 12:23:44] Method: POST URL: /transaction/spending/create Status-Code: 404 Reponse-Size: 44 Response-Time: 1.036 ms
+
+[2023-06-11 12:24:18] Method: POST URL: /transaction/spending/create Status-Code: 400 Reponse-Size: 86 Response-Time: 10.293 ms
+
+[2023-06-11 12:24:32] Method: POST URL: /transaction/spending/create Status-Code: - Reponse-Size: - Response-Time: - ms
+

@@ -1,4 +1,6 @@
 import UserLevelDAO from "../DAO/UserLevelDAO"
+import { AvatarType } from "./Avatar"
+import UserAvatars from "./UserAvatars"
 
 export type UserLevelFieldsType = {
     userId: number
@@ -13,7 +15,9 @@ export default class UserLevel {
     private currentXp: number = 0
     private points: number = 0
     private xpToNextLevel: number = 0
+    private earnedAvatars: AvatarType[] = []
     private userLevelDAO: UserLevelDAO
+    private userAvatars?: UserAvatars
 
     constructor({userId, currentLevel, currentXp, points}: UserLevelFieldsType){
         this.userId = userId
@@ -43,21 +47,29 @@ export default class UserLevel {
             currentLevel: this.currentLevel,
             currentXp: this.currentXp,
             points: this.points,
-            xpToNextLevel: this.xpToNextLevel
+            xpToNextLevel: this.xpToNextLevel,
+            earnedAvatars: this.earnedAvatars
         }
     }
 
-    public incrementXp(addedXp: number){
+    public async incrementXp(addedXp: number){
         this.currentXp += addedXp
-        this.levelUp()
+        await this.levelUp()
     }
 
-    private levelUp(){
+    private async levelUp(){
         if(this.leveledUp()){
             this.currentLevel++
             this.resetCurrentXp()
             this.calculateNeededXp()
-            this.levelUp()
+            if(this.currentLevel % 5 === 0){
+                if(this.userAvatars === undefined){
+                    this.userAvatars = await UserAvatars.getInstanceByUserId(this.userId)
+                }
+                const earnedAvatar = await this.userAvatars.addRandomAvatarToUser() 
+                this.earnedAvatars.push(earnedAvatar.convertToObject())
+            }
+            await this.levelUp()
         }
     }
 

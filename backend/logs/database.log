@@ -1,22 +1,11 @@
-[2023-05-31 20:25:07] Unknown column 'NaN' in 'where clause'
+[2023-06-12 21:01:16] Column 'spentAt' cannot be null
     at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:20:31
     at Generator.next (<anonymous>)
     at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:8:71
     at new Promise (<anonymous>)
     at __awaiter (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:4:12)
     at query (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:36:12)
-    at UserDAO.<anonymous> (C:\Projetos\trabalho_graduacao\backend\src\DAO\UserDAO.ts:121:37)
+    at SpendingDAO.<anonymous> (C:\Projetos\trabalho_graduacao\backend\src\DAO\SpendingDAO.ts:38:37)
     at Generator.next (<anonymous>)
-    at C:\Projetos\trabalho_graduacao\backend\src\DAO\UserDAO.ts:8:71
-    at new Promise (<anonymous>)
-[2023-05-31 21:00:35] Unknown column 'NaN' in 'where clause'
-    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:20:31
-    at Generator.next (<anonymous>)
-    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:8:71
-    at new Promise (<anonymous>)
-    at __awaiter (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:4:12)
-    at query (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:36:12)
-    at UserDAO.<anonymous> (C:\Projetos\trabalho_graduacao\backend\src\DAO\UserDAO.ts:121:37)
-    at Generator.next (<anonymous>)
-    at C:\Projetos\trabalho_graduacao\backend\src\DAO\UserDAO.ts:8:71
+    at C:\Projetos\trabalho_graduacao\backend\src\DAO\SpendingDAO.ts:8:71
     at new Promise (<anonymous>)

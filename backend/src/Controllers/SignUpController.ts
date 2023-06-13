@@ -48,9 +48,11 @@ export async function createNewUser(params: createUserType){
         }
         await startTransaction()
         const userId = await createUserAndReturnId({...params})
-        await createUserFinances(userId)
-        await createUserLevel(userId)
-        await reclaimInnitialsAvatarsToUser(userId)
+        await Promise.all([
+            createUserFinances(userId),
+            createUserLevel(userId),
+            reclaimInnitialsAvatarsToUser(userId)
+        ])
         await commitTransaction()
         return { ok: true, errors: [], userId: userId}
     }catch(error: any){

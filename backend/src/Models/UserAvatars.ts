@@ -34,10 +34,11 @@ export default class UserAvatars {
         }
     }
 
-    public async addRandomAvatarToUser(){
+    public async addRandomAvatarToUser(): Promise<Avatar>{
         const randomAvatarId = await this.getRandomNotReclaimedAvatarId()
         const avatar = await Avatar.getInstanceByAvatarId(randomAvatarId)
         await this.addAvatarToUser(avatar)
+        return avatar
     }
 
     public static async getInstanceByUserId(userId: number){

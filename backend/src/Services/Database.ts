@@ -3,30 +3,48 @@ import { DatabaseLogger } from './../Utils/Logger';
 import { createPool, Pool, PoolConnection } from 'mysql2/promise'
 
 let pool: Pool | null = null;
+let connection: PoolConnection | null = null
+let inTransaction: boolean = false
 
 export async function startTransaction(){
-    await query('START TRANSACTION')
+    if(connection === null){
+        connection = await getConnectionFromPool()
+    }
+    await connection.beginTransaction()
+    inTransaction = true
 }
 
 export async function commitTransaction(){
-    await query('COMMIT')
+    if(connection === null){
+        connection = await getConnectionFromPool()
+    }
+    await connection.commit()
+    connection.release()
+    inTransaction = false
 }
 
 export async function rollbackTransaction(){
-    await query('ROLLBACK')
+    if(connection === null){
+        connection = await getConnectionFromPool()
+    }
+    await connection.rollback()
+    connection.release()
+    inTransaction = false
 }
+
 
 export async function query(sql: string, params?: any[]){
     const currentStackTrace = new Error().stack
-    let connection = null
     try{
-        connection = await getConnectionFromPool()
+        if(connection === null){
+            connection = await getConnectionFromPool()
+        }
         return await connection.query(sql, params)
     }catch(error: any){
         DatabaseLogger.error(formatMessageAndStackTrace(error.message, currentStackTrace))
         return false
     }finally{
-        if(connection !== null){
+        if(connection !== null && inTransaction === false){
             connection.release()
         }
     }

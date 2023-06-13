@@ -1,6 +1,6 @@
 import SpendingDAO from "../DAO/SpendingDAO";
 import { SpendingCategoryEnum } from "../Enums/SpendingCategoryEnum";
-import getCurrentStringDatetime from "../Utils/DateUtils";
+import getCurrentStringDatetime, { getCurrentStringDate } from "../Utils/DateUtils";
 import Transaction, { TransactionType } from "./Transactions";
 
 interface SpendingType extends TransactionType{
@@ -56,9 +56,20 @@ export default class Spending extends Transaction {
         }
     }
 
-    public reclaimRewards(){
+    public async reclaimRewards(): Promise<{xp: number, points: number}>{
         if(this.enableRewards === false){
             throw new Error('As recompensas para o lançamento do gasto não podem ser recuperadas no momento')
+        }
+        if(await this.isFirstUserSpendingOfTheDay()){
+            return {
+                xp: 200,
+                points: 1
+            }
+        }else{
+            return {
+                xp: 50,
+                points: 0
+            } 
         }
     }
 
@@ -106,5 +117,10 @@ export default class Spending extends Transaction {
 
     private isCreated(){
         return this.spendingId !== undefined
+    }
+
+    private async isFirstUserSpendingOfTheDay(){
+        const dailyQuantity = await this.spendingDAO.getUserSpendingsQuantityByDate(this.userId, getCurrentStringDate())
+        return dailyQuantity === 1
     }
 }

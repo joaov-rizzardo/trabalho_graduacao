@@ -1,10 +1,9 @@
 import AvatarDAO from "../DAO/AvatarDAO"
-import getCurrentStringDatetime from "../Utils/DateUtils"
 
 export type AvatarType = {
     avatarId?: number
     name: string
-    createdAt?: string
+    createdAt: string
 }
 
 export default class Avatar {
@@ -17,18 +16,13 @@ export default class Avatar {
         this.avatarId = avatarId
         this.name = name
         this.avatarDAO = new AvatarDAO()
-        if(createdAt !== undefined){
-            this.createdAt = createdAt
-        }else{
-            this.createdAt = getCurrentStringDatetime()
-        }
+        this.createdAt = createdAt
     }
 
     public getAvatarId(){
         return this.avatarId
     }
 
-    
     public get getAvatarName(){
         return this.name
     }

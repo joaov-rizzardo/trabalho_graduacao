@@ -3,16 +3,20 @@ import { ErrorLogger } from '../Utils/Logger'
 import { default500Response } from '../Utils/DefaultResponses'
 import UserEmailCodes from '../Models/UserEmailCodes'
 import User from '../Models/User'
+import { commitTransaction, rollbackTransaction, startTransaction } from '../Services/Database'
 
 export async function sendEmailVerificationCodeToUser(req: Request, res: Response){
     const userId = parseInt(req.params.userId)
     try {
+        await startTransaction()
         const userEmailCodes = await UserEmailCodes.getInstanceByUserId(userId)
         await userEmailCodes.sendRandomUserCode()
+        await commitTransaction()
         return res.status(200).send({
             message: 'The verification code has been sent'
         })
     }catch(error: any){
+        await rollbackTransaction()
         ErrorLogger.error(error.message)
         return res.status(500).send(default500Response())
     }

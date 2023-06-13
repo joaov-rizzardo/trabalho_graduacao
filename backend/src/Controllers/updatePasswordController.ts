@@ -2,19 +2,24 @@ import {Request, Response} from 'express'
 import { default400Response, default500Response } from '../Utils/DefaultResponses'
 import UserEmailCodes from '../Models/UserEmailCodes'
 import User from '../Models/User'
+import { commitTransaction, rollbackTransaction, startTransaction } from '../Services/Database'
 
 export default async function updatePasswordFlow(req: Request, res: Response){
     try{
+        await startTransaction()
         const {newPassword, validationCode}: {newPassword: string, validationCode: string} = req.body
         const userId = parseInt(req.params.userId)
         if(await checkValidationCode(userId, validationCode) === false){
+            await rollbackTransaction()
             return res.status(400).send(default400Response(['The validation code is invalid']))
         }
         await updatePassword(userId, newPassword)
+        await commitTransaction()
         return res.status(200).send({
             message: 'The user password has been updated'
         })
     }catch(error: any){
+        await rollbackTransaction()
         return res.status(500).send(default500Response())
     }
 }

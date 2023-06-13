@@ -106,4 +106,26 @@ export default class SpendingDAO {
         }
         return spendingData
     }
+
+    public async getUserSpendingsQuantityByDate(userId: number, date: string){
+        const response = await query(`
+            SELECT 
+                COUNT(*) as quantity
+            FROM 
+                UserSpendings 
+            WHERE 
+                userId = ? 
+                AND spentAt BETWEEN ? AND ?`,
+            [
+                userId,
+                `${date} 00:00:00`,
+                `${date} 23:59:59`
+            ]
+        ) as [{quantity: number}[], FieldPacket[]] | false
+        if(response === false){
+            throw new Error(`Não foi possível recuperar a quantidade de gastos diários para o usuário ${userId} e data ${date}}`)
+        }
+        const quantity = response[0][0].quantity
+        return quantity
+    }
 }

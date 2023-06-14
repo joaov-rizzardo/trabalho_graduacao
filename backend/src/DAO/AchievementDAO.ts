@@ -61,16 +61,13 @@ export default class AchievementDAO {
                 params.goal,
                 params.createdAt
             ]
-        ) as [ResultSetHeaderType, undefined] | false
-        if(response === false){
-            throw new Error(`Não foi possível inserir uma nova conquista`)
-        }
+        ) as [ResultSetHeaderType, FieldPacket[]]
         const insertedId = response[0].insertId
         return insertedId
     }
 
     public async update(params: AchievementUpdateType){
-        const response = await query(`
+        await query(`
             UPDATE
                 Achievements
             SET
@@ -97,16 +94,10 @@ export default class AchievementDAO {
                 params.achievementId
             ]
         )
-        if(response === false){
-            throw new Error(`Não foi possível atualizar a conquista de ID: ${params.achievementId}`)
-        }
     }
 
     public async findById(achievementId: number){
-        const response = await query(`SELECT * FROM Achievements WHERE achievementId = ?`, [achievementId]) as [AchievementTableType[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error(`Não foi possível recuperar a conquista pelo id: ${achievementId}`)
-        }
+        const response = await query(`SELECT * FROM Achievements WHERE achievementId = ?`, [achievementId]) as [AchievementTableType[], FieldPacket[]]
         const achievementData = response[0][0]
         if(!achievementData){
             throw new Error(`Nenhum ganho foi encontrada para o ID: ${achievementId}`)
@@ -126,10 +117,7 @@ export default class AchievementDAO {
                 u.userId = ?
             `,
             [userId]
-        ) as [AchievementTableType[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error(`Não foi possível recuperar as conquistas para o usuário: ${userId}}`)
-        }
+        ) as [AchievementTableType[], FieldPacket[]]
         const achievementData = response[0]
         return achievementData
     }

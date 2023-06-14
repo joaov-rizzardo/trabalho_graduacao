@@ -58,10 +58,7 @@ export default class UserDAO {
                 user.selectedAvatar,
                 user.isValidatedEmail
             ]
-        ) as [ResultSetHeaderType, undefined] | false
-        if(!response){
-            throw new Error('Não foi possível realizar a inserção do usuário no banco de dados')
-        }
+        ) as [ResultSetHeaderType, FieldPacket[]]
         const insertedId = response[0].insertId
         return insertedId
     }
@@ -70,7 +67,7 @@ export default class UserDAO {
         if(user.userId === undefined){
             throw new Error('Não foi possível atualizar o usuário, o ID não foi informado')
         }
-        const response = await query(`
+        await query(`
             UPDATE
                 User
             SET
@@ -94,14 +91,10 @@ export default class UserDAO {
                 user.userId
             ]
         )
-
-        if(!response){
-            throw new Error('Não foi possível realizar a atualização do usuário no banco de dados')
-        }
     }
 
     public async updateProfile(profileInfo: {userId: number, name: string, lastName: string, selectedAvatar: number}){
-        const response = await query(`
+        await query(`
             UPDATE
                 User
             SET
@@ -112,16 +105,10 @@ export default class UserDAO {
                 userId = ?`,
             [profileInfo.name, profileInfo.lastName, profileInfo.selectedAvatar, profileInfo.userId]
         )
-        if(!response){
-            throw new Error('Não foi possível atualizar o perfil no banco de dados')
-        }
     }
 
     public async getUserById(userId: number){
-        const response = await query(`SELECT * FROM User WHERE userId = ?`, [userId]) as [UserTableType[], FieldPacket[]] | false
-        if(!response){
-            throw new Error('Não foi possível recuperar o usuário do banco de dados')
-        }
+        const response = await query(`SELECT * FROM User WHERE userId = ?`, [userId]) as [UserTableType[], FieldPacket[]]
         const userData = response[0][0]
         if(!userData){
             return false
@@ -140,10 +127,7 @@ export default class UserDAO {
     }
 
     public async getUserByField(field: string, value: string){
-        const response = await query(`SELECT * FROM User WHERE ${field} = ?`, [value]) as [UserTableType[], FieldPacket[]] | false
-        if(!response){
-            throw new Error('Não foi possível recuperar o usuário do banco de dados')
-        }
+        const response = await query(`SELECT * FROM User WHERE ${field} = ?`, [value]) as [UserTableType[], FieldPacket[]]
         const userData = response[0][0]
         if(!userData){
             return false
@@ -164,17 +148,11 @@ export default class UserDAO {
     public async insertEmailVerificationCodeToUser({userId, code, sentAt}: {userId: number, code: string, sentAt: string}){
         const response = await query(`INSERT INTO UserEmailCodes SET userId = ?, code = ?, sentAt = ?`, 
             [userId, code, sentAt]
-        ) as [ResultSetHeaderType, undefined] | false
-        if(!response){
-            throw new Error('Não foi possível realizar a inserção do código de verificação no banco de dados')
-        }
+        ) as [ResultSetHeaderType, FieldPacket[]]
     }
 
     public async getLastSentCode(userId: number){
-        const response = await query(`SELECT code, sentAt FROM UserEmailCodes WHERE userId = ? ORDER BY sentAt DESC LIMIT 1`, [userId]) as [{code: string, sentAt: string}[], FieldPacket[]] | false
-        if(!response){
-            throw new Error('Não foi possível recuperar o código de verificação do banco de dados')
-        }
+        const response = await query(`SELECT code, sentAt FROM UserEmailCodes WHERE userId = ? ORDER BY sentAt DESC LIMIT 1`, [userId]) as [{code: string, sentAt: string}[], FieldPacket[]]
         const responseData = response[0][0]
         if(!responseData){
             return false

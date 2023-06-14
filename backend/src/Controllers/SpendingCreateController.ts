@@ -34,7 +34,7 @@ export default async function createSpendingFlow(req: Request, res: Response){
             insertUserActivityBySpending(spending)
         ])
         await commitTransaction()
-        return res.status(200).send({
+        return res.status(201).send({
             message: 'The spending has been created',
             spending: spending.convertToObject(),
             userFinance: userFinance.convertToObject(),

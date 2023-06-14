@@ -98,16 +98,13 @@ export default class BillDAO {
                 params.payedAt,
                 params.createdAt
             ]
-        ) as [ResultSetHeaderType, undefined] | false
-        if(response === false){
-            throw new Error(`Não foi possível inserir uma parcela para a conta: ${params.billId}`)
-        }
+        ) as [ResultSetHeaderType, FieldPacket[]]
         const insertedId = response[0].insertId
         return insertedId
     }
 
     public async updateInstallment(params: InstallmentUpdateType){
-        const response = await query(`
+        await query(`
             UPDATE
                 BillInstallments
             SET
@@ -132,13 +129,10 @@ export default class BillDAO {
                 params.installmentId
             ]
         )
-        if(!response){
-            throw new Error(`Não foi possível atualizar a parcela de ID: ${params.installmentId}`)
-        }
     }
 
     public async updateBill(params: BillUpdateType){
-        const response = await query(`
+        await query(`
             UPDATE
                 UserBills
             SET
@@ -169,9 +163,6 @@ export default class BillDAO {
                 params.billId
             ]
         )
-        if(!response){
-            throw new Error(`Não foi possível atualizar a conta de ID: ${params.billId}`)
-        }
     }
 
     public async insertBillAndReturnId(params: BillInsertType){
@@ -202,28 +193,19 @@ export default class BillDAO {
                 params.isCanceled,
                 params.canceledAt
             ]
-        ) as [ResultSetHeaderType, undefined] | false
-        if(response === false){
-            throw new Error(`Não foi possível inserir uma nova conta para o usuário: ${params.userId}`)
-        }
+        ) as [ResultSetHeaderType, FieldPacket[]]
         const insertedId = response[0].insertId
         return insertedId
     }
 
     public async getInstallmentsByBillId(billId: number){
-        const response = await query(`SELECT * FROM BillInstallments WHERE billId = ?`, [billId]) as [InstallmentFieldsType[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error(`Não foi possível recuperar as parcelas da conta: ${billId}`)
-        }
+        const response = await query(`SELECT * FROM BillInstallments WHERE billId = ?`, [billId]) as [InstallmentFieldsType[], FieldPacket[]]
         const installmentData = response[0]
         return installmentData
     }
 
     public async getBillById(billId: number){
-        const response = await query(`SELECT * FROM UserBills WHERE billId = ?`, [billId]) as [BillFieldsType[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error(`Não foi possível recuperar a conta pelo ID: ${billId}`)
-        }
+        const response = await query(`SELECT * FROM UserBills WHERE billId = ?`, [billId]) as [BillFieldsType[], FieldPacket[]]
         const billData = response[0][0]
         if(!billData){
             throw new Error(`Nenhuma conta foi encontrada para o ID: ${billId}`)
@@ -232,10 +214,7 @@ export default class BillDAO {
     }
 
     public async getInstallmentById(installmentId: number){
-        const response = await query(`SELECT * FROM BillInstallments WHERE installmentId = ?`, [installmentId]) as [InstallmentFieldsType[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error(`Não foi possível recuperar a parcela pelo id: ${installmentId}`)
-        }
+        const response = await query(`SELECT * FROM BillInstallments WHERE installmentId = ?`, [installmentId]) as [InstallmentFieldsType[], FieldPacket[]]
         const installmentData = response[0][0]
         if(!installmentData){
             throw new Error(`Nenhuma parcela foi encontrada para o ID: ${installmentId}`)

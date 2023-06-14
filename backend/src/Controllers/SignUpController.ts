@@ -19,49 +19,43 @@ type createUserType = {
     lastName: string,
 }
 
-export default async function signUp(req: Request, res: Response){
+export default async function signUpFlow(req: Request, res: Response){
     try {
         const body = req.body
-        const createResult = await createNewUser({
+        await startTransaction()
+        const availabilityErrors = await checkUserAvailability({
+            username: body.username,
+            email: body.email
+        })
+        if(availabilityErrors.length > 0){
+            return res.status(400).send(default400Response(availabilityErrors))
+        }
+        const user = await createUser({
             username: body.username,
             password: body.password,
             email: body.email,
             name: body.name,
             lastName: body.lastName
         })
-        if(createResult.ok === false){
-            return res.status(400).send(default400Response(createResult.errors))
-        }else{
-            return res.status(201).send(default201Response('The user has been created'))
+        const userId = user.getId
+        if(userId === undefined){
+            throw new Error('Não foi possível recuperar o id do usuário inserido')
         }
-    }catch(error: any){
-        ErrorLogger.error(error.message)
-        res.status(500).send(default500Response())
-    }
-}
-
-export async function createNewUser(params: createUserType){
-    try {
-        const errors = await checkUserAvailability({...params})
-        if(errors.length !== 0){
-            return { ok: false, errors: errors, userId: false}
-        }
-        await startTransaction()
-        const userId = await createUserAndReturnId({...params})
         await Promise.all([
-            createUserFinances(userId),
-            createUserLevel(userId),
+            createUserFinancesByUserId(userId),
+            createUserLevelByUserId(userId),
             reclaimInnitialsAvatarsToUser(userId)
         ])
         await commitTransaction()
-        return { ok: true, errors: [], userId: userId}
+        return res.status(201).send(default201Response('The user has been created'))
     }catch(error: any){
         await rollbackTransaction()
-        throw new Error(error)
+        ErrorLogger.error(error.message)
+        return res.status(500).send(default500Response())
     }
 }
 
-async function createUserAndReturnId(params: createUserType): Promise<number>{
+async function createUser(params: createUserType): Promise<User>{
     const user = new User({
         username: params.username,
         password: params.password,
@@ -73,14 +67,10 @@ async function createUserAndReturnId(params: createUserType): Promise<number>{
         createdAt: getCurrentStringDatetime()
     })
     await user.save()
-    const userId = user.getId
-    if(userId === undefined){
-        throw new Error("Não foi possível recuperar o id do usuário inserido")
-    }
-    return userId
+    return user
 }
 
-async function createUserFinances(userId: number){
+async function createUserFinancesByUserId(userId: number){
     const userFinance = new UserFinance({
         userId: userId,
         balance: 0,
@@ -88,9 +78,10 @@ async function createUserFinances(userId: number){
         currentSavings: 0
     })
     await userFinance.save()
+    return userFinance
 }
 
-async function createUserLevel(userId: number){
+async function createUserLevelByUserId(userId: number){
     const userLevel = new UserLevel({
         userId: userId,
         currentLevel: 1,
@@ -98,6 +89,7 @@ async function createUserLevel(userId: number){
         points: 0
     })
     await userLevel.save()
+    return userLevel
 }
 
 async function reclaimInnitialsAvatarsToUser(userId: number){
@@ -106,14 +98,15 @@ async function reclaimInnitialsAvatarsToUser(userId: number){
     for(let i = 0; i < innitialAvatarsQuantity; i++){
         await userAvatars.addRandomAvatarToUser()
     }
+    return userAvatars
 }
 
-async function checkUserAvailability(params: createUserType){
+async function checkUserAvailability({username, email}: {username: string, email: string}){
     const errors = []
-    if(await isAvailableUsername(params.username) === false){
+    if(await isAvailableUsername(username) === false){
         errors.push('The username is not available')
     }
-    if(await isAvailableEmail(params.email) === false){
+    if(await isAvailableEmail(email) === false){
         errors.push('The email is not available')
     }
     return errors

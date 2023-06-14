@@ -22,7 +22,7 @@ type MedalTableType = {
 }
 export default class MedalDAO {
     public async insertMedalToUser(userId: number, medalId: number){
-        const response = await query(`
+        await query(`
             INSERT INTO
                 UserMedals
             SET
@@ -31,9 +31,6 @@ export default class MedalDAO {
             `,
             [userId, medalId]
         )
-        if(!response){
-            throw new Error(`Ocorreu um erro ao inserir a medalha ${medalId} para o usuário ${userId}`)
-        }
     }
 
     public async insertAndReturnId({name, filename, createdAt}: MedalInsertType){
@@ -46,16 +43,13 @@ export default class MedalDAO {
                 createdAt = ?
             `,
             [name, filename, createdAt]
-        ) as [ResultSetHeaderType, undefined] | false
-        if(response === false){
-            throw new Error(`Não foi possível inserir uma nova medalha`)
-        }
+        ) as [ResultSetHeaderType, FieldPacket[]]
         const insertedId = response[0].insertId
         return insertedId
     }
 
     public async update(params: MedalUpdateType){
-        const response = await query(`
+        await query(`
             UPDATE
                 Medals
             SET
@@ -72,9 +66,6 @@ export default class MedalDAO {
                 params.medalId
             ]
         )
-        if(!response){
-            throw new Error(`Não foi possível atualizar a medalha de ID: ${params.medalId}`)
-        }
     }
 
     public async findMedalsByUserId(userId: number){
@@ -88,19 +79,13 @@ export default class MedalDAO {
             WHERE
                 u.userId = ?`,
             [userId]
-        ) as [MedalTableType[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error(`Não foi possível recuperar as medalhas para o usuário: ${userId}`)
-        }
+        ) as [MedalTableType[], FieldPacket[]]
         const medalData = response[0]
         return medalData
     }
 
     public async findMedalById(medalId: number){
-        const response = await query(`SELECT * FROM Medal WHERE medalId = ?`, [medalId]) as [MedalTableType[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error(`Não foi possível recuperar a medalha de ID: ${medalId}`)
-        }
+        const response = await query(`SELECT * FROM Medal WHERE medalId = ?`, [medalId]) as [MedalTableType[], FieldPacket[]]
         const medalData = response[0][0]
         if(!medalData){
             throw new Error(`Nenhuma medalha foi encontrada para o ID: ${medalId}`)

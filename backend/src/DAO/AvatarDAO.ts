@@ -30,16 +30,13 @@ export default class AvatarDAO {
                 name,
                 createdAt
             ]
-        ) as [ResultSetHeaderType, undefined] | false
-        if(!response){
-            throw new Error('Não foi possível realizar a inserção do usuário no banco de dados')
-        }
+        ) as [ResultSetHeaderType, FieldPacket[]]
         const insertedId = response[0].insertId
         return insertedId
     }
 
     public async update({avatarId, name}: AvatarUpdateType){
-        const response = await query(`
+        await query(`
             UPDATE
                 Avatar
             SET
@@ -52,13 +49,10 @@ export default class AvatarDAO {
                 avatarId
             ]
         )
-        if(!response){
-            throw new Error('Não foi possível realizar a atualização de avatar')
-        }
     }
 
     public async insertToUser({userId, avatarId}: {userId: number, avatarId: number}){
-        const response = await query(`
+        await query(`
             INSERT INTO
                 UserAvatars
             SET
@@ -70,9 +64,6 @@ export default class AvatarDAO {
                 userId
             ]
         )
-        if(!response){
-            throw new Error('Não foi possível adicionar o avatar para o usuário')
-        }
     }
 
     public async getAvatarById(avatarId: number){
@@ -85,10 +76,7 @@ export default class AvatarDAO {
                 Avatar
             WHERE
                 avatarId = ?
-        `, [avatarId]) as [AvatarTableFields[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error('Não foi possível recuperar o avatar buscado')
-        }
+        `, [avatarId]) as [AvatarTableFields[], FieldPacket[]]
         const recoveredAvatar = response[0][0]
         if(!recoveredAvatar){
             throw new Error(`Nenhum avatar foi encontrado para o id: ${recoveredAvatar}`)
@@ -112,10 +100,7 @@ export default class AvatarDAO {
                 UserAvatars as u ON u.avatarId = a.avatarId
             WHERE
                 u.userId = ?
-        `, [userId]) as [AvatarTableFields[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error('Não foi possível recuperar o avatar buscado')
-        }
+        `, [userId]) as [AvatarTableFields[], FieldPacket[]]
         const recoveredAvatar = response[0]
         return recoveredAvatar.map(avatar => {
             return {
@@ -127,10 +112,7 @@ export default class AvatarDAO {
     }
 
     public static async getAllAvatars(){
-        const response = await query(`SELECT avatarId, name, createdAt FROM Avatar`, ) as [AvatarTableFields[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error('Não foi possível recuperar o avatar buscado')
-        }
+        const response = await query(`SELECT avatarId, name, createdAt FROM Avatar`, ) as [AvatarTableFields[], FieldPacket[]]
         const recoveredsAvatar = response[0]
         return recoveredsAvatar.map(avatar => {
             return {

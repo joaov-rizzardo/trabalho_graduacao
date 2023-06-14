@@ -18,19 +18,13 @@ export type UserFinanceReplaceType = {
 export default class UserFinanceDAO {
 
     public async replace({userId, balance, totalSavings, currentSavings}: UserFinanceReplaceType) {
-        const response = await query("REPLACE INTO UserFinances SET userId = ?, balance = ?, totalSavings = ?, currentSavings = ?", [
+         await query("REPLACE INTO UserFinances SET userId = ?, balance = ?, totalSavings = ?, currentSavings = ?", [
             userId, balance, totalSavings, currentSavings
         ])
-        if(!response){
-            throw new Error('Ocorreu um erro ao salvar as finanças do usuário.')
-        }
     }
     
     public async getFinancesByUserId(userId: number){
-        const response = await query("SELECT * FROM UserFinances WHERE userId = ?", [userId]) as [UserFinanceTableType[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error('Não foi possível realizar a busca da finança no banco de dados')
-        }
+        const response = await query("SELECT * FROM UserFinances WHERE userId = ?", [userId]) as [UserFinanceTableType[], FieldPacket[]]
         const recoveredFinance = response[0][0]
         if(!recoveredFinance){
             throw new Error(`Nenhuma finança foi encontrada para o usuário informado: ${userId}`)

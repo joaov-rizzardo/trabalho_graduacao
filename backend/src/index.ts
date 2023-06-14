@@ -1,6 +1,5 @@
 import express, {Request, Response} from 'express'
 import dotenv from 'dotenv'
-import { query } from './Services/Database'
 import authenticationRouter from './Routes/AuthenticationRouter'
 import profileRouter from './Routes/ProfileRouter'
 import transactionRouter from './Routes/TransactionRouter'
@@ -17,7 +16,6 @@ app.use(morganMiddleware)
 
 app.all("/", (req: Request, res: Response) => {
     res.status(200).send('Api is running')
-    query("SELECT * FROM arooz")
 })
 
 app.use('/authentication', authenticationRouter)

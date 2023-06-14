@@ -132,3 +132,11 @@
 
 [2023-06-12 22:51:29] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 518 Response-Time: 104.768 ms
 
+[2023-06-13 21:58:11] Method: POST URL: /authentication/signup Status-Code: 400 Reponse-Size: 52 Response-Time: 795.374 ms
+
+[2023-06-13 21:58:52] Method: POST URL: /authentication/signup Status-Code: 400 Reponse-Size: 52 Response-Time: 50.845 ms
+
+[2023-06-13 21:59:03] Method: POST URL: /authentication/signup Status-Code: 400 Reponse-Size: 52 Response-Time: 49.771 ms
+
+[2023-06-13 21:59:16] Method: POST URL: /authentication/signup Status-Code: 201 Reponse-Size: 39 Response-Time: 1764.316 ms
+

@@ -58,16 +58,13 @@ export default class EarningDAO {
                 params.isCanceled,
                 params.canceledAt
             ]
-        ) as [ResultSetHeaderType, undefined] | false
-        if(response === false){
-            throw new Error(`Não foi possível inserir um ganho para o usuário: ${params.userId}`)
-        }
+        ) as [ResultSetHeaderType, FieldPacket[]]
         const insertedId = response[0].insertId
         return insertedId
     }
 
     public async update(params: EarningUpdateType){
-        const response = await query(`
+        await query(`
             UPDATE
                 UserEarnings
             SET
@@ -92,16 +89,10 @@ export default class EarningDAO {
                params.earningId 
             ]
         )
-        if(!response){
-            throw new Error(`Não foi possível atualizar o ganho de id: ${params.earningId}`)
-        }
     }
 
     public async findById(earningId: number){
-        const response = await query(`SELECT * FROM UserEarnings WHERE earningId  = ?`, [earningId]) as [EarningTableType[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error(`Não foi possível recuperar o ganho pelo id: ${earningId}`)
-        }
+        const response = await query(`SELECT * FROM UserEarnings WHERE earningId  = ?`, [earningId]) as [EarningTableType[], FieldPacket[]]
         const earningData = response[0][0]
         if(!earningData){
             throw new Error(`Nenhum ganho foi encontrada para o ID: ${earningId}`)

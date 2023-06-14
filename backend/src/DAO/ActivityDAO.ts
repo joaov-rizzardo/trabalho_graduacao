@@ -34,16 +34,13 @@ export default class ActivityDAO {
             [
                 userId, description, createdAt
             ]
-        ) as [ResultSetHeaderType, undefined] | false
-        if(response === false){
-            throw new Error('Não foi possível realizar a inserção da atividade no banco de dados')
-        }
+        ) as [ResultSetHeaderType, FieldPacket[]]
         const insertedId = response[0].insertId
         return insertedId
     }
 
     public async update(params: ActivityUpdateType){
-        const response = await query(`
+        await query(`
             UPDATE
                 UserActivity
             SET
@@ -60,16 +57,10 @@ export default class ActivityDAO {
                 params.activityId
             ]
         )
-        if(response === false){
-            throw new Error(`Não foi possível atualizar a atividade ID: ${params.activityId}`)
-        }
     }
 
     public async findById(activityId: number){
-        const response = await query(`SELECT * FROM UserActivity WHERE activityId = ?`, [activityId]) as [ActivityTableFieldsType[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error(`Não foi possível recuperar a atividade pelo ID: ${activityId}`)
-        }
+        const response = await query(`SELECT * FROM UserActivity WHERE activityId = ?`, [activityId]) as [ActivityTableFieldsType[], FieldPacket[]]
         const activityData = response[0][0]
         if(!activityData){
             throw new Error(`Nenhuma atividade foi encontrada para o ID: ${activityId}`)
@@ -78,19 +69,13 @@ export default class ActivityDAO {
     }
 
     public async findLastHundredActivitys(userId: number){
-        const response = await query(`SELECT * FROM UserActivity WHERE userId = ? ORDER BY createdAt DESC LIMIT 100`, [userId]) as [ActivityTableFieldsType[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error(`Não foi possível recuperar as ultimas 100 atividades para o usuário: ${userId}`)
-        }
+        const response = await query(`SELECT * FROM UserActivity WHERE userId = ? ORDER BY createdAt DESC LIMIT 100`, [userId]) as [ActivityTableFieldsType[], FieldPacket[]]
         const recoveredActivitys = response[0]
         return recoveredActivitys
     }
 
     public async findAllActivitys(userId: number){
-        const response = await query(`SELECT * FROM UserActivity WHERE userId = ?`, [userId]) as [ActivityTableFieldsType[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error(`Não foi possível recuperar as atividades para o usuário: ${userId}`)
-        }
+        const response = await query(`SELECT * FROM UserActivity WHERE userId = ?`, [userId]) as [ActivityTableFieldsType[], FieldPacket[]]
         const recoveredActivitys = response[0]
         return recoveredActivitys
     }

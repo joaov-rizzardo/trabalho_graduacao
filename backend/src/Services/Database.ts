@@ -39,14 +39,14 @@ export async function query(sql: string, params?: any[]){
         if(connection === null){
             connection = await getConnectionFromPool()
         }
-        return await connection.query(sql, params)
-    }catch(error: any){
-        DatabaseLogger.error(formatMessageAndStackTrace(error.message, currentStackTrace))
-        return false
-    }finally{
+        const result = await connection.query(sql, params)
         if(connection !== null && inTransaction === false){
             connection.release()
         }
+        return result
+    }catch(error: any){
+        DatabaseLogger.error(formatMessageAndStackTrace(error.message, currentStackTrace))
+        throw new Error(error)
     }
 }
 

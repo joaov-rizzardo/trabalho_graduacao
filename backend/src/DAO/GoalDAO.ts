@@ -58,16 +58,13 @@ export default class GoalDAO {
                 params.isCanceled,
                 params.isCompleted
             ]
-        ) as [ResultSetHeaderType, undefined] | false
-        if(response === false){
-            throw new Error(`Não foi possível inserir uma nova meta para o usuário: ${params.userId}`)
-        }
+        ) as [ResultSetHeaderType, FieldPacket[]]
         const insertedId = response[0].insertId
         return insertedId
     }
 
     public async update(params: GoalUpdateType){
-        const response = await query(`
+        await query(`
             UPDATE
                 UserGoals
             SET
@@ -96,16 +93,10 @@ export default class GoalDAO {
                 params.goalId
             ]
         )
-        if(!response){
-            throw new Error(`Não foi possível atualizar a meta de id: ${params.goalId}`)
-        }
     }
 
     public async findById(goalId: number){
-        const response = await query(`SELECT * FROM UserGoals WHERE goalId = ?`, [goalId]) as [GoalTableType[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error(`Não foi possível recuperar a meta pelo id: ${goalId}`)
-        }
+        const response = await query(`SELECT * FROM UserGoals WHERE goalId = ?`, [goalId]) as [GoalTableType[], FieldPacket[]]
         const goalData = response[0][0]
         if(!goalData){
             throw new Error(`Nenhuma meta foi encontrada para o ID: ${goalId}`)
@@ -114,10 +105,7 @@ export default class GoalDAO {
     }
 
     public async findAllUserGoals(userId: number){
-        const response = await query(`SELECT * FROM UserGoals WHERE userId = ?`, [userId]) as [GoalTableType[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error(`Não foi possível recuperar as metas para o usuário: ${userId}`)
-        }
+        const response = await query(`SELECT * FROM UserGoals WHERE userId = ?`, [userId]) as [GoalTableType[], FieldPacket[]]
         const recoveredGoals = response[0]
         return recoveredGoals
     }

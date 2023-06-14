@@ -56,16 +56,13 @@ export default class SpendingDAO {
                 params.isCanceled,
                 params.canceledAt
             ]
-        ) as [ResultSetHeaderType, undefined] | false
-        if(response === false){
-            throw new Error(`Não foi possível inserir um gasto para o usuário: ${params.userId}`)
-        }
+        ) as [ResultSetHeaderType, FieldPacket[]]
         const insertedId = response[0].insertId
         return insertedId
     }
 
     public async update(params: SpendingUpdateType){
-        const response = await query(`
+        await query(`
             UPDATE
                 UserSpendings
             SET
@@ -90,16 +87,10 @@ export default class SpendingDAO {
                 params.spendingId
             ]
         )
-        if(!response){
-            throw new Error(`Não foi possível atualizar o gasto de id: ${params.spendingId}`)
-        }
     }
 
     public async findById(spendingId: number){
-        const response = await query(`SELECT * FROM UserSpendings WHERE spendingId = ?`, [spendingId]) as [SpendingTableType[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error(`Não foi possível recuperar o gasto pelo id: ${spendingId}`)
-        }
+        const response = await query(`SELECT * FROM UserSpendings WHERE spendingId = ?`, [spendingId]) as [SpendingTableType[], FieldPacket[]]
         const spendingData = response[0][0]
         if(!spendingData){
             throw new Error(`Nenhum gasto foi encontrada para o ID: ${spendingId}`)
@@ -121,10 +112,7 @@ export default class SpendingDAO {
                 `${date} 00:00:00`,
                 `${date} 23:59:59`
             ]
-        ) as [{quantity: number}[], FieldPacket[]] | false
-        if(response === false){
-            throw new Error(`Não foi possível recuperar a quantidade de gastos diários para o usuário ${userId} e data ${date}}`)
-        }
+        ) as [{quantity: number}[], FieldPacket[]]
         const quantity = response[0][0].quantity
         return quantity
     }

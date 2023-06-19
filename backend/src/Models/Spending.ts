@@ -88,6 +88,9 @@ export default class Spending extends Transaction {
     }
 
     public cancelSpending(){
+        if(this.isCanceled === true){
+            throw new Error('O gasto já foi cancelado anteriormente')
+        }
         this.isCanceled = true
         this.canceledAt = getCurrentStringDatetime()
     }

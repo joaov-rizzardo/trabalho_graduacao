@@ -1,6 +1,7 @@
 import { FieldPacket } from 'mysql2';
 import { ResultSetHeaderType } from './../Services/Database';
 import { query } from "../Services/Database"
+import { convertDateObjectDatetimeToString } from '../Utils/DateUtils';
 
 export type UserTableType = {
     userId: number
@@ -9,9 +10,9 @@ export type UserTableType = {
     email: string
     name: string
     lastName: string
-    selectedAvatar: number
-    isValidatedEmail: boolean
-    createdAt: string
+    selectedAvatar: number | null
+    isValidatedEmail: number
+    createdAt: Date
 }
 
 type UserUpdateType = {
@@ -120,9 +121,9 @@ export default class UserDAO {
             email: userData.email,
             name: userData.name,
             lastName: userData.lastName,
-            selectedAvatar: userData.selectedAvatar,
-            isValidatedEmail: userData.isValidatedEmail,
-            createdAt: userData.createdAt
+            selectedAvatar: userData.selectedAvatar ?? 0,
+            isValidatedEmail: Boolean(userData.isValidatedEmail),
+            createdAt: convertDateObjectDatetimeToString(userData.createdAt)
         }
     }
 
@@ -139,9 +140,9 @@ export default class UserDAO {
             email: userData.email,
             name: userData.name,
             lastName: userData.lastName,
-            selectedAvatar: userData.selectedAvatar,
-            isValidatedEmail: userData.isValidatedEmail,
-            createdAt: userData.createdAt
+            selectedAvatar: userData.selectedAvatar ?? 0,
+            isValidatedEmail: Boolean(userData.isValidatedEmail),
+            createdAt: convertDateObjectDatetimeToString(userData.createdAt)
         }
     }
 
@@ -152,14 +153,14 @@ export default class UserDAO {
     }
 
     public async getLastSentCode(userId: number){
-        const response = await query(`SELECT code, sentAt FROM UserEmailCodes WHERE userId = ? ORDER BY sentAt DESC LIMIT 1`, [userId]) as [{code: string, sentAt: string}[], FieldPacket[]]
+        const response = await query(`SELECT code, sentAt FROM UserEmailCodes WHERE userId = ? ORDER BY sentAt DESC LIMIT 1`, [userId]) as [{code: string, sentAt: Date}[], FieldPacket[]]
         const responseData = response[0][0]
         if(!responseData){
             return false
         }else{
             return {
                 code: responseData.code,
-                sentAt: responseData.sentAt
+                sentAt: convertDateObjectDatetimeToString(responseData.sentAt)
             }
         }
     }

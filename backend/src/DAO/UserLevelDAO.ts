@@ -2,7 +2,7 @@ import { FieldPacket } from "mysql2/promise"
 import { query } from "../Services/Database"
 
 export type UserLevelTableType = {
-    userId: string
+    userId: number
     currentLevel: string
     currentXp: string
     points: string
@@ -32,7 +32,7 @@ export default class UserLevelDAO{
             throw new Error(`Nenhuma informação de level foi encontrada para o usuário informado: ${userId}`)
         }
         return {
-            userId: parseInt(recoveredLevel.userId),
+            userId: recoveredLevel.userId,
             currentLevel: parseInt(recoveredLevel.currentLevel),
             currentXp: parseInt(recoveredLevel.currentXp),
             points: parseInt(recoveredLevel.points)

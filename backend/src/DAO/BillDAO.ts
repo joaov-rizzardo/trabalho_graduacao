@@ -1,6 +1,7 @@
 import { FieldPacket } from "mysql2/promise"
 import { ResultSetHeaderType, query } from "../Services/Database"
 import { BillEnum } from "../Enums/BillEnum"
+import { convertDateObjectDatetimeToString } from "../Utils/DateUtils"
 
 type InstallmentInsertType = {
     billId: number,
@@ -27,11 +28,11 @@ type InstallmentFieldsType = {
     installmentId: number,
     billId: number,
     installmentNumber: number,
-    value: number,
-    dueDate: string,
-    isPayed: boolean,
-    payedAt: string,
-    createdAt: string,   
+    value: string,
+    dueDate: Date,
+    isPayed: number,
+    payedAt: Date | null,
+    createdAt: Date
 }
 
 type BillUpdateType = {
@@ -66,13 +67,13 @@ type BillFieldsType = {
     userId: number,
     typeId: keyof typeof BillEnum,
     description: string,
-    value: number,
+    value: string,
     installments: number,
     paymentDay: number,
-    firstDueDate: string,
-    createdAt: string,
-    isCanceled: boolean,
-    canceledAt: string
+    firstDueDate: Date,
+    createdAt: Date,
+    isCanceled: number,
+    canceledAt: Date | null
 }
 
 export default class BillDAO {
@@ -201,7 +202,18 @@ export default class BillDAO {
     public async getInstallmentsByBillId(billId: number){
         const response = await query(`SELECT * FROM BillInstallments WHERE billId = ?`, [billId]) as [InstallmentFieldsType[], FieldPacket[]]
         const installmentData = response[0]
-        return installmentData
+        return installmentData.map(installment => {
+            return {
+                installmentId: installment.installmentId,
+                billId: installment.billId,
+                installmentNumber: installment.installmentNumber,
+                value: parseFloat(installment.value),
+                dueDate: convertDateObjectDatetimeToString(installment.dueDate),
+                isPayed: Boolean(installment.isPayed),
+                payedAt: installment.payedAt !== null  ? convertDateObjectDatetimeToString(installment.payedAt) : undefined,
+                createdAt: convertDateObjectDatetimeToString(installment.createdAt)  
+            }
+        })
     }
 
     public async getBillById(billId: number){
@@ -210,7 +222,19 @@ export default class BillDAO {
         if(!billData){
             throw new Error(`Nenhuma conta foi encontrada para o ID: ${billId}`)
         }
-        return billData
+        return {
+            billId: billData.billId,
+            userId: billData.userId,
+            typeId: billData.typeId,
+            description: billData.description,
+            value: parseFloat(billData.value),
+            installments: billData.installments,
+            paymentDay: billData.paymentDay,
+            firstDueDate: convertDateObjectDatetimeToString(billData.firstDueDate),
+            createdAt: convertDateObjectDatetimeToString(billData.createdAt),
+            isCanceled: Boolean(billData.isCanceled),
+            canceledAt: billData.canceledAt !== null ? convertDateObjectDatetimeToString(billData.canceledAt) : undefined
+        }
     }
 
     public async getInstallmentById(installmentId: number){
@@ -219,6 +243,15 @@ export default class BillDAO {
         if(!installmentData){
             throw new Error(`Nenhuma parcela foi encontrada para o ID: ${installmentId}`)
         }
-        return installmentData
+        return {
+            installmentId: installmentData.installmentId,
+            billId: installmentData.billId,
+            installmentNumber: installmentData.installmentNumber,
+            value: parseFloat(installmentData.value),
+            dueDate: convertDateObjectDatetimeToString(installmentData.dueDate),
+            isPayed: Boolean(installmentData.isPayed),
+            payedAt: installmentData.payedAt !== null ? convertDateObjectDatetimeToString(installmentData.payedAt) : undefined,
+            createdAt: convertDateObjectDatetimeToString(installmentData.createdAt) 
+        }
     }
 }

@@ -1,11 +1,12 @@
 import { FieldPacket } from "mysql2/promise";
 import { ResultSetHeaderType, query } from "../Services/Database";
+import { convertDateObjectDatetimeToString } from "../Utils/DateUtils";
 
 type ActivityTableFieldsType = {
     activityId: number
     userId: number
     description: string
-    createdAt: string
+    createdAt: Date
 }
 
 type ActivityInsertType = {
@@ -65,18 +66,37 @@ export default class ActivityDAO {
         if(!activityData){
             throw new Error(`Nenhuma atividade foi encontrada para o ID: ${activityId}`)
         }
-        return activityData
+        return {
+            activityId: activityData.activityId,
+            userId: activityData.userId,
+            description: activityData.description,
+            createdAt: convertDateObjectDatetimeToString(activityData.createdAt) 
+        }
     }
 
     public async findLastHundredActivitys(userId: number){
         const response = await query(`SELECT * FROM UserActivity WHERE userId = ? ORDER BY createdAt DESC LIMIT 100`, [userId]) as [ActivityTableFieldsType[], FieldPacket[]]
         const recoveredActivitys = response[0]
-        return recoveredActivitys
+        return recoveredActivitys.map(activity => {
+            return {
+                activityId: activity.activityId,
+                userId: activity.userId,
+                description: activity.description,
+                createdAt: convertDateObjectDatetimeToString(activity.createdAt) 
+            }
+        })
     }
 
     public async findAllActivitys(userId: number){
         const response = await query(`SELECT * FROM UserActivity WHERE userId = ?`, [userId]) as [ActivityTableFieldsType[], FieldPacket[]]
         const recoveredActivitys = response[0]
-        return recoveredActivitys
+        return recoveredActivitys.map(activity => {
+            return {
+                activityId: activity.activityId,
+                userId: activity.userId,
+                description: activity.description,
+                createdAt: convertDateObjectDatetimeToString(activity.createdAt) 
+            }
+        })
     }
 }

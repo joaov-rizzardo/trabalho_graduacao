@@ -1,10 +1,11 @@
 import { FieldPacket } from "mysql2/promise"
 import { ResultSetHeaderType, query } from "../Services/Database"
+import { convertDateObjectDatetimeToString } from "../Utils/DateUtils"
 
 export type AvatarTableFields = {
     avatarId: number
     name: string
-    createdAt: string
+    createdAt: Date
 }
 
 type AvatarInsertType = {
@@ -84,7 +85,7 @@ export default class AvatarDAO {
         return {
             avatarId: recoveredAvatar.avatarId,
             name: recoveredAvatar.name,
-            createdAt: recoveredAvatar.createdAt
+            createdAt: convertDateObjectDatetimeToString(recoveredAvatar.createdAt)
         }
     }
 
@@ -106,7 +107,7 @@ export default class AvatarDAO {
             return {
                 avatarId: avatar.avatarId,
                 name: avatar.name,
-                createdAt: avatar.createdAt
+                createdAt: convertDateObjectDatetimeToString(avatar.createdAt)
             }
         })
     }
@@ -118,7 +119,7 @@ export default class AvatarDAO {
             return {
                 avatarId: avatar.avatarId,
                 name: avatar.name,
-                createdAt: avatar.createdAt
+                createdAt: convertDateObjectDatetimeToString(avatar.createdAt)
             }
         })
     }

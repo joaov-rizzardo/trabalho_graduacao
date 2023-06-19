@@ -1,6 +1,7 @@
 import { FieldPacket } from "mysql2/promise";
 import { SpendingCategoryEnum } from "../Enums/SpendingCategoryEnum";
 import { ResultSetHeaderType, query } from "../Services/Database";
+import { convertDateObjectDatetimeToString } from "../Utils/DateUtils";
 
 type SpendingInsertType = {
     userId: number,
@@ -28,10 +29,10 @@ type SpendingTableType = {
     userId: number,
     description: string,
     category: keyof typeof SpendingCategoryEnum,
-    value: number,
-    spentAt: string,
-    isCanceled: boolean,
-    canceledAt: string
+    value: string,
+    spentAt: Date,
+    isCanceled: number,
+    canceledAt: Date | null
 }
 export default class SpendingDAO {
     public async insertAndReturnId(params: SpendingInsertType){
@@ -95,7 +96,16 @@ export default class SpendingDAO {
         if(!spendingData){
             throw new Error(`Nenhum gasto foi encontrada para o ID: ${spendingId}`)
         }
-        return spendingData
+        return {
+            spendingId: spendingData.spendingId,
+            userId: spendingData.userId,
+            description: spendingData.description,
+            category: spendingData.category,
+            value: parseFloat(spendingData.value),
+            spentAt: convertDateObjectDatetimeToString(spendingData.spentAt),
+            isCanceled: Boolean(spendingData.isCanceled),
+            canceledAt: spendingData.canceledAt !== null ? convertDateObjectDatetimeToString(spendingData.canceledAt) : undefined
+        }
     }
 
     public async getUserSpendingsQuantityByDate(userId: number, date: string){

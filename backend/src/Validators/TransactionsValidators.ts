@@ -17,3 +17,8 @@ export const spendingCreateValidators = [
     body('balanceType').isLength({min: 2, max: 2}).withMessage('The balanceType field must have 2 characters'),
 ]
 
+export const spendingGetValidators = [
+    body('startDate').optional().matches(/^\d{4}-\d{2}-\d{2}$/).withMessage('The startDate field must be in format yyyy-mm-dd'),
+    body('finishDate').optional().matches(/^\d{4}-\d{2}-\d{2}$/).withMessage('The finishDate field must be in format yyyy-mm-dd')
+]
+

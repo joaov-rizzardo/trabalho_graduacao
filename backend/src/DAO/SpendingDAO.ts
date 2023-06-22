@@ -126,4 +126,28 @@ export default class SpendingDAO {
         const quantity = response[0][0].quantity
         return quantity
     }
+
+    public async findByFilters({userId, startDate, finishDate}: {userId: number, startDate?: string, finishDate?: string}){
+        const params: Array<number|string> = [userId]
+        let sql = `SELECT * FROM UserSpendings WHERE userId = ?`
+        if(startDate !== undefined && finishDate !== undefined){
+            sql += " AND spentAt BETWEEN ? AND ?"
+            params.push(startDate)
+            params.push(finishDate)
+        }
+        const response = await query(sql, params) as [SpendingTableType[], FieldPacket[]]
+        const spendingData = response[0]
+        return spendingData.map(spending => {
+            return {
+                spendingId: spending.spendingId,
+                userId: spending.userId,
+                description: spending.description,
+                category: spending.category,
+                value: parseFloat(spending.value),
+                spentAt: convertDateObjectDatetimeToString(spending.spentAt),
+                isCanceled: Boolean(spending.isCanceled),
+                canceledAt: spending.canceledAt !== null ? convertDateObjectDatetimeToString(spending.canceledAt) : undefined
+            }
+        })
+    }
 }

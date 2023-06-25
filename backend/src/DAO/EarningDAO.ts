@@ -109,4 +109,18 @@ export default class EarningDAO {
             canceledAt: earningData.canceledAt !== null ? convertDateObjectDatetimeToString(earningData.canceledAt) : undefined
         }
     }
+
+    public async getUserEarningsQuantityByDate(userId: number, date: string){
+        const response = await query(`
+            SELECT
+                COUNT(*) AS quantity
+            FROM 
+                UserEarnings
+            WHERE
+                userId = ?
+                AND earnedAt BETWEEN ? AND ?
+        `, [userId, `${date} 00:00:00`, `${date} 23:59:59`]) as [{quantity: number}[], FieldPacket[]]
+        const quantity = response[0][0].quantity
+        return quantity
+    }
 }

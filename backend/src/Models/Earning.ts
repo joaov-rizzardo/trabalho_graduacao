@@ -1,10 +1,10 @@
 import EarningDAO from "../DAO/EarningDAO";
 import { EarningCategoryEnum } from "../Enums/EarningCategoryEnum";
-import getCurrentStringDatetime from "../Utils/DateUtils";
+import getCurrentStringDatetime, { getCurrentStringDate } from "../Utils/DateUtils";
 import Transaction, { TransactionType } from "./Transactions";
 
 interface EarningType extends TransactionType{
-    earningId: number
+    earningId?: number
     categoryKey: keyof typeof EarningCategoryEnum
     earnedAt?: string
 }
@@ -28,25 +28,29 @@ export default class Earning extends Transaction {
         this.categoryKey = params.categoryKey
         this.categoryDescription = EarningCategoryEnum[params.categoryKey]
         this.canceledAt = params.canceledAt
+        this.earnedAt = params.earnedAt
         this.earningDAO = new EarningDAO()
     }
     
-    public reclaimRewards(){
-
+    public async reclaimRewards(){
+        if(!this.enableRewards){
+            throw new Error('As recompensas não estão disponíveis para esse ganho')
+        }
+        if(await this.isFirstEarningOfTheDay()){
+            return {
+                xp: 200,
+                points: 1
+            }
+        }else{
+            return {
+                xp: 50,
+                points: 0
+            } 
+        }
     }
 
     public async save(){
         if(this.isCreated()){
-            this.earningId = await this.earningDAO.insertAndReturnId({
-                userId: this.userId,
-                description: this.description,
-                category: this.categoryKey,
-                value: this.value,
-                earnedAt: this.earnedAt,
-                isCanceled: this.isCanceled,
-                canceledAt: this.canceledAt
-            })
-        }else{
             await this.earningDAO.update({
                 earningId: this.earningId!,
                 userId: this.userId,
@@ -57,6 +61,17 @@ export default class Earning extends Transaction {
                 isCanceled: this.isCanceled,
                 canceledAt: this.canceledAt,
             })
+        }else{
+            this.earningId = await this.earningDAO.insertAndReturnId({
+                userId: this.userId,
+                description: this.description,
+                category: this.categoryKey,
+                value: this.value,
+                earnedAt: this.earnedAt,
+                isCanceled: this.isCanceled,
+                canceledAt: this.canceledAt
+            })
+            this.enableRewards = true
         }
     }
 
@@ -75,8 +90,16 @@ export default class Earning extends Transaction {
     }
 
     public cancelEarning(){
-        this.isCanceled = true
+        this.isCanceled = true  
         this.canceledAt = getCurrentStringDatetime()
+    }
+
+    public get getUserId(){
+        return this.userId
+    }
+
+    public get getValue(){
+        return this.value
     }
 
     public static async getInstanceById(earningId: number){
@@ -96,5 +119,10 @@ export default class Earning extends Transaction {
 
     private isCreated(){
         return this.earningId !== undefined
+    }
+    
+    private async isFirstEarningOfTheDay(){
+        const earningOnThisDayQuantity = await this.earningDAO.getUserEarningsQuantityByDate(this.userId, getCurrentStringDate())
+        return earningOnThisDayQuantity <= 1
     }
 }

@@ -47,7 +47,7 @@ export async function createActivityByCanceledSpending(spending: Spending){
     const userId = spending.getUserId
     const activity = new Activity({
         userId: userId,
-        description: `Gasto no valor de ${formatNumberToCurrency(spending.getValue)} foi cancelado`,
+        description: `Ganho no valor de ${formatNumberToCurrency(spending.getValue)} foi cancelado`,
         createdAt: getCurrentStringDatetime()
     })
     await activity.save()

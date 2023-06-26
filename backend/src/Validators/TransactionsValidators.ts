@@ -39,3 +39,8 @@ export const earningCreateValidators = [
         .isString().withMessage('The categoryKey field must be a string')
         .isLength({min: 2, max: 2}).withMessage('The categoryKey field must have 2 characters')
 ]
+
+export const earningGetValidators = [
+    body('startDate').optional().matches(/^\d{4}-\d{2}-\d{2}$/).withMessage('The startDate field must be in format yyyy-mm-dd'),
+    body('finishDate').optional().matches(/^\d{4}-\d{2}-\d{2}$/).withMessage('The finishDate field must be in format yyyy-mm-dd')
+]

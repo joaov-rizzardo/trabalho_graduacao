@@ -123,4 +123,28 @@ export default class EarningDAO {
         const quantity = response[0][0].quantity
         return quantity
     }
+
+    public async findByFilters({userId, startDate, finishDate}: {userId: number, startDate?: string, finishDate?: string}){
+        const params: Array<number|string> = [userId]
+        let sql = `SELECT * FROM UserEarnings WHERE userId = ?`
+        if(startDate !== undefined && finishDate !== undefined){
+            sql += " AND earnedAt BETWEEN ? AND ?"
+            params.push(startDate)
+            params.push(finishDate)
+        }
+        const response = await query(sql, params) as [EarningTableType[], FieldPacket[]]
+        const earningData = response[0]
+        return earningData.map(earning => {
+            return {
+                earningId: earning.earningId,
+                userId: earning.userId,
+                description: earning.description,
+                category: earning.category,
+                value: parseFloat(earning.value),
+                earnedAt: convertDateObjectDatetimeToString(earning.earnedAt),
+                isCanceled: Boolean(earning.isCanceled),
+                canceledAt: earning.canceledAt !== null ? convertDateObjectDatetimeToString(earning.canceledAt) : undefined
+            }
+        })
+    }
 }

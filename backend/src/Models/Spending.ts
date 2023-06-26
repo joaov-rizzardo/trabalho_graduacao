@@ -1,6 +1,6 @@
 import SpendingDAO from "../DAO/SpendingDAO";
 import { SpendingCategoryEnum } from "../Enums/SpendingCategoryEnum";
-import getCurrentStringDatetime, { getCurrentStringDate } from "../Utils/DateUtils";
+import getCurrentStringDatetime, { dateDiferenceInDays, getCurrentStringDate } from "../Utils/DateUtils";
 import Transaction, { TransactionType } from "./Transactions";
 
 interface SpendingType extends TransactionType{
@@ -88,8 +88,14 @@ export default class Spending extends Transaction {
     }
 
     public cancelSpending(){
+        if(this.isCreated() === false){
+            throw new Error('O gasto não pode ser cancelado: O mesmo ainda não foi criado')
+        }
         if(this.isCanceled === true){
-            throw new Error('O gasto já foi cancelado anteriormente')
+            throw new Error('O gasto não pode ser cancelado: Já foi cancelado anteriormente')
+        }
+        if(dateDiferenceInDays(new Date(this.spentAt!), new Date()) >= 1){
+            throw new Error('O gasto não pode ser cancelado: Prazo limite para cancelamento expirado')
         }
         this.isCanceled = true
         this.canceledAt = getCurrentStringDatetime()

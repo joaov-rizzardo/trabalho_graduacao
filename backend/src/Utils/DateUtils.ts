@@ -22,3 +22,10 @@ export function convertDateObjectDatetimeToString(date: Date){
     const formatedDatetime = `${year}-${month}-${day} ${hour}:${minute}:${second}`
     return formatedDatetime
 }
+
+export function dateDiferenceInDays(date1: Date, date2: Date){
+    const diffInMiliseconds = Math.abs(date2.getTime() - date1.getTime())
+    const dayInMiliseconds = 1000 * 60 * 60 * 24
+    const diffInDays = Math.floor(diffInMiliseconds / dayInMiliseconds)
+    return diffInDays
+}

@@ -1,6 +1,6 @@
 import EarningDAO from "../DAO/EarningDAO";
 import { EarningCategoryEnum } from "../Enums/EarningCategoryEnum";
-import getCurrentStringDatetime, { getCurrentStringDate } from "../Utils/DateUtils";
+import getCurrentStringDatetime, { dateDiferenceInDays, getCurrentStringDate } from "../Utils/DateUtils";
 import Transaction, { TransactionType } from "./Transactions";
 
 interface EarningType extends TransactionType{
@@ -90,6 +90,15 @@ export default class Earning extends Transaction {
     }
 
     public cancelEarning(){
+        if(this.isCreated() === false){
+            throw new Error('O ganho não pode ser cancelado: O mesmo ainda não foi criado')
+        }
+        if(this.isCanceled === true){
+            throw new Error('O ganho não pode ser cancelado: Já foi cancelado anteriormente')
+        }
+        if(dateDiferenceInDays(new Date(this.earnedAt!), new Date()) >= 1){
+            throw new Error('O ganho não pode ser cancelado: Prazo limite para cancelamento expirado')
+        }
         this.isCanceled = true  
         this.canceledAt = getCurrentStringDatetime()
     }

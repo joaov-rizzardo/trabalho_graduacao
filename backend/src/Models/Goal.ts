@@ -135,6 +135,14 @@ export default class Goal {
         }
     }
 
+    public get getUserId(){
+        return this.userId
+    }
+
+    public get getValue(){
+        return this.value
+    }
+
     public static async getInstanceById(goalId: number){
         const goalDAO = new GoalDAO
         const goalData = await goalDAO.findById(goalId)

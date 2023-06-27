@@ -13,3 +13,13 @@ export const createGoalValidators = [
         .isNumeric().withMessage('The value field must be a number')
         .custom(value => value > 0).withMessage('The value field must have a value greater than zero')
 ]
+
+export const investGoalValidators = [
+    body('goalId')
+        .notEmpty().withMessage('The goalId field cannot be empty')
+        .isNumeric().withMessage('The goalId must be a number'),
+    body('value')
+        .notEmpty().withMessage('The value field cannot be empty')
+        .isNumeric().withMessage('The value field must be a number')
+        .custom(value => value > 0).withMessage('The value field must have a value greater than zero')
+]

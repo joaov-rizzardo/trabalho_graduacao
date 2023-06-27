@@ -25,6 +25,7 @@ export default class Goal {
     private canceledAt?: string
     private isCompleted: boolean
     private completedAt?: string
+    private enableRewards: boolean
     private goalDAO: GoalDAO
 
     constructor(params: GoalFieldsType){
@@ -38,6 +39,7 @@ export default class Goal {
         this.canceledAt = params.canceledAt
         this.isCompleted = params.isCompleted
         this.completedAt = params.completedAt
+        this.enableRewards = false
         this.goalDAO = new GoalDAO()
     }
 
@@ -118,6 +120,16 @@ export default class Goal {
         if(!this.goalIsCompleted()){
             throw new Error('Não foi possível obter as recompensas, a meta ainda não foi concluída')
         }
+        if(this.goalIsCanceled()){
+            throw new Error('Não é possível obter as recompensas, a meta está cancelada')
+        }
+        if(!this.enableRewards){
+            throw new Error('As recompensas não estão disponíveis para essa meta')
+        }
+        return {
+            xp: this.value * 0.1,
+            points: 1
+        }
     }
 
     public convertToObject(){
@@ -152,6 +164,7 @@ export default class Goal {
     private complete(){
         this.isCompleted = true
         this.completedAt = getCurrentStringDatetime()
+        this.enableRewards = true
     }
 
     private isCreated(){

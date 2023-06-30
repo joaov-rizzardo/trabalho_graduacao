@@ -184,3 +184,37 @@
 
 [2023-06-28 19:09:53] Method: PUT URL: /goal/recoverInvestment Status-Code: 400 Reponse-Size: 239 Response-Time: 1.633 ms
 
+[2023-06-30 12:16:35] Method: PUT URL: /goal/cancel/1 Status-Code: 500 Reponse-Size: 70 Response-Time: 196.349 ms
+
+[2023-06-30 12:16:46] Method: PUT URL: /goal/cancel/1 Status-Code: 500 Reponse-Size: 70 Response-Time: 43.334 ms
+
+[2023-06-30 12:17:41] Method: PUT URL: /goal/cancel/1 Status-Code: 500 Reponse-Size: 70 Response-Time: 50.601 ms
+
+[2023-06-30 12:18:01] Method: PUT URL: /goal/cancel/1 Status-Code: 500 Reponse-Size: 70 Response-Time: 46.471 ms
+
+[2023-06-30 12:18:33] Method: PUT URL: /goal/cancel/1 Status-Code: 500 Reponse-Size: 70 Response-Time: 43.590 ms
+
+[2023-06-30 12:19:48] Method: PUT URL: /goal/cancel/1 Status-Code: 200 Reponse-Size: 308 Response-Time: 508.548 ms
+
+[2023-06-30 12:20:06] Method: POST URL: /goal/create Status-Code: 201 Reponse-Size: 195 Response-Time: 52.440 ms
+
+[2023-06-30 12:20:14] Method: PUT URL: /goal/invest Status-Code: 200 Reponse-Size: 402 Response-Time: 67.189 ms
+
+[2023-06-30 12:20:27] Method: PUT URL: /goal/recoverInvestment Status-Code: 200 Reponse-Size: 283 Response-Time: 26.711 ms
+
+[2023-06-30 12:20:33] Method: PUT URL: /goal/cancel/2 Status-Code: 200 Reponse-Size: 308 Response-Time: 58.255 ms
+
+[2023-06-30 16:12:22] Method: GET URL: /goal/get/1 Status-Code: 404 Reponse-Size: 44 Response-Time: 2.931 ms
+
+[2023-06-30 16:12:57] Method: GET URL: /goal/get/1 Status-Code: 200 Reponse-Size: 388 Response-Time: 46.841 ms
+
+[2023-06-30 16:14:27] Method: GET URL: /goal/get/1 Status-Code: 200 Reponse-Size: 367 Response-Time: 66.289 ms
+
+[2023-06-30 16:14:47] Method: GET URL: /goal/get/1 Status-Code: 200 Reponse-Size: 367 Response-Time: 37.020 ms
+
+[2023-06-30 16:15:08] Method: GET URL: /goal/get/1 Status-Code: 200 Reponse-Size: 2 Response-Time: 42.226 ms
+
+[2023-06-30 16:15:23] Method: POST URL: /goal/create Status-Code: 201 Reponse-Size: 204 Response-Time: 49.349 ms
+
+[2023-06-30 16:15:27] Method: GET URL: /goal/get/1 Status-Code: 200 Reponse-Size: 159 Response-Time: 2.527 ms
+

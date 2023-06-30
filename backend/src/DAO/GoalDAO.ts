@@ -117,7 +117,7 @@ export default class GoalDAO {
     }
 
     public async findAllUserGoals(userId: number){
-        const response = await query(`SELECT * FROM UserGoals WHERE userId = ?`, [userId]) as [GoalTableType[], FieldPacket[]]
+        const response = await query(`SELECT * FROM UserGoals WHERE userId = ? AND isCanceled = 0`, [userId]) as [GoalTableType[], FieldPacket[]]
         const recoveredGoals = response[0]
         return recoveredGoals.map(goal => {
             return {

@@ -99,6 +99,9 @@ export default class Goal {
         if(this.goalIsCompleted()){
             throw new Error('A meta já foi completa, portanto não é possível recuperar os investimentos')
         }
+        if(this.goalIsCanceled()){
+            throw new Error('A meta foi cancelada, não é possível recuperar os investimentos')
+        }
         if(quantity > this.progressValue){
             throw new Error('O valor decrementado é maior que o valor de progresso da meta')
         }

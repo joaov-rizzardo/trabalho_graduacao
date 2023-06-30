@@ -164,3 +164,23 @@
 
 [2023-06-26 13:46:07] Method: POST URL: /transaction/earning/get/1 Status-Code: 200 Reponse-Size: 207 Response-Time: 3.097 ms
 
+[2023-06-28 19:08:04] Method: POST URL: /goal/create Status-Code: 201 Reponse-Size: 195 Response-Time: 646.237 ms
+
+[2023-06-28 19:08:16] Method: PUT URL: /goal/invest Status-Code: 500 Reponse-Size: 70 Response-Time: 43.077 ms
+
+[2023-06-28 19:08:28] Method: PUT URL: /goal/invest Status-Code: 500 Reponse-Size: 70 Response-Time: 18.071 ms
+
+[2023-06-28 19:08:46] Method: PUT URL: /goal/invest Status-Code: 500 Reponse-Size: 70 Response-Time: 69.476 ms
+
+[2023-06-28 19:09:14] Method: POST URL: /transaction/earning/create Status-Code: 201 Reponse-Size: 444 Response-Time: 144.931 ms
+
+[2023-06-28 19:09:21] Method: PUT URL: /goal/invest Status-Code: 200 Reponse-Size: 402 Response-Time: 31.968 ms
+
+[2023-06-28 19:09:29] Method: PUT URL: /goal/recoverInvestment Status-Code: 200 Reponse-Size: 283 Response-Time: 29.077 ms
+
+[2023-06-28 19:09:42] Method: PUT URL: /goal/recoverInvestment Status-Code: 200 Reponse-Size: 281 Response-Time: 24.354 ms
+
+[2023-06-28 19:09:45] Method: PUT URL: /goal/recoverInvestment Status-Code: 500 Reponse-Size: 70 Response-Time: 2.784 ms
+
+[2023-06-28 19:09:53] Method: PUT URL: /goal/recoverInvestment Status-Code: 400 Reponse-Size: 239 Response-Time: 1.633 ms
+

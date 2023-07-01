@@ -12,3 +12,11 @@ export function default201Response(message: string){
 export function default500Response(){
     return {message: "A server internal error ocurred, please, try again later"}
 }
+
+export function default401Response(){
+    return {message: 'Request unauthorized'}
+}
+
+export function default403Response(){
+    return {message: "Don't have permission to access this resource"}
+}

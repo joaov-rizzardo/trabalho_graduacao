@@ -1,9 +1,6 @@
 import {body} from 'express-validator'
 
 export const createGoalValidators = [
-    body('userId')
-        .notEmpty().withMessage('The userId field cannot be empty')
-        .isNumeric().withMessage('The userId must be a number'),
     body('description')
         .notEmpty().withMessage('The description field cannot be empty')
         .isString().withMessage('The description field must be a string')

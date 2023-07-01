@@ -10,6 +10,7 @@ import Activity from "../Models/Activity";
 import UserLevel from "../Models/UserLevel";
 
 export default async function createEarningFlow(req: Request, res: Response){
+    const userId = req.authenticatedUser!.userId
     try{
         await startTransaction()
         if(!(req.body.categoryKey in EarningCategoryEnum)){
@@ -17,7 +18,7 @@ export default async function createEarningFlow(req: Request, res: Response){
             return res.status(400).send(default400Response(['The categoryKey field is invalid']))
         }
         const earning = await createEarning({
-            userId: req.body.userId,
+            userId: userId,
             description: req.body.description,
             value: req.body.value,
             categoryKey: req.body.categoryKey

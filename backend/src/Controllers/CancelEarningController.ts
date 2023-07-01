@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { commitTransaction, rollbackTransaction, startTransaction } from "../Services/Database";
-import { default500Response } from "../Utils/DefaultResponses";
+import { default403Response, default500Response } from "../Utils/DefaultResponses";
 import Earning from "../Models/Earning";
 import UserFinance from "../Models/UserFinance";
 import Activity from "../Models/Activity";
@@ -9,9 +9,14 @@ import getCurrentStringDatetime from "../Utils/DateUtils";
 
 export default async function cancelEarningFlow(req: Request, res: Response){
     const earningId = parseInt(req.params.earningId)
+    const userId = req.authenticatedUser!.userId
     try{
         await startTransaction()
         const earning = await cancelEarningById(earningId)
+        if(earning.getUserId !== userId){
+            await rollbackTransaction()
+            return res.status(403).send(default403Response())
+        }
         const [userFinance] = await Promise.all([
             decrementUserFinanceByCanceledEarning(earning),
             createActivityByCanceledEarning(earning)

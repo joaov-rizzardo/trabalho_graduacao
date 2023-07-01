@@ -8,7 +8,7 @@ export default async function updatePasswordFlow(req: Request, res: Response){
     try{
         await startTransaction()
         const {newPassword, validationCode}: {newPassword: string, validationCode: string} = req.body
-        const userId = parseInt(req.params.userId)
+        const userId = req.authenticatedUser!.userId
         if(await checkValidationCode(userId, validationCode) === false){
             await rollbackTransaction()
             return res.status(400).send(default400Response(['The validation code is invalid']))

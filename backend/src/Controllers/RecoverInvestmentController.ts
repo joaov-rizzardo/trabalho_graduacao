@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { default500Response } from "../Utils/DefaultResponses";
+import { default403Response, default500Response } from "../Utils/DefaultResponses";
 import { commitTransaction, rollbackTransaction, startTransaction } from "../Services/Database";
 import Goal from "../Models/Goal";
 import UserFinance from "../Models/UserFinance";
@@ -8,9 +8,14 @@ import { formatNumberToCurrency } from "../Utils/NumberFormats";
 import getCurrentStringDatetime from "../Utils/DateUtils";
 
 export default async function recoverInvestmentFlow(req: Request, res: Response){
+    const userId = req.authenticatedUser!.userId
     try{
         await startTransaction()
         const goal = await recoverInvestment(req.body.goalId, req.body.value)
+        if(goal.getUserId !== userId){
+            await rollbackTransaction()
+            return res.status(403).send(default403Response())
+        }
         const [userFinance] = await Promise.all([
             incrementUserBalanceByRecoveredInvestment(goal, req.body.value),
             createActivityForRecoveredInvestment(goal, req.body.value)

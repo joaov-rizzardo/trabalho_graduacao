@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { default500Response } from "../Utils/DefaultResponses";
+import { default403Response, default500Response } from "../Utils/DefaultResponses";
 import Spending from "../Models/Spending";
 import UserFinance from "../Models/UserFinance";
 import Activity from "../Models/Activity";
@@ -9,9 +9,14 @@ import { commitTransaction, rollbackTransaction, startTransaction } from "../Ser
 
 export default async function cancelSpedingFlow(req: Request, res: Response){
     const spendingId = parseInt(req.params.spendingId)
+    const userId = req.authenticatedUser!.userId
     try{
         await startTransaction()
         const spending = await cancelSpendingById(spendingId)
+        if(spending.getUserId !== userId){
+            await rollbackTransaction()
+            return res.status(403).send(default403Response())
+        }
         const [userFinance] = await Promise.all([
             incrementUserFinancesByCanceledSpending(spending),
             createActivityByCanceledSpending(spending)

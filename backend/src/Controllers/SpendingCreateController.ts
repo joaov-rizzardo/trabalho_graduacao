@@ -11,6 +11,7 @@ import { commitTransaction, rollbackTransaction, startTransaction } from '../Ser
 import UserLevel from '../Models/UserLevel';
 
 export default async function createSpendingFlow(req: Request, res: Response){
+    const userId = req.authenticatedUser!.userId
     try{
         await startTransaction()
         if(!(req.body.categoryKey in SpendingCategoryEnum)){
@@ -22,7 +23,7 @@ export default async function createSpendingFlow(req: Request, res: Response){
             return res.status(400).send(default400Response(['The balanceType field is invalid']))
         }
         const spending = await createSpeding({
-            userId: parseInt(req.body.userId),
+            userId: userId,
             description: req.body.description,
             value: parseFloat(req.body.value),
             categoryKey: req.body.categoryKey

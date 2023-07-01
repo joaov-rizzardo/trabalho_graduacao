@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { default500Response } from "../Utils/DefaultResponses";
+import { default403Response, default500Response } from "../Utils/DefaultResponses";
 import Goal from "../Models/Goal";
 import UserFinance from "../Models/UserFinance";
 import UserLevel from "../Models/UserLevel";
@@ -9,12 +9,17 @@ import getCurrentStringDatetime from "../Utils/DateUtils";
 import { commitTransaction, rollbackTransaction, startTransaction } from "../Services/Database";
 
 export default async function investGoalFlow(req: Request, res: Response){
+    const userId = req.authenticatedUser!.userId
     try{
         await startTransaction()
         const goal = await investGoal({
             goalId: req.body.goalId,
             value: req.body.value
         })
+        if(goal.getUserId !== userId){
+            await rollbackTransaction()
+            return res.status(403).send(default403Response())
+        }
         const [userFinance, userLevel] = await Promise.all([
             handleUserFinanceByInvestment(goal, req.body.value),
             goal.goalIsCompleted() && insertXpAndPointsByCompletedGoal(goal),

@@ -7,10 +7,11 @@ import Activity from "../Models/Activity";
 import { formatNumberToCurrency } from "../Utils/NumberFormats";
 
 export default async function createGoalFlow(req: Request, res: Response){
+    const userId = req.authenticatedUser!.userId
     try{
         await startTransaction()
         const goal = await createGoal({
-            userId: req.body.userId,
+            userId: userId,
             description: req.body.description,
             value: req.body.value
         })

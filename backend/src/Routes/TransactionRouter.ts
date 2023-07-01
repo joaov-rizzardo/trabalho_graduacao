@@ -7,8 +7,11 @@ import getSpendingFlow from '../Controllers/SpendingGetterController'
 import createEarningFlow from '../Controllers/EarningCreateController'
 import cancelEarningFlow from '../Controllers/CancelEarningController'
 import getEarningsFlow from '../Controllers/EarningGetterControler'
+import tokenAuthenticationMiddleware from '../Middlewares/TokenAuthenticationMiddleware'
 
 const transactionRouter = Router()
+
+transactionRouter.use(tokenAuthenticationMiddleware)
 
 transactionRouter.all('/', (req: Request, res: Response) => {
     res.status(200).send('Transaction service is running')
@@ -16,9 +19,9 @@ transactionRouter.all('/', (req: Request, res: Response) => {
 
 transactionRouter.post('/spending/create', spendingCreateValidators, checkExpressValidations, createSpendingFlow)
 transactionRouter.put('/spending/cancel/:spendingId', cancelSpedingFlow)
-transactionRouter.post('/spending/get/:userId', spendingGetValidators, checkExpressValidations, getSpendingFlow)
+transactionRouter.post('/spending/get', spendingGetValidators, checkExpressValidations, getSpendingFlow)
 transactionRouter.post('/earning/create', earningCreateValidators, checkExpressValidations, createEarningFlow)
 transactionRouter.put('/earning/cancel/:earningId', cancelEarningFlow)
-transactionRouter.post('/earning/get/:userId', earningGetValidators, checkExpressValidations, getEarningsFlow)
+transactionRouter.post('/earning/get', earningGetValidators, checkExpressValidations, getEarningsFlow)
 
 export default transactionRouter

@@ -3,7 +3,7 @@ import { default500Response } from "../Utils/DefaultResponses";
 import UserGoals from "../Models/UserGoals";
 
 export default async function getGoalsFlow(req: Request, res: Response){
-    const userId = parseInt(req.params.userId)
+    const userId = req.authenticatedUser!.userId
     try {
         const userGoals = await getUserGoalsById(userId)
         const goals = userGoals.convertToObject().goals

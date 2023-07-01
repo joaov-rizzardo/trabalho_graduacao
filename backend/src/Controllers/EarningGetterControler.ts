@@ -4,7 +4,7 @@ import EarningDAO from "../DAO/EarningDAO";
 import Earning from "../Models/Earning";
 
 export default async function getEarningsFlow(req: Request, res: Response){
-    const userId = parseInt(req.params.userId)
+    const userId = req.authenticatedUser!.userId
     try{
         const earnings = await getEarningsByFilters({
             userId: userId,

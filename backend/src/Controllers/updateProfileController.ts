@@ -8,7 +8,7 @@ export default async function updateProfileFlow(req: Request, res: Response){
     try{
         await startTransaction()
         const {name, lastName, selectedAvatar} = req.body
-        const userId = parseInt(req.params.userId)
+        const userId = req.authenticatedUser!.userId
         if(await checkIfUserHasAvatar(userId, selectedAvatar) === false){
             await rollbackTransaction()
             return res.status(400).send(default400Response(['User does not have selected avatar']))

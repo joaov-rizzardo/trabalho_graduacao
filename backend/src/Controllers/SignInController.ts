@@ -5,6 +5,16 @@ import { default400Response, default500Response } from '../Utils/DefaultResponse
 import JWTAuthenticator from '../Models/JWTAuthenticator'
 import { ErrorLogger } from '../Utils/Logger'
 
+export type tokenType = {
+    userId: number,
+    username: string,
+    email: string,
+    name: string,
+    lastName: string,
+    selectedAvatar: number,
+    createdAt: string
+}
+
 export default async function signIn(req: Request, res: Response){
     try {
         const body = req.body
@@ -12,14 +22,14 @@ export default async function signIn(req: Request, res: Response){
         if(authenticatedResult.ok === false || authenticatedResult.user === false){
             return res.status(400).send(default400Response(authenticatedResult.errors))
         }
-        const user = {
-            userId: authenticatedResult.user.userId,
+        const user: tokenType = {
+            userId: authenticatedResult.user.userId!,
             username: authenticatedResult.user.username,
             email: authenticatedResult.user.email,
             name: authenticatedResult.user.name,
             lastName: authenticatedResult.user.lastName,
             selectedAvatar: authenticatedResult.user.selectedAvatar,
-            createdAt: authenticatedResult.user.createdAt
+            createdAt: authenticatedResult.user.createdAt!
         }
         const jwt = new JWTAuthenticator()
         const token = jwt.generateToken(user)

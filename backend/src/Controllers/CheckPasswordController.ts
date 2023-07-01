@@ -4,7 +4,7 @@ import User from '../Models/User'
 
 export default async function checkPasswordFlow(req: Request, res: Response){
     try {
-        const userId = parseInt(req.params.userId)
+        const userId = req.authenticatedUser!.userId
         const password: string = req.body.password
         const checkedPassword = await checkPasswordByUserId(userId, password)
         return res.status(200).send({checked: checkedPassword})

@@ -1,12 +1,12 @@
 import {Request, Response} from 'express'
 import { ErrorLogger } from '../Utils/Logger'
-import { default500Response } from '../Utils/DefaultResponses'
+import { default401Response, default500Response } from '../Utils/DefaultResponses'
 import UserEmailCodes from '../Models/UserEmailCodes'
 import User from '../Models/User'
 import { commitTransaction, rollbackTransaction, startTransaction } from '../Services/Database'
 
 export async function sendEmailVerificationCodeToUser(req: Request, res: Response){
-    const userId = parseInt(req.params.userId)
+    const userId = req.authenticatedUser!.userId
     try {
         await startTransaction()
         const userEmailCodes = await UserEmailCodes.getInstanceByUserId(userId)
@@ -23,7 +23,7 @@ export async function sendEmailVerificationCodeToUser(req: Request, res: Respons
 }
 
 export async function checkEmailVerificationCode(req: Request, res: Response){
-    const userId: number = req.body.userId
+    const userId = req.authenticatedUser!.userId
     const code: string = req.body.code
     try{
         const userEmailCodes = await UserEmailCodes.getInstanceByUserId(userId)

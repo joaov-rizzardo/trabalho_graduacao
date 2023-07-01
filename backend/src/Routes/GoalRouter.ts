@@ -6,8 +6,11 @@ import investGoalFlow from '../Controllers/InvestGoalController'
 import recoverInvestmentFlow from '../Controllers/RecoverInvestmentController'
 import cancelGoalFlow from '../Controllers/CancelGoalController'
 import getGoalsFlow from '../Controllers/GoalsGetterController'
+import tokenAuthenticationMiddleware from '../Middlewares/TokenAuthenticationMiddleware'
 
 const goalRouter = Router()
+
+goalRouter.use(tokenAuthenticationMiddleware)
 
 goalRouter.all('/', (req: Request, res: Response) => {
     res.status(200).send('Goal service is running')
@@ -17,6 +20,6 @@ goalRouter.post('/create', createGoalValidators, checkExpressValidations, create
 goalRouter.put('/invest', investGoalValidators, checkExpressValidations, investGoalFlow)
 goalRouter.put('/recoverInvestment', recoverInvestmentGoalValidators, checkExpressValidations, recoverInvestmentFlow)
 goalRouter.put('/cancel/:goalId', cancelGoalFlow)
-goalRouter.get('/get/:userId', getGoalsFlow)
+goalRouter.get('/get', getGoalsFlow)
 
 export default goalRouter

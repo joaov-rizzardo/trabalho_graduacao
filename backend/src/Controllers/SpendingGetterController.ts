@@ -4,7 +4,7 @@ import Spending from "../Models/Spending";
 import SpendingDAO from "../DAO/SpendingDAO";
 
 export default async function getSpendingFlow(req: Request, res: Response){
-    const userId = parseInt(req.params.userId)
+    const userId = req.authenticatedUser!.userId
     try{
         const spendings = await getSpendingsByFilters({
             userId: userId,

@@ -3,6 +3,7 @@ import { default400Response, default500Response } from '../Utils/DefaultResponse
 import User from '../Models/User'
 import UserAvatars from '../Models/UserAvatars'
 import { commitTransaction, rollbackTransaction, startTransaction } from '../Services/Database'
+import { ProfileLogger, generateErrorLogFromRequest } from '../Utils/Logger'
 
 export default async function updateProfileFlow(req: Request, res: Response){
     try{
@@ -25,6 +26,7 @@ export default async function updateProfileFlow(req: Request, res: Response){
         })
     }catch(error: any){
         await rollbackTransaction()
+        generateErrorLogFromRequest(ProfileLogger, req, error.message)
         res.status(500).send(default500Response())
     }
 }

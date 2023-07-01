@@ -3,6 +3,7 @@ import { default400Response, default500Response } from '../Utils/DefaultResponse
 import UserEmailCodes from '../Models/UserEmailCodes'
 import User from '../Models/User'
 import { commitTransaction, rollbackTransaction, startTransaction } from '../Services/Database'
+import { ProfileLogger, generateErrorLogFromRequest } from '../Utils/Logger'
 
 export default async function updatePasswordFlow(req: Request, res: Response){
     try{
@@ -20,6 +21,7 @@ export default async function updatePasswordFlow(req: Request, res: Response){
         })
     }catch(error: any){
         await rollbackTransaction()
+        generateErrorLogFromRequest(ProfileLogger, req, error.message)
         return res.status(500).send(default500Response())
     }
 }

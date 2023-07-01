@@ -6,6 +6,7 @@ import UserFinance from "../Models/UserFinance";
 import Activity from "../Models/Activity";
 import { formatNumberToCurrency } from "../Utils/NumberFormats";
 import getCurrentStringDatetime from "../Utils/DateUtils";
+import { TransactionLogger, generateErrorLogFromRequest } from "../Utils/Logger";
 
 export default async function cancelEarningFlow(req: Request, res: Response){
     const earningId = parseInt(req.params.earningId)
@@ -28,6 +29,7 @@ export default async function cancelEarningFlow(req: Request, res: Response){
         })
     }catch(error: any){
         await rollbackTransaction()
+        generateErrorLogFromRequest(TransactionLogger, req, error.message)
         return res.status(500).send(default500Response())
     }
 }

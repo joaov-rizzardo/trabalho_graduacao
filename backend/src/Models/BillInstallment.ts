@@ -1,6 +1,5 @@
 import BillDAO from "../DAO/BillDAO"
 import getCurrentStringDatetime from "../Utils/DateUtils"
-import { ErrorLogger } from "../Utils/Logger"
 
 type BillInstallmentType = {
     installmentId?: number
@@ -94,17 +93,13 @@ export default class BillInstallment {
     }
 
     private checkIfIsExpired(){
-        try {
-            const expireDate = new Date(this.dueDate)
-            const currentDate = new Date()
-            if(currentDate > expireDate){
-                this.isExpired = true
-            }else {
-                this.isExpired = false
-            }
-        }catch(error: any){
-            ErrorLogger.error(error.stack)
-        } 
+        const expireDate = new Date(this.dueDate)
+        const currentDate = new Date()
+        if(currentDate > expireDate){
+            this.isExpired = true
+        }else {
+            this.isExpired = false
+        }
     }
 
     private isCreated(){

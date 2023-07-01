@@ -9,6 +9,7 @@ import { formatNumberToCurrency } from '../Utils/NumberFormats';
 import getCurrentStringDatetime from '../Utils/DateUtils';
 import { commitTransaction, rollbackTransaction, startTransaction } from '../Services/Database';
 import UserLevel from '../Models/UserLevel';
+import { TransactionLogger, generateErrorLogFromRequest } from '../Utils/Logger';
 
 export default async function createSpendingFlow(req: Request, res: Response){
     const userId = req.authenticatedUser!.userId
@@ -44,7 +45,7 @@ export default async function createSpendingFlow(req: Request, res: Response){
         })
     }catch(error: any){
         await rollbackTransaction()
-        console.log(error)
+        generateErrorLogFromRequest(TransactionLogger, req, error.message)
         return res.status(500).send(default500Response())
     }
 }

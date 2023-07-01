@@ -350,3 +350,21 @@
 
 [2023-07-01 15:17:07] Method: GET URL: /goal/get Status-Code: 200 Reponse-Size: 2 Response-Time: 4.256 ms
 
+[2023-07-01 15:26:43] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 504 Response-Time: 222.492 ms
+
+[2023-07-01 15:27:31] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 504 Response-Time: 117.627 ms
+
+[2023-07-01 15:27:50] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 504 Response-Time: 111.958 ms
+
+[2023-07-01 15:32:16] Method: POST URL: /authentication/signin Status-Code: 500 Reponse-Size: 70 Response-Time: 107.567 ms
+
+[2023-07-01 15:32:37] Method: POST URL: /authentication/signin Status-Code: 500 Reponse-Size: 70 Response-Time: 108.151 ms
+
+[2023-07-01 15:34:20] Method: POST URL: /authentication/signup Status-Code: 500 Reponse-Size: 70 Response-Time: 49.056 ms
+
+[2023-07-01 15:35:47] Method: POST URL: /authentication/checkToken Status-Code: 500 Reponse-Size: 70 Response-Time: 8.316 ms
+
+[2023-07-01 15:37:43] Method: POST URL: /authentication/checkVerificationCode Status-Code: 200 Reponse-Size: 16 Response-Time: 63.393 ms
+
+[2023-07-01 15:37:50] Method: POST URL: /authentication/sendVerificationCode Status-Code: 500 Reponse-Size: 70 Response-Time: 3.283 ms
+

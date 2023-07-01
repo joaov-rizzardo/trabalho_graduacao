@@ -1,25 +1,63 @@
+import { Request } from "express"
 import winston from "winston"
 
-export const ErrorLogger =  winston.createLogger({
+export const AuthenticationLogger = winston.createLogger({
     format: getLoggerFormat(),
     transports: [
-        new winston.transports.Console({
-            level: 'error'
-        }),
         new winston.transports.File({
-            filename: `logs/error.log`,
+            filename: `logs/authentication.log`,
             level: 'error'
-        }),
+        })
     ]
 })
 
-export const WarningLogger = winston.createLogger({
+export const BillLogger = winston.createLogger({
     format: getLoggerFormat(),
     transports: [
         new winston.transports.File({
-            filename: `logs/warning.log`,
-            level: 'warn'
-        }),
+            filename: `logs/bill.log`,
+            level: 'error'
+        })
+    ]
+})
+
+export const GoalLogger = winston.createLogger({
+    format: getLoggerFormat(),
+    transports: [
+        new winston.transports.File({
+            filename: `logs/goal.log`,
+            level: 'error'
+        })
+    ]
+})
+
+export const ManagementLogger = winston.createLogger({
+    format: getLoggerFormat(),
+    transports: [
+        new winston.transports.File({
+            filename: `logs/management.log`,
+            level: 'error'
+        })
+    ]
+})
+
+export const ProfileLogger = winston.createLogger({
+    format: getLoggerFormat(),
+    transports: [
+        new winston.transports.File({
+            filename: `logs/profile.log`,
+            level: 'error'
+        })
+    ]
+})
+
+export const TransactionLogger = winston.createLogger({
+    format: getLoggerFormat(),
+    transports: [
+        new winston.transports.File({
+            filename: `logs/transaction.log`,
+            level: 'error'
+        })
     ]
 })
 
@@ -42,6 +80,11 @@ export const DatabaseLogger = winston.createLogger({
         })
     ]
 })
+
+export function generateErrorLogFromRequest(logger: winston.Logger, req: Request, errorMessage: string){
+    const fullMessage = `${req.url} - ${errorMessage}`
+    logger.error(fullMessage)
+}
 
 function getLoggerFormat(){
     return winston.format.combine(

@@ -7,6 +7,7 @@ import Activity from "../Models/Activity";
 import { formatNumberToCurrency } from "../Utils/NumberFormats";
 import getCurrentStringDatetime from "../Utils/DateUtils";
 import { commitTransaction, rollbackTransaction, startTransaction } from "../Services/Database";
+import { GoalLogger, generateErrorLogFromRequest } from "../Utils/Logger";
 
 export default async function investGoalFlow(req: Request, res: Response){
     const userId = req.authenticatedUser!.userId
@@ -36,6 +37,7 @@ export default async function investGoalFlow(req: Request, res: Response){
         })
     }catch(error: any){
         await rollbackTransaction()
+        generateErrorLogFromRequest(GoalLogger, req, error.message)
         return res.status(500).send(default500Response())
     }
 }

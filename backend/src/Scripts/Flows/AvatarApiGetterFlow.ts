@@ -1,4 +1,3 @@
-import { ErrorLogger } from './../../Utils/Logger';
 import { Args } from "../Utils/ArgsParser";
 import { generateNotExistentAvatarName, getAvatarImageStreamFromAPI, getCurrentAvatarsOnDirectory, uploadImageStreamToAvatarsDirectory } from "../Utils/AvatarUtils";
 import Avatar from '../../Models/Avatar';
@@ -21,7 +20,7 @@ export default async function handleSearchForNewAvatars(args: Args){
             existentsAvatars.push(randomName)
             i++
         }catch(error: any){
-            ErrorLogger.error(error.message)
+            console.log(error.message)
         }
     }, 72000)
 }

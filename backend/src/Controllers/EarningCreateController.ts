@@ -8,6 +8,7 @@ import UserFinance from "../Models/UserFinance";
 import { formatNumberToCurrency } from "../Utils/NumberFormats";
 import Activity from "../Models/Activity";
 import UserLevel from "../Models/UserLevel";
+import { TransactionLogger, generateErrorLogFromRequest } from "../Utils/Logger";
 
 export default async function createEarningFlow(req: Request, res: Response){
     const userId = req.authenticatedUser!.userId
@@ -39,6 +40,7 @@ export default async function createEarningFlow(req: Request, res: Response){
         })
     }catch(error: any){
         await rollbackTransaction()
+        generateErrorLogFromRequest(TransactionLogger, req, error.message)
         return res.status(500).send(default500Response())
     }
 }

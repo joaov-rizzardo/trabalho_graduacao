@@ -1,5 +1,4 @@
 import {Request, Response} from 'express'
-import { ErrorLogger } from '../Utils/Logger'
 import UserDAO from '../DAO/UserDAO'
 import { default201Response, default400Response, default500Response } from '../Utils/DefaultResponses'
 import getCurrentStringDatetime from '../Utils/DateUtils'
@@ -8,6 +7,7 @@ import { commitTransaction, rollbackTransaction, startTransaction } from '../Ser
 import UserFinance from '../Models/UserFinance'
 import UserLevel from '../Models/UserLevel'
 import UserAvatars from '../Models/UserAvatars'
+import { AuthenticationLogger, generateErrorLogFromRequest } from '../Utils/Logger'
 
 const userDAO = new UserDAO()
 
@@ -50,7 +50,7 @@ export default async function signUpFlow(req: Request, res: Response){
         return res.status(201).send(default201Response('The user has been created'))
     }catch(error: any){
         await rollbackTransaction()
-        ErrorLogger.error(error.message)
+        generateErrorLogFromRequest(AuthenticationLogger, req, error.message)
         return res.status(500).send(default500Response())
     }
 }

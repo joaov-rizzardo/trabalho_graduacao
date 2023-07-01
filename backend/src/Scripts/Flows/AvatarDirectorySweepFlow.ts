@@ -10,7 +10,6 @@ export default async function sweepAvatarDirectory(args: Args){
     for (const avatarName of avatarsOnDirectory){
         if(!avatarsOnDatabase.includes(avatarName)){
             try {
-                console.log(avatarName)
                 await createAvatarOnDatabase(avatarName)
                 avatarsOnDatabase.push(avatarName)
             }catch(error: any){

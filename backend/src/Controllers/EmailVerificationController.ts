@@ -1,9 +1,9 @@
 import {Request, Response} from 'express'
-import { ErrorLogger } from '../Utils/Logger'
-import { default401Response, default500Response } from '../Utils/DefaultResponses'
+import {default500Response } from '../Utils/DefaultResponses'
 import UserEmailCodes from '../Models/UserEmailCodes'
 import User from '../Models/User'
 import { commitTransaction, rollbackTransaction, startTransaction } from '../Services/Database'
+import { AuthenticationLogger, generateErrorLogFromRequest } from '../Utils/Logger'
 
 export async function sendEmailVerificationCodeToUser(req: Request, res: Response){
     const userId = req.authenticatedUser!.userId
@@ -17,7 +17,7 @@ export async function sendEmailVerificationCodeToUser(req: Request, res: Respons
         })
     }catch(error: any){
         await rollbackTransaction()
-        ErrorLogger.error(error.message)
+        generateErrorLogFromRequest(AuthenticationLogger, req, error.message)
         return res.status(500).send(default500Response())
     }
 }
@@ -40,7 +40,7 @@ export async function checkEmailVerificationCode(req: Request, res: Response){
             })
         }
     }catch(error: any){
-        ErrorLogger.error(error.message)
+        generateErrorLogFromRequest(AuthenticationLogger, req, error.message)
         return res.status(500).send(default500Response()) 
     }
 }

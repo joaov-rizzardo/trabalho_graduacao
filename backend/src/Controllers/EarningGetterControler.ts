@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { default500Response } from "../Utils/DefaultResponses";
 import EarningDAO from "../DAO/EarningDAO";
 import Earning from "../Models/Earning";
+import { TransactionLogger, generateErrorLogFromRequest } from "../Utils/Logger";
 
 export default async function getEarningsFlow(req: Request, res: Response){
     const userId = req.authenticatedUser!.userId
@@ -13,6 +14,7 @@ export default async function getEarningsFlow(req: Request, res: Response){
         })
         return res.status(200).send(earnings.map(earning => earning.convertToObject()))
     }catch(error: any){
+        generateErrorLogFromRequest(TransactionLogger, req, error.message)
         return res.status(500).send(default500Response())
     }
 }

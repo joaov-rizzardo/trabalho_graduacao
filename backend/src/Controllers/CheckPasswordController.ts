@@ -1,6 +1,7 @@
 import {Request, Response} from 'express'
 import { default500Response } from '../Utils/DefaultResponses'
 import User from '../Models/User'
+import { AuthenticationLogger, generateErrorLogFromRequest } from '../Utils/Logger'
 
 export default async function checkPasswordFlow(req: Request, res: Response){
     try {
@@ -9,6 +10,7 @@ export default async function checkPasswordFlow(req: Request, res: Response){
         const checkedPassword = await checkPasswordByUserId(userId, password)
         return res.status(200).send({checked: checkedPassword})
     }catch(error: any){
+        generateErrorLogFromRequest(AuthenticationLogger, req, error.message)
         return res.status(500).send(default500Response())
     }
 }

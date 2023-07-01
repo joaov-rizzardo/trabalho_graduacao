@@ -1,6 +1,5 @@
 import UserDAO from "../DAO/UserDAO"
 import getCurrentStringDatetime from "../Utils/DateUtils"
-import { ErrorLogger } from "../Utils/Logger"
 import MailSender from "./MailSender"
 
 export default class UserEmailCodes {
@@ -27,7 +26,6 @@ export default class UserEmailCodes {
                 sentAt: getCurrentStringDatetime()
             })
         }catch(error: any){
-            ErrorLogger.error(error.message)
             throw new Error(error)
         }
     }
@@ -49,7 +47,6 @@ export default class UserEmailCodes {
                 return false
             }
         }catch(error: any){
-            ErrorLogger.error(error.message)
             return false
         }
     }

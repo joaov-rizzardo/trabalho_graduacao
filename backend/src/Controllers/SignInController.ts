@@ -3,7 +3,7 @@ import UserDAO from '../DAO/UserDAO'
 import User, { UserType } from '../Models/User'
 import { default400Response, default500Response } from '../Utils/DefaultResponses'
 import JWTAuthenticator from '../Models/JWTAuthenticator'
-import { ErrorLogger } from '../Utils/Logger'
+import { AuthenticationLogger, generateErrorLogFromRequest } from '../Utils/Logger'
 
 export type tokenType = {
     userId: number,
@@ -38,7 +38,7 @@ export default async function signIn(req: Request, res: Response){
             user: user
         })
     }catch(error: any){
-        ErrorLogger.error(error.message)
+        generateErrorLogFromRequest(AuthenticationLogger, req, error.message)
         return res.status(500).send(default500Response())
     }
 }

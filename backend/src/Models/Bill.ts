@@ -9,11 +9,8 @@ type BillType = {
     userId: number
     billType: keyof typeof BillEnum
     description: string
-    value: number
-    installmentsQuantity: number
     installments: BillInstallment[]
     paymentDay: number
-    firstDueDate: string
     createdAt: string
     isCanceled: boolean
     canceledAt?: string
@@ -25,11 +22,8 @@ export default class Bill {
     private billType: keyof typeof BillEnum
     private billTypeDescription: string
     private description: string
-    private value: number
-    private installmentsQuantity: number
     private installments: BillInstallment[]
     private paymentDay: number
-    private firstDueDate: string
     private createdAt: string
     private isCanceled: boolean
     private canceledAt?: string
@@ -41,11 +35,8 @@ export default class Bill {
         this.billType = params.billType
         this.billTypeDescription = BillEnum[params.billType]
         this.description = params.description
-        this.value = params.value
-        this.installmentsQuantity = params.installmentsQuantity
         this.installments = params.installments
         this.paymentDay = params.paymentDay
-        this.firstDueDate = params.firstDueDate
         this.createdAt = params.createdAt
         this.isCanceled = params.isCanceled
         this.canceledAt = params.canceledAt
@@ -59,10 +50,7 @@ export default class Bill {
                 userId: this.userId,
                 typeId: this.billType,
                 description: this.description,
-                value: this.value,
-                installments: this.installmentsQuantity,
                 paymentDay: this.paymentDay,
-                firstDueDate: this.firstDueDate,
                 createdAt: this.createdAt,
                 isCanceled: this.isCanceled,
                 canceledAt: this.canceledAt
@@ -72,10 +60,7 @@ export default class Bill {
                 userId: this.userId,
                 typeId: this.billType,
                 description: this.description,
-                value: this.value,
-                installments: this.installmentsQuantity,
                 paymentDay: this.paymentDay,
-                firstDueDate: this.firstDueDate,
                 createdAt: this.createdAt,
                 isCanceled: this.isCanceled,
                 canceledAt: this.canceledAt
@@ -105,11 +90,8 @@ export default class Bill {
             billType: this.billType,
             billTypeDescription: this.billTypeDescription,
             description: this.description,
-            value: this.value,
-            installmentsQuantity: this.installmentsQuantity,
             installments: this.installments.map(installment => installment.convertToObject()),
             paymentDay: this.paymentDay,
-            firstDueDate: this.firstDueDate,
             createdAt: this.createdAt,
             isCanceled: this.isCanceled,
             canceledAt: this.canceledAt
@@ -127,11 +109,8 @@ export default class Bill {
             userId: billData.userId,
             billType: billData.typeId,
             description: billData.description,
-            value: billData.value,
-            installmentsQuantity: billData.installments,
             installments: installmentsData.map(installment => new BillInstallment(installment)),
             paymentDay: billData.paymentDay,
-            firstDueDate: billData.firstDueDate,
             createdAt: billData.createdAt,
             isCanceled: billData.isCanceled,
             canceledAt: billData.canceledAt

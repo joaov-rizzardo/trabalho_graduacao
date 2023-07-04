@@ -76,6 +76,7 @@ CREATE TABLE IF NOT EXISTS UserBills (
     userId BIGINT NOT NULL,
     typeId VARCHAR(1) NOT NULL,
     description VARCHAR(40) NOT NULL,
+    installmentValue DECIMAL(15,2) NOT NULL,
     paymentDay TINYINT NOT NULL,
     createdAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     isCanceled BOOLEAN NOT NULL,

@@ -9,7 +9,8 @@ type BillType = {
     userId: number
     billType: keyof typeof BillEnum
     description: string
-    installments: BillInstallment[]
+    installments?: BillInstallment[]
+    installmentValue: number
     paymentDay: number
     createdAt: string
     isCanceled: boolean
@@ -22,7 +23,8 @@ export default class Bill {
     private billType: keyof typeof BillEnum
     private billTypeDescription: string
     private description: string
-    private installments: BillInstallment[]
+    private installments?: BillInstallment[]
+    private installmentValue: number
     private paymentDay: number
     private createdAt: string
     private isCanceled: boolean
@@ -35,7 +37,8 @@ export default class Bill {
         this.billType = params.billType
         this.billTypeDescription = BillEnum[params.billType]
         this.description = params.description
-        this.installments = params.installments
+        this.installments = params.installments !== undefined ? params.installments : []
+        this.installmentValue = params.installmentValue
         this.paymentDay = params.paymentDay
         this.createdAt = params.createdAt
         this.isCanceled = params.isCanceled
@@ -50,6 +53,7 @@ export default class Bill {
                 userId: this.userId,
                 typeId: this.billType,
                 description: this.description,
+                installmentValue: this.installmentValue,
                 paymentDay: this.paymentDay,
                 createdAt: this.createdAt,
                 isCanceled: this.isCanceled,
@@ -60,6 +64,7 @@ export default class Bill {
                 userId: this.userId,
                 typeId: this.billType,
                 description: this.description,
+                installmentValue: this.installmentValue,
                 paymentDay: this.paymentDay,
                 createdAt: this.createdAt,
                 isCanceled: this.isCanceled,
@@ -68,9 +73,25 @@ export default class Bill {
         }
     }
 
+    public async createInstallment({installmentNumber, dueDate}: {installmentNumber: number, dueDate: string}){
+        if(!this.isCreated()){
+            throw new Error('A conta ainda não foi salva')
+        }
+        const installment = new BillInstallment({
+            billId: this.biilId!,
+            installmentNumber: installmentNumber,
+            value: this.installmentValue,
+            dueDate: dueDate,
+            isPayed: false,
+            createdAt: getCurrentStringDatetime()
+        })
+        await installment.save()
+        this.installments?.push(installment)
+    }
+
     public isPayed(){
         let isPayed = true
-        this.installments.forEach(installment => {
+        this.installments?.forEach(installment => {
             if(!installment.isPaid){
                 isPayed = false
             }
@@ -90,12 +111,24 @@ export default class Bill {
             billType: this.billType,
             billTypeDescription: this.billTypeDescription,
             description: this.description,
-            installments: this.installments.map(installment => installment.convertToObject()),
+            installments: this.installments?.map(installment => installment.convertToObject()),
             paymentDay: this.paymentDay,
             createdAt: this.createdAt,
             isCanceled: this.isCanceled,
             canceledAt: this.canceledAt
         }
+    }
+
+    public get getUserId(){
+        return this.userId
+    }
+
+    public get getInstallmentValue(){
+        return this.installmentValue
+    }
+
+    public get getPaymentDay(){
+        return this.paymentDay
     }
 
     public static async getInstanceById(billId: number){
@@ -109,6 +142,7 @@ export default class Bill {
             userId: billData.userId,
             billType: billData.typeId,
             description: billData.description,
+            installmentValue: billData.installmentValue,
             installments: installmentsData.map(installment => new BillInstallment(installment)),
             paymentDay: billData.paymentDay,
             createdAt: billData.createdAt,

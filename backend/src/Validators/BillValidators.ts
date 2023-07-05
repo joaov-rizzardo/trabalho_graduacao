@@ -1,5 +1,6 @@
 import {body} from 'express-validator'
 import {BillEnum} from '../Enums/BillEnum'
+import { BalanceTypeEnum } from '../Enums/BalanceTypeEnum'
 
 export const createBillValidators = [
     body('billType')
@@ -29,8 +30,21 @@ export const createBillValidators = [
         .isString().withMessage('The field firstMonthPayment must be a string')
         .matches(/^\d{4}-\d{2}-\d{2}$/).withMessage('The firstDatePayment field must be in format yyyy-mm-dd')
         .custom(value => new Date(value) > new Date()).withMessage('The field firstMonthPayment must have a date greater than or equal to the current date')
-    
+]
 
+export const payInstallmentValidators = [
+    body('installmentKey')
+        .notEmpty().withMessage('The installmentKey field cannot be empty')
+        .isNumeric().withMessage('The installmentKey field must be a number'),
+    body('balanceType')
+        .notEmpty().withMessage('The balanceType field cannot be empty')
+        .isString().withMessage('The balanceType field must be a string')
+        .isLength({min: 2, max: 2}).withMessage('The balanceType field must be a 2 characters')
+        .isIn(Object.keys(BalanceTypeEnum)).withMessage('The balanceType field has a invalid value'),
+    body('paidValue')
+        .notEmpty().withMessage('The paidValue field cannot be empty')
+        .isNumeric().withMessage('The paidValue field must be a number')
+        .custom(value => value > 0).withMessage('The paidValue must be greater than 0')
 ]
 
 

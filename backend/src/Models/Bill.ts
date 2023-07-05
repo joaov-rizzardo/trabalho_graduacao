@@ -1,7 +1,7 @@
 
 import BillDAO from "../DAO/BillDAO"
 import { BillEnum } from "../Enums/BillEnum"
-import getCurrentStringDatetime from "../Utils/DateUtils"
+import getCurrentStringDatetime, { dateDiferenceInDays } from "../Utils/DateUtils"
 import BillInstallment from "./BillInstallment"
 
 type BillType = {
@@ -89,17 +89,12 @@ export default class Bill {
         this.installments?.push(installment)
     }
 
-    public isPayed(){
-        let isPayed = true
-        this.installments?.forEach(installment => {
-            if(!installment.isPaid){
-                isPayed = false
-            }
-        })
-        return isPayed
-    }
-
     public cancel(){
+        const wasCreatedMoreThan1DayAgo = dateDiferenceInDays(new Date(this.createdAt), new Date()) >= 1
+        const alreadyPaidSomeInstallment = this.hasPaidInstallment()
+        if(wasCreatedMoreThan1DayAgo && alreadyPaidSomeInstallment){
+            throw new Error('A conta não pode ser cancelada, o prazo para cancelamento expirou')
+        }
         this.isCanceled = true
         this.canceledAt = getCurrentStringDatetime()
     }
@@ -131,6 +126,38 @@ export default class Bill {
         return this.paymentDay
     }
 
+    public get getDescription(){
+        return this.description
+    }
+
+    public get getBillType(){
+        return this.billType
+    }
+
+    public get getInstallments(){
+        return this.installments
+    }
+
+    public isActive(){
+        if(this.isCanceled === true){
+            return false
+        }
+        if(this.billType === 'F'){
+            return true
+        }
+        const isFullyPaid = this.installments?.reduce((status, currentValue) => {
+            if(currentValue.isPaid === false){
+                status = false
+            }
+            return status
+        }, true)
+        if(isFullyPaid === false){
+            return true
+        }else{
+            return false
+        }
+    }
+
     public static async getInstanceById(billId: number){
         const billDAO = new BillDAO()
         const [billData, installmentsData] = await Promise.all([
@@ -149,6 +176,16 @@ export default class Bill {
             isCanceled: billData.isCanceled,
             canceledAt: billData.canceledAt
         })
+    }
+
+    private hasPaidInstallment(){
+        let hasPaid = false
+        this.installments?.forEach(installment => {
+            if(installment.isPaid){
+                hasPaid = true
+            }
+        })
+        return hasPaid
     }
 
     private isCreated(){

@@ -6,6 +6,7 @@ import { getUserAvatarsFlow } from '../Controllers/UserAvatarsController'
 import updateProfileFlow from '../Controllers/UpdateProfileController'
 import updatePasswordFlow from '../Controllers/UpdatePasswordController'
 import tokenAuthenticationMiddleware from '../Middlewares/TokenAuthenticationMiddleware'
+import getBalanceTypesFlow from '../Controllers/BalanceTypesGetterController'
 
 const profileRouter = Router()
 
@@ -19,5 +20,6 @@ profileRouter.post('/updateProfile', updateProfileValidators, checkExpressValida
 profileRouter.post('/updatePassword', updatePasswordValidators, checkExpressValidations, updatePasswordFlow)
 profileRouter.get('/userAvatars', getUserAvatarsFlow)
 profileRouter.get('/avatar/:avatarId', sendAvatarImage)
+profileRouter.get('/balanceTypes', getBalanceTypesFlow)
 
 export default profileRouter

@@ -368,3 +368,93 @@
 
 [2023-07-01 15:37:50] Method: POST URL: /authentication/sendVerificationCode Status-Code: 500 Reponse-Size: 70 Response-Time: 3.283 ms
 
+[2023-07-05 18:44:07] Method: POST URL: /bill/create Status-Code: 401 Reponse-Size: 34 Response-Time: 48.483 ms
+
+[2023-07-05 18:44:18] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 72 Response-Time: 578.467 ms
+
+[2023-07-05 18:44:28] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 72 Response-Time: 76.547 ms
+
+[2023-07-05 18:44:36] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 72 Response-Time: 67.470 ms
+
+[2023-07-05 18:45:03] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 17 Response-Time: 1.988 ms
+
+[2023-07-05 18:46:25] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 516 Response-Time: 71.984 ms
+
+[2023-07-05 18:46:35] Method: POST URL: /bill/installment/pay Status-Code: 400 Reponse-Size: 426 Response-Time: 2.921 ms
+
+[2023-07-05 18:46:40] Method: POST URL: /bill/installment/pay Status-Code: 400 Reponse-Size: 426 Response-Time: 1.663 ms
+
+[2023-07-05 18:46:50] Method: POST URL: /bill/create Status-Code: 401 Reponse-Size: 34 Response-Time: 1.193 ms
+
+[2023-07-05 18:46:54] Method: POST URL: /bill/create Status-Code: 201 Reponse-Size: 1492 Response-Time: 359.536 ms
+
+[2023-07-05 18:48:25] Method: POST URL: /bill/installment/pay Status-Code: 400 Reponse-Size: 95 Response-Time: 1.706 ms
+
+[2023-07-05 18:48:29] Method: POST URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 337 Response-Time: 67.873 ms
+
+[2023-07-05 18:48:44] Method: POST URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 337 Response-Time: 26.415 ms
+
+[2023-07-05 18:48:58] Method: POST URL: /bill/installment/pay Status-Code: 500 Reponse-Size: 70 Response-Time: 53.485 ms
+
+[2023-07-05 18:49:23] Method: POST URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 347 Response-Time: 47.102 ms
+
+[2023-07-05 18:50:27] Method: POST URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 344 Response-Time: 32.489 ms
+
+[2023-07-05 19:19:16] Method: PUT URL: /bill/cancel/1 Status-Code: 404 Reponse-Size: 44 Response-Time: 6.162 ms
+
+[2023-07-05 19:19:33] Method: PUT URL: /bill/cancel/1 Status-Code: 500 Reponse-Size: 70 Response-Time: 47.816 ms
+
+[2023-07-05 19:20:12] Method: PUT URL: /bill/cancel/1 Status-Code: 200 Reponse-Size: 1821 Response-Time: 45.561 ms
+
+[2023-07-05 19:20:36] Method: POST URL: /bill/create Status-Code: 201 Reponse-Size: 1012 Response-Time: 52.316 ms
+
+[2023-07-05 19:21:09] Method: PUT URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 342 Response-Time: 35.148 ms
+
+[2023-07-05 19:21:13] Method: PUT URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 343 Response-Time: 35.976 ms
+
+[2023-07-05 19:21:20] Method: PUT URL: /bill/cancel/2 Status-Code: 200 Reponse-Size: 1242 Response-Time: 29.723 ms
+
+[2023-07-05 19:40:11] Method: POST URL: /bill/create Status-Code: 201 Reponse-Size: 1013 Response-Time: 101.343 ms
+
+[2023-07-05 19:41:33] Method: GET URL: /bill/activeBills Status-Code: - Reponse-Size: - Response-Time: - ms
+
+[2023-07-05 19:43:11] Method: GET URL: /bill/activeBills Status-Code: - Reponse-Size: - Response-Time: - ms
+
+[2023-07-05 19:49:58] Method: GET URL: /bill/activeBills Status-Code: 200 Reponse-Size: 3728 Response-Time: 47.647 ms
+
+[2023-07-05 19:50:52] Method: PUT URL: /bill/cancel/1 Status-Code: 200 Reponse-Size: 1821 Response-Time: 94.240 ms
+
+[2023-07-05 19:51:07] Method: GET URL: /bill/activeBills Status-Code: 200 Reponse-Size: 2086 Response-Time: 7.679 ms
+
+[2023-07-05 19:51:24] Method: PUT URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 342 Response-Time: 57.802 ms
+
+[2023-07-05 19:51:28] Method: PUT URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 343 Response-Time: 30.445 ms
+
+[2023-07-05 19:51:31] Method: PUT URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 343 Response-Time: 148.288 ms
+
+[2023-07-05 19:51:34] Method: PUT URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 343 Response-Time: 33.865 ms
+
+[2023-07-05 19:51:38] Method: PUT URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 343 Response-Time: 26.714 ms
+
+[2023-07-05 19:51:43] Method: GET URL: /bill/activeBills Status-Code: 200 Reponse-Size: 1013 Response-Time: 3.521 ms
+
+[2023-07-05 19:59:12] Method: GET URL: /transaction/earningCategories Status-Code: 200 Reponse-Size: 352 Response-Time: 6.266 ms
+
+[2023-07-05 20:01:34] Method: GET URL: /transaction/spendingCategories Status-Code: 200 Reponse-Size: 352 Response-Time: 6.048 ms
+
+[2023-07-05 20:01:40] Method: GET URL: /transaction/earningCategories Status-Code: 200 Reponse-Size: 352 Response-Time: 2.779 ms
+
+[2023-07-05 20:01:44] Method: GET URL: /transaction/spendingCategories Status-Code: 200 Reponse-Size: 352 Response-Time: 2.105 ms
+
+[2023-07-05 20:02:02] Method: GET URL: /transaction/spendingCategories Status-Code: 200 Reponse-Size: 352 Response-Time: 6.558 ms
+
+[2023-07-05 20:02:13] Method: GET URL: /transaction/spendingCategories Status-Code: 200 Reponse-Size: 425 Response-Time: 6.889 ms
+
+[2023-07-05 20:02:19] Method: GET URL: /transaction/earningCategories Status-Code: 200 Reponse-Size: 352 Response-Time: 2.306 ms
+
+[2023-07-05 20:06:19] Method: GET URL: /bill/billTypes Status-Code: 404 Reponse-Size: 44 Response-Time: 2.198 ms
+
+[2023-07-05 20:06:33] Method: GET URL: /bill/billTypes Status-Code: 200 Reponse-Size: 72 Response-Time: 5.870 ms
+
+[2023-07-05 20:10:56] Method: GET URL: /profile/balanceTypes Status-Code: 200 Reponse-Size: 75 Response-Time: 7.147 ms
+

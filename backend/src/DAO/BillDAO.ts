@@ -238,4 +238,22 @@ export default class BillDAO {
             createdAt: convertDateObjectDatetimeToString(installmentData.createdAt) 
         }
     }
+
+    public async getNotCanceledBillsByUserId(userId: number){
+        const response = await query(`SELECT * FROM UserBills WHERE userId = ? AND isCanceled = 0`, [userId]) as [BillFieldsType[], FieldPacket[]]
+        const billData = response[0]
+        return billData.map(bill => {
+            return {
+                billId: bill.billId,
+                userId: bill.userId,
+                typeId: bill.typeId,
+                description: bill.description,
+                installmentValue: parseFloat(bill.installmentValue),
+                paymentDay: bill.paymentDay,
+                createdAt: convertDateObjectDatetimeToString(bill.createdAt),
+                isCanceled: Boolean(bill.isCanceled),
+                canceledAt: bill.canceledAt !== null ? convertDateObjectDatetimeToString(bill.canceledAt) : undefined
+            }
+        })
+    }
 }

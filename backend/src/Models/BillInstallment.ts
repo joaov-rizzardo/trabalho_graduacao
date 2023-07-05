@@ -38,8 +38,16 @@ export default class BillInstallment {
         this.checkIfIsExpired()
     }
 
-    get isPaid(){
+    public get isPaid(){
         return this.isPayed
+    }
+
+    public get getBillId(){
+        return this.billId
+    }
+
+    public get getValue(){
+        return this.value
     }
 
     public async save(){
@@ -81,7 +89,8 @@ export default class BillInstallment {
         }
     }
 
-    public pay(){
+    public pay(paidValue: number){
+        this.value = paidValue
         this.isPayed = true
         this.payedAt = getCurrentStringDatetime()
     }

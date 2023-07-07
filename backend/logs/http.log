@@ -458,3 +458,9 @@
 
 [2023-07-05 20:10:56] Method: GET URL: /profile/balanceTypes Status-Code: 200 Reponse-Size: 75 Response-Time: 7.147 ms
 
+[2023-07-06 21:04:04] Method: GET URL: /management/pointsRanking Status-Code: 200 Reponse-Size: 436 Response-Time: 265.445 ms
+
+[2023-07-06 21:04:28] Method: GET URL: /management/levelRanking Status-Code: 200 Reponse-Size: 472 Response-Time: 8.094 ms
+
+[2023-07-06 21:05:06] Method: GET URL: /management/levelRanking Status-Code: 200 Reponse-Size: 472 Response-Time: 4.046 ms
+

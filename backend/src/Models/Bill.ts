@@ -1,6 +1,7 @@
 
 import BillDAO from "../DAO/BillDAO"
 import { BillEnum } from "../Enums/BillEnum"
+import { SpendingCategoryEnum } from "../Enums/SpendingCategoryEnum"
 import getCurrentStringDatetime, { dateDiferenceInDays } from "../Utils/DateUtils"
 import BillInstallment from "./BillInstallment"
 
@@ -8,6 +9,7 @@ type BillType = {
     biilId?: number
     userId: number
     billType: keyof typeof BillEnum
+    category: keyof typeof SpendingCategoryEnum,
     description: string
     installments?: BillInstallment[]
     installmentValue: number
@@ -22,6 +24,8 @@ export default class Bill {
     private userId: number
     private billType: keyof typeof BillEnum
     private billTypeDescription: string
+    private categoryKey: keyof typeof SpendingCategoryEnum
+    private categoryDescription: SpendingCategoryEnum
     private description: string
     private installments?: BillInstallment[]
     private installmentValue: number
@@ -36,6 +40,8 @@ export default class Bill {
         this.userId = params.userId
         this.billType = params.billType
         this.billTypeDescription = BillEnum[params.billType]
+        this.categoryKey = params.category
+        this.categoryDescription = SpendingCategoryEnum[params.category]
         this.description = params.description
         this.installments = params.installments !== undefined ? params.installments : []
         this.installmentValue = params.installmentValue
@@ -52,6 +58,7 @@ export default class Bill {
                 billId: this.biilId!,
                 userId: this.userId,
                 typeId: this.billType,
+                category: this.categoryKey,
                 description: this.description,
                 installmentValue: this.installmentValue,
                 paymentDay: this.paymentDay,
@@ -63,6 +70,7 @@ export default class Bill {
             this.biilId = await this.billDAO.insertBillAndReturnId({
                 userId: this.userId,
                 typeId: this.billType,
+                category: this.categoryKey,
                 description: this.description,
                 installmentValue: this.installmentValue,
                 paymentDay: this.paymentDay,
@@ -105,6 +113,8 @@ export default class Bill {
             userId: this.userId,
             billType: this.billType,
             billTypeDescription: this.billTypeDescription,
+            categoryKey: this.categoryKey,
+            categoryDescription: this.categoryDescription,
             description: this.description,
             installments: this.installments?.map(installment => installment.convertToObject()),
             paymentDay: this.paymentDay,
@@ -168,6 +178,7 @@ export default class Bill {
             biilId: billData.billId,
             userId: billData.userId,
             billType: billData.typeId,
+            category: billData.category,
             description: billData.description,
             installmentValue: billData.installmentValue,
             installments: installmentsData.map(installment => new BillInstallment(installment)),

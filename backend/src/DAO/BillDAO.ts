@@ -2,6 +2,7 @@ import { FieldPacket } from "mysql2/promise"
 import { ResultSetHeaderType, query } from "../Services/Database"
 import { BillEnum } from "../Enums/BillEnum"
 import { convertDateObjectDatetimeToString } from "../Utils/DateUtils"
+import { SpendingCategoryEnum } from "../Enums/SpendingCategoryEnum"
 
 type InstallmentInsertType = {
     billId: number,
@@ -39,6 +40,7 @@ type BillUpdateType = {
     billId: number,
     userId: number,
     typeId: keyof typeof BillEnum,
+    category: keyof typeof SpendingCategoryEnum,
     description: string,
     installmentValue: number,
     paymentDay: number,
@@ -50,6 +52,7 @@ type BillUpdateType = {
 type BillInsertType = {
     userId: number,
     typeId: keyof typeof BillEnum,
+    category: keyof typeof SpendingCategoryEnum,
     description: string,
     installmentValue: number,
     paymentDay: number,
@@ -62,6 +65,7 @@ type BillFieldsType = {
     billId: number,
     userId: number,
     typeId: keyof typeof BillEnum,
+    category: keyof typeof SpendingCategoryEnum,
     description: string,
     installmentValue: string,
     paymentDay: number,
@@ -133,6 +137,7 @@ export default class BillDAO {
             SET
                 userId = ?,
                 typeId = ?,
+                category = ?,
                 description = ?,
                 installmentValue = ?,
                 paymentDay = ?,
@@ -145,6 +150,7 @@ export default class BillDAO {
             [
                 params.userId,
                 params.typeId,
+                params.category,
                 params.description,
                 params.installmentValue,
                 params.paymentDay,
@@ -163,6 +169,7 @@ export default class BillDAO {
             SET
                 userId = ?,
                 typeId = ?,
+                category = ?,
                 description = ?,
                 installmentValue = ?,
                 paymentDay = ?,
@@ -173,6 +180,7 @@ export default class BillDAO {
             [
                 params.userId,
                 params.typeId,
+                params.category,
                 params.description,
                 params.installmentValue,
                 params.paymentDay,
@@ -212,6 +220,7 @@ export default class BillDAO {
             billId: billData.billId,
             userId: billData.userId,
             typeId: billData.typeId,
+            category: billData.category,
             description: billData.description,
             installmentValue: parseFloat(billData.installmentValue),
             paymentDay: billData.paymentDay,
@@ -247,6 +256,7 @@ export default class BillDAO {
                 billId: bill.billId,
                 userId: bill.userId,
                 typeId: bill.typeId,
+                category: bill.category,
                 description: bill.description,
                 installmentValue: parseFloat(bill.installmentValue),
                 paymentDay: bill.paymentDay,

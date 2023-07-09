@@ -75,6 +75,7 @@ CREATE TABLE IF NOT EXISTS UserBills (
     billId BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     userId BIGINT NOT NULL,
     typeId VARCHAR(1) NOT NULL,
+    category VARCHAR(2) NOT NULL,
     description VARCHAR(40) NOT NULL,
     installmentValue DECIMAL(15,2) NOT NULL,
     paymentDay TINYINT NOT NULL,

@@ -1,6 +1,7 @@
 import {body} from 'express-validator'
 import {BillEnum} from '../Enums/BillEnum'
 import { BalanceTypeEnum } from '../Enums/BalanceTypeEnum'
+import { SpendingCategoryEnum } from '../Enums/SpendingCategoryEnum'
 
 export const createBillValidators = [
     body('billType')
@@ -8,6 +9,11 @@ export const createBillValidators = [
         .isString().withMessage('The billType field must be a string')
         .isLength({min: 1, max: 1}).withMessage('The billType field must be a 1 character')
         .isIn(Object.keys(BillEnum)).withMessage('The billType field has a invalid value'),
+    body('category')
+        .notEmpty().withMessage('The category field cannot be empty')
+        .isString().withMessage('The category field must be a string')
+        .isLength({min: 2, max: 2}).withMessage('The category field must be a 2 character')
+        .isIn(Object.keys(SpendingCategoryEnum)).withMessage('The category field has a invalid value'),
     body('description')
         .notEmpty().withMessage('The description field cannot be empty')
         .isString().withMessage('The description field must be a string')

@@ -7,6 +7,7 @@ import Bill from "../Models/Bill";
 import getCurrentStringDatetime from "../Utils/DateUtils";
 import Activity from "../Models/Activity";
 import { formatNumberToCurrency } from "../Utils/NumberFormats";
+import { SpendingCategoryEnum } from "../Enums/SpendingCategoryEnum";
 
 export default async function createBillFlow(req: Request, res: Response){
     const userId = req.authenticatedUser!.userId
@@ -15,6 +16,7 @@ export default async function createBillFlow(req: Request, res: Response){
         let bill = await createBill({
             userId: userId,
             billType: req.body.billType,
+            category: req.body.category,
             description: req.body.description,
             installmentValue: req.body.installmentValue,
             paymentDay: req.body.paymentDay
@@ -40,6 +42,7 @@ export default async function createBillFlow(req: Request, res: Response){
 type createBillType = {
     userId: number,
     billType: keyof typeof BillEnum,
+    category: keyof typeof SpendingCategoryEnum,
     description: string,
     installmentValue: number,
     paymentDay: number
@@ -49,6 +52,7 @@ export async function createBill(params: createBillType){
     const bill = new Bill({
         userId: params.userId,
         billType: params.billType,
+        category: params.category,
         description: params.description,
         installmentValue: params.installmentValue,
         paymentDay: params.paymentDay,

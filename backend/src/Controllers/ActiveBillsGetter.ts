@@ -25,6 +25,7 @@ export async function findActiveBillsByUser(userId: number){
             biilId: bill.billId,
             userId: bill.userId,
             billType: bill.typeId,
+            category: bill.category,
             description: bill.description,
             installmentValue: bill.installmentValue,
             installments: installments.map(installment => new BillInstallment(installment)),

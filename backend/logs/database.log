@@ -31,3 +31,14 @@
     at Generator.next (<anonymous>)
     at C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\DAO\EarningDAO.ts:8:71
     at new Promise (<anonymous>)
+[2023-07-10 14:25:03] Cannot add or update a child row: a foreign key constraint fails (`bd_tcc`.`userearnings`, CONSTRAINT `userearnings_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`))
+    at C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:37:31
+    at Generator.next (<anonymous>)
+    at C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:4:12)
+    at query (C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:52:12)
+    at EarningDAO.<anonymous> (C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\DAO\EarningDAO.ts:41:37)
+    at Generator.next (<anonymous>)
+    at C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\DAO\EarningDAO.ts:8:71
+    at new Promise (<anonymous>)

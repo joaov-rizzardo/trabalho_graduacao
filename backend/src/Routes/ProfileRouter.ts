@@ -3,10 +3,10 @@ import { updatePasswordValidators, updateProfileValidators } from '../Validators
 import checkExpressValidations from '../Middlewares/DefaultExpressValidationsChecker'
 import { sendAvatarImage } from '../Controllers/AvatarImageController'
 import { getUserAvatarsFlow } from '../Controllers/UserAvatarsController'
-import updateProfileFlow from '../Controllers/UpdateProfileController'
-import updatePasswordFlow from '../Controllers/UpdatePasswordController'
 import tokenAuthenticationMiddleware from '../Middlewares/TokenAuthenticationMiddleware'
 import getBalanceTypesFlow from '../Controllers/BalanceTypesGetterController'
+import updateProfileFlow from '../Controllers/updateProfileController'
+import updatePasswordFlow from '../Controllers/updatePasswordController'
 
 const profileRouter = Router()
 

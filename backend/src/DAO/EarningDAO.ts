@@ -147,4 +147,23 @@ export default class EarningDAO {
             }
         })
     }
+
+    public async getEarningsByCategory({userId, startDate, finishDate}: {userId: number, startDate?: string, finishDate?: string}){
+        let sql = `SELECT SUM(value) AS value, category FROM UserEarnings WHERE userId = ?`
+        const params: Array<string|number> = []
+        params.push(userId)
+        if(startDate !== undefined && finishDate !== undefined){
+            sql += ` AND earnedAt BETWEEN ? AND ?`
+            params.push(`${startDate} 00:00:00`)
+            params.push(`${finishDate} 23:59:59`)
+        }
+        sql += ` GROUP BY category`
+        const response = await query(sql, params) as [{value: string, category: keyof typeof EarningCategoryEnum}[], FieldPacket[]]
+        return response[0].map(earning => {
+            return {
+                value: parseFloat(earning.value),
+                category: earning.category
+            }
+        })
+    }
 }

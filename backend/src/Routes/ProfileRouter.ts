@@ -7,6 +7,8 @@ import tokenAuthenticationMiddleware from '../Middlewares/TokenAuthenticationMid
 import getBalanceTypesFlow from '../Controllers/BalanceTypesGetterController'
 import updateProfileFlow from '../Controllers/updateProfileController'
 import updatePasswordFlow from '../Controllers/updatePasswordController'
+import getUserFinanceFlow from '../Controllers/UserFinanceGetterController'
+import getUserLevelFlow from '../Controllers/UserLevelGetterController'
 
 const profileRouter = Router()
 
@@ -21,5 +23,7 @@ profileRouter.post('/updatePassword', updatePasswordValidators, checkExpressVali
 profileRouter.get('/userAvatars', getUserAvatarsFlow)
 profileRouter.get('/avatar/:avatarId', sendAvatarImage)
 profileRouter.get('/balanceTypes', getBalanceTypesFlow)
+profileRouter.get('/userFinance', getUserFinanceFlow)
+profileRouter.get('/userLevel', getUserLevelFlow)
 
 export default profileRouter

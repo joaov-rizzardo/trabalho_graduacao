@@ -22,7 +22,7 @@ export default function tokenAuthenticationMiddleware(req: Request, res: Respons
         if(decodedToken === false || typeof decodedToken === 'string'){
             throw new Error('Token inválido')
         }
-        if(!validateTokenAttributes(decodedToken)){
+        if(!jwtAuthenticator.validateTokenAttributes(decodedToken)){
             throw new Error('O token não possuí os atributos necessários')
         }
         req.authenticatedUser = {
@@ -40,21 +40,3 @@ export default function tokenAuthenticationMiddleware(req: Request, res: Respons
     } 
 }
 
-export function validateTokenAttributes(token: Record<string, any>){
-    const expectedProperties = [
-        {name: 'userId', type: 'number'},
-        {name: 'username', type: 'string'},
-        {name: 'email', type: 'string'},
-        {name: 'name', type: 'string'},
-        {name: 'lastName', type: 'string'},
-        {name: 'selectedAvatar', type: 'number'},
-        {name: 'createdAt', type: 'string'},
-    ]
-    let isValidToken = true
-    expectedProperties.forEach(({name, type}) => {
-        if(!(name in token) || typeof token[name] !== type){
-            isValidToken = false
-        }
-    })
-    return isValidToken
-}

@@ -28,4 +28,23 @@ export default class JWTAuthenticator {
             return false
         }
     }
+
+    public validateTokenAttributes(token: Record<string, any>){
+        const expectedProperties = [
+            {name: 'userId', type: 'number'},
+            {name: 'username', type: 'string'},
+            {name: 'email', type: 'string'},
+            {name: 'name', type: 'string'},
+            {name: 'lastName', type: 'string'},
+            {name: 'selectedAvatar', type: 'number'},
+            {name: 'createdAt', type: 'string'},
+        ]
+        let isValidToken = true
+        expectedProperties.forEach(({name, type}) => {
+            if(!(name in token) || typeof token[name] !== type){
+                isValidToken = false
+            }
+        })
+        return isValidToken
+    }
 }

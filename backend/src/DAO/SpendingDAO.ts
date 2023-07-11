@@ -162,10 +162,28 @@ export default class SpendingDAO {
         }
         sql += ` GROUP BY category`
         const response = await query(sql, params) as [{value: string, category: keyof typeof SpendingCategoryEnum}[], FieldPacket[]]
-        return response[0].map(earning => {
+        return response[0].map(spending => {
             return {
-                value: parseFloat(earning.value),
-                category: earning.category
+                value: parseFloat(spending.value),
+                category: spending.category
+            }
+        })
+    }
+    public async getAllSpendingsByFilters({userId, startDate, finishDate}: {userId: number, startDate?: string, finishDate?: string}){
+        let sql = `SELECT value, category, spendingDate FROM vw_spending_by_category WHERE userId = ?`
+        const params: Array<string|number> = []
+        params.push(userId)
+        if(startDate !== undefined && finishDate !== undefined){
+            sql += ` AND spendingDate BETWEEN ? AND ?`
+            params.push(`${startDate} 00:00:00`)
+            params.push(`${finishDate} 23:59:59`)
+        }
+        const response = await query(sql, params) as [{value: string, category: keyof typeof SpendingCategoryEnum, spendingDate: Date}[], FieldPacket[]]
+        return response[0].map(spending => {
+            return {
+                value: parseFloat(spending.value),
+                category: spending.category,
+                spendingDate: convertDateObjectDatetimeToString(spending.spendingDate)
             }
         })
     }

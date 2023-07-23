@@ -1,15 +1,16 @@
-import { TouchableOpacity, Text, StyleSheet, TouchableOpacityProps } from "react-native";
+import { TouchableOpacity, Text, StyleSheet, TouchableOpacityProps, ActivityIndicator } from "react-native";
 import { colors } from "../configs/theme";
 
-interface CustomButtonProps extends TouchableOpacityProps{
+interface CustomButtonProps extends TouchableOpacityProps {
     text: string,
     width?: number,
-    isOutline?: boolean
+    isOutline?: boolean,
+    loading?: boolean
 }
 
-export default function CustomButton({text, width = 330, isOutline = false, ...props}: CustomButtonProps){
+export default function CustomButton({ text, width = 330, isOutline = false, loading = false, ...props }: CustomButtonProps) {
     return (
-        <TouchableOpacity 
+        <TouchableOpacity
             style={{
                 ...styles.container,
                 width: width,
@@ -17,12 +18,17 @@ export default function CustomButton({text, width = 330, isOutline = false, ...p
             }}
             {...props}
         >
-            <Text
-                style={{
-                    ...styles.textStyle,
-                    color: isOutline ? colors.mainColor : colors.text
-                }}
-            >{text}</Text>
+            {
+                loading
+                    ? <ActivityIndicator size="large" color={isOutline ? colors.mainColor : colors.text} />
+                    : <Text
+                        style={{
+                            ...styles.textStyle,
+                            color: isOutline ? colors.mainColor : colors.text
+                        }}
+                    >{text}</Text>
+            }
+
         </TouchableOpacity>
     )
 }
@@ -38,6 +44,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     textStyle: {
-        fontSize: 20
+        fontSize: 20,
+        fontFamily: 'ComicNeue_400Regular'
     }
 })

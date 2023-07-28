@@ -3,12 +3,12 @@ import { colors } from "../configs/theme";
 
 interface CustomButtonProps extends TouchableOpacityProps {
     text: string,
-    width?: number,
+    width?: number | string,
     isOutline?: boolean,
     loading?: boolean
 }
 
-export default function CustomButton({ text, width = 330, isOutline = false, loading = false, ...props }: CustomButtonProps) {
+export default function CustomButton({ text, width = '100%', isOutline = false, loading = false, ...props }: CustomButtonProps) {
     return (
         <TouchableOpacity
             style={{
@@ -24,7 +24,7 @@ export default function CustomButton({ text, width = 330, isOutline = false, loa
                     : <Text
                         style={{
                             ...styles.textStyle,
-                            color: isOutline ? colors.mainColor : colors.text
+                            color: isOutline ? colors.mainColor : colors.background
                         }}
                     >{text}</Text>
             }

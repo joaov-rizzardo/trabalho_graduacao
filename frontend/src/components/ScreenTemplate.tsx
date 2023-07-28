@@ -39,6 +39,8 @@ const styles = StyleSheet.create({
     },
     contentContainer: {
         flex: 1,
+        paddingHorizontal: 24,
+        paddingVertical: 40,
         backgroundColor: colors.background,
         borderTopLeftRadius: 40,
         borderTopRightRadius: 40

@@ -4,9 +4,9 @@ import { colors } from "../../configs/theme";
 
 interface InputContainerProps {
     children: ReactNode,
-    width?: number
+    width?: number | string
 }
-export default function InputContainer({children, width = 330}: InputContainerProps){
+export default function InputContainer({children, width = "100%"}: InputContainerProps){
     return (
         <View style={{
             width: width,

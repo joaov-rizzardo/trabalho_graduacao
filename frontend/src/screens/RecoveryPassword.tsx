@@ -2,7 +2,7 @@ import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import ScreenTemplate from "../components/ScreenTemplate";
 import CustomInput from "../components/CustomInput";
 import CustomButton from "../components/CustomButton";
-import { colors } from "../configs/theme";
+import { colors } from "../configs/Theme";
 
 export default function RecoveryPassword(){
     return (

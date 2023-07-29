@@ -1,6 +1,6 @@
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import ScreenTemplate from "../components/ScreenTemplate";
-import { colors } from "../configs/theme";
+import { colors } from "../configs/Theme";
 import CustomButton from "../components/CustomButton";
 import CodeInput from "../components/CodeInput";
 import { useState } from "react";

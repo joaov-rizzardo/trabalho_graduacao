@@ -1,5 +1,5 @@
 import { TouchableOpacity, Text, StyleSheet, TouchableOpacityProps, ActivityIndicator } from "react-native";
-import { colors } from "../configs/theme";
+import {colors} from '../configs/Theme'
 
 interface CustomButtonProps extends TouchableOpacityProps {
     text: string,

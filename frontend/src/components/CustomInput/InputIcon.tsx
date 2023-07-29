@@ -1,5 +1,5 @@
 import MaterialIcon from '@expo/vector-icons/MaterialIcons';
-import { colors } from '../../configs/theme';
+import { colors } from '../../configs/Theme';
 
 interface InputIconProps {
     iconName: React.ComponentProps<typeof MaterialIcon>['name']

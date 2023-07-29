@@ -1,5 +1,5 @@
 import { TextInput, TextInputProps } from "react-native";
-import { colors } from "../../configs/theme";
+import { colors } from "../../configs/Theme";
 
 interface InputProps extends TextInputProps {
 

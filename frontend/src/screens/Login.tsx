@@ -1,7 +1,7 @@
 import { View, StyleSheet, Image, Text } from 'react-native'
-import { colors } from '../configs/theme'
 import CustomButton from '../components/CustomButton'
 import CustomInput from '../components/CustomInput'
+import { colors } from '../configs/Theme'
 
 export default function Login() {
     return (

@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Image, StyleSheet, View } from "react-native";
-import { colors } from "../configs/theme";
+import { colors } from "../configs/Theme";
 
 interface ScreenTemplateProps {
     children: ReactNode

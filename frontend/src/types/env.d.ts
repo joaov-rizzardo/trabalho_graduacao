@@ -1,3 +1,4 @@
 declare module '@env' {
-    // export const TESTE_ENV: string;
+    export const BACKEND_URL: string
+    export const BACKEND_PORT: string
 }

@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { View } from "react-native";
-import { colors } from "../../configs/theme";
+import { colors } from "../../configs/Theme";
 
 interface InputContainerProps {
     children: ReactNode,

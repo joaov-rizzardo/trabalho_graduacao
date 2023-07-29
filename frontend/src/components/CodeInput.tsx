@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { NativeSyntheticEvent, StyleSheet, TextInput, TextInputKeyPressEventData, View } from "react-native";
-import { colors } from "../configs/theme";
+import { colors } from "../configs/Theme";
 
 interface CodeInputProps {
     changeValue: React.Dispatch<React.SetStateAction<string>>,

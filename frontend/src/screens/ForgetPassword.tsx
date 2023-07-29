@@ -4,7 +4,7 @@ import CustomInput from "../components/CustomInput";
 import CodeInput from "../components/CodeInput";
 import { useState } from "react";
 import CustomButton from "../components/CustomButton";
-import { colors } from "../configs/theme";
+import { colors } from "../configs/Theme";
 
 export default function ForgetPassword() {
     const [code, setCode] = useState<string>('')

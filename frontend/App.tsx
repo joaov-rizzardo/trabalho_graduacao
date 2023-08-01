@@ -3,6 +3,7 @@ import AuthRouter from './src/routers/AuthRouter';
 import { StatusBar } from 'react-native';
 import { colors } from './src/configs/Theme';
 import { useFonts, ComicNeue_400Regular, ComicNeue_700Bold } from '@expo-google-fonts/comic-neue';
+import { AuthProvider } from './src/contexts/AuthContext';
 
 export default function App() {
 
@@ -15,9 +16,9 @@ export default function App() {
     return null;
   }
   return (
-    <>
+    <AuthProvider>
       <StatusBar backgroundColor={colors.mainColor}/>
       <AuthRouter />
-    </>
+    </AuthProvider>
   )
 }

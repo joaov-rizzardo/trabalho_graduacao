@@ -2,8 +2,32 @@ import { View, StyleSheet, Image, Text } from 'react-native'
 import CustomButton from '../components/CustomButton'
 import CustomInput from '../components/CustomInput'
 import { colors } from '../configs/Theme'
+import { StackNavigationProp } from '@react-navigation/stack'
+import { AuthStackNavigationType } from '../routers/AuthRouter'
+import { useContext, useEffect, useState } from 'react'
+import { AuthContext } from '../contexts/AuthContext'
 
-export default function Login() {
+interface LoginProps {
+    navigation: StackNavigationProp<AuthStackNavigationType, "HomePage", "RecoveryPassword">
+}
+
+export default function Login({navigation}: LoginProps) {
+    const [username, setUsername] = useState<string>('')
+    const [password, setPassword] = useState<string>('')
+    const [loginLoading, setLoginLoading] = useState<boolean>(false)
+    const {login} = useContext(AuthContext)
+
+    async function handleLoginButtonPress(){
+        setLoginLoading(true)
+        const response = await login({username, password})
+        if(response === true){
+            navigation.navigate('HomePage')
+        }else{
+            console.log('Error')
+        }
+        setLoginLoading(false)
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.logoSection}>
@@ -13,23 +37,35 @@ export default function Login() {
                 <View style={styles.inputsContainer}>
                     <CustomInput.Container>
                         <CustomInput.Icon iconName="person" />
-                        <CustomInput.Input placeholder='Usuário' />
+                        <CustomInput.Input 
+                            placeholder='Usuário'
+                            value={username}
+                            onChangeText={text => setUsername(text)}
+                        />
                     </CustomInput.Container>
 
                     <CustomInput.Container>
                         <CustomInput.Icon iconName="lock" />
                         <CustomInput.Input
                             secureTextEntry={true} 
-                            placeholder='Senha' 
+                            placeholder='Senha'
+                            value={password}
+                            onChangeText={text => setPassword(text)}
                         />
                     </CustomInput.Container>
                 </View>
                 <View style={styles.buttonsContainer}>
-                    <CustomButton text="Entrar" />
+                    <CustomButton 
+                        text="Entrar"
+                        disabled={(password === "" || username === "")}
+                        loading={loginLoading}
+                        onPress={handleLoginButtonPress}
+                    />
                     <CustomButton text="Cadastre-se" isOutline={true} />
                 </View>
-                <Text style={styles.textActionStyle}>Esqueci minha senha</Text>
-                
+                <Text style={styles.textActionStyle} onPress={() => {
+                    navigation.navigate('RecoveryPassword')
+                }}>Esqueci minha senha</Text>
             </View>
         </View>
     )
@@ -53,6 +89,8 @@ const styles = StyleSheet.create({
     },
     loginContent: {
         flex: 1,
+        paddingHorizontal: 24,
+        paddingVertical: 40,
         alignItems: 'center',
         justifyContent: 'center',
         gap: 50,
@@ -61,9 +99,11 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 40
     },
     inputsContainer: {
+        width: '100%',
         gap: 20
     },
     buttonsContainer: {
+        width: '100%',
         gap: 20
     },
     textActionStyle: {

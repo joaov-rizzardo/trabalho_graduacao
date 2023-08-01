@@ -22,6 +22,7 @@ export default function useAuth(){
             }
             setUser(user)
             setAuthenticated(true)
+            return true
         }catch(error: any){
             return false
         }

@@ -488,3 +488,7 @@
 
 [2023-07-29 12:04:06] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 187 Response-Time: 3.515 ms
 
+[2023-07-31 20:57:04] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 72 Response-Time: 507.367 ms
+
+[2023-07-31 20:57:18] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 504 Response-Time: 93.980 ms
+

@@ -492,3 +492,13 @@
 
 [2023-07-31 20:57:18] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 504 Response-Time: 93.980 ms
 
+[2023-08-01 08:10:33] Method: GET URL: /profile/balanceTypes Status-Code: 401 Reponse-Size: 34 Response-Time: 35.224 ms
+
+[2023-08-01 08:10:40] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 504 Response-Time: 563.719 ms
+
+[2023-08-01 08:10:50] Method: GET URL: /profile/balanceTypes Status-Code: 200 Reponse-Size: 75 Response-Time: 2.509 ms
+
+[2023-08-01 08:29:54] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 187 Response-Time: 4.271 ms
+
+[2023-08-01 08:31:48] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 187 Response-Time: 2.422 ms
+

@@ -15,12 +15,14 @@ export default function Login({navigation}: LoginProps) {
     const [username, setUsername] = useState<string>('')
     const [password, setPassword] = useState<string>('')
     const [loginLoading, setLoginLoading] = useState<boolean>(false)
-    const {login} = useContext(AuthContext)
+    const {login, logout} = useContext(AuthContext)
+
+    //useEffect(() => {logout()}, [])
 
     async function handleLoginButtonPress(){
         setLoginLoading(true)
         const response = await login({username, password})
-        if(response === true){
+        if(response !== false){
             navigation.navigate('HomePage')
         }else{
             console.log('Error')

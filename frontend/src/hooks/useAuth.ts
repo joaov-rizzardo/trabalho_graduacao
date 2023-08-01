@@ -22,7 +22,7 @@ export default function useAuth(){
             }
             setUser(user)
             setAuthenticated(true)
-            return true
+            return user
         }catch(error: any){
             return false
         }
@@ -48,7 +48,7 @@ export default function useAuth(){
             if(isValid && user !== undefined){
                 setUser(user)
                 setAuthenticated(true)
-                return true
+                return user
             }else{
                 return false
             }

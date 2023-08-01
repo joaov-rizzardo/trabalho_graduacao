@@ -39,6 +39,7 @@ export function checkToken(token: string){
         name: decodedToken.name,
         lastName: decodedToken.lastName,
         selectedAvatar: decodedToken.selectedAvatar,
+        isValidatedEmail: decodedToken.isValidatedEmail,
         createdAt: decodedToken.createdAt
     }
 }

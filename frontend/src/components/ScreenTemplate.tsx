@@ -1,12 +1,15 @@
-import { ReactNode } from "react";
+import { ReactNode, useContext } from "react";
 import { Image, StyleSheet, View } from "react-native";
 import { colors } from "../configs/Theme";
+import IconButton from "./IconButton";
+import { AuthContext } from "../contexts/AuthContext";
 
 interface ScreenTemplateProps {
     children: ReactNode
 }
 
 export default function ScreenTemplate({children}: ScreenTemplateProps){
+    const {logout, authenticated} = useContext(AuthContext)
     return (
         <View style={styles.container}>
             <View style={styles.logoContainer}>
@@ -14,9 +17,12 @@ export default function ScreenTemplate({children}: ScreenTemplateProps){
                     source={require('../../assets/images/logo.png')}
                     style={{
                         height: '90%',
+                        maxWidth: '50%',
                         aspectRatio: 500 / 136
                     }}
                 />
+                {authenticated && <IconButton icon="logout" color={colors.background} onPress={logout}/>}
+                
             </View>
             <View style={styles.contentContainer}>
                 {children}
@@ -32,10 +38,11 @@ const styles = StyleSheet.create({
     },
     logoContainer: {
         width: '100%',
-        height: '10%',
+        height: 80,
         padding: 10,
-        justifyContent: 'center',
-        alignItems: 'flex-start'
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
     },
     contentContainer: {
         flex: 1,

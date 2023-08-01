@@ -6,9 +6,9 @@ type AuthContextType = {
     login: ({ username, password }: {
         username: string;
         password: string;
-    }) => Promise<boolean>, 
+    }) => Promise<UserType | false>, 
     logout: () => Promise<boolean>, 
-    loginWithToken: () => Promise<boolean>, 
+    loginWithToken: () => Promise<UserType | false>, 
     user: UserType, 
     token: string, 
     authenticated: boolean

@@ -1,10 +1,10 @@
-import AsyncStorage from "@react-native-async-storage/async-storage"
+import * as SecureStore from 'expo-secure-store';
 
 export default function useStorage(){
     
     const getStorageItem = async (key: string) => {
         try{
-            const item = await AsyncStorage.getItem(key)
+            const item = await SecureStore.getItemAsync(key)
             if(item === null){
                 throw new Error('Item not found')
             }
@@ -16,7 +16,7 @@ export default function useStorage(){
 
     const setStorageItem = async (key: string, value: string) => {
         try{
-            await AsyncStorage.setItem(key, value)
+            await SecureStore.setItemAsync(key, value)
             return true
         }catch(error: any){
             return false
@@ -25,7 +25,7 @@ export default function useStorage(){
 
     const removeStorageItem = async (key: string) => {
         try{
-            await AsyncStorage.removeItem(key)
+            await SecureStore.deleteItemAsync(key)
             return true
         }catch(error: any){
             return false

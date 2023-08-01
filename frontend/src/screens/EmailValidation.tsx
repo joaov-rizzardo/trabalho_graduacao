@@ -3,9 +3,14 @@ import ScreenTemplate from "../components/ScreenTemplate";
 import { colors } from "../configs/Theme";
 import CustomButton from "../components/CustomButton";
 import CodeInput from "../components/CodeInput";
-import { useState } from "react";
-
-export default function EmailValidation(){
+import { useEffect, useState } from "react";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { StackActions } from '@react-navigation/native';
+import { AuthStackNavigationType } from "../routers/AuthRouter";
+interface EmailValidationProps {
+    navigation: StackNavigationProp<AuthStackNavigationType>
+}
+export default function EmailValidation({navigation}: EmailValidationProps){
     const [code, setCode] = useState<string>('')
     return (
         <ScreenTemplate>
@@ -16,7 +21,7 @@ export default function EmailValidation(){
                 </Text>
                 <CodeInput changeValue={setCode}/>
                 <View style={styles.buttonsContainer}>
-                    <CustomButton text="Validar"/>
+                    <CustomButton onPress={() => navigation.dispatch(StackActions.replace('HomePage'))} text="Validar"/>
                     <CustomButton text="Reenviar código" isOutline={true} />
                 </View>
             </ScrollView>

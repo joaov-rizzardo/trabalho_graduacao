@@ -5,5 +5,6 @@ export type UserType = {
     name: string,
     lastName: string,
     selectedAvatar: number,
+    isValidatedEmail: boolean,
     createdAt: string
 }

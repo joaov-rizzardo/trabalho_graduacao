@@ -12,6 +12,7 @@ export type tokenType = {
     name: string,
     lastName: string,
     selectedAvatar: number,
+    isValidatedEmail: boolean,
     createdAt: string
 }
 
@@ -29,6 +30,7 @@ export default async function signIn(req: Request, res: Response){
             name: authenticatedResult.user.name,
             lastName: authenticatedResult.user.lastName,
             selectedAvatar: authenticatedResult.user.selectedAvatar,
+            isValidatedEmail: authenticatedResult.user.isValidatedEmail,
             createdAt: authenticatedResult.user.createdAt!
         }
         const jwt = new JWTAuthenticator()

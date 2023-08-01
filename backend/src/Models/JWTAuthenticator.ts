@@ -37,6 +37,7 @@ export default class JWTAuthenticator {
             {name: 'name', type: 'string'},
             {name: 'lastName', type: 'string'},
             {name: 'selectedAvatar', type: 'number'},
+            {name: 'isValidatedEmail', type: 'boolean'},
             {name: 'createdAt', type: 'string'},
         ]
         let isValidToken = true

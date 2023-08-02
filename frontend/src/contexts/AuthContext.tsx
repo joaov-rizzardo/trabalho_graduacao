@@ -1,12 +1,12 @@
 import { ReactNode, createContext } from "react";
 import { UserType } from "../types/UserType";
-import useAuth from "../hooks/useAuth";
+import useAuth, { LoginFunctionType } from "../hooks/useAuth";
 
 type AuthContextType = {
     login: ({ username, password }: {
         username: string;
         password: string;
-    }) => Promise<UserType | false>, 
+    }) => Promise<LoginFunctionType>, 
     logout: () => Promise<boolean>, 
     loginWithToken: () => Promise<UserType | false>, 
     user: UserType, 

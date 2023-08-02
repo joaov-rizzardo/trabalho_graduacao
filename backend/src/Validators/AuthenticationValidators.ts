@@ -33,3 +33,12 @@ export const checkPasswordValidators = [
         .isString().withMessage('The password field must be a string type')
 ]
 
+export const checkEmailValidators = [
+    body('email').notEmpty().isEmail().withMessage('The email field must be of email type')
+]
+
+export const checkUserValidators = [
+    body('username').notEmpty().isString().withMessage('The username field cannot be empty'),
+    body('username').isLength({min: 8}).withMessage('The username field must be 8 characters'),
+]
+

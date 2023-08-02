@@ -4,8 +4,9 @@ import CustomInput from '../components/CustomInput'
 import { colors } from '../configs/Theme'
 import { StackNavigationProp } from '@react-navigation/stack'
 import { AuthStackNavigationType } from '../routers/AuthRouter'
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useState } from 'react'
 import { AuthContext } from '../contexts/AuthContext'
+import { PopupContext } from '../contexts/PopupContext'
 
 interface LoginProps {
     navigation: StackNavigationProp<AuthStackNavigationType, "HomePage", "RecoveryPassword">
@@ -15,17 +16,18 @@ export default function Login({navigation}: LoginProps) {
     const [username, setUsername] = useState<string>('')
     const [password, setPassword] = useState<string>('')
     const [loginLoading, setLoginLoading] = useState<boolean>(false)
-    const {login, logout} = useContext(AuthContext)
-
-    //useEffect(() => {logout()}, [])
+    const {login} = useContext(AuthContext)
+    const {openAlertPopup} = useContext(PopupContext)
 
     async function handleLoginButtonPress(){
         setLoginLoading(true)
-        const response = await login({username, password})
-        if(response !== false){
+        const {ok, message} = await login({username, password})
+        if(ok === true){
             navigation.navigate('HomePage')
         }else{
-            console.log('Error')
+            openAlertPopup({
+                content: message
+            })
         }
         setLoginLoading(false)
     }
@@ -63,7 +65,11 @@ export default function Login({navigation}: LoginProps) {
                         loading={loginLoading}
                         onPress={handleLoginButtonPress}
                     />
-                    <CustomButton text="Cadastre-se" isOutline={true} />
+                    <CustomButton 
+                        text="Cadastre-se" 
+                        isOutline={true}
+                        onPress={() => navigation.navigate('Register')}
+                    />
                 </View>
                 <Text style={styles.textActionStyle} onPress={() => {
                     navigation.navigate('RecoveryPassword')

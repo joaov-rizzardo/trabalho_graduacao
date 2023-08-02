@@ -1,5 +1,5 @@
 import {Router, Request, Response} from 'express'
-import { checkPasswordValidators, checkTokenValidators, checkVerificationCodeValidators, signInValidators, signUpValidators } from '../Validators/AuthenticationValidators'
+import { checkEmailValidators, checkPasswordValidators, checkTokenValidators, checkUserValidators, checkVerificationCodeValidators, signInValidators, signUpValidators } from '../Validators/AuthenticationValidators'
 import checkExpressValidations from '../Middlewares/DefaultExpressValidationsChecker'
 import signIn from '../Controllers/SignInController'
 import checkTokenFlow from '../Controllers/TokenValidatorController'
@@ -7,6 +7,7 @@ import { checkEmailVerificationCode, sendEmailVerificationCodeToUser } from '../
 import checkPasswordFlow from '../Controllers/CheckPasswordController'
 import signUpFlow from '../Controllers/SignUpController'
 import tokenAuthenticationMiddleware from '../Middlewares/TokenAuthenticationMiddleware'
+import { checkEmailDisponibility, checkUserDisponibility } from '../Controllers/CheckUserDisponibilityController'
 
 const authenticationRouter = Router()
 
@@ -18,6 +19,8 @@ authenticationRouter.all('/', (req: Request, res: Response) => {
 authenticationRouter.post('/signup', signUpValidators, checkExpressValidations, signUpFlow)
 authenticationRouter.post('/signin', signInValidators, checkExpressValidations, signIn)
 authenticationRouter.post('/checkToken', checkTokenValidators, checkExpressValidations, checkTokenFlow)
+authenticationRouter.post('/checkEmail', checkEmailValidators, checkExpressValidations, checkEmailDisponibility)
+authenticationRouter.post('/checkUser', checkUserValidators, checkExpressValidations, checkUserDisponibility)
 // Middleware de autenticação
 authenticationRouter.use(tokenAuthenticationMiddleware)
 // Rotas que requerem autenticação

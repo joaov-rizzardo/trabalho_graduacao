@@ -32,6 +32,7 @@ export default function tokenAuthenticationMiddleware(req: Request, res: Respons
             name: decodedToken.name,
             lastName: decodedToken.lastName,
             selectedAvatar: decodedToken.selectedAvatar,
+            isValidatedEmail: decodedToken.isValidatedEmail,
             createdAt: decodedToken.createdAt
         }
         next()

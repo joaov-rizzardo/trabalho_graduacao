@@ -1,9 +1,14 @@
 import { useState } from "react"
 import { UserType } from "../types/UserType"
 import { backendApi } from "../configs/Api"
-import { SignInType } from "../types/ApiResponses/Authentication/SignInType"
 import useStorage from "./useStorage"
-import { CheckTokenType } from "../types/ApiResponses/Authentication/CheckTokenType"
+import axios, { AxiosError } from "axios"
+import { CheckTokenType, SignInType } from "../types/ApiResponses/AuthenticationTypes"
+
+export type LoginFunctionType = {
+    ok: boolean,
+    message: string
+}
 
 export default function useAuth(){
     const [user, setUser] = useState<UserType>({} as UserType)
@@ -11,7 +16,7 @@ export default function useAuth(){
     const [authenticated, setAuthenticated] = useState<boolean>(false)
     const {setStorageItem, removeStorageItem, getStorageItem} = useStorage()
 
-    const login = async ({username, password}: {username: string, password: string}) => {
+    const login = async ({username, password}: {username: string, password: string}): Promise<LoginFunctionType> => {
         try{
             const response = await backendApi.post<SignInType>('/authentication/signin', {
                 username, password
@@ -22,9 +27,24 @@ export default function useAuth(){
             }
             setUser(user)
             setAuthenticated(true)
-            return user
+            return {
+                ok: true,
+                message: ''
+            }
         }catch(error: any){
-            return false
+            if(axios.isAxiosError(error)){
+                const axiosError = error as AxiosError
+                if(axiosError.response?.status === 400){
+                    return {
+                        ok: false,
+                        message: 'Usuário e/ou senha incorretos. Confira suas credenciais de acesso.'
+                    }
+                }
+            }
+            return {
+                ok: false,
+                message: 'Não foi possível realizar o login, tente novamente mais tarde.'
+            }
         }
     }
 

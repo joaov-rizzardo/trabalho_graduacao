@@ -502,3 +502,217 @@
 
 [2023-08-01 08:31:48] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 187 Response-Time: 2.422 ms
 
+[2023-08-01 08:36:26] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 563 Response-Time: 117.998 ms
+
+[2023-08-01 08:36:32] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 17 Response-Time: 4.048 ms
+
+[2023-08-01 08:36:45] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.767 ms
+
+[2023-08-01 08:37:10] Method: GET URL: /profile/balanceTypes Status-Code: 401 Reponse-Size: 34 Response-Time: 1.782 ms
+
+[2023-08-01 08:37:12] Method: GET URL: /profile/balanceTypes Status-Code: 200 Reponse-Size: 75 Response-Time: 1.939 ms
+
+[2023-08-01 08:43:00] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 17 Response-Time: 3.078 ms
+
+[2023-08-01 08:43:19] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 17 Response-Time: 2.323 ms
+
+[2023-08-01 08:45:59] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 17 Response-Time: 3.281 ms
+
+[2023-08-01 08:46:11] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 17 Response-Time: 2.557 ms
+
+[2023-08-01 08:46:25] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 17 Response-Time: 2.437 ms
+
+[2023-08-01 08:46:27] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 17 Response-Time: 2.117 ms
+
+[2023-08-01 08:46:30] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 17 Response-Time: 2.208 ms
+
+[2023-08-01 08:47:50] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 17 Response-Time: 2.375 ms
+
+[2023-08-01 08:56:15] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 563 Response-Time: 74.757 ms
+
+[2023-08-01 08:58:36] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 563 Response-Time: 69.650 ms
+
+[2023-08-01 08:59:41] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 563 Response-Time: 77.148 ms
+
+[2023-08-01 09:02:38] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 563 Response-Time: 67.468 ms
+
+[2023-08-01 09:13:04] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 563 Response-Time: 70.772 ms
+
+[2023-08-01 09:14:16] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 563 Response-Time: 67.612 ms
+
+[2023-08-01 09:15:12] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.091 ms
+
+[2023-08-01 09:15:22] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.144 ms
+
+[2023-08-01 09:16:03] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.304 ms
+
+[2023-08-01 09:21:06] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.271 ms
+
+[2023-08-01 09:21:18] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 3.039 ms
+
+[2023-08-01 09:21:25] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.146 ms
+
+[2023-08-01 09:26:00] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.142 ms
+
+[2023-08-01 09:28:49] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.140 ms
+
+[2023-08-01 09:29:04] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 1.931 ms
+
+[2023-08-01 09:29:20] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.224 ms
+
+[2023-08-01 09:29:27] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.062 ms
+
+[2023-08-01 09:29:53] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.938 ms
+
+[2023-08-01 09:59:30] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 6.610 ms
+
+[2023-08-01 09:59:37] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.185 ms
+
+[2023-08-01 09:59:56] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.886 ms
+
+[2023-08-01 10:00:19] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 1.974 ms
+
+[2023-08-01 10:01:41] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.459 ms
+
+[2023-08-01 10:02:25] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.263 ms
+
+[2023-08-01 10:03:13] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.341 ms
+
+[2023-08-01 10:04:45] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.017 ms
+
+[2023-08-01 10:05:44] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.412 ms
+
+[2023-08-01 10:20:40] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.199 ms
+
+[2023-08-01 10:22:21] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 4.769 ms
+
+[2023-08-01 10:28:52] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.537 ms
+
+[2023-08-01 10:30:52] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.130 ms
+
+[2023-08-01 10:32:21] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.139 ms
+
+[2023-08-01 10:32:37] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 563 Response-Time: 69.990 ms
+
+[2023-08-01 10:34:44] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 5.883 ms
+
+[2023-08-01 10:35:06] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 3.448 ms
+
+[2023-08-01 10:40:39] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.104 ms
+
+[2023-08-01 10:49:56] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.148 ms
+
+[2023-08-01 10:51:39] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 563 Response-Time: 75.446 ms
+
+[2023-08-01 10:51:58] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 563 Response-Time: 98.529 ms
+
+[2023-08-01 10:52:38] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 563 Response-Time: 75.356 ms
+
+[2023-08-01 10:52:57] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 563 Response-Time: 75.485 ms
+
+[2023-08-01 11:07:43] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.014 ms
+
+[2023-08-01 11:08:03] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 563 Response-Time: 83.204 ms
+
+[2023-08-01 11:08:17] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 563 Response-Time: 76.461 ms
+
+[2023-08-01 11:13:36] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.600 ms
+
+[2023-08-01 11:26:46] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 2.468 ms
+
+[2023-08-02 08:06:18] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 184.151 ms
+
+[2023-08-02 08:16:03] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 563 Response-Time: 636.319 ms
+
+[2023-08-02 09:16:12] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 8.239 ms
+
+[2023-08-02 11:19:15] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 212 Response-Time: 15.878 ms
+
+[2023-08-02 11:20:56] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 72 Response-Time: 658.279 ms
+
+[2023-08-02 11:21:08] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 563 Response-Time: 75.294 ms
+
+[2023-08-02 11:33:28] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 135 Response-Time: 1.591 ms
+
+[2023-08-02 11:36:35] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 135 Response-Time: 1.933 ms
+
+[2023-08-02 11:37:57] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 135 Response-Time: 0.870 ms
+
+[2023-08-02 11:38:18] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 135 Response-Time: 0.734 ms
+
+[2023-08-02 11:38:55] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 135 Response-Time: 0.579 ms
+
+[2023-08-02 11:39:08] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 135 Response-Time: 0.680 ms
+
+[2023-08-02 11:40:12] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 135 Response-Time: 0.735 ms
+
+[2023-08-02 11:40:54] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 135 Response-Time: 1.274 ms
+
+[2023-08-02 15:10:49] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 135 Response-Time: 3.300 ms
+
+[2023-08-02 15:11:23] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 135 Response-Time: 0.598 ms
+
+[2023-08-02 15:11:42] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 135 Response-Time: 0.724 ms
+
+[2023-08-02 15:11:47] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 135 Response-Time: 0.583 ms
+
+[2023-08-02 15:12:08] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 135 Response-Time: 3.323 ms
+
+[2023-08-02 15:12:13] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 135 Response-Time: 0.738 ms
+
+[2023-08-02 15:12:19] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 135 Response-Time: 0.585 ms
+
+[2023-08-02 15:12:22] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 135 Response-Time: 0.711 ms
+
+[2023-08-02 15:47:01] Method: POST URL: /authentication/checkUser Status-Code: 200 Reponse-Size: 20 Response-Time: 72.810 ms
+
+[2023-08-02 15:47:07] Method: POST URL: /authentication/checkUser Status-Code: 200 Reponse-Size: 20 Response-Time: 3.118 ms
+
+[2023-08-02 15:47:12] Method: POST URL: /authentication/checkUser Status-Code: 200 Reponse-Size: 21 Response-Time: 2.883 ms
+
+[2023-08-02 15:47:15] Method: POST URL: /authentication/checkEmail Status-Code: 200 Reponse-Size: 20 Response-Time: 73.355 ms
+
+[2023-08-02 15:47:27] Method: POST URL: /authentication/checkEmail Status-Code: 200 Reponse-Size: 20 Response-Time: 6.133 ms
+
+[2023-08-02 15:47:43] Method: POST URL: /authentication/checkEmail Status-Code: 200 Reponse-Size: 21 Response-Time: 4.103 ms
+
+[2023-08-02 15:57:56] Method: POST URL: /authentication/signup Status-Code: 201 Reponse-Size: 39 Response-Time: 452.294 ms
+
+[2023-08-02 16:09:57] Method: POST URL: /authentication/checkEmail Status-Code: 200 Reponse-Size: 20 Response-Time: 1.793 ms
+
+[2023-08-02 16:09:57] Method: POST URL: /authentication/checkUser Status-Code: 400 Reponse-Size: 146 Response-Time: 1.049 ms
+
+[2023-08-02 16:10:24] Method: POST URL: /authentication/checkEmail Status-Code: 200 Reponse-Size: 20 Response-Time: 1.631 ms
+
+[2023-08-02 16:10:24] Method: POST URL: /authentication/checkUser Status-Code: 400 Reponse-Size: 146 Response-Time: 0.471 ms
+
+[2023-08-02 16:10:32] Method: POST URL: /authentication/checkEmail Status-Code: 200 Reponse-Size: 20 Response-Time: 3.731 ms
+
+[2023-08-02 16:10:32] Method: POST URL: /authentication/checkUser Status-Code: 400 Reponse-Size: 146 Response-Time: 0.633 ms
+
+[2023-08-02 16:10:43] Method: POST URL: /authentication/checkEmail Status-Code: 200 Reponse-Size: 20 Response-Time: 1.679 ms
+
+[2023-08-02 16:10:43] Method: POST URL: /authentication/checkUser Status-Code: 400 Reponse-Size: 146 Response-Time: 0.433 ms
+
+[2023-08-02 16:11:11] Method: POST URL: /authentication/checkEmail Status-Code: 200 Reponse-Size: 20 Response-Time: 1.579 ms
+
+[2023-08-02 16:11:11] Method: POST URL: /authentication/checkUser Status-Code: 200 Reponse-Size: 20 Response-Time: 1.317 ms
+
+[2023-08-02 16:11:24] Method: POST URL: /authentication/checkEmail Status-Code: 200 Reponse-Size: 20 Response-Time: 1.176 ms
+
+[2023-08-02 16:11:24] Method: POST URL: /authentication/checkUser Status-Code: 200 Reponse-Size: 20 Response-Time: 1.331 ms
+
+[2023-08-02 16:11:24] Method: POST URL: /authentication/signup Status-Code: 201 Reponse-Size: 39 Response-Time: 138.156 ms
+
+[2023-08-02 16:11:24] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 551 Response-Time: 77.130 ms
+
+[2023-08-02 16:14:27] Method: POST URL: /authentication/checkEmail Status-Code: 200 Reponse-Size: 20 Response-Time: 1.658 ms
+
+[2023-08-02 16:14:27] Method: POST URL: /authentication/checkUser Status-Code: 200 Reponse-Size: 21 Response-Time: 1.468 ms
+
+[2023-08-02 16:15:52] Method: POST URL: /authentication/checkEmail Status-Code: 200 Reponse-Size: 20 Response-Time: 2.458 ms
+
+[2023-08-02 16:15:52] Method: POST URL: /authentication/checkUser Status-Code: 200 Reponse-Size: 20 Response-Time: 1.109 ms
+
+[2023-08-02 16:15:52] Method: POST URL: /authentication/signup Status-Code: 201 Reponse-Size: 39 Response-Time: 133.921 ms
+

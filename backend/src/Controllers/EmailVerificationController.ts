@@ -6,7 +6,7 @@ import { commitTransaction, rollbackTransaction, startTransaction } from '../Ser
 import { AuthenticationLogger, generateErrorLogFromRequest } from '../Utils/Logger'
 
 export async function sendEmailVerificationCodeToUser(req: Request, res: Response){
-    const userId = req.authenticatedUser!.userId
+    const userId = parseInt(req.params.userId)
     try {
         await startTransaction()
         const userEmailCodes = await UserEmailCodes.getInstanceByUserId(userId)
@@ -23,7 +23,7 @@ export async function sendEmailVerificationCodeToUser(req: Request, res: Respons
 }
 
 export async function checkEmailVerificationCode(req: Request, res: Response){
-    const userId = req.authenticatedUser!.userId
+    const userId = parseInt(req.params.userId)
     const code: string = req.body.code
     try{
         const userEmailCodes = await UserEmailCodes.getInstanceByUserId(userId)

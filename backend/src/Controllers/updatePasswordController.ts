@@ -3,13 +3,13 @@ import { default400Response, default500Response } from '../Utils/DefaultResponse
 import UserEmailCodes from '../Models/UserEmailCodes'
 import User from '../Models/User'
 import { commitTransaction, rollbackTransaction, startTransaction } from '../Services/Database'
-import { ProfileLogger, generateErrorLogFromRequest } from '../Utils/Logger'
+import { AuthenticationLogger, generateErrorLogFromRequest } from '../Utils/Logger'
 
 export default async function updatePasswordFlow(req: Request, res: Response){
+    const userId = parseInt(req.params.userId)
     try{
         await startTransaction()
         const {newPassword, validationCode}: {newPassword: string, validationCode: string} = req.body
-        const userId = req.authenticatedUser!.userId
         if(await checkValidationCode(userId, validationCode) === false){
             await rollbackTransaction()
             return res.status(400).send(default400Response(['The validation code is invalid']))
@@ -21,7 +21,7 @@ export default async function updatePasswordFlow(req: Request, res: Response){
         })
     }catch(error: any){
         await rollbackTransaction()
-        generateErrorLogFromRequest(ProfileLogger, req, error.message)
+        generateErrorLogFromRequest(AuthenticationLogger, req, error.message)
         return res.status(500).send(default500Response())
     }
 }

@@ -716,3 +716,27 @@
 
 [2023-08-02 16:15:52] Method: POST URL: /authentication/signup Status-Code: 201 Reponse-Size: 39 Response-Time: 133.921 ms
 
+[2023-08-03 07:52:16] Method: POST URL: /authentication/searchUserIdByEmailOrUsername Status-Code: 200 Reponse-Size: 16 Response-Time: 458.734 ms
+
+[2023-08-03 07:52:20] Method: POST URL: /authentication/searchUserIdByEmailOrUsername Status-Code: 200 Reponse-Size: 12 Response-Time: 3.636 ms
+
+[2023-08-03 07:52:29] Method: POST URL: /authentication/searchUserIdByEmailOrUsername Status-Code: 200 Reponse-Size: 16 Response-Time: 5.834 ms
+
+[2023-08-03 07:52:36] Method: POST URL: /authentication/searchUserIdByEmailOrUsername Status-Code: 200 Reponse-Size: 16 Response-Time: 2.935 ms
+
+[2023-08-03 07:52:45] Method: POST URL: /authentication/searchUserIdByEmailOrUsername Status-Code: 200 Reponse-Size: 12 Response-Time: 2.020 ms
+
+[2023-08-03 07:56:34] Method: POST URL: /authentication/sendVerificationCode/1 Status-Code: 200 Reponse-Size: 49 Response-Time: 7207.969 ms
+
+[2023-08-03 07:56:50] Method: POST URL: /authentication/checkVerificationCode/1 Status-Code: 200 Reponse-Size: 16 Response-Time: 575.621 ms
+
+[2023-08-03 07:57:08] Method: POST URL: /profile/updatePassword/1 Status-Code: 401 Reponse-Size: 34 Response-Time: 32.151 ms
+
+[2023-08-03 07:57:34] Method: POST URL: /authentication/updatePassword/1 Status-Code: 200 Reponse-Size: 48 Response-Time: 223.049 ms
+
+[2023-08-03 07:58:05] Method: POST URL: /authentication/searchUserIdByEmailOrUsername Status-Code: 200 Reponse-Size: 12 Response-Time: 4.505 ms
+
+[2023-08-03 07:58:12] Method: POST URL: /authentication/searchUserIdByEmailOrUsername Status-Code: 200 Reponse-Size: 12 Response-Time: 3.357 ms
+
+[2023-08-03 07:58:21] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 572 Response-Time: 71.010 ms
+

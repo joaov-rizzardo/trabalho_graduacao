@@ -72,7 +72,7 @@ export default function Login({navigation}: LoginProps) {
                     />
                 </View>
                 <Text style={styles.textActionStyle} onPress={() => {
-                    navigation.navigate('RecoveryPassword')
+                    navigation.navigate('ForgetPassword')
                 }}>Esqueci minha senha</Text>
             </View>
         </View>

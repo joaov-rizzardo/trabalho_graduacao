@@ -5,10 +5,10 @@ import Login from "../screens/Login";
 import React, { useContext, useEffect, useState } from "react";
 import Register from "../screens/Register";
 import EmailValidation from "../screens/EmailValidation";
-import ForgetPassword from "../screens/ForgetPassword";
-import RecoveryPassword from "../screens/RecoveryPassword";
 import HomePage from "../screens/HomePage";
 import { AuthContext } from "../contexts/AuthContext";
+import ForgetPassword from "../screens/ForgetPassword";
+import RecoveryPassword from "../screens/RecoveryPassword";
 
 export type AuthStackNavigationType = {
     Login: undefined,
@@ -52,9 +52,7 @@ export default function AuthRouter() {
                         <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
                         <Stack.Screen name="RecoveryPassword" component={RecoveryPassword} />
                     </>
-                )}
-
-                
+                )}  
             </Stack.Navigator>
         </NavigationContainer>
     )

@@ -42,3 +42,19 @@ export const checkUserValidators = [
     body('username').isLength({min: 8}).withMessage('The username field must be 8 characters'),
 ]
 
+export const searchUserIdByEmailOrUsernameValidators = [
+    body('userInfo')
+    .notEmpty().withMessage('The password field cannot be empty')
+    .isString().withMessage('The password field must be a string type')
+]
+
+export const updatePasswordValidators = [
+    body('newPassword')
+        .notEmpty().withMessage('The currentPassword field cannot be empty')
+        .isString().withMessage('The currentPassword field must be a string'),
+    body('validationCode')
+        .notEmpty().withMessage('The validationCode field cannot be empty')
+        .isString().withMessage('The validationCode must be a string')
+]
+
+

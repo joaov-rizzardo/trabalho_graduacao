@@ -11,12 +11,3 @@ export const updateProfileValidators = [
         .notEmpty().withMessage('The avatar field cannot be empty')
         .isNumeric().withMessage('The avatar field must be a number')
 ]
-
-export const updatePasswordValidators = [
-    body('newPassword')
-        .notEmpty().withMessage('The currentPassword field cannot be empty')
-        .isString().withMessage('The currentPassword field must be a string'),
-    body('validationCode')
-        .notEmpty().withMessage('The validationCode field cannot be empty')
-        .isString().withMessage('The validationCode must be a string')
-]

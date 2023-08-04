@@ -16,7 +16,7 @@ export default function AlertPopup({visible, title = "Atenção", content, butto
 
     const {closeAlertPopup} = useContext(PopupContext)
     
-    function handleButtonClick(){
+    function handleClose(){
         closeAlertPopup()
         if(buttonFunction !== undefined){
             buttonFunction()
@@ -36,7 +36,7 @@ export default function AlertPopup({visible, title = "Atenção", content, butto
                     <View style={styles.messageContainer}>
                         <Text style={styles.message}>{content}</Text>
                     </View>
-                    <TouchableOpacity style={styles.button} onPress={handleButtonClick}>
+                    <TouchableOpacity style={styles.button} onPress={handleClose}>
                         <Text style={styles.buttonText}>{buttonText}</Text>
                     </TouchableOpacity>
                 </View>

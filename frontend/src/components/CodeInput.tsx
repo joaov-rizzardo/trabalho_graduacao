@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NativeSyntheticEvent, StyleSheet, TextInput, TextInputKeyPressEventData, View } from "react-native";
 import { colors } from "../configs/Theme";
 
@@ -10,10 +10,13 @@ export default function CodeInput({changeValue}: CodeInputProps){
     const inputRefs = Array.from({length: 5}, () => useRef<TextInput>(null))
     const [inputsValues, setInputValues] = useState<string[]>(Array.from({length: 5}, () => ''))
 
+    useEffect(() => {
+        changeValue(inputsValues.join(''))
+    }, [inputsValues])
+
     function handleTextChange(index: number, text: string){
         if(text !== ""){
             changeInputValue(text, index)
-            changeValue(inputsValues.join(''))
             const nextInputIndex = text !== "" ? index + 1 : index - 1
             handleFocusChange(nextInputIndex)
         }
@@ -79,6 +82,7 @@ export default function CodeInput({changeValue}: CodeInputProps){
                 <TextInput 
                     key={index}
                     ref={inputRef}
+                    keyboardType="number-pad"
                     style={styles.inputStyle}
                     value={inputsValues[index]}
                     onChangeText={(text) => handleTextChange(index, text)}

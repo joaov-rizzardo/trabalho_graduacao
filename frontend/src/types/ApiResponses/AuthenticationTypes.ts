@@ -21,3 +21,15 @@ export type CheckEmailType = {
 export type SignUpType = {
     message: string
 }
+
+export type searchUserIdByEmailOrUsernameType = {
+    userId: number | false
+}
+
+export type sendVerificationTokenType = {
+    message: string
+}
+
+export type updatePasswordType = {
+    message: string
+}

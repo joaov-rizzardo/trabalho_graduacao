@@ -11,12 +11,12 @@ import ForgetPassword from "../screens/ForgetPassword";
 import RecoveryPassword from "../screens/RecoveryPassword";
 
 export type AuthStackNavigationType = {
+    HomePage: undefined
     Login: undefined,
     Register: undefined,
     EmailValidation: undefined,
     ForgetPassword: undefined,
-    RecoveryPassword: undefined,
-    HomePage: undefined
+    RecoveryPassword: {userId: number},
 }
 
 export default function AuthRouter() {
@@ -50,7 +50,7 @@ export default function AuthRouter() {
                         <Stack.Screen name="Login" component={Login} />
                         <Stack.Screen name="Register" component={Register} />
                         <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
-                        <Stack.Screen name="RecoveryPassword" component={RecoveryPassword} />
+                        <Stack.Screen name="RecoveryPassword" component={RecoveryPassword} initialParams={{userId: 0}}/>
                     </>
                 )}  
             </Stack.Navigator>

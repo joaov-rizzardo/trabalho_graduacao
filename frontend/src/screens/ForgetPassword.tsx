@@ -3,8 +3,60 @@ import ScreenTemplate from "../components/ScreenTemplate";
 import CustomInput from "../components/CustomInput";
 import CustomButton from "../components/CustomButton";
 import { colors } from "../configs/Theme";
+import { useContext, useState } from "react";
+import { PopupContext } from "../contexts/PopupContext";
+import { backendApi } from "../configs/Api";
+import { searchUserIdByEmailOrUsernameType } from "../types/ApiResponses/AuthenticationTypes";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { AuthStackNavigationType } from "../routers/AuthRouter";
 
-export default function ForgetPassword(){
+interface ForgetPasswordProps {
+    navigation: StackNavigationProp<AuthStackNavigationType>
+}
+
+export default function ForgetPassword({navigation}: ForgetPasswordProps){
+    const [user, setUser] = useState<string>('')
+    const [buttonLoading, setButtonLoading] = useState<boolean>(false)
+    const {openAlertPopup} = useContext(PopupContext)
+    async function handlePasswordRecovery(){
+        if(user === ''){
+            openAlertPopup({
+                content: 'Por favor, informe o email ou o nome de usuário para recuperar sua senha!'
+            })
+            return false
+        }
+        const {userId, message} = await findUserByEmailOrUsername()
+        if(userId === false){
+            openAlertPopup({
+                content: message
+            })
+            return false
+        }
+        navigation.navigate('RecoveryPassword', {userId: userId})
+    }
+
+    async function findUserByEmailOrUsername(): Promise<{userId: number | false, message: string}>{
+        try{
+            const {data: {userId}} = await backendApi.post<searchUserIdByEmailOrUsernameType>('/authentication/searchUserIdByEmailOrUsername', {
+                userInfo: user
+            })
+            if(userId === false){
+                return {
+                    userId: false,
+                    message: 'O endereço de email/usuário informado não existe em nossa base de dados'
+                }
+            }
+            return {
+                userId: userId,
+                message: ''
+            }
+        }catch(error: any){
+            return {
+                userId: false,
+                message: 'Não foi possível se comunicar com o servidor, tente novamente mais tarde'
+            }
+        }
+    }
     return (
         <ScreenTemplate>
             <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.container}>
@@ -19,9 +71,21 @@ export default function ForgetPassword(){
                 <View style={styles.actionsContainer}>
                     <CustomInput.Container>
                         <CustomInput.Icon iconName="person" />
-                        <CustomInput.Input placeholder="Usuário ou Email" />
+                        <CustomInput.Input 
+                            placeholder="Usuário ou Email" 
+                            value={user}
+                            onChangeText={text => setUser(text)}
+                        />
                     </CustomInput.Container>
-                    <CustomButton text="Recuperar senha"/>
+                    <CustomButton 
+                        text="Recuperar senha"
+                        loading={buttonLoading}
+                        onPress={async () => {
+                            setButtonLoading(true)
+                            await handlePasswordRecovery()
+                            setButtonLoading(false)
+                        }}
+                    />
                 </View>
             </ScrollView>
         </ScreenTemplate>

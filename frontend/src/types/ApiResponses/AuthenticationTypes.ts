@@ -33,3 +33,7 @@ export type sendVerificationTokenType = {
 export type updatePasswordType = {
     message: string
 }
+
+export type checkVerificationCode = {
+    checked: boolean
+}

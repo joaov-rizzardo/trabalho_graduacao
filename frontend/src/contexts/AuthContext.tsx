@@ -8,7 +8,11 @@ type AuthContextType = {
         password: string;
     }) => Promise<LoginFunctionType>, 
     logout: () => Promise<boolean>, 
-    loginWithToken: () => Promise<UserType | false>, 
+    loginWithToken: () => Promise<UserType | false>,
+    validateEmail: (code: string) => Promise<{
+        ok: boolean;
+        message: string;
+    }>,
     user: UserType, 
     token: string, 
     authenticated: boolean
@@ -17,9 +21,9 @@ type AuthContextType = {
 const AuthContext = createContext<AuthContextType>({} as AuthContextType)
 
 function AuthProvider({children}: {children: ReactNode}){
-    const {login, logout, loginWithToken, user, token, authenticated} = useAuth()
+    const {login, logout, loginWithToken, user, token, authenticated, validateEmail} = useAuth()
     return (
-        <AuthContext.Provider value={{login, logout, loginWithToken, user, token, authenticated}}>
+        <AuthContext.Provider value={{login, logout, loginWithToken, validateEmail, user, token, authenticated}}>
             {children}
         </AuthContext.Provider>
     )

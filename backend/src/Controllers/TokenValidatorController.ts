@@ -2,17 +2,19 @@ import {Request, Response} from 'express'
 import { default500Response } from '../Utils/DefaultResponses'
 import JWTAuthenticator from '../Models/JWTAuthenticator'
 import { AuthenticationLogger, generateErrorLogFromRequest } from '../Utils/Logger'
+import User from '../Models/User'
 
-export default function checkTokenFlow(req: Request, res: Response){
+export default async function checkTokenFlow(req: Request, res: Response){
     try{
         const token: string = req.body.token
         const decodedToken = checkToken(token)
         if(decodedToken === false){
             return res.status(200).send({isValid: false})
         }
+        const user = await User.getInstanceByUserId(decodedToken.userId)
         return res.status(200).send({
             isValid: true,
-            user: decodedToken
+            user: user.convertToObject()
         })
     }catch(error: any){
         generateErrorLogFromRequest(AuthenticationLogger, req, error.message)

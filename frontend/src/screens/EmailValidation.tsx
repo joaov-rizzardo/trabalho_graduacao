@@ -3,15 +3,81 @@ import ScreenTemplate from "../components/ScreenTemplate";
 import { colors } from "../configs/Theme";
 import CustomButton from "../components/CustomButton";
 import CodeInput from "../components/CodeInput";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { StackNavigationProp } from "@react-navigation/stack";
-import { StackActions } from '@react-navigation/native';
 import { AuthStackNavigationType } from "../routers/AuthRouter";
+import { AuthContext } from "../contexts/AuthContext";
+import { backendApi } from "../configs/Api";
+import { sendVerificationTokenType } from "../types/ApiResponses/AuthenticationTypes";
+import { PopupContext } from "../contexts/PopupContext";
+
 interface EmailValidationProps {
     navigation: StackNavigationProp<AuthStackNavigationType>
 }
+
 export default function EmailValidation({navigation}: EmailValidationProps){
+    const {user, validateEmail} = useContext(AuthContext)
     const [code, setCode] = useState<string>('')
+    const {openAlertPopup} = useContext(PopupContext)
+    const [buttonLoading, setButtonLoading] = useState<boolean>(false)
+    const [resendInterval, setResendInterval] = useState<NodeJS.Timer>()
+    const [timeToResend, setTimeToResend] = useState<number>(0)
+
+    useEffect(() => {
+        handleSendingVerificationCode()
+    }, [])
+
+    useEffect(() => {
+        if(timeToResend !== 0 && resendInterval === undefined){
+            setResendInterval(setInterval(() => {
+                setTimeToResend(prevTime => prevTime - 1)
+            }, 1000))
+        }
+        if(timeToResend === 0 && resendInterval !== undefined){
+            clearInterval(resendInterval)
+            setResendInterval(undefined)
+        }
+    }, [timeToResend])
+
+    function initResendCounter(){
+        setTimeToResend(30)
+    }
+
+    async function handleEmailValidation(){
+        if(code.length < 5){
+            openAlertPopup({
+                content: 'Por favor, informe o código para realizar a validação do email.'
+            })
+            return false
+        }
+        const {ok, message} = await validateEmail(code)
+        if(ok === false){
+            openAlertPopup({
+                content: message
+            })
+            return false
+        }
+        navigation.navigate('HomePage')
+    }
+
+    async function handleSendingVerificationCode(){
+        initResendCounter()
+        const {ok} = await sendVerificationCode(user.userId)
+        if(ok === false){
+            openAlertPopup({
+                content: 'Não foi possível enviar o código de verificação, tente novamente mais tarde.'
+            })
+        }
+    }
+    
+    async function sendVerificationCode(userId: number){
+        try {
+            await backendApi.post<sendVerificationTokenType>(`/authentication/sendVerificationCode/${userId}`)
+            return {ok: true}
+        }catch(error: any){
+            return {ok: false}
+        }
+    }
     return (
         <ScreenTemplate>
             <ScrollView style={{flex: 1}} contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
@@ -21,8 +87,21 @@ export default function EmailValidation({navigation}: EmailValidationProps){
                 </Text>
                 <CodeInput changeValue={setCode}/>
                 <View style={styles.buttonsContainer}>
-                    <CustomButton onPress={() => navigation.dispatch(StackActions.replace('HomePage'))} text="Validar"/>
-                    <CustomButton text="Reenviar código" isOutline={true} />
+                    <CustomButton 
+                        loading={buttonLoading}
+                        onPress={async () => {
+                            setButtonLoading(true)
+                            await handleEmailValidation()
+                            setButtonLoading(false)
+                        }}
+                        text="Validar"
+                    />
+                    <CustomButton 
+                        text={timeToResend !== 0 ? timeToResend.toString() : "Reenviar código"} 
+                        isOutline={true}
+                        disabled={timeToResend !== 0}
+                        onPress={handleSendingVerificationCode} 
+                    />
                 </View>
             </ScrollView>
         </ScreenTemplate>

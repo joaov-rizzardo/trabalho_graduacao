@@ -3,7 +3,7 @@ import { UserType } from "../types/UserType"
 import { backendApi } from "../configs/Api"
 import useStorage from "./useStorage"
 import axios, { AxiosError } from "axios"
-import { CheckTokenType, SignInType } from "../types/ApiResponses/AuthenticationTypes"
+import { CheckTokenType, SignInType, checkVerificationCode } from "../types/ApiResponses/AuthenticationTypes"
 
 export type LoginFunctionType = {
     ok: boolean,
@@ -77,10 +77,28 @@ export default function useAuth(){
         }
     }
 
+    const validateEmail = async (code: string) => {
+        try {
+            const {data: {checked}} = await backendApi.post<checkVerificationCode>(`/authentication/checkVerificationCode/${user.userId}`, {
+                code: code
+            })
+            if(checked === false){
+                return {ok: false, message: 'O token informado está inválido'}
+            }
+            setUser(currentUser => ({
+                ...currentUser,
+                isValidatedEmail: true
+            }))
+            return {ok: true, message: ''}
+        }catch(error){
+            return {ok: false, message: 'Não foi possível se comunicar com o servidor, tente novamente mais tarde'}
+        }
+    }
+
     async function storageToken(token: string){
         setToken(token)
         return await setStorageItem('token', token)
     }
     
-    return {login, logout, loginWithToken, user, token, authenticated}
+    return {login, logout, loginWithToken, user, token, authenticated, validateEmail}
 }

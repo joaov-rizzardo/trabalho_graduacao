@@ -9,6 +9,7 @@ import HomePage from "../screens/HomePage";
 import { AuthContext } from "../contexts/AuthContext";
 import ForgetPassword from "../screens/ForgetPassword";
 import RecoveryPassword from "../screens/RecoveryPassword";
+import MainRouter from "./MainRouter";
 
 export type AuthStackNavigationType = {
     HomePage: undefined
@@ -42,7 +43,7 @@ export default function AuthRouter() {
             >
                 {authenticated ? (
                     <>
-                        <Stack.Screen name="HomePage" component={HomePage} />
+                        <Stack.Screen name="HomePage" component={MainRouter} />
                         <Stack.Screen name="EmailValidation" component={EmailValidation} options={{animationEnabled: false}} />
                     </>
                 ) : (

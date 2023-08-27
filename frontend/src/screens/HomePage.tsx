@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { ScrollView, StyleSheet, Text } from "react-native";
 import ScreenTemplate from "../components/ScreenTemplate";
 import { StackNavigationProp } from "@react-navigation/stack";
@@ -9,12 +9,14 @@ import DataBox from '../components/DataBox';
 import HomepageCard from '../components/HomepageCard';
 import LevelStar from '../components/LevelStar';
 import LevelBar from '../components/LevelBar';
+import OptionSelector from '../components/OptionSelector';
 interface HomePageProps {
     navigation: StackNavigationProp<AuthStackNavigationType, "EmailValidation">
 }
 
 export default function HomePage({ navigation }: HomePageProps) {
     const { user } = useContext(AuthContext)
+    const [showType, setShowType] = useState<'M'|'A'>('M')
     useEffect(() => {
         if (user.isValidatedEmail === false) {
             navigation.dispatch(StackActions.replace('EmailValidation'))
@@ -32,6 +34,20 @@ export default function HomePage({ navigation }: HomePageProps) {
                     <HomepageCard title="Economias" value="R$ 220,99" image={require('../../assets/images/cofrinho.png')} />
                     <HomepageCard title="Saldo" value="R$ 1500,99" image={require('../../assets/images/moedas.png')} />
                 </DataBox>
+                <OptionSelector 
+                    options={[
+                        {
+                            value: 'M',
+                            description: 'Movimentações'
+                        },
+                        {
+                            value: 'A',
+                            description: 'Atividades'
+                        }
+                    ]}
+                    value={showType}
+                    setValue={setShowType}
+                />
             </ScrollView>
         </ScreenTemplate>
     )

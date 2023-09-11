@@ -2,10 +2,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from '@react-navigation/native'
 import * as SplashScreen from 'expo-splash-screen'
 import Login from "../screens/Login";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import Register from "../screens/Register";
 import EmailValidation from "../screens/EmailValidation";
-import HomePage from "../screens/HomePage";
 import { AuthContext } from "../contexts/AuthContext";
 import ForgetPassword from "../screens/ForgetPassword";
 import RecoveryPassword from "../screens/RecoveryPassword";

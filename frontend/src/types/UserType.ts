@@ -8,3 +8,18 @@ export type UserType = {
     isValidatedEmail: boolean,
     createdAt: string
 }
+
+export type UserLevel = {
+    userId: number,
+    currentLevel: number,
+    currentXp: number,
+    points: number,
+    xpToNextLevel: number 
+}
+
+export type UserFinance = {
+    userId: number,
+    balance: number,
+    totalSavings: number,
+    currentSavings: number
+}

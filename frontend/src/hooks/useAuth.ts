@@ -1,8 +1,8 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { UserType } from "../types/UserType"
 import { backendApi } from "../configs/Api"
 import useStorage from "./useStorage"
-import axios, { AxiosError } from "axios"
+import axios, { AxiosError, AxiosInstance } from "axios"
 import { CheckTokenType, SignInType, checkVerificationCode } from "../types/ApiResponses/AuthenticationTypes"
 
 export type LoginFunctionType = {
@@ -15,6 +15,10 @@ export default function useAuth(){
     const [token, setToken] = useState<string>('')
     const [authenticated, setAuthenticated] = useState<boolean>(false)
     const {setStorageItem, removeStorageItem, getStorageItem} = useStorage()
+
+    useEffect(() => {
+        backendApi.defaults.headers.common['Authorization'] = token !== "" ? `Bearer ${token}` : ''
+    }, [token])
 
     const login = async ({username, password}: {username: string, password: string}): Promise<LoginFunctionType> => {
         try{
@@ -57,17 +61,18 @@ export default function useAuth(){
 
     const loginWithToken = async() => {
         try{
-            const token = await getStorageItem('token')
-            if(token === false){
+            const storagedToken = await getStorageItem('token')
+            if(storagedToken === false){
                 throw new Error('No token was saved in storage')
             }
             const response = await backendApi.post<CheckTokenType>('/authentication/checkToken', {
-                token
+                token: storagedToken
             })
             const {isValid, user} = response.data
             if(isValid && user !== undefined){
                 setUser(user)
                 setAuthenticated(true)
+                setToken(storagedToken)
                 return user
             }else{
                 return false

@@ -15,9 +15,10 @@ interface OptionSelectorProps<T extends string | number, U extends string | numb
 export default function OptionSelector<T extends string | number, U extends string | number>({ options, value, setValue }: OptionSelectorProps<T, U>) {
     return (
         <View style={styles.container}>
-            {options.map(({ value: optionValue, description }) => (
+            {options.map(({ value: optionValue, description }, index) => (
                 <TouchableOpacity
                     onPress={() => setValue(optionValue)}
+                    key={index}
                     style={{
                         ...styles.itemContainer,
                         backgroundColor: value === optionValue ? colors.mainColor : colors.sections

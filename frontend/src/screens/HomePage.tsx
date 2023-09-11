@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react'
-import { ScrollView, StyleSheet, Text } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import ScreenTemplate from "../components/ScreenTemplate";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { AuthStackNavigationType } from "../routers/AuthRouter";
@@ -10,6 +10,9 @@ import HomepageCard from '../components/HomepageCard';
 import LevelStar from '../components/LevelStar';
 import LevelBar from '../components/LevelBar';
 import OptionSelector from '../components/OptionSelector';
+import MovementCard from '../components/MovementCard';
+import ActivityCard from '../components/ActivityCard';
+import { UserContext } from '../contexts/UserContext';
 interface HomePageProps {
     navigation: StackNavigationProp<AuthStackNavigationType, "EmailValidation">
 }
@@ -17,6 +20,8 @@ interface HomePageProps {
 export default function HomePage({ navigation }: HomePageProps) {
     const { user } = useContext(AuthContext)
     const [showType, setShowType] = useState<'M'|'A'>('M')
+    const context = useContext(UserContext)
+    console.log({context: context.finances})
     useEffect(() => {
         if (user.isValidatedEmail === false) {
             navigation.dispatch(StackActions.replace('EmailValidation'))
@@ -48,6 +53,11 @@ export default function HomePage({ navigation }: HomePageProps) {
                     value={showType}
                     setValue={setShowType}
                 />
+                <View style={styles.cardList}>
+                    <ActivityCard />
+                    {/* <MovementCard /> */}
+                </View>
+                
             </ScrollView>
         </ScreenTemplate>
     )
@@ -55,6 +65,9 @@ export default function HomePage({ navigation }: HomePageProps) {
 
 const styles = StyleSheet.create({
     container: {
+        gap: 16
+    },
+    cardList: {
         gap: 16
     }
 })

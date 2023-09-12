@@ -1,15 +1,19 @@
 import { StyleSheet, View } from "react-native";
 import LevelStar from "./LevelStar";
 import { colors } from "../configs/Theme";
+import { useContext } from "react";
+import { UserContext } from "../contexts/UserContext";
 
 export default function LevelBar(){
+    const {level} = useContext(UserContext)
+    const percent = (level.currentXp * 100) / level.xpToNextLevel
     return (
         <View style={styles.container}>
-            <LevelStar level={72} />
+            <LevelStar level={level.currentLevel} />
             <View style={styles.bar}>
                 <View style={{
                     ...styles.progressBar,
-                    width: '90%'
+                    width: `${percent}%`
                 }}/>
             </View>
         </View>

@@ -42,3 +42,25 @@
     at Generator.next (<anonymous>)
     at C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\DAO\EarningDAO.ts:8:71
     at new Promise (<anonymous>)
+[2023-09-11 19:59:58] Table 'bd_tcc.vw_spending_by_category' doesn't exist
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:37:31
+    at Generator.next (<anonymous>)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:4:12)
+    at query (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:52:12)
+    at SpendingDAO.<anonymous> (C:\Projetos\trabalho_graduacao\backend\src\DAO\SpendingDAO.ts:181:37)
+    at Generator.next (<anonymous>)
+    at C:\Projetos\trabalho_graduacao\backend\src\DAO\SpendingDAO.ts:8:71
+    at new Promise (<anonymous>)
+[2023-09-11 20:00:12] Table 'bd_tcc.vw_spending_by_category' doesn't exist
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:37:31
+    at Generator.next (<anonymous>)
+    at C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:4:12)
+    at query (C:\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:52:12)
+    at SpendingDAO.<anonymous> (C:\Projetos\trabalho_graduacao\backend\src\DAO\SpendingDAO.ts:181:37)
+    at Generator.next (<anonymous>)
+    at C:\Projetos\trabalho_graduacao\backend\src\DAO\SpendingDAO.ts:8:71
+    at new Promise (<anonymous>)

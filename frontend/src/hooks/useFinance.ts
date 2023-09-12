@@ -1,17 +1,10 @@
-import { useContext, useEffect, useState } from 'react';
+import { useState } from 'react';
 import { UserFinance } from '../types/UserType';
-import { AuthContext } from '../contexts/AuthContext';
 import { GetUserFinanceType } from '../types/ApiResponses/ProfileTypes';
 import { backendApi } from '../configs/Api';
+
 export default function useFinance(){
     const [finances, setFinances] = useState<UserFinance>({} as UserFinance)
-    const {token} = useContext(AuthContext)
-
-    useEffect(() => {
-        if(token !== ""){
-            findUserFinances()
-        }
-    }, [token, backendApi])
 
     const findUserFinances = async () => {
         try {
@@ -27,5 +20,5 @@ export default function useFinance(){
         }
     }
 
-    return {finances}
+    return {finances, findUserFinances}
 }

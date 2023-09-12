@@ -3,7 +3,7 @@ import { colors } from "../configs/Theme";
 
 interface HomepageCardProps {
     title: string,
-    value: string,
+    value: string | number,
     image: ImageSourcePropType
 }
 

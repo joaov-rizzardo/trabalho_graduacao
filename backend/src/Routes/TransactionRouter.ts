@@ -9,6 +9,7 @@ import cancelEarningFlow from '../Controllers/CancelEarningController'
 import getEarningsFlow from '../Controllers/EarningGetterControler'
 import tokenAuthenticationMiddleware from '../Middlewares/TokenAuthenticationMiddleware'
 import { getEarningCategoriesFlow, getSpendingCategoriesFlow } from '../Controllers/TransactionsCategoriesGetterController'
+import getLastAcitivities from '../Controllers/ActivitiesGetterController'
 
 const transactionRouter = Router()
 
@@ -26,5 +27,6 @@ transactionRouter.put('/earning/cancel/:earningId', cancelEarningFlow)
 transactionRouter.post('/earning/get', earningGetValidators, checkExpressValidations, getEarningsFlow)
 transactionRouter.get('/earningCategories', getEarningCategoriesFlow)
 transactionRouter.get('/spendingCategories', getSpendingCategoriesFlow)
+transactionRouter.get('/lastActivities', getLastAcitivities)
 
 export default transactionRouter

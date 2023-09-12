@@ -1,15 +1,21 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import DataBox from "./DataBox";
 import { colors } from "../configs/Theme";
+import { ActivityType } from "../types/ActivityType";
+import { formatDatetimeToBrString } from "../Utils/DateUtils";
 
-export default function ActivityCard(){
+interface ActivityCardProps {
+    activity: ActivityType
+}
+
+export default function ActivityCard({activity}: ActivityCardProps){
     return (
         <DataBox>
             <View style={styles.container}>
                 <Image style={styles.image} source={require('../../assets/images/lapis.png')}/>
                 <View style={{flex: 1, gap: 8}}>
-                    <Text style={{...styles.text, ...styles.descriptionText}}>Gasto no valor de R$ 1.000,00 foi cancelado</Text>
-                    <Text style={{...styles.text, ...styles.dateText}}>23/06/2023 17:51</Text>
+                    <Text style={{...styles.text, ...styles.descriptionText}}>{activity.description}</Text>
+                    <Text style={{...styles.text, ...styles.dateText}}>{formatDatetimeToBrString(new Date(activity.createdAt))}</Text>
                 </View>
             </View>
         </DataBox>

@@ -74,8 +74,8 @@ export default class ActivityDAO {
         }
     }
 
-    public async findLastHundredActivitys(userId: number){
-        const response = await query(`SELECT * FROM UserActivity WHERE userId = ? ORDER BY createdAt DESC LIMIT 100`, [userId]) as [ActivityTableFieldsType[], FieldPacket[]]
+    public async findLastThirdyActivitys(userId: number){
+        const response = await query(`SELECT * FROM UserActivity WHERE userId = ? ORDER BY createdAt DESC LIMIT 30`, [userId]) as [ActivityTableFieldsType[], FieldPacket[]]
         const recoveredActivitys = response[0]
         return recoveredActivitys.map(activity => {
             return {

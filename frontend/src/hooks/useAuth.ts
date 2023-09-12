@@ -70,9 +70,9 @@ export default function useAuth(){
             })
             const {isValid, user} = response.data
             if(isValid && user !== undefined){
+                setToken(storagedToken)
                 setUser(user)
                 setAuthenticated(true)
-                setToken(storagedToken)
                 return user
             }else{
                 return false

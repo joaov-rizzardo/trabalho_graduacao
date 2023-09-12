@@ -21,9 +21,9 @@ export default class UserActivitys {
         }
     }
 
-    public static async getInstanceWithLastHundredActivitys(userId: number){
+    public static async getInstanceWithLastThirdyActivitys(userId: number){
         const activityDAO = new ActivityDAO()
-        const recoveredActivitys = await activityDAO.findLastHundredActivitys(userId)
+        const recoveredActivitys = await activityDAO.findLastThirdyActivitys(userId)
         return new this({
             userId: userId,
             activitys: recoveredActivitys.map(activity => new Activity(activity))

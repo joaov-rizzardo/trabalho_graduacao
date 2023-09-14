@@ -72,8 +72,27 @@ type BillFieldsType = {
     createdAt: Date,
     isCanceled: number,
     canceledAt: Date | null
+}   
+
+type GetPaidBillInstallmentsByFiltersParamsType = {
+    userId: number
+    startDate?: string
+    finishDate?: string
 }
 
+type GetPaidBillInstallmentsByFiltersReturnType = {
+    billId: number
+    installmentId: number
+    installmentNumber: number
+    userId: number
+    typeId: keyof typeof BillEnum,
+    category: keyof typeof SpendingCategoryEnum,
+    description: string
+    value: number
+    isPayed: number
+    payedAt: Date | null
+    dueDate: Date
+}
 export default class BillDAO {
     public async insertInstallmentAndReturnId(params: InstallmentInsertType){
         const response = await query(`
@@ -263,6 +282,33 @@ export default class BillDAO {
                 createdAt: convertDateObjectDatetimeToString(bill.createdAt),
                 isCanceled: Boolean(bill.isCanceled),
                 canceledAt: bill.canceledAt !== null ? convertDateObjectDatetimeToString(bill.canceledAt) : undefined
+            }
+        })
+    }
+
+    public async getPaidBillInstallmentsByFilters({userId, startDate, finishDate}: GetPaidBillInstallmentsByFiltersParamsType){
+        const params: Array<number|string> = [userId]
+        let sql = `SELECT * FROM vw_installments WHERE userId = ? AND isPayed = 1`
+        if(startDate !== undefined && finishDate !== undefined){
+            sql += " AND payedAt BETWEEN ? AND ?"
+            params.push(startDate)
+            params.push(finishDate)
+        }
+        const response = await query(sql, params) as [GetPaidBillInstallmentsByFiltersReturnType[], FieldPacket[]]
+        const installmentData = response[0]
+        return installmentData.map(installment => {
+            return {
+                billId: installment.billId,
+                installmentId: installment.installmentId,
+                installmentNumber: installment.installmentNumber,
+                userId: installment.userId,
+                typeId: installment.typeId,
+                category: installment.category,
+                description: installment.description,
+                value: installment.value,
+                isPayed: Boolean(installment.isPayed),
+                payedAt: installment.payedAt !== null ? convertDateObjectDatetimeToString(installment.payedAt) : null,
+                dueDate: convertDateObjectDatetimeToString(installment.dueDate)
             }
         })
     }

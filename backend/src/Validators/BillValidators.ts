@@ -53,4 +53,7 @@ export const payInstallmentValidators = [
         .custom(value => value > 0).withMessage('The paidValue must be greater than 0')
 ]
 
-
+export const installmentsGetValidators = [
+    body('startDate').optional().matches(/^\d{4}-\d{2}-\d{2}$/).withMessage('The startDate field must be in format yyyy-mm-dd'),
+    body('finishDate').optional().matches(/^\d{4}-\d{2}-\d{2}$/).withMessage('The finishDate field must be in format yyyy-mm-dd')
+]

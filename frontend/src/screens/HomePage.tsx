@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react'
-import { ScrollView, StyleSheet, View } from "react-native";
+import { ImageSourcePropType, ScrollView, StyleSheet, View } from "react-native";
 import ScreenTemplate from "../components/ScreenTemplate";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { AuthStackNavigationType } from "../routers/AuthRouter";
@@ -12,7 +12,7 @@ import OptionSelector from '../components/OptionSelector';
 import MovementCard from '../components/MovementCard';
 import ActivityCard from '../components/ActivityCard';
 import { ActivityType } from '../types/ActivityType';
-import { EarningCategoryEnum, SpendingCategoryEnum } from '../types/CategoryTypes';
+import { EarningCategoryEnum, EarningCategoryImages, SpendingCategoryEnum, SpendingCategoryImages } from '../types/CategoryTypes';
 import { backendApi } from '../configs/Api';
 import { GetEarnings, GetLastActivities, GetSpendings } from '../types/ApiResponses/TransactionTypes';
 import { getThirtyDaysIntervalDateString } from '../Utils/DateUtils';
@@ -26,10 +26,10 @@ export type TransactionType = {
     type: 'S' | 'E'
     categoryKey: keyof typeof EarningCategoryEnum | keyof typeof SpendingCategoryEnum,
     categoryDescription: EarningCategoryEnum | SpendingCategoryEnum,
+    image: ImageSourcePropType,
     date: Date,
     description: string,
-    value: number,
-    
+    value: number  
 }
 
 async function findLastActivities() {
@@ -77,6 +77,7 @@ function groupTransactions({ spendings, earnings }: { spendings: GetSpendings[],
             id: spending.spendingId,
             categoryKey: spending.categoryKey,
             categoryDescription: spending.categoryDescription,
+            image: require(`../../assets/images/${SpendingCategoryImages[spending.categoryKey]}`),
             date: new Date(spending.spentAt),
             description: spending.description,
             value: spending.value,
@@ -88,6 +89,7 @@ function groupTransactions({ spendings, earnings }: { spendings: GetSpendings[],
             id: earning.earningId,
             categoryKey: earning.categoryKey,
             categoryDescription: earning.categoryDescription,
+            image: require(`../../assets/images/${EarningCategoryImages[earning.categoryKey]}`),
             date: new Date(earning.earnedAt),
             description: earning.description,
             value: earning.value,

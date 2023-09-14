@@ -1,12 +1,13 @@
 import {Router, Request, Response} from 'express'
 import tokenAuthenticationMiddleware from '../Middlewares/TokenAuthenticationMiddleware'
-import { createBillValidators, payInstallmentValidators } from '../Validators/BillValidators'
+import { createBillValidators, installmentsGetValidators, payInstallmentValidators } from '../Validators/BillValidators'
 import checkExpressValidations from '../Middlewares/DefaultExpressValidationsChecker'
 import createBillFlow from '../Controllers/CreateBillController'
 import payInstallmentFlow from '../Controllers/PayInstallmentController'
 import cancelBillFlow from '../Controllers/CancelBillController'
 import getActiveBillsFlow from '../Controllers/ActiveBillsGetter'
 import getBillTypesFlow from '../Controllers/BillTypesGetterController'
+import getInstallmentsFlow from '../Controllers/InstallmentsGetterController'
 
 const billRouter = Router()
 billRouter.use(tokenAuthenticationMiddleware)
@@ -20,5 +21,6 @@ billRouter.put('/installment/pay', payInstallmentValidators, checkExpressValidat
 billRouter.put('/cancel/:billId', cancelBillFlow)
 billRouter.get('/activeBills', getActiveBillsFlow)
 billRouter.get('/billTypes', getBillTypesFlow)
+billRouter.post('/getInstallments', installmentsGetValidators, checkExpressValidations, getInstallmentsFlow)
 
 export default billRouter

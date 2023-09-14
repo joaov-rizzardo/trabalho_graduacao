@@ -52,3 +52,20 @@ CREATE VIEW vw_spending_by_category AS (
 	) AS B
 );
 
+CREATE VIEW vw_installments AS
+    (SELECT 
+        ub.billId,
+        bi.installmentId,
+        bi.installmentNumber,
+        ub.userId,
+        ub.typeId,
+        ub.category,
+        ub.description,
+        bi.value,
+        bi.isPayed,
+        bi.payedAt,
+        bi.dueDate
+    FROM
+        UserBills AS ub
+            INNER JOIN
+        billinstallments AS bi ON ub.billId = bi.billId)

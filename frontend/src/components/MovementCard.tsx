@@ -12,7 +12,7 @@ export default function MovementCard({ transaction }: MovementCardProps) {
     return (
         <DataBox>
             <View style={styles.container}>
-                <Image source={require('../../assets/images/educacao.png')} style={styles.categoryImage} />
+                <Image source={transaction.image} style={styles.categoryImage} />
                 <View style={{ flex: 1, ...styles.columnContainer }}>
                     <Text style={{ ...styles.text, ...styles.movementText }}>{transaction.description}</Text>
                     <Text style={{ ...styles.text, ...styles.categoryText }}>{transaction.categoryDescription}</Text>

@@ -25,27 +25,32 @@ export enum SpendingCategoryEnum {
 }
 
 export enum EarningCategoryImages {
-    "SA" = "salario.png",
-    "IN" = "investimentos.png",
-    "VE" = "Vendas.png",
-    "BO" = "Bonificações.png",
-    "PR" = "Premios.png",
-    "HE" = "heranca.png",
-    "PE" = "presente.png",
-    "AL" = "aluguel.png",
-    "OU" = "outros.png",
+    "SA" = require('../../assets/images/salario.png'),
+    "IN" = require('../../assets/images/investimentos.png'),
+    "VE" = require('../../assets/images/Vendas.png'),
+    "BO" = require('../../assets/images/Bonificações.png'),
+    "PR" = require('../../assets/images/Premios.png'),
+    "HE" = require('../../assets/images/heranca.png'),
+    "PE" = require('../../assets/images/presente.png'),
+    "AL" = require('../../assets/images/aluguel.png'),
+    "OU" = require('../../assets/images/Outros.png')
 }
 
 export enum SpendingCategoryImages {
-    "MO" = "Moradia.png",
-    "TR" = "Transporte.png",
-    "AL" = "Alimentação.png",
-    "LA" = "Lazer.png",
-    "SA" = "Saúde.png",
-    "VE" = "Vestuário.png",
-    "TE" = "Tecnologia.png",
-    "FI" = "Finanças.png",
-    "ED" = "educacao.png",
-    "CA" = "Doação.png",
-    "OU" = "Outros.png"
+    "MO" = require('../../assets/images/Moradia.png'),
+    "TR" = require('../../assets/images/Transporte.png'),
+    "AL" = require('../../assets/images/Alimentação.png'),
+    "LA" = require('../../assets/images/Lazer.png'),
+    "SA" = require('../../assets/images/Saúde.png'),
+    "VE" = require('../../assets/images/Vestuário.png'),
+    "TE" = require('../../assets/images/Tecnologia.png'),
+    "FI" = require('../../assets/images/Finanças.png'),
+    "ED" = require('../../assets/images/educacao.png'),
+    "CA" = require('../../assets/images/Doação.png'),
+    "OU" = require('../../assets/images/Outros.png')
+}
+
+export enum BillEnum {
+    F = 'Fixo',
+    V = 'Variável'
 }

@@ -17,6 +17,7 @@ import { backendApi } from '../configs/Api';
 import { GetEarnings, GetLastActivities, GetSpendings } from '../types/ApiResponses/TransactionTypes';
 import { getThirtyDaysIntervalDateString } from '../Utils/DateUtils';
 import { UserContext } from '../contexts/UserContext';
+import { GetInstallmentsType } from '../types/ApiResponses/BillTypes';
 interface HomePageProps {
     navigation: StackNavigationProp<AuthStackNavigationType, "EmailValidation">
 }
@@ -56,6 +57,20 @@ async function findLastEarnings() {
     }
 }
 
+async function findLastPaidInstallments(){
+    try{
+        const { startDate, endDate } = getThirtyDaysIntervalDateString()
+        const {data: installmentData} = await backendApi.post<GetInstallmentsType[]>('/bill/getInstallments', {
+            startDate: startDate,
+            finishDate: endDate
+        })
+        return installmentData
+    }catch(error: any){
+        console.log(error)
+        return []
+    }
+}
+
 async function findLastSpendings() {
     try {
         const { startDate, endDate } = getThirtyDaysIntervalDateString()
@@ -70,26 +85,36 @@ async function findLastSpendings() {
     }
 }
 
-function groupTransactions({ spendings, earnings }: { spendings: GetSpendings[], earnings: GetEarnings[] }) {
+function groupTransactions({ spendings, earnings, installments }: { spendings: GetSpendings[], earnings: GetEarnings[], installments: GetInstallmentsType[]}) {
     const transactionList: TransactionType[] = []
     spendings.forEach(spending => {
         transactionList.push({
             id: spending.spendingId,
             categoryKey: spending.categoryKey,
             categoryDescription: spending.categoryDescription,
-            image: require(`../../assets/images/${SpendingCategoryImages[spending.categoryKey]}`),
+            image: SpendingCategoryImages[spending.categoryKey],
             date: new Date(spending.spentAt),
             description: spending.description,
             value: spending.value,
             type: 'S'
         })
     })
+    installments.forEach(installment => ({
+        id: installment.installmentId,
+        categoryKey: installment.categoryKey,
+        categoryDescription: installment.categoryDescription,
+        image: SpendingCategoryImages[installment.categoryKey],
+        date: new Date(installment.payedAt),
+        description: installment.description,
+        value: installment.value,
+        type: 'S'
+    }))
     earnings.forEach(earning => {
         transactionList.push({
             id: earning.earningId,
             categoryKey: earning.categoryKey,
             categoryDescription: earning.categoryDescription,
-            image: require(`../../assets/images/${EarningCategoryImages[earning.categoryKey]}`),
+            image: EarningCategoryImages[earning.categoryKey],
             date: new Date(earning.earnedAt),
             description: earning.description,
             value: earning.value,
@@ -115,13 +140,14 @@ export default function HomePage({ navigation }: HomePageProps) {
 
     useEffect(() => {
         const getHomePageData = async () => {
-            const [lastActivities, lastSpendings, lastEarnings] = await Promise.all([
+            const [lastActivities, lastSpendings, lastEarnings, lastInstallments] = await Promise.all([
                 findLastActivities(),
                 findLastSpendings(),
-                findLastEarnings()
+                findLastEarnings(),
+                findLastPaidInstallments()
             ])
             setActivities(lastActivities)
-            setTransactions(groupTransactions({ spendings: lastSpendings, earnings: lastEarnings }))
+            setTransactions(groupTransactions({ spendings: lastSpendings, earnings: lastEarnings, installments: lastInstallments }))
         }
         if (backendApi.defaults.headers.common['Authorization'] !== "") {
             getHomePageData()
@@ -174,7 +200,6 @@ export default function HomePage({ navigation }: HomePageProps) {
                         ))
                     )}
                 </View>
-
             </ScrollView>
         </ScreenTemplate>
     )

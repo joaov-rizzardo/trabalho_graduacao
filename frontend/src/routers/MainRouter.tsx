@@ -1,12 +1,12 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomePage from "../screens/HomePage";
 import Rankings from "../screens/Rankings";
-import Actions from "../screens/Actions";
 import Statistics from "../screens/Statistics";
 import Profile from "../screens/Profile";
 import MaterialIcon from '@expo/vector-icons/MaterialIcons';
 import { colors } from "../configs/Theme";
 import { UserProvider } from "../contexts/UserContext";
+import ActionsRouter from "./ActionsRouter";
 
 export default function MainRouter() {
     const Tab = createBottomTabNavigator()
@@ -48,7 +48,7 @@ export default function MainRouter() {
                 />
                 <Tab.Screen
                     name="Actions"
-                    component={Actions}
+                    component={ActionsRouter}
                     options={{
                         tabBarItemStyle: {
                             backgroundColor: colors.mainColor,

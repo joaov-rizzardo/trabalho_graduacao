@@ -3,25 +3,25 @@ import MaterialIcon from '@expo/vector-icons/MaterialIcons';
 import { colors } from "../configs/Theme";
 import IconButton from "./IconButton";
 import CustomInput from "./CustomInput";
-import { SpendingCategoryEnum, SpendingCategoryImages } from "../types/CategoryTypes";
+import { EarningCategoryEnum, EarningCategoryImages } from "../types/CategoryTypes";
 import { useState } from "react";
-import { getSpendingCategoriesList } from "../Utils/Categories";
+import { getEarningCategoriesList } from "../Utils/Categories";
 import FullscreenModalTemplate from "./FullscreenModalTemplate";
 
-interface SpendingCategorySelectorProps {
-    category: keyof typeof SpendingCategoryEnum | '',
-    setCategory:React.Dispatch<React.SetStateAction<"" | keyof typeof SpendingCategoryEnum>>
+interface EarningCategorySelectorProps {
+    category: keyof typeof EarningCategoryEnum | '',
+    setCategory:React.Dispatch<React.SetStateAction<"" | keyof typeof EarningCategoryEnum>>
 }
 
-export default function SpendingCategorySelector({category, setCategory}: SpendingCategorySelectorProps) {
+export default function EarningCategorySelector({category, setCategory}: EarningCategorySelectorProps) {
     const [search, setSearch] = useState<string>('')
     const [isOpenModal, setIsOpenModal] = useState<boolean>(false)
-    const options = getSpendingCategoriesList()
+    const options = getEarningCategoriesList()
     return (
         <>
             <TouchableOpacity style={styles.inputContainer} onPress={() => setIsOpenModal(true)}>
                 <Image style={styles.inputImage} source={require('../../assets/images/lista-de-controle.png')} />
-                <Text style={styles.inputText}>  {category !== '' ? SpendingCategoryEnum[category] : 'Selecione uma categoria'}</Text>
+                <Text style={styles.inputText}>  {category !== '' ? EarningCategoryEnum[category] : 'Selecione uma categoria'}</Text>
                 <MaterialIcon name="expand-more" size={36} color={colors.mainColor} />
             </TouchableOpacity>
             <FullscreenModalTemplate visible={isOpenModal} transparent={true} animationType="slide">
@@ -40,7 +40,7 @@ export default function SpendingCategorySelector({category, setCategory}: Spendi
                                 setIsOpenModal(false)
                                 setCategory(option.value)
                             }} style={styles.itemContainer}>
-                                <Image source={SpendingCategoryImages[option.value]} style={styles.itemImage} />
+                                <Image source={EarningCategoryImages[option.value]} style={styles.itemImage} />
                                 <Text style={styles.itemText}>{option.label}</Text>
                                 <View style={styles.circle}>
                                     {category === option.value && (

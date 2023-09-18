@@ -1,17 +1,35 @@
 import { StackNavigationProp } from "@react-navigation/stack";
-import { View, Text } from "react-native";
+import { View, Text, ScrollView, StyleSheet } from "react-native";
 import { ActionsStackNavigationType } from "../routers/ActionsRouter";
+import ScreenTemplate from "../components/ScreenTemplate";
+import CustomInput from "../components/CustomInput";
+import EarningCategorySelector from "../components/EarningCategorySelector";
+import CustomButton from "../components/CustomButton";
+import { useState } from "react";
+import { EarningCategoryEnum } from "../types/CategoryTypes";
 
-interface CreateEarningProps {
-    navigation: StackNavigationProp<ActionsStackNavigationType, "CreateExpense", "CreateEarning">
-}
-
-export default function CreateEarning({navigation}: CreateEarningProps){
+export default function CreateEarning() {
+    const [category, setCategory] = useState<keyof typeof EarningCategoryEnum | ''>('')
     return (
-        <View>
-            <Text onPress={() => {
-                    navigation.navigate('CreateExpense')
-                }}>Create Earning</Text>
-        </View>
+        <ScreenTemplate>
+            <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.container}>
+                <CustomInput.Container>
+                    <CustomInput.Icon iconName="description" />
+                    <CustomInput.Input placeholder="Descrição" />
+                </CustomInput.Container>
+                <CustomInput.Container>
+                    <CustomInput.Icon iconName="attach-money" />
+                    <CustomInput.Input placeholder="Valor" />
+                </CustomInput.Container>
+                <EarningCategorySelector category={category} setCategory={setCategory} />
+                <CustomButton text="Realizar lançamento" />
+            </ScrollView>
+        </ScreenTemplate>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        gap: 28
+    }
+})

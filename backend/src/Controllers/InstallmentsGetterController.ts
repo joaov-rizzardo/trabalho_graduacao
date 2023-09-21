@@ -6,10 +6,10 @@ import { SpendingCategoryEnum } from "../Enums/SpendingCategoryEnum";
 
 export default async function getInstallmentsFlow(req: Request, res: Response){
     try{
-        const {startDate, finishDate} = req.body
+        const {startDate, finishDate, payed} = req.body
         const userId = req.authenticatedUser!.userId
         const billDao = new BillDAO()
-        const installments = await billDao.getPaidBillInstallmentsByFilters({userId, startDate: `${startDate} 00:00:00`, finishDate: `${finishDate} 23:59:59`})
+        const installments = await billDao.getBillInstallmentsByFilters({userId, startDate, finishDate, payed})
         return res.status(200).send(installments.map(installment => ({
             ...installment,
             categoryKey: installment.category,

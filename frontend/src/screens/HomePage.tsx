@@ -62,7 +62,8 @@ async function findLastPaidInstallments(){
         const { startDate, endDate } = getThirtyDaysIntervalDateString()
         const {data: installmentData} = await backendApi.post<GetInstallmentsType[]>('/bill/getInstallments', {
             startDate: startDate,
-            finishDate: endDate
+            finishDate: endDate,
+            payed: true
         })
         return installmentData
     }catch(error: any){

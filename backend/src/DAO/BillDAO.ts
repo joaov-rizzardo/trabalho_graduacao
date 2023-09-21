@@ -74,13 +74,14 @@ type BillFieldsType = {
     canceledAt: Date | null
 }   
 
-type GetPaidBillInstallmentsByFiltersParamsType = {
+type GetBillInstallmentsByFiltersParamsType = {
     userId: number
     startDate?: string
     finishDate?: string
+    payed?: boolean
 }
 
-type GetPaidBillInstallmentsByFiltersReturnType = {
+type GetBillInstallmentsByFiltersReturnType = {
     billId: number
     installmentId: number
     installmentNumber: number
@@ -88,7 +89,7 @@ type GetPaidBillInstallmentsByFiltersReturnType = {
     typeId: keyof typeof BillEnum,
     category: keyof typeof SpendingCategoryEnum,
     description: string
-    value: number
+    value: string
     isPayed: number
     payedAt: Date | null
     dueDate: Date
@@ -286,15 +287,19 @@ export default class BillDAO {
         })
     }
 
-    public async getPaidBillInstallmentsByFilters({userId, startDate, finishDate}: GetPaidBillInstallmentsByFiltersParamsType){
+    public async getBillInstallmentsByFilters({userId, startDate, finishDate, payed}: GetBillInstallmentsByFiltersParamsType){
         const params: Array<number|string> = [userId]
-        let sql = `SELECT * FROM vw_installments WHERE userId = ? AND isPayed = 1`
+        let sql = `SELECT * FROM vw_installments WHERE userId = ?`
         if(startDate !== undefined && finishDate !== undefined){
             sql += " AND payedAt BETWEEN ? AND ?"
-            params.push(startDate)
-            params.push(finishDate)
+            params.push(`${startDate} 00:00:00`)
+            params.push(`${finishDate} 23:59:59`)
         }
-        const response = await query(sql, params) as [GetPaidBillInstallmentsByFiltersReturnType[], FieldPacket[]]
+        if(payed !== undefined){
+            sql += " AND isPayed = ?"
+            params.push(payed === true ? '1' : '0')
+        }
+        const response = await query(sql, params) as [GetBillInstallmentsByFiltersReturnType[], FieldPacket[]]
         const installmentData = response[0]
         return installmentData.map(installment => {
             return {
@@ -305,7 +310,7 @@ export default class BillDAO {
                 typeId: installment.typeId,
                 category: installment.category,
                 description: installment.description,
-                value: installment.value,
+                value: parseFloat(installment.value),
                 isPayed: Boolean(installment.isPayed),
                 payedAt: installment.payedAt !== null ? convertDateObjectDatetimeToString(installment.payedAt) : null,
                 dueDate: convertDateObjectDatetimeToString(installment.dueDate)

@@ -15,23 +15,66 @@ export type openAlertType = {
     buttonText?: string
 }
 
-export default function usePopup(){
+
+export type RewardsModalType = {
+    visible: boolean,
+    xp: number,
+    points: number,
+    onClose?: () => void
+}
+
+
+export type openRewardsModalType = {
+    xp: number,
+    points: number,
+    onClose?: () => void
+}
+
+export type LevelUpModalType = {
+    visible: boolean,
+    level: number,
+    avatarRewards: number[],
+    onClose?: () => void
+}
+
+
+export type openLevelupModalType = {
+    level: number,
+    avatarRewards: number[],
+    onClose?: () => void
+}
+
+const innitialRewardsModalType: RewardsModalType = {
+    visible: false,
+    xp: 0,
+    points: 0
+}
+
+const innitialLevelupModalType: LevelUpModalType = {
+    visible: false,
+    level: 0,
+    avatarRewards: []
+}
+
+export default function usePopup() {
     const [alertConfigs, setAlertConfigs] = useState<AlertPopupConfigsType>({
         visible: false,
         content: ''
     })
+    const [rewardsModalConfigs, setRewardsModalConfigs] = useState<RewardsModalType>(innitialRewardsModalType)
+    const [levelupModalConfigs, setLevelupModalConfigs] = useState<LevelUpModalType>(innitialLevelupModalType)
 
     const openAlertPopup = (params: openAlertType) => {
         const newConfigs: AlertPopupConfigsType = {} as AlertPopupConfigsType
         newConfigs.visible = true
         newConfigs.content = params.content
-        if(params.buttonFunction !== undefined){
+        if (params.buttonFunction !== undefined) {
             newConfigs.buttonFunction = params.buttonFunction
         }
-        if(params.title !== undefined){
+        if (params.title !== undefined) {
             newConfigs.title = params.title
         }
-        if(params.buttonText !== undefined){
+        if (params.buttonText !== undefined) {
             newConfigs.buttonText = params.buttonText
         }
         setAlertConfigs(newConfigs)
@@ -44,5 +87,41 @@ export default function usePopup(){
         })
     }
 
-    return {alertConfigs, openAlertPopup, closeAlertPopup}
+    const openModalRewards = (configs: openRewardsModalType) => {
+        setRewardsModalConfigs({
+            visible: true,
+            ...configs
+        })
+    }
+
+    const closeModalRewards = () => {
+        const closeFunction = rewardsModalConfigs.onClose
+        setRewardsModalConfigs(innitialRewardsModalType)
+        closeFunction && closeFunction()
+    }
+
+    const openModalLevelup = (configs: openLevelupModalType) => {
+        setLevelupModalConfigs({
+            visible: true,
+            ...configs
+        })
+    }
+
+    const closeModalLevelup = () => {
+        const closeFunction = levelupModalConfigs.onClose
+        setLevelupModalConfigs(innitialLevelupModalType)
+        closeFunction && closeFunction()
+    }
+
+    return {
+        alertConfigs,
+        openAlertPopup,
+        closeAlertPopup,
+        openModalRewards,
+        closeModalRewards,
+        rewardsModalConfigs,
+        openModalLevelup,
+        closeModalLevelup,
+        levelupModalConfigs
+    }
 }

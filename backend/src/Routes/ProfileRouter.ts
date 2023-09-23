@@ -12,15 +12,15 @@ import updatePasswordFlow from '../Controllers/UpdatePasswordController'
 
 const profileRouter = Router()
 
-profileRouter.use(tokenAuthenticationMiddleware)
-
 profileRouter.all('/', (req: Request, res: Response) => {
     res.status(200).send('Profile service is running')
 })
+profileRouter.get('/avatar/:avatarId', sendAvatarImage)
+
+profileRouter.use(tokenAuthenticationMiddleware)
 
 profileRouter.post('/updateProfile', updateProfileValidators, checkExpressValidations, updateProfileFlow)
 profileRouter.get('/userAvatars', getUserAvatarsFlow)
-profileRouter.get('/avatar/:avatarId', sendAvatarImage)
 profileRouter.get('/balanceTypes', getBalanceTypesFlow)
 profileRouter.get('/userFinance', getUserFinanceFlow)
 profileRouter.get('/userLevel', getUserLevelFlow)

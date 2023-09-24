@@ -1,5 +1,7 @@
+import { UserFinance } from '../UserType';
 import { EarningCategoryEnum } from './../../../../backend/src/Enums/EarningCategoryEnum';
 import { SpendingCategoryEnum } from './../CategoryTypes';
+import { GetUserLevelType } from './ProfileTypes';
 
 export type GetSpendings = {
     spendingId: number,
@@ -31,4 +33,15 @@ export type GetLastActivities = {
     userId: number,
     description: string,
     createdAt: string
+}
+
+export type CreateEarningType = {
+    message: string,
+    earning: GetEarnings,
+    userFinance: UserFinance,
+    userLevel: GetUserLevelType,
+    rewards: {
+        xp: number,
+        points: number
+    }
 }

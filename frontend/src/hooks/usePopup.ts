@@ -20,14 +20,14 @@ export type RewardsModalType = {
     visible: boolean,
     xp: number,
     points: number,
-    onClose?: () => void
+    close?: () => void
 }
 
 
 export type openRewardsModalType = {
     xp: number,
     points: number,
-    onClose?: () => void
+    close?: () => void
 }
 
 export type LevelUpModalType = {
@@ -95,7 +95,7 @@ export default function usePopup() {
     }
 
     const closeModalRewards = () => {
-        const closeFunction = rewardsModalConfigs.onClose
+        const closeFunction = rewardsModalConfigs.close
         setRewardsModalConfigs(innitialRewardsModalType)
         closeFunction && closeFunction()
     }

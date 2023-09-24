@@ -33,7 +33,7 @@ export default async function createEarningFlow(req: Request, res: Response){
         await commitTransaction()
         return res.status(201).send({
             message: 'The earning has been created',
-            spending: earning.convertToObject(),
+            earning: earning.convertToObject(),
             userFinance: userFinance.convertToObject(),
             userLevel: userLevel.convertToObject(),
             rewards: {xp, points}
@@ -85,7 +85,7 @@ export async function createActivityByEarning(earning: Earning){
 export async function insertXpAndPointsByEarning(earning: Earning, {xp, points}: {xp: number, points: number}){
     const userLevel = await UserLevel.getInstanceByUserId(earning.getUserId)
     userLevel.incrementPoints(points)
-    userLevel.incrementXp(xp)
+    await userLevel.incrementXp(xp)
     await userLevel.save()
     return userLevel
 }

@@ -10,5 +10,12 @@ export type GetUserLevelType = {
     currentLevel: number,
     currentXp: number,
     points: number,
-    xpToNextLevel: number
+    xpToNextLevel: number,
+    earnedAvatars: GetUserAvatars[]
+}
+
+export type GetUserAvatars = {
+    avatarId: number,
+    name: string,
+    createdAt: string
 }

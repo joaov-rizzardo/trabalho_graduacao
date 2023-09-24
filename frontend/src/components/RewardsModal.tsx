@@ -24,11 +24,11 @@ export default function RewardsModal({xp, points, visible, close}: RewardsModalP
                     </View>
                     <View style={styles.rewardContainer}>
                         <Image style={styles.rewardImage} source={require('../../assets/images/xp.png')} />
-                        <Text style={styles.rewardText}>550 XP</Text>
+                        <Text style={styles.rewardText}>{xp} XP</Text>
                     </View>
                     <View style={styles.rewardContainer}>
                         <Image style={styles.rewardImage} source={require('../../assets/images/velocimetro.png')} />
-                        <Text style={styles.rewardText}>50 pontos</Text>
+                        <Text style={styles.rewardText}>{points} pontos</Text>
                     </View>
                     <CustomButton text="OK" onPress={close}/>
                 </View>

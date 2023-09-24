@@ -3,6 +3,13 @@ import { UserFinance } from '../types/UserType';
 import { GetUserFinanceType } from '../types/ApiResponses/ProfileTypes';
 import { backendApi } from '../configs/Api';
 
+
+export type UpdateFinancesType = {
+    balance?: number,
+    totalSavings?: number,
+    currentSavings?: number
+}
+
 export default function useFinance(){
     const [finances, setFinances] = useState<UserFinance>({} as UserFinance)
 
@@ -20,5 +27,14 @@ export default function useFinance(){
         }
     }
 
-    return {finances, findUserFinances}
+    const updateFinances = ({balance, currentSavings, totalSavings}: UpdateFinancesType) => {
+        setFinances(prevFinance => ({
+            ...prevFinance,
+            balance: balance || prevFinance.balance,
+            currentSavings: currentSavings || prevFinance.currentSavings,
+            totalSavings: totalSavings || prevFinance.totalSavings
+        }))
+    }
+
+    return {finances, findUserFinances, updateFinances}
 }

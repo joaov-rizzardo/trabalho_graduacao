@@ -5,8 +5,8 @@ import { AuthContext } from "../contexts/AuthContext";
 import { backendApi } from "../configs/Api";
 
 export default function useUser(){
-    const {finances, findUserFinances} = useFinance()
-    const {level, findUserLevel} = useLevel()
+    const {finances, findUserFinances, updateFinances} = useFinance()
+    const {level, findUserLevel, updateLevel} = useLevel()
     const {token} = useContext(AuthContext)
     
     useEffect(() => {
@@ -19,7 +19,9 @@ export default function useUser(){
     }, [token])
 
     return {
-        finances, 
+        finances,
+        updateFinances,
+        updateLevel,
         level
     }
 }

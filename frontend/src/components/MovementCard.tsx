@@ -17,7 +17,7 @@ export default function MovementCard({ transaction }: MovementCardProps) {
                     <Text style={{ ...styles.text, ...styles.movementText }}>{transaction.description}</Text>
                     <Text style={{ ...styles.text, ...styles.categoryText }}>{transaction.categoryDescription}</Text>
                 </View>
-                <View style={{ ...styles.columnContainer, alignItems: 'center' }}>
+                <View style={{ ...styles.columnContainer, alignItems: 'flex-end' }}>
                     <MaterialIcon name={transaction.type === 'S' ? 'arrow-downward' : 'arrow-upward'} size={28} color={transaction.type === 'S' ? colors.error : colors.success} />
                     <Text style={{ ...styles.text, ...styles.valueText }}>{transaction.value?.toLocaleString('pt-BR', {
                         style: 'currency',

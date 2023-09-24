@@ -10,6 +10,7 @@ import { PopupContext } from "../contexts/PopupContext";
 import { backendApi } from "../configs/Api";
 import { CreateEarningType } from "../types/ApiResponses/TransactionTypes";
 import { UserContext } from "../contexts/UserContext";
+import { textToMoneyNumber } from "../Utils/InputUtils";
 
 export default function CreateEarning() {
     const {openAlertPopup, openModalRewards, openModalLevelup} = useContext(PopupContext)
@@ -21,7 +22,6 @@ export default function CreateEarning() {
 
     async function handleCreateEarning(){
         try{
-            setIsCreating(true)
             const {ok, message} = handleValidations()
             if(ok === false){
                 return openAlertPopup({
@@ -46,6 +46,7 @@ export default function CreateEarning() {
                 points: userLevel.points,
                 xpToNextLevel: userLevel.xpToNextLevel
             })
+            clearData()
             openModalRewards({
                 points: rewards.points,
                 xp: rewards.xp,
@@ -64,8 +65,6 @@ export default function CreateEarning() {
                 title: 'Atenção',
                 content: 'Não foi possível realizar o lançamento, tente novamente mais tarde.'
             }) 
-        }finally{
-            setIsCreating(false)
         }
     }
 
@@ -82,6 +81,12 @@ export default function CreateEarning() {
         return {ok: true, message: ''}
     }
 
+    function clearData(){
+        setValue(0)
+        setCategory('')
+        setDescription('')
+    }
+
     return (
         <ScreenTemplate>
             <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.container}>
@@ -95,11 +100,15 @@ export default function CreateEarning() {
                         placeholder="Valor" 
                         keyboardType="number-pad" 
                         value={value !== 0 ? value.toString(): ""}
-                        onChangeText={text => setValue(parseFloat(moneyMask(text.trim() !== "" ? text : "0")))}
+                        onChangeText={text => setValue(textToMoneyNumber(text))}
                     />
                 </CustomInput.Container>
                 <EarningCategorySelector category={category} setCategory={setCategory} />
-                <CustomButton text="Realizar lançamento" onPress={handleCreateEarning} loading={isCreating}/>
+                <CustomButton text="Realizar lançamento" onPress={async () => {
+                    setIsCreating(true)
+                    await handleCreateEarning()
+                    setIsCreating(false)
+                }} loading={isCreating}/>
             </ScrollView>
         </ScreenTemplate>
     )

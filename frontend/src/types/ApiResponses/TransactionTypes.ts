@@ -15,7 +15,6 @@ export type GetSpendings = {
     canceledAt?: string
 }
 
-
 export type GetEarnings = {
     earningId: number,
     categoryKey: keyof typeof EarningCategoryEnum,
@@ -38,6 +37,17 @@ export type GetLastActivities = {
 export type CreateEarningType = {
     message: string,
     earning: GetEarnings,
+    userFinance: UserFinance,
+    userLevel: GetUserLevelType,
+    rewards: {
+        xp: number,
+        points: number
+    }
+}
+
+export type CreateSpendingType = {
+    message: string,
+    spending: GetSpendings,
     userFinance: UserFinance,
     userLevel: GetUserLevelType,
     rewards: {

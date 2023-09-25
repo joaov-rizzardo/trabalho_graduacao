@@ -9,6 +9,7 @@ import UserFinance from "../Models/UserFinance";
 import Activity from "../Models/Activity";
 import { formatNumberToCurrency } from "../Utils/NumberFormats";
 import getCurrentStringDatetime from "../Utils/DateUtils";
+import UserLevel from "../Models/UserLevel";
 
 export default async function payInstallmentFlow(req: Request, res: Response){
     const userId = req.authenticatedUser!.userId
@@ -20,7 +21,7 @@ export default async function payInstallmentFlow(req: Request, res: Response){
             await rollbackTransaction()
             return res.status(403).send(default403Response())
         }
-        const [userFinance] = await Promise.all([
+        const [userFinance, activity, {rewards, userLevel}] = await Promise.all([
             decrementUserFinancesByPaidInstallment({
                 userId: userId,
                 paidValue: req.body.paidValue,
@@ -30,13 +31,16 @@ export default async function payInstallmentFlow(req: Request, res: Response){
                 userId: userId,
                 paidValue: req.body.paidValue,
                 billDescription: bill.getDescription
-            })
+            }),
+            reclaimRewardsFromPaidInstallment(userId)
         ])
         await commitTransaction()
         return res.status(200).send({
             message: 'The installmente has been paid',
             installment: installment.convertToObject(),
-            userFinance: userFinance.convertToObject()
+            userFinance: userFinance.convertToObject(),
+            userLevel: userLevel.convertToObject(),
+            rewards
         })
     }catch(error: any){
         await rollbackTransaction()
@@ -47,11 +51,13 @@ export default async function payInstallmentFlow(req: Request, res: Response){
 
 export async function payInstallment(installmentKey: number, paidValue: number){
     const installment = await BillInstallment.getInstanceById(installmentKey)
+    if(installment.isPaid){
+        throw new Error('Installment already paid')
+    }
     installment.pay(paidValue)
     await installment.save()
     return installment
 }
-
 
 type decrementUserFinancesByPaidInstallmentType = {
     userId: number,
@@ -75,6 +81,7 @@ type createActivityByPaidInstallmentType = {
     paidValue: number,
     billDescription: string
 }
+
 export async function createActivityByPaidInstallment(params: createActivityByPaidInstallmentType){
     const activity = new Activity({
         userId: params.userId,
@@ -83,4 +90,16 @@ export async function createActivityByPaidInstallment(params: createActivityByPa
     })
     await activity.save()
     return activity
+}
+
+export async function reclaimRewardsFromPaidInstallment(userId: number){
+    const points = 1
+    const xp = 100
+    const userLevel = await UserLevel.getInstanceByUserId(userId)
+    userLevel.incrementPoints(points)
+    await userLevel.incrementXp(xp)
+    return {
+        rewards: {xp, points},
+        userLevel: userLevel
+    }
 }

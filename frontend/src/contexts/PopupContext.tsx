@@ -1,5 +1,5 @@
 import React, { ReactNode, createContext } from "react";
-import usePopup, { AlertPopupConfigsType, LevelUpModalType, RewardsModalType, openAlertType, openLevelupModalType, openRewardsModalType } from "../hooks/usePopup";
+import usePopup, { AlertPopupConfigsType, ConfirmPopUpType, LevelUpModalType, RewardsModalType, openAlertType, openConfirmPopUpType, openLevelupModalType, openRewardsModalType } from "../hooks/usePopup";
 
 type PopupContextType = {
     alertConfigs: AlertPopupConfigsType
@@ -11,6 +11,9 @@ type PopupContextType = {
     openModalLevelup: (configs: openLevelupModalType) => void
     closeModalLevelup: () => void
     levelupModalConfigs: LevelUpModalType
+    openConfirmPopUp: (configs: openConfirmPopUpType) => void
+    closeConfirmPopUp: () => void
+    confirmPopUpConfigs: ConfirmPopUpType
 }
 
 const PopupContext = createContext<PopupContextType>({} as PopupContextType)
@@ -25,7 +28,10 @@ function PopupProvider({ children }: { children: ReactNode }) {
         rewardsModalConfigs,
         openModalLevelup,
         closeModalLevelup,
-        levelupModalConfigs
+        levelupModalConfigs,
+        openConfirmPopUp,
+        closeConfirmPopUp,
+        confirmPopUpConfigs
     } = usePopup()
     return (
         <PopupContext.Provider value={{
@@ -37,7 +43,10 @@ function PopupProvider({ children }: { children: ReactNode }) {
             rewardsModalConfigs,
             openModalLevelup,
             closeModalLevelup,
-            levelupModalConfigs
+            levelupModalConfigs,
+            openConfirmPopUp,
+            closeConfirmPopUp,
+            confirmPopUpConfigs
         }}>
             {children}
         </PopupContext.Provider>

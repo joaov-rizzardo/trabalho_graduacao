@@ -3,10 +3,11 @@ import AlertPopup from "./AlertPopup";
 import {useContext} from 'react'
 import RewardsModal from "./RewardsModal";
 import LevelupModal from "./LevelupModal";
+import ConfirmPopupProps from "./ConfirmPopUp";
 
 export default function PopupElements(){
 
-    const {alertConfigs, closeModalRewards, rewardsModalConfigs, levelupModalConfigs, closeModalLevelup} = useContext(PopupContext)
+    const {alertConfigs, closeModalRewards, rewardsModalConfigs, levelupModalConfigs, closeModalLevelup, confirmPopUpConfigs} = useContext(PopupContext)
     
     return (
         <>
@@ -28,6 +29,12 @@ export default function PopupElements(){
                 level={levelupModalConfigs.level}
                 onClose={closeModalLevelup}
                 avatarRewards={levelupModalConfigs.avatarRewards}
+            />
+            <ConfirmPopupProps 
+                visible={confirmPopUpConfigs.visible}
+                content={confirmPopUpConfigs.content}
+                onConfirm={confirmPopUpConfigs.onConfirm}
+                title={confirmPopUpConfigs.title}
             />
         </>
     )

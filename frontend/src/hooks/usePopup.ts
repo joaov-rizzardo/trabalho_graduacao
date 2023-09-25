@@ -44,6 +44,19 @@ export type openLevelupModalType = {
     onClose?: () => void
 }
 
+export type ConfirmPopUpType = {
+    visible: boolean,
+    title: string,
+    content: string,
+    onConfirm: () => void
+}
+
+export type openConfirmPopUpType = {
+    title: string,
+    content: string,
+    onConfirm: () => void
+}
+
 const innitialRewardsModalType: RewardsModalType = {
     visible: false,
     xp: 0,
@@ -56,6 +69,13 @@ const innitialLevelupModalType: LevelUpModalType = {
     avatarRewards: []
 }
 
+const innitialConfirmPopUpType = {
+    visible: false,
+    title: '',
+    content: '',
+    onConfirm: () => {}
+}
+
 export default function usePopup() {
     const [alertConfigs, setAlertConfigs] = useState<AlertPopupConfigsType>({
         visible: false,
@@ -63,6 +83,7 @@ export default function usePopup() {
     })
     const [rewardsModalConfigs, setRewardsModalConfigs] = useState<RewardsModalType>(innitialRewardsModalType)
     const [levelupModalConfigs, setLevelupModalConfigs] = useState<LevelUpModalType>(innitialLevelupModalType)
+    const [confirmPopUpConfigs, setConfirmPopUpConfigs] = useState<ConfirmPopUpType>(innitialConfirmPopUpType)
 
     const openAlertPopup = (params: openAlertType) => {
         const newConfigs: AlertPopupConfigsType = {} as AlertPopupConfigsType
@@ -113,6 +134,17 @@ export default function usePopup() {
         closeFunction && closeFunction()
     }
 
+    const openConfirmPopUp = (configs: openConfirmPopUpType) => {
+        setConfirmPopUpConfigs({
+            visible: true,
+            ...configs
+        })
+    }
+
+    const closeConfirmPopUp = () => {
+        setConfirmPopUpConfigs(innitialConfirmPopUpType)
+    }
+
     return {
         alertConfigs,
         openAlertPopup,
@@ -122,6 +154,9 @@ export default function usePopup() {
         rewardsModalConfigs,
         openModalLevelup,
         closeModalLevelup,
-        levelupModalConfigs
+        levelupModalConfigs,
+        openConfirmPopUp,
+        closeConfirmPopUp,
+        confirmPopUpConfigs
     }
 }

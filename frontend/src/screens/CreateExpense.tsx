@@ -1,6 +1,4 @@
-import { View, Text, ScrollView, StyleSheet } from "react-native";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { ActionsStackNavigationType } from "../routers/ActionsRouter";
+import { ScrollView, StyleSheet } from "react-native";
 import ScreenTemplate from "../components/ScreenTemplate";
 import CustomInput from "../components/CustomInput";
 import CustomButton from "../components/CustomButton";
@@ -9,18 +7,17 @@ import { BalanceTypeEnum } from "../types/BalanceType";
 import PaymentMethodSelector from "../components/PaymentMethodSelector";
 import SpendingCategorySelector from "../components/SpendingCategorySelector";
 import { SpendingCategoryEnum } from "../types/CategoryTypes";
-import { moneyMask } from "../Utils/Mask";
 import { UserContext } from "../contexts/UserContext";
 import { PopupContext } from "../contexts/PopupContext";
 import { backendApi } from "../configs/Api";
 import { CreateSpendingType } from "../types/ApiResponses/TransactionTypes";
-import { textToMoneyNumber } from "../Utils/InputUtils";
+import { moneyMask } from "../Utils/Mask";
 
 export default function CreateExpense() {
     const [paymentMethod, setPaymentMethod] = useState<keyof typeof BalanceTypeEnum>('SA')
     const [category, setCategory] = useState<keyof typeof SpendingCategoryEnum | ''>('')
     const [description, setDescription] = useState<string>('')
-    const [value, setValue] = useState<number>(0)
+    const [value, setValue] = useState<string>('')
     const { finances, level, updateFinances, updateLevel } = useContext(UserContext)
     const { openAlertPopup, openModalRewards, openModalLevelup} = useContext(PopupContext)
     const [isCreating, setIsCreating] = useState<boolean>(false)
@@ -35,7 +32,7 @@ export default function CreateExpense() {
             }
             const { data: {rewards, userFinance, userLevel} } = await backendApi.post<CreateSpendingType>('/transaction/spending/create', {
                 description: description.trim(),
-                value,
+                value: parseFloat(value),
                 categoryKey: category,
                 balanceType: paymentMethod
             })
@@ -73,7 +70,8 @@ export default function CreateExpense() {
     }
 
     function handleValidations() {
-        if (value <= 0) {
+        const floatValue = parseFloat(value)
+        if (floatValue <= 0) {
             return { ok: false, message: 'O valor do lançamento deve ser superior a zero' }
         }
         if (description === "") {
@@ -82,17 +80,17 @@ export default function CreateExpense() {
         if (category === "") {
             return { ok: false, message: 'Informe uma categoria para o lançamento' }
         }
-        if (paymentMethod === "EC" && finances.currentSavings < value) {
+        if (paymentMethod === "EC" && finances.currentSavings < floatValue) {
             return { ok: false, message: 'Economias insuficientes para realizar o lançamento' }
         }
-        if (paymentMethod === "SA" && finances.balance < value) {
+        if (paymentMethod === "SA" && finances.balance < floatValue) {
             return { ok: false, message: 'Saldo insuficiente para realizar o lançamento' }
         }
         return { ok: true, message: '' }
     }
 
     function clearData(){
-        setValue(0)
+        setValue('')
         setCategory('')
         setDescription('')
     }
@@ -112,8 +110,8 @@ export default function CreateExpense() {
                     <CustomInput.Icon iconName="attach-money" />
                     <CustomInput.Input
                         placeholder="Valor"
-                        value={value !== 0 ? value.toString() : ''}
-                        onChangeText={text => setValue(textToMoneyNumber(text))}
+                        value={value}
+                        onChangeText={text => setValue(moneyMask(text))}
                     />
                 </CustomInput.Container>
                 <SpendingCategorySelector category={category} setCategory={setCategory} />

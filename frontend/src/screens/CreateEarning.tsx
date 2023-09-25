@@ -10,14 +10,13 @@ import { PopupContext } from "../contexts/PopupContext";
 import { backendApi } from "../configs/Api";
 import { CreateEarningType } from "../types/ApiResponses/TransactionTypes";
 import { UserContext } from "../contexts/UserContext";
-import { textToMoneyNumber } from "../Utils/InputUtils";
 
 export default function CreateEarning() {
     const {openAlertPopup, openModalRewards, openModalLevelup} = useContext(PopupContext)
     const {level, updateFinances, updateLevel} = useContext(UserContext)
     const [category, setCategory] = useState<keyof typeof EarningCategoryEnum | ''>('')
     const [description, setDescription] = useState<string>('')
-    const [value, setValue] = useState<number>(0)
+    const [value, setValue] = useState<string>('')
     const [isCreating, setIsCreating] = useState<boolean>(false)
 
     async function handleCreateEarning(){
@@ -31,7 +30,7 @@ export default function CreateEarning() {
             }
             const {data: {rewards, userFinance, userLevel}} = await backendApi.post<CreateEarningType>('/transaction/earning/create', {
                 description: description.trim(),
-                value,
+                value: parseFloat(value),
                 categoryKey: category
             })
             const levelUp = userLevel.currentLevel > level.currentLevel
@@ -69,7 +68,8 @@ export default function CreateEarning() {
     }
 
     function handleValidations(){
-        if(value <= 0){
+        const floatValue = parseFloat(value)
+        if(floatValue <= 0){
             return {ok: false, message: 'O valor de lançamento precisa ser superior a zero'}
         }
         if(description.trim() === ""){
@@ -82,7 +82,7 @@ export default function CreateEarning() {
     }
 
     function clearData(){
-        setValue(0)
+        setValue('')
         setCategory('')
         setDescription('')
     }
@@ -99,8 +99,8 @@ export default function CreateEarning() {
                     <CustomInput.Input 
                         placeholder="Valor" 
                         keyboardType="number-pad" 
-                        value={value !== 0 ? value.toString(): ""}
-                        onChangeText={text => setValue(textToMoneyNumber(text))}
+                        value={value}
+                        onChangeText={text => setValue(moneyMask(text))}
                     />
                 </CustomInput.Container>
                 <EarningCategorySelector category={category} setCategory={setCategory} />

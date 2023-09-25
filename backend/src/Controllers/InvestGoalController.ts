@@ -23,7 +23,7 @@ export default async function investGoalFlow(req: Request, res: Response){
         }
         const [userFinance, userLevel] = await Promise.all([
             handleUserFinanceByInvestment(goal, req.body.value),
-            goal.goalIsCompleted() && insertXpAndPointsByCompletedGoal(goal),
+            insertXpAndPointsByGoal(goal, req.body.value),
             createActivityByInvesmentInGoal(goal, req.body.value),
             goal.goalIsCompleted() && createActivityByCompletedGoal(goal)
         ])
@@ -31,9 +31,9 @@ export default async function investGoalFlow(req: Request, res: Response){
         return res.status(200).send({
             message: 'The investment has been made',
             goal: goal.convertToObject(),
-            rewards: goal.goalIsCompleted() && goal.reclaimRewards(),
+            rewards: goal.goalIsCompleted() ? goal.reclaimRewards() : goal.getPartialRewards(req.body.value),
             userFinance: userFinance.convertToObject(),
-            userLevel: userLevel !== false ? userLevel.convertToObject() : (await UserLevel.getInstanceByUserId(goal.getUserId)).convertToObject()
+            userLevel: userLevel.convertToObject()
         })
     }catch(error: any){
         await rollbackTransaction()
@@ -60,14 +60,18 @@ export async function handleUserFinanceByInvestment(goal: Goal, investmentValue:
     return userFinance
 }
 
-export async function insertXpAndPointsByCompletedGoal(goal: Goal){
+export async function insertXpAndPointsByGoal(goal: Goal, investValue: number){
     const userLevel = await UserLevel.getInstanceByUserId(goal.getUserId)
     if(goal.goalIsCompleted()){
         const {xp, points} = goal.reclaimRewards()
         userLevel.incrementXp(xp)
         userLevel.incrementPoints(points)
-        await userLevel.save()
+    }else{
+        const {xp, points} = goal.getPartialRewards(investValue)
+        userLevel.incrementXp(xp)
+        userLevel.incrementPoints(points)
     }
+    await userLevel.save()
     return userLevel
 }
 

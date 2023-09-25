@@ -135,6 +135,14 @@ export default class Goal {
         }
     }
 
+    public getPartialRewards(investValue: number){
+        const fixedXp = 10
+        return {
+            xp: Math.round(fixedXp * ((investValue / this.value) * 100)),
+            points: 0
+        }
+    }
+
     public convertToObject(){
         return {
             goalId: this.goalId,

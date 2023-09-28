@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import ScreenTemplate from "../components/ScreenTemplate";
 import CustomInput from "../components/CustomInput";
 import CustomButton from "../components/CustomButton";
@@ -8,6 +8,8 @@ import { moneyMask } from "../Utils/Mask";
 import { useState } from "react";
 import { SpendingCategoryEnum } from "../types/CategoryTypes";
 import OptionSelector from "../components/OptionSelector";
+import Datepicker from "../components/Datepicker";
+import { colors } from "../configs/Theme";
 
 export default function CreateBills() {
     const [description, setDescription] = useState<string>('')
@@ -15,6 +17,7 @@ export default function CreateBills() {
     const [value, setValue] = useState<string>('')
     const [billType, setBillType] = useState<'V' | 'F'>('F')
     const [installmentsQuantity, setInstallmentsQuantity] = useState<string>('')
+    const [dueDate, setDueDate] = useState<Date | null>(null)
     return (
         <ScreenTemplate>
             <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.container}>
@@ -35,6 +38,10 @@ export default function CreateBills() {
                         onChangeText={text => setValue(moneyMask(text))}
                     />
                 </CustomInput.Container>
+                <View>
+                    <Datepicker date={dueDate} setDate={setDueDate} placeholder="Vencimento 1ª parcela" />
+                    <Text style={styles.installmentsDescription}>As demais parcelas serão geradas no mesmo dia de vencimento</Text>
+                </View>
                 <OptionSelector
                     options={[
                         { value: 'F', description: 'Fixo' },
@@ -62,5 +69,12 @@ export default function CreateBills() {
 const styles = StyleSheet.create({
     container: {
         gap: 28
+    },
+    installmentsDescription: {
+        fontFamily: 'ComicNeue_400Regular',
+        fontSize: 12,
+        color: colors.highlight,
+        textAlign: 'center',
+        marginTop: 10
     }
 })

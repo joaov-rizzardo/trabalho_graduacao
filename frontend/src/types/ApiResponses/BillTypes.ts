@@ -27,3 +27,31 @@ export type PayInstallmentType = {
         points: number
     }
 }
+
+export type BillType = {
+    biilId: number,
+    userId: number,
+    billType: keyof typeof BillEnum,
+    billTypeDescription: BillEnum,
+    categoryKey: keyof typeof SpendingCategoryEnum,
+    categoryDescription: SpendingCategoryEnum,
+    description: string,
+    paymentDay: number,
+    createdAt: string,
+    isCanceled: boolean,
+    installments: [{
+        installmentId: number,
+        billId: number,
+        installmentNumber: number,
+        value: number,
+        dueDate: string,
+        isPayed: boolean,
+        createdAt: string,
+        isExpired: boolean
+    }]
+}
+
+export type CreateBillType = {
+    message: string,
+    bill: BillType
+}

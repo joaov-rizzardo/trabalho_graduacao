@@ -44,12 +44,15 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'flex-end',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: 'rgba(0, 0, 0, 0.5)'
     },
     content: {
         width: '100%',
         height: 300,
-        backgroundColor: colors.sections
+        backgroundColor: colors.sections,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10
     },
     titleContainer: {
         height: 48,

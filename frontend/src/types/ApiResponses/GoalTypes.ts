@@ -22,3 +22,8 @@ export type InvestGoalType = {
     userLevel: GetUserLevelType,
     userFinance: UserFinance
 }
+
+export type CreateGoalResponse = {
+    message: string
+    goal: GetGoalType
+}

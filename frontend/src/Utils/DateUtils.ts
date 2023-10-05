@@ -30,3 +30,10 @@ export function formatDateToBrString(date: Date){
     const day = String(date.getDate()).padStart(2, '0');
     return `${day}/${month}/${year}`
 }
+
+export function dateDiferenceInDays(date1: Date, date2: Date){
+    const diffInMiliseconds = Math.abs(date2.getTime() - date1.getTime())
+    const dayInMiliseconds = 1000 * 60 * 60 * 24
+    const diffInDays = Math.floor(diffInMiliseconds / dayInMiliseconds)
+    return diffInDays
+}

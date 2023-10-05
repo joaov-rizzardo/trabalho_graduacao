@@ -50,7 +50,7 @@ async function findLastEarnings() {
             startDate: startDate,
             finishDate: endDate
         })
-        return earningData
+        return earningData.filter(earning => earning.isCanceled === false)
     } catch (error: any) {
         console.log(error)
         return []
@@ -79,7 +79,7 @@ async function findLastSpendings() {
             startDate: startDate,
             finishDate: endDate
         })
-        return spendingData
+        return spendingData.filter(spending => spending.isCanceled === false)
     } catch (error: any) {
         console.log(error)
         return []
@@ -122,7 +122,7 @@ function groupTransactions({ spendings, earnings, installments }: { spendings: G
             type: 'E'
         })
     })
-    transactionList.sort((a, b) => b.date.getDate() - a.date.getDate())
+    transactionList.sort((a, b) => a.date.getDate() - b.date.getDate())
     return transactionList
 }
 

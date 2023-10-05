@@ -64,7 +64,7 @@ const actions: ActionType[] = [
         title: 'Gerenciar metas',
         description: 'Gerencie suas metas, possibilitando o cancelamento e a recuperação dos investimentos.',
         image: require('../../assets/images/prancheta.png'),
-        page: 'ManageBills'
+        page: 'ManageGoals'
     }
 ]
 

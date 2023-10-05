@@ -100,7 +100,7 @@ export default class Bill {
     public cancel(){
         const wasCreatedMoreThan1DayAgo = dateDiferenceInDays(new Date(this.createdAt), new Date()) >= 1
         const alreadyPaidSomeInstallment = this.hasPaidInstallment()
-        if(wasCreatedMoreThan1DayAgo && alreadyPaidSomeInstallment){
+        if(wasCreatedMoreThan1DayAgo && alreadyPaidSomeInstallment && this.billType === "V"){
             throw new Error('A conta não pode ser cancelada, o prazo para cancelamento expirou')
         }
         this.isCanceled = true

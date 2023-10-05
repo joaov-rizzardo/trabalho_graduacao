@@ -75,7 +75,7 @@ function groupTransactions({ spendings, earnings }: { spendings: GetSpendings[],
             type: 'E'
         })
     })
-    transactionList.sort((a, b) => a.date.getDate() - b.date.getDate())
+    transactionList.sort((a, b) => b.date.getTime() - a.date.getTime())
     return transactionList
 }
 

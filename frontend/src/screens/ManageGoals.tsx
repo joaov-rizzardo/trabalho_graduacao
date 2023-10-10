@@ -5,11 +5,9 @@ import { useContext, useEffect, useState } from "react";
 import { backendApi } from "../configs/Api";
 import { colors } from "../configs/Theme";
 import IconButton from "../components/IconButton";
-import { SpendingCategoryImages } from "../types/CategoryTypes";
-import { dateDiferenceInDays } from "../Utils/DateUtils";
 import { PopupContext } from "../contexts/PopupContext";
-import { BillType } from "../types/ApiResponses/BillTypes";
 import { GetGoalType } from "../types/ApiResponses/GoalTypes";
+import RecoverInvestments from "../components/RecoverInvestments";
 
 async function findGoals() {
     try {
@@ -23,6 +21,8 @@ async function findGoals() {
 
 export default function ManageGoals() {
     const [search, setSearch] = useState<string>("")
+    const [isOpenRecoveryModal, setIsOpenRecoveryModal] = useState<boolean>(false)
+    const [recoveringGoal, setRecoveringGoal] = useState<GetGoalType | null>(null)
     const [goals, setGoals] = useState<GetGoalType[]>([])
     const { openAlertPopup, openConfirmPopUp } = useContext(PopupContext)
 
@@ -48,54 +48,88 @@ export default function ManageGoals() {
     }
 
     return (
-        <ScreenTemplate>
-            <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.container}>
-                <CustomInput.Container>
-                    <CustomInput.Icon iconName="search" />
-                    <CustomInput.Input placeholder="Buscar categoria" value={search} onChangeText={text => setSearch(text)} />
-                </CustomInput.Container>
-                {goals.flatMap((goal, index) => {
-                    if (search !== "" && !goal.description.toLowerCase().includes(search.toLowerCase())) {
-                        return false
-                    }
-                    return (
-                        <View style={styles.itemContainer} key={index}>
-                            <Image source={require('../../assets/images/alvo.png')} style={styles.itemImage} />
-                            <View style={{
-                                flex: 1,
-                                height: 36,
-                                justifyContent: 'space-between',
-                                alignSelf: 'center',
-                            }}>
-                                <Text style={{ ...styles.text, fontSize: 12, color: colors.text }}>{goal.description}</Text>
-                                <Text style={{ ...styles.text, fontSize: 16, color: colors.mainColor }}>{goal.value?.toLocaleString('pt-BR', {
-                                    style: 'currency',
-                                    currency: 'BRL',
-                                })}</Text>
+        <>
+            {
+                recoveringGoal !== null && (
+                    <RecoverInvestments
+                        visible={isOpenRecoveryModal}
+                        closeModal={() => setIsOpenRecoveryModal(false)}
+                        goal={recoveringGoal}
+                        onSave={goal => {
+                            openAlertPopup({
+                                title: 'Sucesso',
+                                content: 'Seus investimentos foram recuperados com sucesso.'
+                            })
+                            setGoals(goals.map(currentGoal => {
+                                return goal.goalId === currentGoal.goalId ? goal : currentGoal
+                            }))
+                        }}
+                    />
+                )
+            }
+
+            <ScreenTemplate>
+                <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.container}>
+                    <CustomInput.Container>
+                        <CustomInput.Icon iconName="search" />
+                        <CustomInput.Input placeholder="Buscar categoria" value={search} onChangeText={text => setSearch(text)} />
+                    </CustomInput.Container>
+                    {goals.flatMap((goal, index) => {
+                        if (search !== "" && !goal.description.toLowerCase().includes(search.toLowerCase())) {
+                            return false
+                        }
+                        return (
+                            <View style={styles.itemContainer} key={index}>
+                                <Image source={require('../../assets/images/alvo.png')} style={styles.itemImage} />
+                                <View style={{
+                                    flex: 1,
+                                    height: 36,
+                                    justifyContent: 'space-between',
+                                    alignSelf: 'center',
+                                }}>
+                                    <Text style={{ ...styles.text, fontSize: 12, color: colors.text }}>{goal.description}</Text>
+                                    <Text style={{ ...styles.text, fontSize: 16, color: colors.mainColor }}>{goal.value?.toLocaleString('pt-BR', {
+                                        style: 'currency',
+                                        currency: 'BRL',
+                                    })}</Text>
+                                </View>
+                                <View style={{ alignSelf: 'flex-end' }}>
+                                    <Text style={{ ...styles.text, fontSize: 16, color: colors.highlight }}>{goal.progressValue?.toLocaleString('pt-BR', {
+                                        style: 'currency',
+                                        currency: 'BRL',
+                                    })}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row', gap: 8 }}>
+                                    <IconButton
+                                        onPress={() => {
+                                            setRecoveringGoal(goal)
+                                            setIsOpenRecoveryModal(true)
+                                        }}
+                                        style={{ alignSelf: 'flex-end' }}
+                                        icon="attach-money" size={28}
+                                        color={colors.mainColor}
+                                    />
+                                    <IconButton
+                                        onPress={() => {
+                                            openConfirmPopUp({
+                                                title: 'Atenção',
+                                                content: 'Você tem certeza que deseja cancelar a meta? Essa ação é irreversível',
+                                                onConfirm: () => handleCancelGoal(goal.goalId)
+                                            })
+                                        }}
+                                        style={{ alignSelf: 'flex-end' }}
+                                        icon="delete" size={28}
+                                        color={colors.mainColor}
+                                    />
+                                </View>
+
                             </View>
-                            <View style={{ alignSelf: 'flex-end' }}>
-                                <Text style={{ ...styles.text, fontSize: 16, color: colors.highlight }}>{goal.progressValue?.toLocaleString('pt-BR', {
-                                    style: 'currency',
-                                    currency: 'BRL',
-                                })}</Text>
-                            </View>
-                            <IconButton
-                                onPress={() => {
-                                    openConfirmPopUp({
-                                        title: 'Atenção',
-                                        content: 'Você tem certeza que deseja cancelar a meta? Essa ação é irreversível',
-                                        onConfirm: () => handleCancelGoal(goal.goalId)
-                                    })
-                                }}
-                                style={{ alignSelf: 'flex-end' }}
-                                icon="delete" size={28}
-                                color={colors.mainColor}
-                            />
-                        </View>
-                    )
-                })}
-            </ScrollView>
-        </ScreenTemplate>
+                        )
+                    })}
+                </ScrollView>
+            </ScreenTemplate>
+        </>
+
     )
 }
 

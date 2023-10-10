@@ -19,18 +19,24 @@ export default class LevelRanking extends Ranking {
     }
 
     public getTopRanking(){
-        return this.partitionedRanking[0]
+        return {
+            division: 1,
+            ranking: this.partitionedRanking[0]   
+        }
     }
 
     public getUserRanking(userId: number){
-        const userRanking = this.partitionedRanking.find(ranking => {
+        const userRankingIndex = this.partitionedRanking.findIndex(ranking => {
             const findUser = ranking.find(user => user.userId === userId)
             return findUser !== undefined
         })
-        if(userRanking === undefined){
+        if(userRankingIndex === -1){
             throw new Error('Não foi possível encontrar o ranking para o usuário informado')
         }
-        return userRanking
+        return {
+            division: userRankingIndex + 1,
+            ranking: this.partitionedRanking[userRankingIndex]
+        }
     }
 
     public static async getInstanceWithRankings(){

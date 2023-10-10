@@ -1,5 +1,5 @@
 import { UserFinance } from "../UserType"
-import { GetUserLevelType } from "./ProfileTypes"
+import { GetUserFinanceType, GetUserLevelType } from "./ProfileTypes"
 
 export type GetGoalType = {
     goalId: number,
@@ -26,4 +26,10 @@ export type InvestGoalType = {
 export type CreateGoalResponse = {
     message: string
     goal: GetGoalType
+}
+
+export type RecoverInvestmentsResponse = {
+    message: string,
+    goal: GetGoalType,
+    userFinance: GetUserFinanceType
 }

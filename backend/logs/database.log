@@ -64,3 +64,25 @@
     at Generator.next (<anonymous>)
     at C:\Projetos\trabalho_graduacao\backend\src\DAO\SpendingDAO.ts:8:71
     at new Promise (<anonymous>)
+[2023-10-10 19:05:28] Table 'bd_tcc.vw_points_ranking' doesn't exist
+    at C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:37:31
+    at Generator.next (<anonymous>)
+    at C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:4:12)
+    at query (C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:52:12)
+    at RankingDAO.<anonymous> (C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\DAO\RankingsDAO.ts:27:37)
+    at Generator.next (<anonymous>)
+    at C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\DAO\RankingsDAO.ts:8:71
+    at new Promise (<anonymous>)
+[2023-10-10 19:05:28] Table 'bd_tcc.vw_level_ranking' doesn't exist
+    at C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:37:31
+    at Generator.next (<anonymous>)
+    at C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:8:71
+    at new Promise (<anonymous>)
+    at __awaiter (C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:4:12)
+    at query (C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\Services\Database.ts:52:12)
+    at RankingDAO.<anonymous> (C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\DAO\RankingsDAO.ts:21:37)
+    at Generator.next (<anonymous>)
+    at C:\Users\João\Desktop\Projetos\trabalho_graduacao\backend\src\DAO\RankingsDAO.ts:8:71
+    at new Promise (<anonymous>)

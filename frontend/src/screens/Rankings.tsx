@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native"
 import ScreenTemplate from "../components/ScreenTemplate"
 import { Gauge } from '../components/Gauge'
 import { colors } from "../configs/Theme"
 import LevelStar from "../components/LevelStar"
-import { GetLevelRanking, GetPointsRanking } from "../types/ApiResponses/ManagementTypes";
-import { backendApi } from "../configs/Api";
+import { GetLevelRanking, GetPointsRanking, LevelRankingMemberType, PointRankingMemberType} from "../types/ApiResponses/ManagementTypes";
+import { apiURL, backendApi } from "../configs/Api";
 
 export async function findLevelRanking() {
     try {
@@ -43,52 +43,67 @@ export default function Rankings() {
         })
     }, [])
 
+    const currentRankings = useMemo(() => {
+        if (rankingType === "level") {
+            return divisionType === "my" ? levelRanking.userRanking : levelRanking.topRanking
+        } else if (rankingType === "points") {
+            return divisionType === "my" ? pointsRanking.userRanking : pointsRanking.topRanking
+        }
+    }, [pointsRanking, levelRanking, rankingType, divisionType])
+
     return (
         <ScreenTemplate>
             <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.container}>
                 <View style={{ gap: 12 }}>
                     <View style={{ gap: 12, flexDirection: 'row' }}>
-                        <Gauge 
-                            text="Level" 
-                            isOutline={rankingType !== 'level'} 
+                        <Gauge
+                            text="Level"
+                            isOutline={rankingType !== 'level'}
                             onPress={() => setRankingType('level')}
-                            image={require('../../assets/images/subir-de-nivel.png')} 
+                            image={require('../../assets/images/subir-de-nivel.png')}
                         />
-                        <Gauge 
-                            text="Pontos" 
-                            isOutline={rankingType !== 'points'} 
+                        <Gauge
+                            text="Pontos"
+                            isOutline={rankingType !== 'points'}
                             onPress={() => setRankingType('points')}
-                            image={require('../../assets/images/velocimetro.png')} 
+                            image={require('../../assets/images/velocimetro.png')}
                         />
                     </View>
                     <View style={{ gap: 12, flexDirection: 'row' }}>
-                        <Gauge 
-                            text="Meu ranking" 
-                            isOutline={divisionType !== "my"} 
+                        <Gauge
+                            text="Meu ranking"
+                            isOutline={divisionType !== "my"}
                             onPress={() => setDivisionType("my")}
-                            image={require('../../assets/images/avatar-de-perfil.png')} 
+                            image={require('../../assets/images/avatar-de-perfil.png')}
                         />
-                        <Gauge 
-                            text="Top ranking" 
-                            isOutline={divisionType !== "top"} 
+                        <Gauge
+                            text="Top ranking"
+                            isOutline={divisionType !== "top"}
                             onPress={() => setDivisionType("top")}
-                            image={require('../../assets/images/podio.png')} 
+                            image={require('../../assets/images/podio.png')}
                         />
                     </View>
                 </View>
-                <Text style={styles.divisionText}>2ª Divisão</Text>
-                <View style={{
-                    ...styles.personContainer,
-                    backgroundColor: true ? colors.mainColor : colors.sections,
-                }}>
-                    <Text style={styles.positionText}>2ª</Text>
-                    <Image style={styles.avatarImage} source={require('../../assets/images/avatar-de-perfil.png')} />
-                    <Text style={{
-                        ...styles.nameText,
-                        color: true ? colors.secondaryHighlight : colors.text,
-                    }}>Marcos</Text>
-                    <Text style={styles.pointsText}>502</Text>
-                </View>
+                <Text style={styles.divisionText}>{currentRankings?.division}ª Divisão</Text>
+                {currentRankings?.ranking.map((ranking, index) => (
+                    <View style={{
+                        ...styles.personContainer,
+                        backgroundColor: true ? colors.mainColor : colors.sections,
+                    }}>
+                        <Text style={styles.positionText}>{index + 1}ª</Text>
+                        <Image style={styles.avatarImage} source={{ uri: `${apiURL}/profile/avatar/${ranking.selectedAvatar}` }} />
+                        <Text style={{
+                            ...styles.nameText,
+                            color: true ? colors.secondaryHighlight : colors.text,
+                        }}>{ranking.username}</Text>
+                        {ranking instanceof LevelRankingMemberType ? (
+                            <LevelStar level={ranking?.currentLevel} size={40} />
+                        ) : (
+                            <Text style={styles.pointsText}>502</Text>
+                        )}
+                    </View>
+                ))}
+
                 <View style={{
                     ...styles.personContainer,
                     backgroundColor: false ? colors.mainColor : colors.sections,

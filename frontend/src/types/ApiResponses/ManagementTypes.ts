@@ -1,11 +1,11 @@
-export type PointRankingMemberType = {
+export interface PointRankingMemberType {
     userId: number,
     username: string,
     selectedAvatar: number,
     points: number
 }
 
-export type LevelRankingMemberType = {
+export interface LevelRankingMemberType {
     userId: number,
     username: string,
     selectedAvatar: number,

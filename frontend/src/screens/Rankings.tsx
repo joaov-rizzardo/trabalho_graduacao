@@ -1,11 +1,12 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useContext } from "react";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native"
 import ScreenTemplate from "../components/ScreenTemplate"
 import { Gauge } from '../components/Gauge'
 import { colors } from "../configs/Theme"
 import LevelStar from "../components/LevelStar"
-import { GetLevelRanking, GetPointsRanking, LevelRankingMemberType, PointRankingMemberType} from "../types/ApiResponses/ManagementTypes";
+import { GetLevelRanking, GetPointsRanking, LevelRankingMemberType, PointRankingMemberType } from "../types/ApiResponses/ManagementTypes";
 import { apiURL, backendApi } from "../configs/Api";
+import { AuthContext } from "../contexts/AuthContext";
 
 export async function findLevelRanking() {
     try {
@@ -28,10 +29,11 @@ export async function findPointsRankings() {
 }
 
 export default function Rankings() {
-    const [pointsRanking, setPointsRanking] = useState<GetPointsRanking>({} as GetPointsRanking)
-    const [levelRanking, setLevelRanking] = useState<GetLevelRanking>({} as GetLevelRanking)
+    const [pointsRanking, setPointsRanking] = useState<GetPointsRanking | null>(null)
+    const [levelRanking, setLevelRanking] = useState<GetLevelRanking | null>(null)
     const [rankingType, setRankingType] = useState<'level' | 'points'>('level')
     const [divisionType, setDivisionType] = useState<'top' | 'my'>('my')
+    const {user} = useContext(AuthContext)
 
     useEffect(() => {
         Promise.all([
@@ -44,10 +46,22 @@ export default function Rankings() {
     }, [])
 
     const currentRankings = useMemo(() => {
-        if (rankingType === "level") {
-            return divisionType === "my" ? levelRanking.userRanking : levelRanking.topRanking
-        } else if (rankingType === "points") {
-            return divisionType === "my" ? pointsRanking.userRanking : pointsRanking.topRanking
+        if (rankingType === "level" && levelRanking !== null) {
+            const ranking = divisionType === "my" ? levelRanking.userRanking : levelRanking.topRanking
+            return {
+                division: ranking.division,
+                ranking: ranking.ranking.map(ranking => ({ ...ranking, points: 0 }))
+            }
+        } else if (rankingType === "points" && pointsRanking !== null) {
+            const ranking = divisionType === "my" ? pointsRanking.userRanking : pointsRanking.topRanking
+            return {
+                division: ranking.division,
+                ranking: ranking.ranking.map(ranking => ({ ...ranking, currentLevel: 0 }))
+            }
+        }
+        return {
+            division: 1,
+            ranking: []
         }
     }, [pointsRanking, levelRanking, rankingType, divisionType])
 
@@ -88,58 +102,21 @@ export default function Rankings() {
                 {currentRankings?.ranking.map((ranking, index) => (
                     <View style={{
                         ...styles.personContainer,
-                        backgroundColor: true ? colors.mainColor : colors.sections,
-                    }}>
+                        backgroundColor: ranking.userId === user.userId ? colors.mainColor : colors.sections,
+                    }} key={index}>
                         <Text style={styles.positionText}>{index + 1}ª</Text>
-                        <Image style={styles.avatarImage} source={{ uri: `${apiURL}/profile/avatar/${ranking.selectedAvatar}` }} />
+                        <Image style={styles.avatarImage} source={ranking.selectedAvatar ? { uri: `${apiURL}/profile/avatar/${ranking.selectedAvatar}` } : require('../../assets/images/default-picture.jpg')} />
                         <Text style={{
                             ...styles.nameText,
-                            color: true ? colors.secondaryHighlight : colors.text,
-                        }}>{ranking.username}</Text>
-                        {ranking instanceof LevelRankingMemberType ? (
+                            color: ranking.userId === user.userId ? colors.secondaryHighlight : colors.text,
+                        }}>{ranking.userId === user.userId ? "Você" : ranking.username}</Text>
+                        {rankingType === "level" ? (
                             <LevelStar level={ranking?.currentLevel} size={40} />
                         ) : (
-                            <Text style={styles.pointsText}>502</Text>
+                            <Text style={styles.pointsText}>{ranking.points}</Text>
                         )}
                     </View>
                 ))}
-
-                <View style={{
-                    ...styles.personContainer,
-                    backgroundColor: false ? colors.mainColor : colors.sections,
-                }}>
-                    <Text style={styles.positionText}>2ª</Text>
-                    <Image style={styles.avatarImage} source={require('../../assets/images/avatar-de-perfil.png')} />
-                    <Text style={{
-                        ...styles.nameText,
-                        color: false ? colors.secondaryHighlight : colors.text,
-                    }}>Marcos</Text>
-                    <Text style={styles.pointsText}>502</Text>
-                </View>
-                <View style={{
-                    ...styles.personContainer,
-                    backgroundColor: false ? colors.mainColor : colors.sections,
-                }}>
-                    <Text style={styles.positionText}>2ª</Text>
-                    <Image style={styles.avatarImage} source={require('../../assets/images/avatar-de-perfil.png')} />
-                    <Text style={{
-                        ...styles.nameText,
-                        color: false ? colors.secondaryHighlight : colors.text,
-                    }}>Marcos</Text>
-                    <LevelStar level={52} size={40} />
-                </View>
-                <View style={{
-                    ...styles.personContainer,
-                    backgroundColor: true ? colors.mainColor : colors.sections,
-                }}>
-                    <Text style={styles.positionText}>2ª</Text>
-                    <Image style={styles.avatarImage} source={require('../../assets/images/avatar-de-perfil.png')} />
-                    <Text style={{
-                        ...styles.nameText,
-                        color: true ? colors.secondaryHighlight : colors.text,
-                    }}>Marcos</Text>
-                    <LevelStar level={52} size={40} />
-                </View>
             </ScrollView>
         </ScreenTemplate>
     )

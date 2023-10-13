@@ -100,10 +100,17 @@ export default function useAuth(){
         }
     }
 
+    const changeUserProfile = ({name, lastName, avatarId}: {name: string, lastName: string, avatarId: number}) => {
+        setUser(prevUser => ({
+            ...prevUser,
+            name, lastName, selectedAvatar: avatarId
+        }))
+    }
+
     async function storageToken(token: string){
         setToken(token)
         return await setStorageItem('token', token)
     }
     
-    return {login, logout, loginWithToken, user, token, authenticated, validateEmail}
+    return {login, logout, loginWithToken, user, token, authenticated, validateEmail, changeUserProfile}
 }

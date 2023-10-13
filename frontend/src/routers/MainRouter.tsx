@@ -1,12 +1,13 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomePage from "../screens/HomePage";
 import Rankings from "../screens/Rankings";
-import Statistics from "../screens/Statistics";
-import Profile from "../screens/Profile";
+import Statistics from "../screens/Statistics/Statistics";
+import Profile from "../screens/Profile/Profile";
 import MaterialIcon from '@expo/vector-icons/MaterialIcons';
 import { colors } from "../configs/Theme";
 import { UserProvider } from "../contexts/UserContext";
 import ActionsRouter from "./ActionsRouter";
+import ProfileRouter from "./ProfileRouter";
 
 export default function MainRouter() {
     const Tab = createBottomTabNavigator()
@@ -30,6 +31,7 @@ export default function MainRouter() {
                     name="Home"
                     component={HomePage}
                     options={{
+                        unmountOnBlur: true,
                         tabBarLabel: 'Início',
                         tabBarIcon: ({ color }) => (
                             <MaterialIcon name="home" color={color} size={36} />
@@ -40,6 +42,7 @@ export default function MainRouter() {
                     name="Rankings"
                     component={Rankings}
                     options={{
+                        unmountOnBlur: true,
                         tabBarLabel: 'Rankings',
                         tabBarIcon: ({ color, size }) => (
                             <MaterialIcon name="leaderboard" color={color} size={36} />
@@ -50,6 +53,7 @@ export default function MainRouter() {
                     name="Actions"
                     component={ActionsRouter}
                     options={{
+                        unmountOnBlur: true,
                         tabBarItemStyle: {
                             backgroundColor: colors.mainColor,
                             borderRadius: 100,
@@ -70,6 +74,7 @@ export default function MainRouter() {
                     name="Statistics"
                     component={Statistics}
                     options={{
+                        unmountOnBlur: true,
                         tabBarLabel: 'Estatísticas',
                         tabBarIcon: ({ color, size }) => (
                             <MaterialIcon name="pie-chart" color={color} size={36} />
@@ -78,8 +83,9 @@ export default function MainRouter() {
                 />
                 <Tab.Screen
                     name="Profile"
-                    component={Profile}
+                    component={ProfileRouter}
                     options={{
+                        unmountOnBlur: true,
                         tabBarLabel: 'Perfil',
                         tabBarIcon: ({ color, size }) => (
                             <MaterialIcon name="person" color={color} size={36} />

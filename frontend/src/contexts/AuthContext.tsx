@@ -15,15 +15,16 @@ type AuthContextType = {
     }>,
     user: UserType, 
     token: string, 
-    authenticated: boolean
+    authenticated: boolean,
+    changeUserProfile: ({name, lastName, avatarId}: {name: string, lastName: string, avatarId: number}) => void
 }
 
 const AuthContext = createContext<AuthContextType>({} as AuthContextType)
 
 function AuthProvider({children}: {children: ReactNode}){
-    const {login, logout, loginWithToken, user, token, authenticated, validateEmail} = useAuth()
+    const {login, logout, loginWithToken, user, token, authenticated, validateEmail, changeUserProfile} = useAuth()
     return (
-        <AuthContext.Provider value={{login, logout, loginWithToken, validateEmail, user, token, authenticated}}>
+        <AuthContext.Provider value={{login, logout, loginWithToken, validateEmail, user, token, authenticated, changeUserProfile}}>
             {children}
         </AuthContext.Provider>
     )

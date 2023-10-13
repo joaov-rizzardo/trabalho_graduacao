@@ -1,3 +1,5 @@
+import { EarningCategoryEnum, SpendingCategoryEnum } from "../CategoryTypes"
+
 export interface PointRankingMemberType {
     userId: number,
     username: string,
@@ -32,4 +34,29 @@ export type GetLevelRanking = {
         division: number,
         ranking: [LevelRankingMemberType]
     }
+}
+
+export type GetEarningByCategoryType = {
+    value: number,
+    categoryKey: keyof typeof EarningCategoryEnum,
+    categoryDescription: EarningCategoryEnum
+}
+
+export type GetSpendingByCategoryType = {
+    value: number,
+    categoryKey: keyof typeof SpendingCategoryEnum,
+    categoryDescription: SpendingCategoryEnum
+}
+
+export type GetTransactionsType = {
+    earnings: [{
+        value: number,
+        category: keyof typeof EarningCategoryEnum,
+        date: string
+    }],
+    spendings: [{
+        value: number,
+        category: keyof typeof SpendingCategoryEnum,
+        spendingDate: string
+    }]
 }

@@ -3074,3 +3074,3057 @@
 
 [2023-10-11 23:56:27] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 2.212 ms
 
+[2023-10-12 13:58:43] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 424.491 ms
+
+[2023-10-12 13:58:44] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 47.971 ms
+
+[2023-10-12 13:58:44] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 40.316 ms
+
+[2023-10-12 13:58:44] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 43.677 ms
+
+[2023-10-12 13:58:44] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1311 Response-Time: 56.837 ms
+
+[2023-10-12 13:58:44] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 54.264 ms
+
+[2023-10-12 13:58:44] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 49.646 ms
+
+[2023-10-12 14:03:45] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 4.869 ms
+
+[2023-10-12 14:03:46] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 3.306 ms
+
+[2023-10-12 14:03:47] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 78.906 ms
+
+[2023-10-12 14:03:47] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 71.624 ms
+
+[2023-10-12 14:03:47] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1311 Response-Time: 70.621 ms
+
+[2023-10-12 14:03:47] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 62.011 ms
+
+[2023-10-12 14:03:47] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 48.688 ms
+
+[2023-10-12 14:05:14] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.654 ms
+
+[2023-10-12 14:05:15] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.455 ms
+
+[2023-10-12 14:05:15] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 2.135 ms
+
+[2023-10-12 14:05:15] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.175 ms
+
+[2023-10-12 14:05:15] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1311 Response-Time: 2.393 ms
+
+[2023-10-12 14:05:15] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1.826 ms
+
+[2023-10-12 14:05:15] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.772 ms
+
+[2023-10-12 14:19:08] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 572 Response-Time: 107.876 ms
+
+[2023-10-12 14:19:40] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 475 Response-Time: 45.716 ms
+
+[2023-10-12 14:46:08] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.783 ms
+
+[2023-10-12 14:46:09] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 67.850 ms
+
+[2023-10-12 14:46:09] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 22.894 ms
+
+[2023-10-12 14:46:09] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 24.783 ms
+
+[2023-10-12 14:46:09] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1311 Response-Time: 23.736 ms
+
+[2023-10-12 14:46:09] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 21.731 ms
+
+[2023-10-12 14:46:09] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 6.393 ms
+
+[2023-10-12 14:48:47] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 2.845 ms
+
+[2023-10-12 14:48:47] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.775 ms
+
+[2023-10-12 14:48:47] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 6.571 ms
+
+[2023-10-12 14:48:47] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1311 Response-Time: 3.447 ms
+
+[2023-10-12 14:49:24] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 4.519 ms
+
+[2023-10-12 14:49:24] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.925 ms
+
+[2023-10-12 14:49:24] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1311 Response-Time: 4.173 ms
+
+[2023-10-12 14:49:24] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.632 ms
+
+[2023-10-12 14:52:13] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.212 ms
+
+[2023-10-12 14:52:14] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 2.179 ms
+
+[2023-10-12 14:52:14] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 14.859 ms
+
+[2023-10-12 14:52:14] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1311 Response-Time: 4.745 ms
+
+[2023-10-12 14:52:14] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 3.232 ms
+
+[2023-10-12 14:52:14] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 35.911 ms
+
+[2023-10-12 14:52:14] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 35.272 ms
+
+[2023-10-12 14:53:30] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 4.249 ms
+
+[2023-10-12 14:53:30] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 3.694 ms
+
+[2023-10-12 14:53:30] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1311 Response-Time: 2.471 ms
+
+[2023-10-12 14:53:30] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.290 ms
+
+[2023-10-12 15:03:53] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.825 ms
+
+[2023-10-12 15:03:54] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.490 ms
+
+[2023-10-12 15:03:55] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 705.815 ms
+
+[2023-10-12 15:03:55] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1311 Response-Time: 704.977 ms
+
+[2023-10-12 15:03:55] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 97.116 ms
+
+[2023-10-12 15:03:55] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 3.796 ms
+
+[2023-10-12 15:03:55] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 2.803 ms
+
+[2023-10-12 15:04:19] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 476 Response-Time: 3.361 ms
+
+[2023-10-12 15:06:07] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 476 Response-Time: 2.762 ms
+
+[2023-10-12 15:07:19] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 476 Response-Time: 2.425 ms
+
+[2023-10-12 15:07:43] Method: GET URL: /management/levelRanking Status-Code: 200 Reponse-Size: 1860 Response-Time: 29.596 ms
+
+[2023-10-12 15:07:43] Method: GET URL: /management/pointsRanking Status-Code: 200 Reponse-Size: 1716 Response-Time: 15.395 ms
+
+[2023-10-12 15:07:46] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 476 Response-Time: 2.175 ms
+
+[2023-10-12 15:07:55] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 476 Response-Time: 2.260 ms
+
+[2023-10-12 15:07:57] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 476 Response-Time: 2.093 ms
+
+[2023-10-12 15:08:10] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 476 Response-Time: 3.353 ms
+
+[2023-10-12 15:08:29] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.178 ms
+
+[2023-10-12 15:08:33] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.044 ms
+
+[2023-10-12 15:08:39] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.320 ms
+
+[2023-10-12 15:10:03] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.951 ms
+
+[2023-10-12 15:10:04] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 2.070 ms
+
+[2023-10-12 15:10:04] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 7.359 ms
+
+[2023-10-12 15:10:04] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 6.453 ms
+
+[2023-10-12 15:10:04] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 5.606 ms
+
+[2023-10-12 15:10:04] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1311 Response-Time: 4.505 ms
+
+[2023-10-12 15:10:04] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.603 ms
+
+[2023-10-12 15:10:08] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.378 ms
+
+[2023-10-12 15:10:22] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 3.216 ms
+
+[2023-10-12 15:10:27] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.032 ms
+
+[2023-10-12 15:10:32] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 3.060 ms
+
+[2023-10-12 15:10:32] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 2.287 ms
+
+[2023-10-12 15:11:03] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 16.537 ms
+
+[2023-10-12 15:11:04] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.398 ms
+
+[2023-10-12 15:11:05] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.993 ms
+
+[2023-10-12 15:11:06] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.184 ms
+
+[2023-10-12 15:12:39] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.682 ms
+
+[2023-10-12 15:13:54] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 137 Response-Time: 31.572 ms
+
+[2023-10-12 15:17:06] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 3.395 ms
+
+[2023-10-12 15:17:24] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.181 ms
+
+[2023-10-12 15:17:25] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.264 ms
+
+[2023-10-12 15:17:25] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 3.787 ms
+
+[2023-10-12 15:17:25] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 2.565 ms
+
+[2023-10-12 15:17:25] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1311 Response-Time: 2.370 ms
+
+[2023-10-12 15:17:25] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1.807 ms
+
+[2023-10-12 15:17:25] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 2.924 ms
+
+[2023-10-12 15:18:02] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.303 ms
+
+[2023-10-12 15:18:06] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 138 Response-Time: 2.467 ms
+
+[2023-10-12 15:18:08] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.070 ms
+
+[2023-10-12 15:18:38] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 138 Response-Time: 3.341 ms
+
+[2023-10-12 15:18:41] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 139 Response-Time: 2.441 ms
+
+[2023-10-12 15:18:44] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 138 Response-Time: 2.300 ms
+
+[2023-10-12 15:19:02] Method: POST URL: /transaction/spending/create Status-Code: 201 Reponse-Size: 458 Response-Time: 196.968 ms
+
+[2023-10-12 15:19:15] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 205 Response-Time: 2.666 ms
+
+[2023-10-12 15:19:16] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 204 Response-Time: 2.333 ms
+
+[2023-10-12 15:19:20] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 205 Response-Time: 2.434 ms
+
+[2023-10-12 15:19:21] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 204 Response-Time: 2.288 ms
+
+[2023-10-12 15:21:19] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.606 ms
+
+[2023-10-12 15:21:20] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3858 Response-Time: 2.058 ms
+
+[2023-10-12 15:21:20] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 173 Response-Time: 4.136 ms
+
+[2023-10-12 15:21:20] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1311 Response-Time: 3.092 ms
+
+[2023-10-12 15:21:20] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.101 ms
+
+[2023-10-12 15:21:20] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 76 Response-Time: 4.000 ms
+
+[2023-10-12 15:21:20] Method: GET URL: /profile/userLevel Status-Code: 200 Reponse-Size: 96 Response-Time: 2.993 ms
+
+[2023-10-12 15:21:34] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 173 Response-Time: 4.011 ms
+
+[2023-10-12 15:21:34] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 3.080 ms
+
+[2023-10-12 15:21:34] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1311 Response-Time: 4.507 ms
+
+[2023-10-12 15:21:34] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 3.564 ms
+
+[2023-10-12 15:21:49] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 981 Response-Time: 2.295 ms
+
+[2023-10-12 15:21:55] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.071 ms
+
+[2023-10-12 15:21:59] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 204 Response-Time: 2.942 ms
+
+[2023-10-12 15:22:07] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 981 Response-Time: 2.682 ms
+
+[2023-10-12 15:22:15] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.119 ms
+
+[2023-10-12 15:22:16] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 204 Response-Time: 2.362 ms
+
+[2023-10-12 15:22:22] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 981 Response-Time: 3.245 ms
+
+[2023-10-12 15:22:26] Method: PUT URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 486 Response-Time: 72.239 ms
+
+[2023-10-12 15:22:30] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.340 ms
+
+[2023-10-12 15:22:31] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 205 Response-Time: 2.348 ms
+
+[2023-10-12 15:22:39] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.099 ms
+
+[2023-10-12 15:22:51] Method: POST URL: /management/getTransactions Status-Code: 401 Reponse-Size: 34 Response-Time: 1.131 ms
+
+[2023-10-12 15:22:59] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 766 Response-Time: 4.371 ms
+
+[2023-10-12 15:33:05] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.202 ms
+
+[2023-10-12 15:33:06] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3876 Response-Time: 2.070 ms
+
+[2023-10-12 15:33:06] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 20.034 ms
+
+[2023-10-12 15:33:06] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 173 Response-Time: 4.339 ms
+
+[2023-10-12 15:33:06] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 3.247 ms
+
+[2023-10-12 15:33:06] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 76 Response-Time: 1.740 ms
+
+[2023-10-12 15:33:06] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 2.668 ms
+
+[2023-10-12 15:33:11] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.533 ms
+
+[2023-10-12 15:37:22] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.168 ms
+
+[2023-10-12 15:37:23] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.252 ms
+
+[2023-10-12 15:37:23] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 5.194 ms
+
+[2023-10-12 15:37:23] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 173 Response-Time: 2.849 ms
+
+[2023-10-12 15:37:23] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.541 ms
+
+[2023-10-12 15:37:23] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3.896 ms
+
+[2023-10-12 15:37:23] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 2.998 ms
+
+[2023-10-12 15:37:25] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.170 ms
+
+[2023-10-12 15:38:15] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.846 ms
+
+[2023-10-12 15:38:16] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.169 ms
+
+[2023-10-12 15:38:16] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 173 Response-Time: 2.076 ms
+
+[2023-10-12 15:38:16] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.126 ms
+
+[2023-10-12 15:38:16] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.339 ms
+
+[2023-10-12 15:38:16] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1.727 ms
+
+[2023-10-12 15:38:16] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.641 ms
+
+[2023-10-12 15:38:21] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 3.148 ms
+
+[2023-10-12 15:38:22] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.032 ms
+
+[2023-10-12 15:38:24] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.216 ms
+
+[2023-10-12 15:38:54] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 205 Response-Time: 2.498 ms
+
+[2023-10-12 15:48:39] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 3.818 ms
+
+[2023-10-12 15:54:25] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.228 ms
+
+[2023-10-12 15:54:26] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 173 Response-Time: 2.533 ms
+
+[2023-10-12 15:54:26] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 4.632 ms
+
+[2023-10-12 15:54:26] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 5.743 ms
+
+[2023-10-12 15:54:26] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.717 ms
+
+[2023-10-12 15:54:26] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 2.207 ms
+
+[2023-10-12 15:54:26] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 2.008 ms
+
+[2023-10-12 15:54:29] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.791 ms
+
+[2023-10-12 16:03:26] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 3.759 ms
+
+[2023-10-12 16:03:30] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 2.778 ms
+
+[2023-10-12 16:03:32] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 4.426 ms
+
+[2023-10-12 16:03:32] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.180 ms
+
+[2023-10-12 16:03:33] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 2.667 ms
+
+[2023-10-12 16:03:35] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 4.311 ms
+
+[2023-10-12 16:03:43] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 3.320 ms
+
+[2023-10-12 16:04:00] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 2.915 ms
+
+[2023-10-12 16:04:10] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 4.508 ms
+
+[2023-10-12 16:04:17] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 2.863 ms
+
+[2023-10-12 16:12:12] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 4.787 ms
+
+[2023-10-12 16:12:53] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.803 ms
+
+[2023-10-12 16:12:54] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.071 ms
+
+[2023-10-12 16:12:54] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 173 Response-Time: 2.117 ms
+
+[2023-10-12 16:12:54] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 3.216 ms
+
+[2023-10-12 16:12:54] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.283 ms
+
+[2023-10-12 16:12:54] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3.010 ms
+
+[2023-10-12 16:12:54] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 2.169 ms
+
+[2023-10-12 16:13:05] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.171 ms
+
+[2023-10-12 16:13:06] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 3.809 ms
+
+[2023-10-12 16:13:08] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.126 ms
+
+[2023-10-12 16:13:09] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 3.687 ms
+
+[2023-10-12 16:13:31] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 3.452 ms
+
+[2023-10-12 16:13:35] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 2.713 ms
+
+[2023-10-12 16:13:35] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.483 ms
+
+[2023-10-12 16:13:36] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 2.716 ms
+
+[2023-10-12 16:13:49] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 2.965 ms
+
+[2023-10-12 16:14:17] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 5.135 ms
+
+[2023-10-12 16:14:19] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 2.751 ms
+
+[2023-10-12 16:14:28] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 3.132 ms
+
+[2023-10-12 16:14:32] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 5.411 ms
+
+[2023-10-12 16:16:21] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 4.897 ms
+
+[2023-10-12 16:19:20] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 3.142 ms
+
+[2023-10-12 16:19:45] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 3.389 ms
+
+[2023-10-12 16:19:55] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 4.116 ms
+
+[2023-10-12 16:19:56] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.143 ms
+
+[2023-10-12 16:19:56] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 3.553 ms
+
+[2023-10-12 16:19:56] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 173 Response-Time: 2.339 ms
+
+[2023-10-12 16:19:56] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.294 ms
+
+[2023-10-12 16:19:56] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1.807 ms
+
+[2023-10-12 16:19:56] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.736 ms
+
+[2023-10-12 16:20:19] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.124 ms
+
+[2023-10-12 16:20:20] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 4.002 ms
+
+[2023-10-12 16:20:48] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.694 ms
+
+[2023-10-12 16:20:49] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 1.981 ms
+
+[2023-10-12 16:20:49] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 173 Response-Time: 2.160 ms
+
+[2023-10-12 16:20:49] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 3.322 ms
+
+[2023-10-12 16:20:49] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 3.209 ms
+
+[2023-10-12 16:20:49] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 2.098 ms
+
+[2023-10-12 16:20:49] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.681 ms
+
+[2023-10-12 16:20:59] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 3.631 ms
+
+[2023-10-12 16:21:00] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 2.785 ms
+
+[2023-10-12 16:22:28] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.125 ms
+
+[2023-10-12 16:22:29] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.401 ms
+
+[2023-10-12 16:22:29] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 4.787 ms
+
+[2023-10-12 16:22:30] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 173 Response-Time: 7.451 ms
+
+[2023-10-12 16:22:30] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 2.068 ms
+
+[2023-10-12 16:22:30] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 3.148 ms
+
+[2023-10-12 16:22:30] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3.416 ms
+
+[2023-10-12 16:22:35] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.682 ms
+
+[2023-10-12 16:22:36] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 2.826 ms
+
+[2023-10-12 16:22:54] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 4.779 ms
+
+[2023-10-12 16:23:24] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 3.121 ms
+
+[2023-10-12 16:23:38] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 3.616 ms
+
+[2023-10-12 16:24:00] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 2.839 ms
+
+[2023-10-12 16:24:24] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 3.572 ms
+
+[2023-10-12 16:24:29] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 3.711 ms
+
+[2023-10-12 16:24:30] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 3.141 ms
+
+[2023-10-12 16:24:43] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 3.748 ms
+
+[2023-10-12 16:25:01] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 4.592 ms
+
+[2023-10-12 16:25:17] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 2.963 ms
+
+[2023-10-12 16:25:34] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.590 ms
+
+[2023-10-12 16:25:34] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3876 Response-Time: 2.145 ms
+
+[2023-10-12 16:25:34] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 4.409 ms
+
+[2023-10-12 16:25:34] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.431 ms
+
+[2023-10-12 16:25:34] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 173 Response-Time: 4.566 ms
+
+[2023-10-12 16:25:34] Method: GET URL: /profile/userLevel Status-Code: 200 Reponse-Size: 96 Response-Time: 3.472 ms
+
+[2023-10-12 16:25:34] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 76 Response-Time: 2.393 ms
+
+[2023-10-12 16:25:36] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.412 ms
+
+[2023-10-12 16:25:37] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 1.958 ms
+
+[2023-10-12 16:25:37] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.036 ms
+
+[2023-10-12 16:25:37] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 173 Response-Time: 1.940 ms
+
+[2023-10-12 16:25:37] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.204 ms
+
+[2023-10-12 16:25:37] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1.789 ms
+
+[2023-10-12 16:25:37] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.773 ms
+
+[2023-10-12 16:25:38] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.218 ms
+
+[2023-10-12 16:25:39] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 3.125 ms
+
+[2023-10-12 16:25:44] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.110 ms
+
+[2023-10-12 16:25:45] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 2.675 ms
+
+[2023-10-12 16:25:55] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.454 ms
+
+[2023-10-12 16:25:55] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 1.947 ms
+
+[2023-10-12 16:25:55] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 5.367 ms
+
+[2023-10-12 16:25:55] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 173 Response-Time: 6.782 ms
+
+[2023-10-12 16:25:55] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 5.149 ms
+
+[2023-10-12 16:25:55] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 3.703 ms
+
+[2023-10-12 16:25:55] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 2.754 ms
+
+[2023-10-12 16:25:58] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.926 ms
+
+[2023-10-12 16:25:59] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 3.661 ms
+
+[2023-10-12 16:26:16] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 2.911 ms
+
+[2023-10-12 16:26:16] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 2.955 ms
+
+[2023-10-12 16:26:30] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 3.384 ms
+
+[2023-10-12 16:26:30] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 2.556 ms
+
+[2023-10-12 16:26:42] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 5.406 ms
+
+[2023-10-12 16:26:42] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1395 Response-Time: 4.906 ms
+
+[2023-10-12 16:26:45] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1522 Response-Time: 2.901 ms
+
+[2023-10-12 16:27:07] Method: POST URL: /transaction/spending/create Status-Code: 201 Reponse-Size: 447 Response-Time: 62.878 ms
+
+[2023-10-12 16:27:10] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.936 ms
+
+[2023-10-12 16:27:13] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 269 Response-Time: 2.299 ms
+
+[2023-10-12 16:27:15] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 270 Response-Time: 2.164 ms
+
+[2023-10-12 16:27:17] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1590 Response-Time: 3.292 ms
+
+[2023-10-12 16:27:31] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.517 ms
+
+[2023-10-12 16:27:32] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3876 Response-Time: 2.007 ms
+
+[2023-10-12 16:27:32] Method: GET URL: /profile/userLevel Status-Code: 200 Reponse-Size: 96 Response-Time: 1.586 ms
+
+[2023-10-12 16:27:32] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 6.413 ms
+
+[2023-10-12 16:27:32] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 75 Response-Time: 5.421 ms
+
+[2023-10-12 16:27:32] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 3.936 ms
+
+[2023-10-12 16:27:32] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.941 ms
+
+[2023-10-12 16:27:43] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.897 ms
+
+[2023-10-12 16:27:47] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.735 ms
+
+[2023-10-12 16:27:49] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.550 ms
+
+[2023-10-12 16:28:43] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.228 ms
+
+[2023-10-12 16:28:52] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.316 ms
+
+[2023-10-12 16:28:52] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.901 ms
+
+[2023-10-12 16:28:52] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 3.987 ms
+
+[2023-10-12 16:28:52] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.793 ms
+
+[2023-10-12 16:28:52] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 5.309 ms
+
+[2023-10-12 16:28:52] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 4.399 ms
+
+[2023-10-12 16:28:52] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3.396 ms
+
+[2023-10-12 16:28:56] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.931 ms
+
+[2023-10-12 16:28:58] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.509 ms
+
+[2023-10-12 16:30:15] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.121 ms
+
+[2023-10-12 16:30:21] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.225 ms
+
+[2023-10-12 16:30:22] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 1.968 ms
+
+[2023-10-12 16:30:22] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 8.140 ms
+
+[2023-10-12 16:30:22] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 7.330 ms
+
+[2023-10-12 16:30:22] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 6.412 ms
+
+[2023-10-12 16:30:22] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 5.495 ms
+
+[2023-10-12 16:30:22] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 4.574 ms
+
+[2023-10-12 16:30:26] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.033 ms
+
+[2023-10-12 16:30:28] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.596 ms
+
+[2023-10-12 16:31:38] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 4.330 ms
+
+[2023-10-12 16:31:38] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.713 ms
+
+[2023-10-12 16:31:51] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1590 Response-Time: 2.748 ms
+
+[2023-10-12 17:04:36] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 6.577 ms
+
+[2023-10-12 17:09:11] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.524 ms
+
+[2023-10-12 17:17:31] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.723 ms
+
+[2023-10-12 17:18:07] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 4.823 ms
+
+[2023-10-12 17:18:29] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.062 ms
+
+[2023-10-12 17:18:42] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 4.420 ms
+
+[2023-10-12 17:18:43] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3876 Response-Time: 2.418 ms
+
+[2023-10-12 17:18:43] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 3.219 ms
+
+[2023-10-12 17:18:43] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 4.000 ms
+
+[2023-10-12 17:18:43] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.655 ms
+
+[2023-10-12 17:18:43] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 75 Response-Time: 1.925 ms
+
+[2023-10-12 17:18:43] Method: GET URL: /profile/userLevel Status-Code: 200 Reponse-Size: 96 Response-Time: 1.829 ms
+
+[2023-10-12 17:18:48] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.569 ms
+
+[2023-10-12 17:18:50] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.672 ms
+
+[2023-10-12 18:01:22] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 2128 Response-Time: 6.506 ms
+
+[2023-10-12 18:04:57] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.053 ms
+
+[2023-10-12 18:04:58] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 20.420 ms
+
+[2023-10-12 18:04:58] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 5.971 ms
+
+[2023-10-12 18:04:58] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 5.713 ms
+
+[2023-10-12 18:04:58] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 5.324 ms
+
+[2023-10-12 18:04:58] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 3.476 ms
+
+[2023-10-12 18:04:59] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 9.933 ms
+
+[2023-10-12 18:05:03] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 49.853 ms
+
+[2023-10-12 18:05:04] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.735 ms
+
+[2023-10-12 18:05:31] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.099 ms
+
+[2023-10-12 18:06:22] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 20.571 ms
+
+[2023-10-12 18:09:05] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.877 ms
+
+[2023-10-12 18:09:54] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.953 ms
+
+[2023-10-12 18:10:04] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 4.661 ms
+
+[2023-10-12 18:11:24] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.227 ms
+
+[2023-10-12 18:11:45] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.350 ms
+
+[2023-10-12 18:11:56] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 4.115 ms
+
+[2023-10-12 18:12:41] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.373 ms
+
+[2023-10-12 18:13:01] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.920 ms
+
+[2023-10-12 18:13:13] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.126 ms
+
+[2023-10-12 18:13:14] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 16.600 ms
+
+[2023-10-12 18:13:14] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 3.164 ms
+
+[2023-10-12 18:13:14] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.081 ms
+
+[2023-10-12 18:13:14] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.344 ms
+
+[2023-10-12 18:13:14] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1.665 ms
+
+[2023-10-12 18:13:14] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.598 ms
+
+[2023-10-12 18:13:19] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.747 ms
+
+[2023-10-12 18:13:19] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.427 ms
+
+[2023-10-12 18:13:20] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.503 ms
+
+[2023-10-12 18:13:37] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.561 ms
+
+[2023-10-12 18:13:38] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.831 ms
+
+[2023-10-12 18:13:38] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.094 ms
+
+[2023-10-12 18:13:38] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 8.248 ms
+
+[2023-10-12 18:13:38] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 15.168 ms
+
+[2023-10-12 18:13:38] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1.633 ms
+
+[2023-10-12 18:13:38] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.579 ms
+
+[2023-10-12 18:14:37] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 12.380 ms
+
+[2023-10-12 18:14:38] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.205 ms
+
+[2023-10-12 18:14:47] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.685 ms
+
+[2023-10-12 18:14:55] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.567 ms
+
+[2023-10-12 18:15:21] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.996 ms
+
+[2023-10-12 18:15:28] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1590 Response-Time: 2.769 ms
+
+[2023-10-12 18:15:51] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1590 Response-Time: 3.021 ms
+
+[2023-10-12 18:16:17] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1590 Response-Time: 3.157 ms
+
+[2023-10-12 18:16:26] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1590 Response-Time: 16.146 ms
+
+[2023-10-12 18:16:41] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.539 ms
+
+[2023-10-12 18:16:42] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 1.935 ms
+
+[2023-10-12 18:16:42] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 7.835 ms
+
+[2023-10-12 18:16:42] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 6.849 ms
+
+[2023-10-12 18:16:42] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 6.086 ms
+
+[2023-10-12 18:16:42] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 4.360 ms
+
+[2023-10-12 18:16:42] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3.481 ms
+
+[2023-10-12 18:16:43] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.405 ms
+
+[2023-10-12 18:16:44] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.089 ms
+
+[2023-10-12 18:16:44] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 2.015 ms
+
+[2023-10-12 18:16:44] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 3.573 ms
+
+[2023-10-12 18:16:44] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.508 ms
+
+[2023-10-12 18:16:44] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1.719 ms
+
+[2023-10-12 18:16:44] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.662 ms
+
+[2023-10-12 18:16:45] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.802 ms
+
+[2023-10-12 18:16:46] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.919 ms
+
+[2023-10-12 18:16:48] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1590 Response-Time: 2.582 ms
+
+[2023-10-12 18:16:54] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.652 ms
+
+[2023-10-12 18:17:44] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 20.465 ms
+
+[2023-10-12 18:18:04] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 16.588 ms
+
+[2023-10-12 18:18:05] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.013 ms
+
+[2023-10-12 18:18:05] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 3.609 ms
+
+[2023-10-12 18:18:05] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.512 ms
+
+[2023-10-12 18:18:05] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 14.156 ms
+
+[2023-10-12 18:18:06] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.950 ms
+
+[2023-10-12 18:18:07] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.960 ms
+
+[2023-10-12 18:18:09] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1590 Response-Time: 3.485 ms
+
+[2023-10-12 18:18:18] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.516 ms
+
+[2023-10-12 18:18:19] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 1.889 ms
+
+[2023-10-12 18:18:19] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 21.106 ms
+
+[2023-10-12 18:18:19] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 20.011 ms
+
+[2023-10-12 18:18:19] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 18.942 ms
+
+[2023-10-12 18:18:19] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 4.640 ms
+
+[2023-10-12 18:18:19] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 3.364 ms
+
+[2023-10-12 18:18:22] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.958 ms
+
+[2023-10-12 18:18:23] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.055 ms
+
+[2023-10-12 18:18:24] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1590 Response-Time: 16.401 ms
+
+[2023-10-12 18:19:00] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.833 ms
+
+[2023-10-12 18:19:01] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 1.890 ms
+
+[2023-10-12 18:19:01] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.102 ms
+
+[2023-10-12 18:19:01] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 6.001 ms
+
+[2023-10-12 18:19:01] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 4.413 ms
+
+[2023-10-12 18:19:01] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3.589 ms
+
+[2023-10-12 18:19:01] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 2.848 ms
+
+[2023-10-12 18:19:04] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.930 ms
+
+[2023-10-12 18:19:05] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.594 ms
+
+[2023-10-12 19:11:07] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 3.162 ms
+
+[2023-10-12 19:11:10] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.594 ms
+
+[2023-10-12 19:11:13] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.558 ms
+
+[2023-10-12 19:11:14] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.732 ms
+
+[2023-10-12 19:11:15] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.901 ms
+
+[2023-10-12 19:11:15] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.419 ms
+
+[2023-10-12 19:11:17] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1590 Response-Time: 18.741 ms
+
+[2023-10-12 19:11:19] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 29.278 ms
+
+[2023-10-12 19:11:21] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1590 Response-Time: 3.281 ms
+
+[2023-10-12 19:12:08] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.858 ms
+
+[2023-10-12 19:18:56] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.039 ms
+
+[2023-10-12 19:18:57] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 1.985 ms
+
+[2023-10-12 19:18:57] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 1.986 ms
+
+[2023-10-12 19:18:57] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 1.841 ms
+
+[2023-10-12 19:18:57] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.868 ms
+
+[2023-10-12 19:18:57] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1.866 ms
+
+[2023-10-12 19:18:57] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.743 ms
+
+[2023-10-12 19:19:03] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.884 ms
+
+[2023-10-12 19:19:06] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.471 ms
+
+[2023-10-12 19:19:14] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 39.402 ms
+
+[2023-10-12 19:19:38] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 3.434 ms
+
+[2023-10-12 19:20:51] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.365 ms
+
+[2023-10-12 19:20:51] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 4.090 ms
+
+[2023-10-12 19:20:51] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 6.313 ms
+
+[2023-10-12 19:20:51] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 30.619 ms
+
+[2023-10-12 19:20:51] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 29.635 ms
+
+[2023-10-12 19:20:51] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 28.749 ms
+
+[2023-10-12 19:20:51] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 18.079 ms
+
+[2023-10-12 19:20:55] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 3.070 ms
+
+[2023-10-12 19:20:58] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.234 ms
+
+[2023-10-12 19:21:00] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 271 Response-Time: 2.844 ms
+
+[2023-10-12 19:21:02] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 269 Response-Time: 2.178 ms
+
+[2023-10-12 19:21:03] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 271 Response-Time: 2.139 ms
+
+[2023-10-12 19:21:04] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 3.106 ms
+
+[2023-10-12 19:21:50] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.760 ms
+
+[2023-10-12 19:21:50] Method: GET URL: /management/pointsRanking Status-Code: 200 Reponse-Size: 1718 Response-Time: 1.922 ms
+
+[2023-10-12 19:21:50] Method: GET URL: /management/levelRanking Status-Code: 200 Reponse-Size: 1860 Response-Time: 16.108 ms
+
+[2023-10-12 19:21:51] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 1.901 ms
+
+[2023-10-12 19:21:51] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 8.087 ms
+
+[2023-10-12 19:21:51] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 9.752 ms
+
+[2023-10-12 19:21:51] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 9.053 ms
+
+[2023-10-12 19:21:51] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 9.119 ms
+
+[2023-10-12 19:21:51] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 7.548 ms
+
+[2023-10-12 19:21:52] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.729 ms
+
+[2023-10-12 19:21:53] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.568 ms
+
+[2023-10-12 19:21:55] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.005 ms
+
+[2023-10-12 19:21:57] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.942 ms
+
+[2023-10-12 19:21:58] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.249 ms
+
+[2023-10-12 19:22:56] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 4.761 ms
+
+[2023-10-12 19:37:46] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.134 ms
+
+[2023-10-12 19:37:46] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 3.116 ms
+
+[2023-10-12 19:37:46] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 7.492 ms
+
+[2023-10-12 19:37:46] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 4.531 ms
+
+[2023-10-12 19:37:46] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 3.390 ms
+
+[2023-10-12 19:37:46] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3.539 ms
+
+[2023-10-12 19:37:46] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 2.286 ms
+
+[2023-10-12 19:37:51] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.338 ms
+
+[2023-10-12 19:39:01] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.749 ms
+
+[2023-10-12 19:39:02] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 1.912 ms
+
+[2023-10-12 19:39:02] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 2.829 ms
+
+[2023-10-12 19:39:02] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 5.555 ms
+
+[2023-10-12 19:39:02] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 4.206 ms
+
+[2023-10-12 19:39:02] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 3.320 ms
+
+[2023-10-12 19:39:02] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.515 ms
+
+[2023-10-12 19:39:03] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.862 ms
+
+[2023-10-12 19:39:48] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.612 ms
+
+[2023-10-12 19:39:49] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 13.557 ms
+
+[2023-10-12 19:39:49] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 5.488 ms
+
+[2023-10-12 19:39:49] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 6.010 ms
+
+[2023-10-12 19:39:49] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 5.986 ms
+
+[2023-10-12 19:39:49] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 5.251 ms
+
+[2023-10-12 19:39:49] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 9.583 ms
+
+[2023-10-12 19:39:50] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.931 ms
+
+[2023-10-12 19:39:50] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.612 ms
+
+[2023-10-12 19:40:09] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 3.308 ms
+
+[2023-10-12 19:43:04] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.083 ms
+
+[2023-10-12 19:43:05] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.230 ms
+
+[2023-10-12 19:43:05] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 3.066 ms
+
+[2023-10-12 19:43:05] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 6.642 ms
+
+[2023-10-12 19:43:05] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 4.915 ms
+
+[2023-10-12 19:43:05] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 3.706 ms
+
+[2023-10-12 19:43:05] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.574 ms
+
+[2023-10-12 19:43:10] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.912 ms
+
+[2023-10-12 19:44:22] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.398 ms
+
+[2023-10-12 19:44:22] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 2.046 ms
+
+[2023-10-12 19:44:22] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 5.456 ms
+
+[2023-10-12 19:44:22] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 6.789 ms
+
+[2023-10-12 19:44:22] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 5.960 ms
+
+[2023-10-12 19:44:22] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 5.108 ms
+
+[2023-10-12 19:44:22] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3.708 ms
+
+[2023-10-12 19:44:28] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.897 ms
+
+[2023-10-12 19:44:35] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.504 ms
+
+[2023-10-12 19:44:35] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 1.835 ms
+
+[2023-10-12 19:44:35] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 14.625 ms
+
+[2023-10-12 19:44:35] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 5.624 ms
+
+[2023-10-12 19:44:35] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 4.811 ms
+
+[2023-10-12 19:44:35] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 3.955 ms
+
+[2023-10-12 19:44:35] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3.090 ms
+
+[2023-10-12 19:44:36] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.232 ms
+
+[2023-10-12 19:44:37] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.574 ms
+
+[2023-10-12 19:45:40] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.867 ms
+
+[2023-10-12 19:46:01] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 4.531 ms
+
+[2023-10-12 19:46:06] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.534 ms
+
+[2023-10-12 19:46:23] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.522 ms
+
+[2023-10-12 19:46:35] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 3.434 ms
+
+[2023-10-12 19:47:17] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.697 ms
+
+[2023-10-12 19:47:22] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.624 ms
+
+[2023-10-12 19:47:50] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 20.785 ms
+
+[2023-10-12 19:48:16] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.704 ms
+
+[2023-10-12 19:48:41] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.907 ms
+
+[2023-10-12 19:48:48] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.575 ms
+
+[2023-10-12 19:49:06] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.500 ms
+
+[2023-10-12 19:49:26] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.601 ms
+
+[2023-10-12 19:49:40] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.581 ms
+
+[2023-10-12 19:49:47] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 3.430 ms
+
+[2023-10-12 19:49:54] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.554 ms
+
+[2023-10-12 19:50:06] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.632 ms
+
+[2023-10-12 19:50:14] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 3.430 ms
+
+[2023-10-12 19:50:43] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.857 ms
+
+[2023-10-12 19:50:54] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.597 ms
+
+[2023-10-12 19:51:31] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 3.460 ms
+
+[2023-10-12 19:51:37] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.590 ms
+
+[2023-10-12 19:51:44] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.892 ms
+
+[2023-10-12 19:51:45] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.494 ms
+
+[2023-10-12 19:52:03] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.345 ms
+
+[2023-10-12 19:52:46] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.997 ms
+
+[2023-10-12 19:53:00] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.512 ms
+
+[2023-10-12 19:53:12] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 11.872 ms
+
+[2023-10-12 19:53:23] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.920 ms
+
+[2023-10-12 19:53:37] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.665 ms
+
+[2023-10-12 19:53:42] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.960 ms
+
+[2023-10-12 19:53:44] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.482 ms
+
+[2023-10-12 19:54:24] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.239 ms
+
+[2023-10-12 19:54:25] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 1.901 ms
+
+[2023-10-12 19:54:25] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 22.146 ms
+
+[2023-10-12 19:54:25] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 22.691 ms
+
+[2023-10-12 19:54:25] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.092 ms
+
+[2023-10-12 19:54:27] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.911 ms
+
+[2023-10-12 19:54:28] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.546 ms
+
+[2023-10-12 19:58:44] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.796 ms
+
+[2023-10-12 19:58:50] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.568 ms
+
+[2023-10-12 19:59:43] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.881 ms
+
+[2023-10-12 20:01:30] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 4.050 ms
+
+[2023-10-12 20:01:40] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.744 ms
+
+[2023-10-12 20:02:35] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.903 ms
+
+[2023-10-12 20:05:46] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 4.209 ms
+
+[2023-10-12 20:06:04] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.704 ms
+
+[2023-10-12 20:06:07] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 1.925 ms
+
+[2023-10-12 20:06:07] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 1.949 ms
+
+[2023-10-12 20:06:07] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 3.781 ms
+
+[2023-10-12 20:06:07] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.133 ms
+
+[2023-10-12 20:06:08] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.926 ms
+
+[2023-10-12 20:06:09] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.970 ms
+
+[2023-10-12 20:06:11] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 3.225 ms
+
+[2023-10-12 20:07:42] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.084 ms
+
+[2023-10-12 20:10:38] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.109 ms
+
+[2023-10-12 20:11:29] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 4.249 ms
+
+[2023-10-12 20:13:28] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.140 ms
+
+[2023-10-12 20:13:33] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 4.563 ms
+
+[2023-10-12 20:13:33] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 18.290 ms
+
+[2023-10-12 20:13:33] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 17.374 ms
+
+[2023-10-12 20:13:33] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 15.738 ms
+
+[2023-10-12 20:13:44] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.947 ms
+
+[2023-10-12 20:13:45] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.606 ms
+
+[2023-10-12 20:13:56] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.115 ms
+
+[2023-10-12 20:14:12] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.776 ms
+
+[2023-10-12 20:14:43] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.841 ms
+
+[2023-10-12 20:14:48] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 17.705 ms
+
+[2023-10-12 20:14:51] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.662 ms
+
+[2023-10-12 20:16:44] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.092 ms
+
+[2023-10-12 20:17:29] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 19.065 ms
+
+[2023-10-12 20:17:36] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.950 ms
+
+[2023-10-12 20:17:38] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.578 ms
+
+[2023-10-12 20:20:02] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 14.766 ms
+
+[2023-10-12 20:20:02] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 15.075 ms
+
+[2023-10-12 20:20:02] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 2.193 ms
+
+[2023-10-12 20:20:02] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 1.988 ms
+
+[2023-10-12 20:20:03] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.249 ms
+
+[2023-10-12 20:20:05] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.681 ms
+
+[2023-10-12 20:20:07] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 271 Response-Time: 2.739 ms
+
+[2023-10-12 20:20:10] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.588 ms
+
+[2023-10-12 20:29:15] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 3.453 ms
+
+[2023-10-12 20:30:39] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.997 ms
+
+[2023-10-12 20:34:56] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 3.361 ms
+
+[2023-10-12 20:35:23] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.957 ms
+
+[2023-10-12 20:35:41] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 3.274 ms
+
+[2023-10-12 20:35:41] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.231 ms
+
+[2023-10-12 20:35:41] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 3.216 ms
+
+[2023-10-12 20:35:41] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.076 ms
+
+[2023-10-12 20:35:58] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 15.887 ms
+
+[2023-10-12 20:35:58] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 1.922 ms
+
+[2023-10-12 20:35:58] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 4.683 ms
+
+[2023-10-12 20:35:58] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 5.196 ms
+
+[2023-10-12 20:35:58] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 4.797 ms
+
+[2023-10-12 20:35:58] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 3.386 ms
+
+[2023-10-12 20:35:58] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.787 ms
+
+[2023-10-12 20:36:40] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.063 ms
+
+[2023-10-12 20:36:51] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 269 Response-Time: 2.408 ms
+
+[2023-10-12 20:36:54] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 1.872 ms
+
+[2023-10-12 20:36:54] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 4.601 ms
+
+[2023-10-12 20:36:54] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 3.490 ms
+
+[2023-10-12 20:36:54] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.138 ms
+
+[2023-10-12 20:36:56] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 269 Response-Time: 2.201 ms
+
+[2023-10-12 20:37:00] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 1.978 ms
+
+[2023-10-12 20:37:02] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 15.912 ms
+
+[2023-10-12 20:37:03] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.642 ms
+
+[2023-10-12 20:37:12] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.569 ms
+
+[2023-10-12 20:37:16] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 3.283 ms
+
+[2023-10-12 20:37:19] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.616 ms
+
+[2023-10-12 20:37:24] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 408 Response-Time: 2.010 ms
+
+[2023-10-12 20:37:25] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.570 ms
+
+[2023-10-12 20:37:28] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 3.314 ms
+
+[2023-10-12 20:37:30] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.947 ms
+
+[2023-10-12 20:37:32] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.502 ms
+
+[2023-10-12 20:37:41] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.786 ms
+
+[2023-10-12 20:37:44] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.657 ms
+
+[2023-10-12 20:39:20] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 2329 Response-Time: 12.058 ms
+
+[2023-10-12 20:40:37] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.099 ms
+
+[2023-10-12 20:40:39] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.603 ms
+
+[2023-10-12 20:41:32] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.810 ms
+
+[2023-10-12 20:41:34] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.450 ms
+
+[2023-10-12 20:41:37] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.398 ms
+
+[2023-10-12 20:41:41] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.549 ms
+
+[2023-10-12 20:59:18] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.868 ms
+
+[2023-10-12 20:59:19] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 1.918 ms
+
+[2023-10-12 20:59:19] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 5.082 ms
+
+[2023-10-12 20:59:19] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 3.432 ms
+
+[2023-10-12 20:59:19] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.541 ms
+
+[2023-10-12 20:59:19] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3.182 ms
+
+[2023-10-12 20:59:19] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 2.129 ms
+
+[2023-10-12 20:59:23] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 269 Response-Time: 2.989 ms
+
+[2023-10-12 20:59:24] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 2.787 ms
+
+[2023-10-12 20:59:38] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.878 ms
+
+[2023-10-12 21:22:18] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.020 ms
+
+[2023-10-12 21:22:19] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 6.063 ms
+
+[2023-10-12 21:22:19] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 3.958 ms
+
+[2023-10-12 21:22:19] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 3.142 ms
+
+[2023-10-12 21:22:19] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.326 ms
+
+[2023-10-12 21:22:19] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1.595 ms
+
+[2023-10-12 21:22:19] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 9.152 ms
+
+[2023-10-12 21:22:26] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 269 Response-Time: 2.817 ms
+
+[2023-10-12 21:22:28] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 375.850 ms
+
+[2023-10-12 21:22:40] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 3.828 ms
+
+[2023-10-12 21:22:49] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1463 Response-Time: 3.361 ms
+
+[2023-10-12 21:34:52] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.403 ms
+
+[2023-10-12 21:34:53] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.066 ms
+
+[2023-10-12 21:34:53] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 16.185 ms
+
+[2023-10-12 21:34:53] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 4.183 ms
+
+[2023-10-12 21:34:53] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 3.370 ms
+
+[2023-10-12 21:34:53] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 3.287 ms
+
+[2023-10-12 21:34:53] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.923 ms
+
+[2023-10-12 21:35:02] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 269 Response-Time: 2.454 ms
+
+[2023-10-12 21:35:03] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 271 Response-Time: 19.540 ms
+
+[2023-10-12 21:35:04] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 2.632 ms
+
+[2023-10-12 21:40:02] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.864 ms
+
+[2023-10-12 21:40:02] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 3.016 ms
+
+[2023-10-12 21:40:03] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 2.137 ms
+
+[2023-10-12 21:40:03] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 4.305 ms
+
+[2023-10-12 21:40:03] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.515 ms
+
+[2023-10-12 21:40:03] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1.628 ms
+
+[2023-10-12 21:40:03] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 2.354 ms
+
+[2023-10-12 21:52:04] Method: GET URL: /profile/avatar/1 Status-Code: 200 Reponse-Size: 61774 Response-Time: 396.756 ms
+
+[2023-10-12 22:05:54] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 269 Response-Time: 26.552 ms
+
+[2023-10-12 22:07:07] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.098 ms
+
+[2023-10-12 22:07:08] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 3.267 ms
+
+[2023-10-12 22:07:08] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 3.120 ms
+
+[2023-10-12 22:07:08] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.087 ms
+
+[2023-10-12 22:07:08] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1.884 ms
+
+[2023-10-12 22:07:08] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.840 ms
+
+[2023-10-12 22:07:08] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 2.019 ms
+
+[2023-10-12 22:09:14] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 269 Response-Time: 2.854 ms
+
+[2023-10-12 22:21:41] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.486 ms
+
+[2023-10-12 22:21:41] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 19.528 ms
+
+[2023-10-12 22:21:42] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 7.116 ms
+
+[2023-10-12 22:21:42] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 7.470 ms
+
+[2023-10-12 22:21:42] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 8.109 ms
+
+[2023-10-12 22:21:42] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 7.657 ms
+
+[2023-10-12 22:21:42] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 6.393 ms
+
+[2023-10-12 22:21:45] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.544 ms
+
+[2023-10-12 22:21:46] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 1.908 ms
+
+[2023-10-12 22:21:46] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.732 ms
+
+[2023-10-12 22:21:46] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 3.110 ms
+
+[2023-10-12 22:21:46] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.601 ms
+
+[2023-10-12 22:21:46] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.085 ms
+
+[2023-10-12 22:21:46] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1.635 ms
+
+[2023-10-12 22:25:55] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 5.365 ms
+
+[2023-10-12 22:25:56] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 8.654 ms
+
+[2023-10-12 22:25:56] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 22.269 ms
+
+[2023-10-12 22:25:56] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 15.503 ms
+
+[2023-10-12 22:25:56] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 20.509 ms
+
+[2023-10-12 22:25:56] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 17.063 ms
+
+[2023-10-12 22:25:56] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 9.960 ms
+
+[2023-10-12 22:31:50] Method: GET URL: /profile/avatar/2 Status-Code: 200 Reponse-Size: 60029 Response-Time: 26.268 ms
+
+[2023-10-12 22:41:03] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.969 ms
+
+[2023-10-12 22:41:03] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.209 ms
+
+[2023-10-12 22:41:03] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 7.426 ms
+
+[2023-10-12 22:41:03] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 4.973 ms
+
+[2023-10-12 22:41:03] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 5.610 ms
+
+[2023-10-12 22:41:03] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 4.809 ms
+
+[2023-10-12 22:41:03] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.737 ms
+
+[2023-10-12 22:41:05] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.445 ms
+
+[2023-10-12 22:41:07] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.025 ms
+
+[2023-10-12 22:41:07] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 3.786 ms
+
+[2023-10-12 22:41:07] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.250 ms
+
+[2023-10-12 22:41:07] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.551 ms
+
+[2023-10-12 22:41:07] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1.900 ms
+
+[2023-10-12 22:41:07] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.910 ms
+
+[2023-10-12 22:54:32] Method: GET URL: /profile/userAvatars Status-Code: 200 Reponse-Size: 808 Response-Time: 216.978 ms
+
+[2023-10-12 22:59:33] Method: GET URL: /profile/userAvatars Status-Code: 200 Reponse-Size: 808 Response-Time: 2.869 ms
+
+[2023-10-12 22:59:33] Method: GET URL: /profile/avatar/212 Status-Code: 200 Reponse-Size: 82552 Response-Time: 39.171 ms
+
+[2023-10-12 22:59:33] Method: GET URL: /profile/avatar/181 Status-Code: 200 Reponse-Size: 62389 Response-Time: 44.683 ms
+
+[2023-10-12 22:59:33] Method: GET URL: /profile/avatar/116 Status-Code: 200 Reponse-Size: 72111 Response-Time: 47.663 ms
+
+[2023-10-12 22:59:33] Method: GET URL: /profile/avatar/131 Status-Code: 200 Reponse-Size: 62711 Response-Time: 34.401 ms
+
+[2023-10-12 22:59:33] Method: GET URL: /profile/avatar/265 Status-Code: 200 Reponse-Size: 71376 Response-Time: 46.082 ms
+
+[2023-10-12 22:59:33] Method: GET URL: /profile/avatar/32 Status-Code: 200 Reponse-Size: 78137 Response-Time: 40.486 ms
+
+[2023-10-12 22:59:33] Method: GET URL: /profile/avatar/34 Status-Code: 200 Reponse-Size: 56136 Response-Time: 40.867 ms
+
+[2023-10-12 22:59:33] Method: GET URL: /profile/avatar/79 Status-Code: 200 Reponse-Size: 65716 Response-Time: 30.490 ms
+
+[2023-10-12 22:59:33] Method: GET URL: /profile/avatar/54 Status-Code: 200 Reponse-Size: 68404 Response-Time: 42.480 ms
+
+[2023-10-12 22:59:33] Method: GET URL: /profile/avatar/5 Status-Code: 200 Reponse-Size: 57662 Response-Time: 18.419 ms
+
+[2023-10-12 22:59:33] Method: GET URL: /profile/avatar/65 Status-Code: 200 Reponse-Size: 54360 Response-Time: 22.873 ms
+
+[2023-10-12 23:00:22] Method: GET URL: /profile/userAvatars Status-Code: 304 Reponse-Size: - Response-Time: 2.200 ms
+
+[2023-10-12 23:02:25] Method: POST URL: /profile/updateProfile Status-Code: 200 Reponse-Size: 42 Response-Time: 37.839 ms
+
+[2023-10-12 23:03:58] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.665 ms
+
+[2023-10-12 23:03:58] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 10.963 ms
+
+[2023-10-12 23:03:58] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 9.857 ms
+
+[2023-10-12 23:03:58] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 5.813 ms
+
+[2023-10-12 23:03:58] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 3.947 ms
+
+[2023-10-12 23:03:58] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 35.329 ms
+
+[2023-10-12 23:03:58] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.258 ms
+
+[2023-10-12 23:03:59] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.586 ms
+
+[2023-10-12 23:03:59] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 2.385 ms
+
+[2023-10-12 23:03:59] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.403 ms
+
+[2023-10-12 23:03:59] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.557 ms
+
+[2023-10-12 23:03:59] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1.651 ms
+
+[2023-10-12 23:03:59] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.695 ms
+
+[2023-10-12 23:04:00] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.864 ms
+
+[2023-10-12 23:04:02] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 30.481 ms
+
+[2023-10-12 23:04:02] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 29.679 ms
+
+[2023-10-12 23:04:02] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 6.073 ms
+
+[2023-10-12 23:04:02] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 5.347 ms
+
+[2023-10-12 23:04:02] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 5.346 ms
+
+[2023-10-12 23:04:02] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 4.350 ms
+
+[2023-10-12 23:04:02] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.268 ms
+
+[2023-10-12 23:04:03] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.152 ms
+
+[2023-10-12 23:04:03] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 2.273 ms
+
+[2023-10-12 23:04:03] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.814 ms
+
+[2023-10-12 23:04:03] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1.843 ms
+
+[2023-10-12 23:04:03] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 3.846 ms
+
+[2023-10-12 23:04:03] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 2.455 ms
+
+[2023-10-12 23:04:05] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 4.264 ms
+
+[2023-10-12 23:04:12] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 6.399 ms
+
+[2023-10-12 23:04:12] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 9.518 ms
+
+[2023-10-12 23:04:12] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 10.012 ms
+
+[2023-10-12 23:04:12] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 7.491 ms
+
+[2023-10-12 23:04:12] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 6.225 ms
+
+[2023-10-12 23:04:12] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.650 ms
+
+[2023-10-12 23:04:12] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.508 ms
+
+[2023-10-12 23:04:13] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 5.645 ms
+
+[2023-10-12 23:04:13] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 3.902 ms
+
+[2023-10-12 23:04:13] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 3.071 ms
+
+[2023-10-12 23:04:13] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 2.678 ms
+
+[2023-10-12 23:04:13] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 2.190 ms
+
+[2023-10-12 23:04:13] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.030 ms
+
+[2023-10-12 23:04:13] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.203 ms
+
+[2023-10-12 23:04:47] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.226 ms
+
+[2023-10-12 23:04:47] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 2.111 ms
+
+[2023-10-12 23:04:47] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 5.176 ms
+
+[2023-10-12 23:04:47] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 4.685 ms
+
+[2023-10-12 23:04:47] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 5.152 ms
+
+[2023-10-12 23:04:47] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 4.251 ms
+
+[2023-10-12 23:04:47] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 12.394 ms
+
+[2023-10-12 23:04:47] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 6.348 ms
+
+[2023-10-12 23:04:48] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 2.060 ms
+
+[2023-10-12 23:04:48] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 3.182 ms
+
+[2023-10-12 23:04:48] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 5.020 ms
+
+[2023-10-12 23:04:48] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 4.077 ms
+
+[2023-10-12 23:04:48] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1.907 ms
+
+[2023-10-12 23:04:48] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 2.140 ms
+
+[2023-10-12 23:09:14] Method: GET URL: /profile/userAvatars Status-Code: 304 Reponse-Size: - Response-Time: 10.157 ms
+
+[2023-10-12 23:09:37] Method: POST URL: /profile/updateProfile Status-Code: 400 Reponse-Size: 122 Response-Time: 3.160 ms
+
+[2023-10-12 23:10:15] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 3.702 ms
+
+[2023-10-12 23:10:15] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.512 ms
+
+[2023-10-12 23:10:15] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 15.544 ms
+
+[2023-10-12 23:10:15] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 7.589 ms
+
+[2023-10-12 23:10:15] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 19.082 ms
+
+[2023-10-12 23:10:15] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 18.105 ms
+
+[2023-10-12 23:10:15] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 18.049 ms
+
+[2023-10-12 23:10:18] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 2.764 ms
+
+[2023-10-12 23:10:19] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.835 ms
+
+[2023-10-12 23:10:19] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 2.182 ms
+
+[2023-10-12 23:10:19] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 2.805 ms
+
+[2023-10-12 23:10:19] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 3.642 ms
+
+[2023-10-12 23:10:19] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 5.708 ms
+
+[2023-10-12 23:10:19] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3.494 ms
+
+[2023-10-12 23:10:38] Method: GET URL: /profile/userAvatars Status-Code: 304 Reponse-Size: - Response-Time: 3.124 ms
+
+[2023-10-12 23:10:45] Method: POST URL: /profile/updateProfile Status-Code: 200 Reponse-Size: 42 Response-Time: 105.322 ms
+
+[2023-10-12 23:10:47] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 9.377 ms
+
+[2023-10-12 23:10:47] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 11.148 ms
+
+[2023-10-12 23:10:47] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 9.230 ms
+
+[2023-10-12 23:10:47] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 6.042 ms
+
+[2023-10-12 23:10:49] Method: GET URL: /profile/userAvatars Status-Code: 304 Reponse-Size: - Response-Time: 3.831 ms
+
+[2023-10-12 23:10:53] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 269 Response-Time: 10.625 ms
+
+[2023-10-12 23:12:00] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 302 Response-Time: 3.626 ms
+
+[2023-10-12 23:12:01] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 3.393 ms
+
+[2023-10-12 23:12:01] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 3.912 ms
+
+[2023-10-12 23:12:01] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 3.870 ms
+
+[2023-10-12 23:12:01] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.158 ms
+
+[2023-10-12 23:12:01] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 3.896 ms
+
+[2023-10-12 23:12:01] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3.111 ms
+
+[2023-10-12 23:12:08] Method: GET URL: /profile/userAvatars Status-Code: 304 Reponse-Size: - Response-Time: 3.017 ms
+
+[2023-10-12 23:12:12] Method: POST URL: /profile/updateProfile Status-Code: 200 Reponse-Size: 42 Response-Time: 436.781 ms
+
+[2023-10-12 23:12:14] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.704 ms
+
+[2023-10-12 23:12:14] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 3.686 ms
+
+[2023-10-12 23:12:14] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 4.139 ms
+
+[2023-10-12 23:12:14] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 2.401 ms
+
+[2023-10-12 23:12:16] Method: GET URL: /profile/userAvatars Status-Code: 304 Reponse-Size: - Response-Time: 8.683 ms
+
+[2023-10-12 23:12:20] Method: POST URL: /profile/updateProfile Status-Code: 200 Reponse-Size: 42 Response-Time: 131.502 ms
+
+[2023-10-12 23:12:21] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 3.312 ms
+
+[2023-10-12 23:12:21] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 3.506 ms
+
+[2023-10-12 23:12:21] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 3.072 ms
+
+[2023-10-12 23:12:21] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 1.978 ms
+
+[2023-10-12 23:12:23] Method: GET URL: /profile/userAvatars Status-Code: 304 Reponse-Size: - Response-Time: 1.764 ms
+
+[2023-10-12 23:12:28] Method: POST URL: /profile/updateProfile Status-Code: 200 Reponse-Size: 42 Response-Time: 84.259 ms
+
+[2023-10-12 23:12:29] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.346 ms
+
+[2023-10-12 23:12:29] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 4.542 ms
+
+[2023-10-12 23:12:29] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 3.186 ms
+
+[2023-10-12 23:12:29] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 1.812 ms
+
+[2023-10-12 23:12:30] Method: GET URL: /management/levelRanking Status-Code: 200 Reponse-Size: 1858 Response-Time: 5.163 ms
+
+[2023-10-12 23:12:30] Method: GET URL: /management/pointsRanking Status-Code: 200 Reponse-Size: 1716 Response-Time: 4.087 ms
+
+[2023-10-12 23:12:35] Method: GET URL: /profile/userAvatars Status-Code: 304 Reponse-Size: - Response-Time: 5.324 ms
+
+[2023-10-12 23:12:38] Method: POST URL: /profile/updateProfile Status-Code: 200 Reponse-Size: 42 Response-Time: 43.239 ms
+
+[2023-10-12 23:12:40] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.297 ms
+
+[2023-10-12 23:12:40] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1573 Response-Time: 14.571 ms
+
+[2023-10-12 23:12:40] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 10.002 ms
+
+[2023-10-12 23:12:40] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2574 Response-Time: 4.935 ms
+
+[2023-10-12 23:12:42] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 269 Response-Time: 2.212 ms
+
+[2023-10-12 23:12:43] Method: GET URL: /management/levelRanking Status-Code: 200 Reponse-Size: 1858 Response-Time: 1.913 ms
+
+[2023-10-12 23:12:43] Method: GET URL: /management/pointsRanking Status-Code: 200 Reponse-Size: 1716 Response-Time: 3.022 ms
+
+[2023-10-12 23:12:44] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 269 Response-Time: 2.441 ms
+
+[2023-10-12 23:12:45] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 271 Response-Time: 5.437 ms
+
+[2023-10-12 23:12:46] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1591 Response-Time: 3.631 ms
+
+[2023-11-02 10:56:32] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 299 Response-Time: 5286.070 ms
+
+[2023-11-02 10:56:34] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 1619.400 ms
+
+[2023-11-02 10:56:35] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2152.060 ms
+
+[2023-11-02 10:56:35] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2 Response-Time: 2514.716 ms
+
+[2023-11-02 10:56:37] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 4401.115 ms
+
+[2023-11-02 10:56:37] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 4709.050 ms
+
+[2023-11-02 10:56:37] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3314.608 ms
+
+[2023-11-02 10:57:12] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 735 Response-Time: 12.436 ms
+
+[2023-11-02 10:57:33] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 13.951 ms
+
+[2023-11-02 10:57:33] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 13.479 ms
+
+[2023-11-02 10:57:33] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 30.358 ms
+
+[2023-11-02 10:57:33] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2 Response-Time: 28.260 ms
+
+[2023-11-02 11:04:46] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 299 Response-Time: 8.403 ms
+
+[2023-11-02 11:04:46] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 3.178 ms
+
+[2023-11-02 11:04:46] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 6.763 ms
+
+[2023-11-02 11:04:46] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 4.385 ms
+
+[2023-11-02 11:04:46] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2 Response-Time: 4.225 ms
+
+[2023-11-02 11:04:46] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3.097 ms
+
+[2023-11-02 11:04:46] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 2.134 ms
+
+[2023-11-02 11:05:12] Method: POST URL: /transaction/earning/create Status-Code: 201 Reponse-Size: 456 Response-Time: 425.678 ms
+
+[2023-11-02 11:06:24] Method: GET URL: /profile/userAvatars Status-Code: 304 Reponse-Size: - Response-Time: 46.974 ms
+
+[2023-11-02 11:07:37] Method: GET URL: /profile/userAvatars Status-Code: 304 Reponse-Size: - Response-Time: 6.778 ms
+
+[2023-11-02 11:07:49] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 7.334 ms
+
+[2023-11-02 11:07:49] Method: GET URL: /management/pointsRanking Status-Code: 200 Reponse-Size: 1716 Response-Time: 3.697 ms
+
+[2023-11-02 11:08:28] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 199 Response-Time: 46.358 ms
+
+[2023-11-02 11:08:31] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 229 Response-Time: 10.559 ms
+
+[2023-11-02 11:08:33] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 199 Response-Time: 2.493 ms
+
+[2023-11-02 11:08:35] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 68 Response-Time: 3.450 ms
+
+[2023-11-02 11:08:36] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 199 Response-Time: 8.075 ms
+
+[2023-11-02 11:09:55] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 11.002 ms
+
+[2023-11-02 11:09:55] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 6.320 ms
+
+[2023-11-02 11:11:22] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3873 Response-Time: 18.168 ms
+
+[2023-11-02 11:11:22] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 10.966 ms
+
+[2023-11-02 11:11:22] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 8.032 ms
+
+[2023-11-02 11:11:22] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 7.513 ms
+
+[2023-11-02 11:11:23] Method: GET URL: /management/levelRanking Status-Code: 200 Reponse-Size: 1914 Response-Time: 4.221 ms
+
+[2023-11-02 11:11:23] Method: GET URL: /management/pointsRanking Status-Code: 200 Reponse-Size: 1770 Response-Time: 2.897 ms
+
+[2023-11-02 11:12:12] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 199 Response-Time: 2.701 ms
+
+[2023-11-02 11:17:58] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 75 Response-Time: 10.978 ms
+
+[2023-11-02 11:17:58] Method: GET URL: /profile/userLevel Status-Code: 200 Reponse-Size: 96 Response-Time: 9.275 ms
+
+[2023-11-02 11:19:17] Method: POST URL: /authentication/searchUserIdByEmailOrUsername Status-Code: 200 Reponse-Size: 12 Response-Time: 4.389 ms
+
+[2023-11-02 11:19:22] Method: POST URL: /authentication/sendVerificationCode/1 Status-Code: 200 Reponse-Size: 49 Response-Time: 5078.640 ms
+
+[2023-11-02 11:21:52] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 72 Response-Time: 118.181 ms
+
+[2023-11-02 11:21:59] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 593 Response-Time: 90.673 ms
+
+[2023-11-02 11:22:00] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.764 ms
+
+[2023-11-02 11:22:00] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 9.229 ms
+
+[2023-11-02 11:22:00] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 9.552 ms
+
+[2023-11-02 11:22:00] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 8.274 ms
+
+[2023-11-02 11:22:00] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 7.601 ms
+
+[2023-11-02 11:22:00] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 5.490 ms
+
+[2023-11-02 11:23:26] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 6.758 ms
+
+[2023-11-02 11:23:26] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 4.835 ms
+
+[2023-11-02 11:24:02] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 199 Response-Time: 6.858 ms
+
+[2023-11-02 11:25:55] Method: GET URL: /profile/userAvatars Status-Code: 304 Reponse-Size: - Response-Time: 5.648 ms
+
+[2023-11-02 11:28:38] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 735 Response-Time: 5.236 ms
+
+[2023-11-02 11:30:15] Method: GET URL: /goal/get Status-Code: 200 Reponse-Size: 500 Response-Time: 17.312 ms
+
+[2023-11-02 11:31:58] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 6.138 ms
+
+[2023-11-02 11:31:58] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 6.845 ms
+
+[2023-11-02 11:31:58] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 6.066 ms
+
+[2023-11-02 11:31:58] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 3.844 ms
+
+[2023-11-02 11:32:36] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 8.626 ms
+
+[2023-11-02 11:32:36] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 2.384 ms
+
+[2023-11-02 11:33:42] Method: GET URL: /bill/activeBills Status-Code: 200 Reponse-Size: 1192 Response-Time: 19.303 ms
+
+[2023-11-02 11:34:22] Method: GET URL: /goal/get Status-Code: 304 Reponse-Size: - Response-Time: 5.765 ms
+
+[2023-11-02 11:35:15] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 5.206 ms
+
+[2023-11-02 11:35:15] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 3.389 ms
+
+[2023-11-02 11:35:15] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.422 ms
+
+[2023-11-02 11:35:15] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 3.243 ms
+
+[2023-11-02 11:35:15] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 2.797 ms
+
+[2023-11-02 11:35:15] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 3.091 ms
+
+[2023-11-02 11:35:18] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 3.244 ms
+
+[2023-11-02 11:35:18] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 2.471 ms
+
+[2023-11-04 10:50:57] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 299 Response-Time: 887.499 ms
+
+[2023-11-04 10:50:58] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 365.249 ms
+
+[2023-11-04 10:50:58] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 398.088 ms
+
+[2023-11-04 10:50:59] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 1033.452 ms
+
+[2023-11-04 10:50:59] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 1115.881 ms
+
+[2023-11-04 10:50:59] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 1123.287 ms
+
+[2023-11-04 10:50:59] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 793.157 ms
+
+[2023-11-04 10:51:53] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 13.340 ms
+
+[2023-11-04 10:51:53] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 11.021 ms
+
+[2023-11-04 10:51:53] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 9.569 ms
+
+[2023-11-04 10:51:53] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 9.016 ms
+
+[2023-11-04 10:51:53] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 7.756 ms
+
+[2023-11-04 10:51:53] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 2.267 ms
+
+[2023-11-04 10:52:06] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 72 Response-Time: 186.000 ms
+
+[2023-11-04 10:52:13] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 593 Response-Time: 69.930 ms
+
+[2023-11-04 10:52:13] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.424 ms
+
+[2023-11-04 10:52:14] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 6.797 ms
+
+[2023-11-04 10:52:14] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 8.849 ms
+
+[2023-11-04 10:52:14] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 7.861 ms
+
+[2023-11-04 10:52:14] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 4.856 ms
+
+[2023-11-04 10:52:14] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3.775 ms
+
+[2023-11-04 10:52:21] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 25.845 ms
+
+[2023-11-04 10:52:21] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 19.592 ms
+
+[2023-11-04 10:52:21] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 12.421 ms
+
+[2023-11-04 10:52:21] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 9.014 ms
+
+[2023-11-04 10:52:21] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 7.189 ms
+
+[2023-11-04 10:52:21] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 2.856 ms
+
+[2023-11-04 10:52:33] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 93 Response-Time: 0.750 ms
+
+[2023-11-04 10:52:37] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 72 Response-Time: 66.989 ms
+
+[2023-11-04 10:52:52] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 67 Response-Time: 4.005 ms
+
+[2023-11-04 10:52:55] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 67 Response-Time: 5.370 ms
+
+[2023-11-04 10:53:06] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 593 Response-Time: 66.148 ms
+
+[2023-11-04 10:53:07] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 8.705 ms
+
+[2023-11-04 10:53:07] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 23.015 ms
+
+[2023-11-04 10:53:07] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 17.423 ms
+
+[2023-11-04 10:53:07] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 11.569 ms
+
+[2023-11-04 10:53:07] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 8.924 ms
+
+[2023-11-04 10:53:07] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 6.942 ms
+
+[2023-11-04 10:53:23] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 9.460 ms
+
+[2023-11-04 10:53:23] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 8.139 ms
+
+[2023-11-04 10:53:23] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 7.374 ms
+
+[2023-11-04 10:53:23] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 6.453 ms
+
+[2023-11-04 10:53:23] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 5.514 ms
+
+[2023-11-04 10:53:23] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.766 ms
+
+[2023-11-04 10:53:42] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 72 Response-Time: 65.230 ms
+
+[2023-11-04 10:53:51] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 593 Response-Time: 68.809 ms
+
+[2023-11-04 10:53:51] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.332 ms
+
+[2023-11-04 10:53:51] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 3.618 ms
+
+[2023-11-04 10:53:51] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 4.264 ms
+
+[2023-11-04 10:53:51] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 3.441 ms
+
+[2023-11-04 10:53:51] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 2.919 ms
+
+[2023-11-04 10:53:51] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 2.098 ms
+
+[2023-11-04 10:54:24] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 9.749 ms
+
+[2023-11-04 10:54:24] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 8.091 ms
+
+[2023-11-04 10:54:24] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 6.863 ms
+
+[2023-11-04 10:54:24] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 4.883 ms
+
+[2023-11-04 10:54:24] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 3.413 ms
+
+[2023-11-04 10:54:24] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.984 ms
+
+[2023-11-04 10:54:46] Method: POST URL: /authentication/searchUserIdByEmailOrUsername Status-Code: 200 Reponse-Size: 12 Response-Time: 3.287 ms
+
+[2023-11-04 10:54:51] Method: POST URL: /authentication/sendVerificationCode/1 Status-Code: 200 Reponse-Size: 49 Response-Time: 4703.102 ms
+
+[2023-11-04 10:56:25] Method: POST URL: /authentication/updatePassword/1 Status-Code: 400 Reponse-Size: 84 Response-Time: 5.874 ms
+
+[2023-11-04 10:56:37] Method: POST URL: /authentication/sendVerificationCode/1 Status-Code: 200 Reponse-Size: 49 Response-Time: 4334.252 ms
+
+[2023-11-04 10:57:01] Method: POST URL: /authentication/updatePassword/1 Status-Code: 400 Reponse-Size: 84 Response-Time: 3.117 ms
+
+[2023-11-04 10:57:08] Method: POST URL: /authentication/updatePassword/1 Status-Code: 400 Reponse-Size: 84 Response-Time: 5.725 ms
+
+[2023-11-04 10:57:23] Method: POST URL: /authentication/updatePassword/1 Status-Code: 200 Reponse-Size: 48 Response-Time: 120.021 ms
+
+[2023-11-04 10:57:56] Method: POST URL: /authentication/searchUserIdByEmailOrUsername Status-Code: 200 Reponse-Size: 12 Response-Time: 7.532 ms
+
+[2023-11-04 10:58:01] Method: POST URL: /authentication/sendVerificationCode/1 Status-Code: 200 Reponse-Size: 49 Response-Time: 4596.618 ms
+
+[2023-11-04 10:58:23] Method: POST URL: /authentication/updatePassword/1 Status-Code: 400 Reponse-Size: 84 Response-Time: 10.114 ms
+
+[2023-11-04 10:58:36] Method: POST URL: /authentication/updatePassword/1 Status-Code: 200 Reponse-Size: 48 Response-Time: 137.179 ms
+
+[2023-11-04 10:58:48] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 72 Response-Time: 72.801 ms
+
+[2023-11-04 10:58:51] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 593 Response-Time: 85.138 ms
+
+[2023-11-04 10:58:52] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 5.775 ms
+
+[2023-11-04 10:58:52] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 10.260 ms
+
+[2023-11-04 10:58:52] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 6.494 ms
+
+[2023-11-04 10:58:52] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 5.099 ms
+
+[2023-11-04 10:58:52] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 4.083 ms
+
+[2023-11-04 10:58:52] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.760 ms
+
+[2023-11-04 10:59:06] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 9.680 ms
+
+[2023-11-04 10:59:06] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 8.642 ms
+
+[2023-11-04 10:59:06] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 6.640 ms
+
+[2023-11-04 10:59:06] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 5.934 ms
+
+[2023-11-04 10:59:06] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 5.078 ms
+
+[2023-11-04 10:59:06] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.792 ms
+
+[2023-11-04 10:59:54] Method: POST URL: /authentication/checkEmail Status-Code: 200 Reponse-Size: 20 Response-Time: 27.572 ms
+
+[2023-11-04 10:59:54] Method: POST URL: /authentication/checkUser Status-Code: 200 Reponse-Size: 21 Response-Time: 1.700 ms
+
+[2023-11-04 11:00:07] Method: POST URL: /authentication/checkEmail Status-Code: 200 Reponse-Size: 20 Response-Time: 6.608 ms
+
+[2023-11-04 11:00:07] Method: POST URL: /authentication/checkUser Status-Code: 200 Reponse-Size: 20 Response-Time: 1.400 ms
+
+[2023-11-04 11:00:07] Method: POST URL: /authentication/signup Status-Code: 201 Reponse-Size: 39 Response-Time: 143.714 ms
+
+[2023-11-04 11:00:07] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 537 Response-Time: 69.023 ms
+
+[2023-11-04 11:00:08] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 2 Response-Time: 5.416 ms
+
+[2023-11-04 11:00:08] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2 Response-Time: 5.634 ms
+
+[2023-11-04 11:00:08] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 6.125 ms
+
+[2023-11-04 11:00:08] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 61 Response-Time: 5.185 ms
+
+[2023-11-04 11:00:08] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 2.738 ms
+
+[2023-11-04 11:00:08] Method: GET URL: /profile/userLevel Status-Code: 200 Reponse-Size: 94 Response-Time: 1.850 ms
+
+[2023-11-04 11:00:12] Method: POST URL: /authentication/sendVerificationCode/13 Status-Code: 200 Reponse-Size: 49 Response-Time: 4126.411 ms
+
+[2023-11-04 11:01:50] Method: POST URL: /authentication/checkEmail Status-Code: 200 Reponse-Size: 21 Response-Time: 2.625 ms
+
+[2023-11-04 11:02:02] Method: POST URL: /authentication/checkEmail Status-Code: 200 Reponse-Size: 21 Response-Time: 4.149 ms
+
+[2023-11-04 11:02:46] Method: POST URL: /authentication/checkEmail Status-Code: 200 Reponse-Size: 20 Response-Time: 1.302 ms
+
+[2023-11-04 11:02:46] Method: POST URL: /authentication/checkUser Status-Code: 200 Reponse-Size: 20 Response-Time: 1.466 ms
+
+[2023-11-04 11:02:46] Method: POST URL: /authentication/signup Status-Code: 201 Reponse-Size: 39 Response-Time: 113.918 ms
+
+[2023-11-04 11:02:46] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 579 Response-Time: 76.151 ms
+
+[2023-11-04 11:02:47] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 5.159 ms
+
+[2023-11-04 11:02:47] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2 Response-Time: 3.502 ms
+
+[2023-11-04 11:02:47] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 4.005 ms
+
+[2023-11-04 11:02:47] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 2.225 ms
+
+[2023-11-04 11:02:47] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 61 Response-Time: 2.888 ms
+
+[2023-11-04 11:02:47] Method: GET URL: /profile/userLevel Status-Code: 200 Reponse-Size: 94 Response-Time: 1.951 ms
+
+[2023-11-04 11:02:51] Method: POST URL: /authentication/sendVerificationCode/14 Status-Code: 200 Reponse-Size: 49 Response-Time: 4294.527 ms
+
+[2023-11-04 11:03:26] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 579 Response-Time: 97.036 ms
+
+[2023-11-04 11:03:26] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 7.120 ms
+
+[2023-11-04 11:03:26] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 18.576 ms
+
+[2023-11-04 11:03:26] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 15.164 ms
+
+[2023-11-04 11:03:26] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2 Response-Time: 9.661 ms
+
+[2023-11-04 11:03:26] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 7.298 ms
+
+[2023-11-04 11:03:26] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 4.357 ms
+
+[2023-11-04 11:03:26] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 12.481 ms
+
+[2023-11-04 11:03:26] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 12.724 ms
+
+[2023-11-04 11:03:26] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2 Response-Time: 9.920 ms
+
+[2023-11-04 11:03:26] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 5.148 ms
+
+[2023-11-04 11:03:26] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 3.934 ms
+
+[2023-11-04 11:03:26] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.942 ms
+
+[2023-11-04 11:03:30] Method: POST URL: /authentication/sendVerificationCode/14 Status-Code: 500 Reponse-Size: 70 Response-Time: 3813.465 ms
+
+[2023-11-04 11:03:30] Method: POST URL: /authentication/sendVerificationCode/14 Status-Code: 200 Reponse-Size: 49 Response-Time: 4272.382 ms
+
+[2023-11-04 11:03:49] Method: POST URL: /authentication/checkVerificationCode/14 Status-Code: 200 Reponse-Size: 17 Response-Time: 4.808 ms
+
+[2023-11-04 11:03:56] Method: POST URL: /authentication/checkVerificationCode/14 Status-Code: 200 Reponse-Size: 17 Response-Time: 1.905 ms
+
+[2023-11-04 11:04:09] Method: POST URL: /authentication/sendVerificationCode/14 Status-Code: 200 Reponse-Size: 49 Response-Time: 4011.300 ms
+
+[2023-11-04 11:04:25] Method: POST URL: /authentication/checkVerificationCode/14 Status-Code: 200 Reponse-Size: 16 Response-Time: 47.246 ms
+
+[2023-11-04 11:04:26] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 5.764 ms
+
+[2023-11-04 11:04:26] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 6.110 ms
+
+[2023-11-04 11:04:26] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 7.121 ms
+
+[2023-11-04 11:04:26] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2 Response-Time: 6.046 ms
+
+[2023-11-04 11:04:26] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 5.177 ms
+
+[2023-11-04 11:04:26] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3.940 ms
+
+[2023-11-04 11:04:40] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 7.195 ms
+
+[2023-11-04 11:04:40] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 7.934 ms
+
+[2023-11-04 11:04:40] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 7.022 ms
+
+[2023-11-04 11:04:40] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 5.979 ms
+
+[2023-11-04 11:04:40] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2 Response-Time: 3.179 ms
+
+[2023-11-04 11:04:40] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 1.733 ms
+
+[2023-11-04 11:04:58] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 67 Response-Time: 4.964 ms
+
+[2023-11-04 11:05:03] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 72 Response-Time: 64.733 ms
+
+[2023-11-04 11:05:06] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 593 Response-Time: 72.820 ms
+
+[2023-11-04 11:05:07] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3873 Response-Time: 7.513 ms
+
+[2023-11-04 11:05:07] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 7.050 ms
+
+[2023-11-04 11:05:07] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 6.405 ms
+
+[2023-11-04 11:05:07] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 75 Response-Time: 5.444 ms
+
+[2023-11-04 11:05:07] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 4.686 ms
+
+[2023-11-04 11:05:07] Method: GET URL: /profile/userLevel Status-Code: 200 Reponse-Size: 96 Response-Time: 3.030 ms
+
+[2023-11-04 11:05:59] Method: POST URL: /transaction/earning/create Status-Code: 201 Reponse-Size: 452 Response-Time: 292.506 ms
+
+[2023-11-04 11:06:05] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3874 Response-Time: 3.074 ms
+
+[2023-11-04 11:06:05] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 343 Response-Time: 5.067 ms
+
+[2023-11-04 11:06:05] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 3.914 ms
+
+[2023-11-04 11:06:05] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 2.898 ms
+
+[2023-11-04 11:06:12] Method: GET URL: /management/pointsRanking Status-Code: 200 Reponse-Size: 2052 Response-Time: 7.750 ms
+
+[2023-11-04 11:06:12] Method: GET URL: /management/levelRanking Status-Code: 200 Reponse-Size: 2220 Response-Time: 3.707 ms
+
+[2023-11-04 11:06:12] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 3.517 ms
+
+[2023-11-04 11:06:12] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 2.519 ms
+
+[2023-11-04 11:06:12] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 4.204 ms
+
+[2023-11-04 11:06:12] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 343 Response-Time: 2.208 ms
+
+[2023-11-04 11:08:54] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 14.284 ms
+
+[2023-11-04 11:08:54] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 8.914 ms
+
+[2023-11-04 11:11:11] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 199 Response-Time: 51.514 ms
+
+[2023-11-04 11:11:12] Method: GET URL: /management/levelRanking Status-Code: 200 Reponse-Size: 854 Response-Time: 19.598 ms
+
+[2023-11-04 11:11:12] Method: GET URL: /management/pointsRanking Status-Code: 200 Reponse-Size: 776 Response-Time: 5.368 ms
+
+[2023-11-04 11:11:16] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 75 Response-Time: 15.924 ms
+
+[2023-11-04 11:11:16] Method: GET URL: /profile/userLevel Status-Code: 200 Reponse-Size: 96 Response-Time: 12.287 ms
+
+[2023-11-04 11:11:28] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 577 Response-Time: 72.816 ms
+
+[2023-11-04 11:11:29] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 2 Response-Time: 43.132 ms
+
+[2023-11-04 11:11:29] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 61 Response-Time: 27.593 ms
+
+[2023-11-04 11:11:29] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 23.868 ms
+
+[2023-11-04 11:11:29] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2 Response-Time: 13.680 ms
+
+[2023-11-04 11:11:29] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 8.903 ms
+
+[2023-11-04 11:11:29] Method: GET URL: /profile/userLevel Status-Code: 200 Reponse-Size: 94 Response-Time: 1.970 ms
+
+[2023-11-04 11:11:31] Method: GET URL: /management/levelRanking Status-Code: 200 Reponse-Size: 772 Response-Time: 7.863 ms
+
+[2023-11-04 11:11:31] Method: GET URL: /management/pointsRanking Status-Code: 200 Reponse-Size: 715 Response-Time: 3.962 ms
+
+[2023-11-04 11:11:54] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 54.055 ms
+
+[2023-11-04 11:11:54] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 36.267 ms
+
+[2023-11-04 11:12:08] Method: POST URL: /authentication/searchUserIdByEmailOrUsername Status-Code: 200 Reponse-Size: 12 Response-Time: 9.503 ms
+
+[2023-11-04 11:12:13] Method: POST URL: /authentication/sendVerificationCode/1 Status-Code: 200 Reponse-Size: 49 Response-Time: 4164.579 ms
+
+[2023-11-04 11:12:40] Method: POST URL: /authentication/updatePassword/1 Status-Code: 200 Reponse-Size: 48 Response-Time: 94.364 ms
+
+[2023-11-04 11:12:52] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 593 Response-Time: 70.418 ms
+
+[2023-11-04 11:12:53] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3874 Response-Time: 9.405 ms
+
+[2023-11-04 11:12:53] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 19.985 ms
+
+[2023-11-04 11:12:53] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 18.267 ms
+
+[2023-11-04 11:12:53] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 75 Response-Time: 13.121 ms
+
+[2023-11-04 11:12:53] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 343 Response-Time: 12.709 ms
+
+[2023-11-04 11:12:53] Method: GET URL: /profile/userLevel Status-Code: 200 Reponse-Size: 96 Response-Time: 6.564 ms
+
+[2023-11-04 11:12:58] Method: GET URL: /management/pointsRanking Status-Code: 200 Reponse-Size: 2052 Response-Time: 8.630 ms
+
+[2023-11-04 11:12:58] Method: GET URL: /management/levelRanking Status-Code: 200 Reponse-Size: 2220 Response-Time: 5.329 ms
+
+[2023-11-04 11:13:18] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 199 Response-Time: 5.905 ms
+
+[2023-11-04 11:13:22] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 271 Response-Time: 5.310 ms
+
+[2023-11-04 11:13:24] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 199 Response-Time: 5.114 ms
+
+[2023-11-04 11:13:26] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 271 Response-Time: 5.159 ms
+
+[2023-11-04 11:13:49] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 199 Response-Time: 10.491 ms
+
+[2023-11-04 11:13:54] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 69 Response-Time: 11.770 ms
+
+[2023-11-04 11:13:57] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 410 Response-Time: 2.317 ms
+
+[2023-11-04 11:14:08] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 271 Response-Time: 5.286 ms
+
+[2023-11-04 11:14:10] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 199 Response-Time: 4.767 ms
+
+[2023-11-04 11:14:11] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 271 Response-Time: 4.910 ms
+
+[2023-11-04 11:14:12] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1651 Response-Time: 7.968 ms
+
+[2023-11-04 11:14:22] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 288 Response-Time: 12.126 ms
+
+[2023-11-04 11:14:44] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1651 Response-Time: 5.783 ms
+
+[2023-11-04 11:16:29] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 410 Response-Time: 14.547 ms
+
+[2023-11-04 11:16:31] Method: POST URL: /management/earningsByCategory Status-Code: 200 Reponse-Size: 69 Response-Time: 4.976 ms
+
+[2023-11-04 11:16:38] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 199 Response-Time: 4.663 ms
+
+[2023-11-04 11:16:42] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 288 Response-Time: 6.044 ms
+
+[2023-11-04 11:17:12] Method: GET URL: /profile/userAvatars Status-Code: 304 Reponse-Size: - Response-Time: 8.149 ms
+
+[2023-11-04 11:17:29] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 4.524 ms
+
+[2023-11-04 11:17:29] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 2.292 ms
+
+[2023-11-04 11:17:46] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 593 Response-Time: 75.085 ms
+
+[2023-11-04 11:17:47] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 8.819 ms
+
+[2023-11-04 11:17:47] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 24.585 ms
+
+[2023-11-04 11:17:47] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 343 Response-Time: 15.601 ms
+
+[2023-11-04 11:17:47] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 12.640 ms
+
+[2023-11-04 11:17:47] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 10.262 ms
+
+[2023-11-04 11:17:47] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 7.012 ms
+
+[2023-11-04 11:17:55] Method: GET URL: /profile/userAvatars Status-Code: 304 Reponse-Size: - Response-Time: 8.631 ms
+
+[2023-11-04 11:17:58] Method: POST URL: /profile/updateProfile Status-Code: 200 Reponse-Size: 42 Response-Time: 50.785 ms
+
+[2023-11-04 11:18:00] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 199 Response-Time: 9.484 ms
+
+[2023-11-04 11:18:01] Method: GET URL: /profile/userAvatars Status-Code: 304 Reponse-Size: - Response-Time: 5.620 ms
+
+[2023-11-04 11:18:05] Method: POST URL: /profile/updateProfile Status-Code: 200 Reponse-Size: 42 Response-Time: 41.860 ms
+
+[2023-11-04 11:18:12] Method: POST URL: /profile/updateProfile Status-Code: 200 Reponse-Size: 42 Response-Time: 44.693 ms
+
+[2023-11-04 11:18:14] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 199 Response-Time: 5.973 ms
+
+[2023-11-04 11:18:15] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 9.104 ms
+
+[2023-11-04 11:18:15] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 6.805 ms
+
+[2023-11-04 11:18:15] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 343 Response-Time: 5.116 ms
+
+[2023-11-04 11:18:15] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 4.029 ms
+
+[2023-11-04 11:18:16] Method: GET URL: /management/levelRanking Status-Code: 200 Reponse-Size: 2222 Response-Time: 6.226 ms
+
+[2023-11-04 11:18:16] Method: GET URL: /management/pointsRanking Status-Code: 200 Reponse-Size: 2054 Response-Time: 2.257 ms
+
+[2023-11-04 11:18:27] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 8.692 ms
+
+[2023-11-04 11:18:27] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 7.296 ms
+
+[2023-11-04 11:18:27] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 6.381 ms
+
+[2023-11-04 11:18:27] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 343 Response-Time: 4.375 ms
+
+[2023-11-04 11:18:30] Method: GET URL: /profile/userAvatars Status-Code: 304 Reponse-Size: - Response-Time: 2.124 ms
+
+[2023-11-04 11:18:55] Method: POST URL: /profile/updateProfile Status-Code: 200 Reponse-Size: 42 Response-Time: 43.739 ms
+
+[2023-11-04 11:19:12] Method: POST URL: /profile/updateProfile Status-Code: 200 Reponse-Size: 42 Response-Time: 36.745 ms
+
+[2023-11-04 11:20:19] Method: POST URL: /transaction/earning/create Status-Code: 201 Reponse-Size: 445 Response-Time: 47.393 ms
+
+[2023-11-04 11:20:22] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3870 Response-Time: 8.601 ms
+
+[2023-11-04 11:20:22] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 506 Response-Time: 7.949 ms
+
+[2023-11-04 11:20:22] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 4.542 ms
+
+[2023-11-04 11:20:22] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 3.466 ms
+
+[2023-11-04 11:20:39] Method: POST URL: /transaction/earning/create Status-Code: 201 Reponse-Size: 449 Response-Time: 40.005 ms
+
+[2023-11-04 11:20:41] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3855 Response-Time: 12.029 ms
+
+[2023-11-04 11:20:41] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 15.759 ms
+
+[2023-11-04 11:20:41] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 672 Response-Time: 9.898 ms
+
+[2023-11-04 11:20:41] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 263 Response-Time: 6.203 ms
+
+[2023-11-04 11:21:05] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 735 Response-Time: 4.313 ms
+
+[2023-11-04 11:21:27] Method: PUT URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 488 Response-Time: 101.344 ms
+
+[2023-11-04 11:21:32] Method: PUT URL: /bill/installment/pay Status-Code: 500 Reponse-Size: 70 Response-Time: 6.156 ms
+
+[2023-11-04 11:21:55] Method: PUT URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 488 Response-Time: 32.775 ms
+
+[2023-11-04 11:22:30] Method: PUT URL: /bill/installment/pay Status-Code: 500 Reponse-Size: 70 Response-Time: 5.117 ms
+
+[2023-11-04 11:22:34] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 247 Response-Time: 9.499 ms
+
+[2023-11-04 11:22:37] Method: PUT URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 485 Response-Time: 64.807 ms
+
+[2023-11-04 11:22:57] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3856 Response-Time: 9.615 ms
+
+[2023-11-04 11:22:58] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1045 Response-Time: 5.466 ms
+
+[2023-11-04 11:22:58] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 672 Response-Time: 4.269 ms
+
+[2023-11-04 11:22:58] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 336 Response-Time: 2.151 ms
+
+[2023-11-04 11:23:09] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 4.970 ms
+
+[2023-11-04 11:23:12] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 6.363 ms
+
+[2023-11-04 11:23:12] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 2.046 ms
+
+[2023-11-04 11:23:14] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 266 Response-Time: 5.661 ms
+
+[2023-11-04 11:23:15] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 266 Response-Time: 5.136 ms
+
+[2023-11-04 11:23:16] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 4.050 ms
+
+[2023-11-04 11:23:16] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 3.264 ms
+
+[2023-11-04 11:23:46] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 4722 Response-Time: 10.477 ms
+
+[2023-11-04 11:24:42] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 5.913 ms
+
+[2023-11-04 11:24:42] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 2.293 ms
+
+[2023-11-04 11:25:04] Method: POST URL: /transaction/spending/create Status-Code: 400 Reponse-Size: 91 Response-Time: 4.670 ms
+
+[2023-11-04 11:25:10] Method: POST URL: /transaction/spending/create Status-Code: 400 Reponse-Size: 91 Response-Time: 3.910 ms
+
+[2023-11-04 11:25:16] Method: POST URL: /transaction/spending/create Status-Code: 400 Reponse-Size: 91 Response-Time: 4.462 ms
+
+[2023-11-04 11:25:17] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 131 Response-Time: 2.813 ms
+
+[2023-11-04 11:25:19] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 4722 Response-Time: 6.080 ms
+
+[2023-11-04 11:25:48] Method: POST URL: /transaction/spending/create Status-Code: 400 Reponse-Size: 91 Response-Time: 4.800 ms
+
+[2023-11-04 11:25:53] Method: POST URL: /transaction/spending/create Status-Code: 400 Reponse-Size: 91 Response-Time: 1.462 ms
+
+[2023-11-04 11:25:57] Method: POST URL: /transaction/spending/create Status-Code: 201 Reponse-Size: 446 Response-Time: 49.689 ms
+
+[2023-11-04 11:26:10] Method: POST URL: /transaction/spending/create Status-Code: 201 Reponse-Size: 445 Response-Time: 48.593 ms
+
+[2023-11-04 11:26:23] Method: POST URL: /transaction/spending/create Status-Code: 201 Reponse-Size: 447 Response-Time: 71.520 ms
+
+[2023-11-04 11:27:37] Method: GET URL: /goal/get Status-Code: 304 Reponse-Size: - Response-Time: 14.376 ms
+
+[2023-11-04 11:27:59] Method: PUT URL: /goal/invest Status-Code: 200 Reponse-Size: 438 Response-Time: 34.667 ms
+
+[2023-11-04 11:28:08] Method: GET URL: /management/levelRanking Status-Code: 200 Reponse-Size: 2222 Response-Time: 5.123 ms
+
+[2023-11-04 11:28:08] Method: GET URL: /management/pointsRanking Status-Code: 200 Reponse-Size: 2054 Response-Time: 1.967 ms
+
+[2023-11-04 11:28:10] Method: GET URL: /goal/get Status-Code: 200 Reponse-Size: 503 Response-Time: 3.010 ms
+
+[2023-11-04 11:28:27] Method: PUT URL: /goal/invest Status-Code: 200 Reponse-Size: 441 Response-Time: 43.791 ms
+
+[2023-11-04 11:29:34] Method: PUT URL: /goal/invest Status-Code: 500 Reponse-Size: 70 Response-Time: 6.260 ms
+
+[2023-11-04 11:30:07] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3771 Response-Time: 4.773 ms
+
+[2023-11-04 11:30:07] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 823 Response-Time: 2.704 ms
+
+[2023-11-04 11:30:07] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 10.171 ms
+
+[2023-11-04 11:30:07] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 672 Response-Time: 5.236 ms
+
+[2023-11-04 11:30:12] Method: GET URL: /goal/get Status-Code: 200 Reponse-Size: 504 Response-Time: 11.330 ms
+
+[2023-11-04 11:30:58] Method: PUT URL: /goal/invest Status-Code: 200 Reponse-Size: 486 Response-Time: 68.475 ms
+
+[2023-11-04 11:31:03] Method: GET URL: /management/pointsRanking Status-Code: 200 Reponse-Size: 2054 Response-Time: 7.620 ms
+
+[2023-11-04 11:31:03] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 2.261 ms
+
+[2023-11-04 11:31:05] Method: GET URL: /goal/get Status-Code: 200 Reponse-Size: 538 Response-Time: 6.897 ms
+
+[2023-11-04 11:31:19] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 4.817 ms
+
+[2023-11-04 11:31:19] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 3.322 ms
+
+[2023-11-04 11:32:22] Method: POST URL: /bill/create Status-Code: 400 Reponse-Size: 140 Response-Time: 10.091 ms
+
+[2023-11-04 11:32:54] Method: POST URL: /bill/create Status-Code: 400 Reponse-Size: 140 Response-Time: 2.009 ms
+
+[2023-11-04 11:33:03] Method: POST URL: /bill/create Status-Code: 400 Reponse-Size: 140 Response-Time: 7.881 ms
+
+[2023-11-04 11:33:09] Method: POST URL: /bill/create Status-Code: 400 Reponse-Size: 140 Response-Time: 4.933 ms
+
+[2023-11-04 11:33:14] Method: POST URL: /bill/create Status-Code: 201 Reponse-Size: 2165 Response-Time: 50.908 ms
+
+[2023-11-04 11:33:52] Method: POST URL: /bill/create Status-Code: 400 Reponse-Size: 140 Response-Time: 7.926 ms
+
+[2023-11-04 11:33:55] Method: POST URL: /bill/create Status-Code: 400 Reponse-Size: 140 Response-Time: 5.680 ms
+
+[2023-11-04 11:33:59] Method: POST URL: /bill/create Status-Code: 400 Reponse-Size: 140 Response-Time: 7.235 ms
+
+[2023-11-04 11:34:06] Method: POST URL: /bill/create Status-Code: 201 Reponse-Size: 434 Response-Time: 39.343 ms
+
+[2023-11-04 11:35:57] Method: POST URL: /goal/create Status-Code: 201 Reponse-Size: 194 Response-Time: 250.471 ms
+
+[2023-11-04 11:36:03] Method: GET URL: /goal/get Status-Code: 200 Reponse-Size: 686 Response-Time: 5.242 ms
+
+[2023-11-04 11:36:08] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 5.055 ms
+
+[2023-11-04 11:36:08] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 2.947 ms
+
+[2023-11-04 11:36:23] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 823 Response-Time: 4.462 ms
+
+[2023-11-04 11:36:23] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 672 Response-Time: 3.103 ms
+
+[2023-11-04 11:36:44] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3787 Response-Time: 19.665 ms
+
+[2023-11-04 11:36:44] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 823 Response-Time: 23.034 ms
+
+[2023-11-04 11:36:45] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 10.484 ms
+
+[2023-11-04 11:36:45] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 672 Response-Time: 7.027 ms
+
+[2023-11-04 11:36:53] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 823 Response-Time: 7.406 ms
+
+[2023-11-04 11:36:53] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 672 Response-Time: 3.471 ms
+
+[2023-11-04 11:36:56] Method: PUT URL: /transaction/earning/cancel/23 Status-Code: 200 Reponse-Size: 146 Response-Time: 49.837 ms
+
+[2023-11-04 11:36:58] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3785 Response-Time: 6.693 ms
+
+[2023-11-04 11:36:58] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 2.317 ms
+
+[2023-11-04 11:36:58] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 823 Response-Time: 2.238 ms
+
+[2023-11-04 11:36:58] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 2.319 ms
+
+[2023-11-04 11:37:11] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 257 Response-Time: 3.878 ms
+
+[2023-11-04 11:37:12] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 5.877 ms
+
+[2023-11-04 11:37:12] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 3.413 ms
+
+[2023-11-04 11:37:12] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 2.218 ms
+
+[2023-11-04 11:37:12] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 823 Response-Time: 3.177 ms
+
+[2023-11-04 11:37:30] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 5.573 ms
+
+[2023-11-04 11:37:30] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 3.935 ms
+
+[2023-11-04 11:37:34] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 823 Response-Time: 14.505 ms
+
+[2023-11-04 11:37:34] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 7.230 ms
+
+[2023-11-04 11:37:44] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 8.303 ms
+
+[2023-11-04 11:37:44] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 6.465 ms
+
+[2023-11-04 11:37:44] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 823 Response-Time: 5.711 ms
+
+[2023-11-04 11:37:44] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 4.660 ms
+
+[2023-11-04 11:37:53] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 823 Response-Time: 13.933 ms
+
+[2023-11-04 11:37:53] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 8.322 ms
+
+[2023-11-04 11:37:58] Method: PUT URL: /transaction/spending/cancel/6 Status-Code: 200 Reponse-Size: 136 Response-Time: 49.928 ms
+
+[2023-11-04 11:38:00] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3781 Response-Time: 9.878 ms
+
+[2023-11-04 11:38:00] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 11.240 ms
+
+[2023-11-04 11:38:00] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 7.158 ms
+
+[2023-11-04 11:38:00] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 2.432 ms
+
+[2023-11-04 11:38:46] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 8.345 ms
+
+[2023-11-04 11:38:46] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 7.046 ms
+
+[2023-11-04 11:38:46] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 5.870 ms
+
+[2023-11-04 11:38:46] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 4.220 ms
+
+[2023-11-04 11:39:13] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 10.013 ms
+
+[2023-11-04 11:39:13] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 75 Response-Time: 8.370 ms
+
+[2023-11-04 11:39:13] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 7.445 ms
+
+[2023-11-04 11:39:13] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 6.238 ms
+
+[2023-11-04 11:39:13] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 4.207 ms
+
+[2023-11-04 11:39:13] Method: GET URL: /profile/userLevel Status-Code: 200 Reponse-Size: 96 Response-Time: 1.870 ms
+
+[2023-11-04 11:39:27] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 577 Response-Time: 69.412 ms
+
+[2023-11-04 11:39:28] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 2 Response-Time: 1.870 ms
+
+[2023-11-04 11:39:28] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 5.025 ms
+
+[2023-11-04 11:39:28] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 2 Response-Time: 3.678 ms
+
+[2023-11-04 11:39:28] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 2 Response-Time: 3.221 ms
+
+[2023-11-04 11:39:28] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 61 Response-Time: 3.410 ms
+
+[2023-11-04 11:39:28] Method: GET URL: /profile/userLevel Status-Code: 200 Reponse-Size: 94 Response-Time: 2.400 ms
+
+[2023-11-04 11:39:43] Method: POST URL: /transaction/earning/create Status-Code: 201 Reponse-Size: 445 Response-Time: 39.891 ms
+
+[2023-11-04 11:40:00] Method: POST URL: /transaction/spending/create Status-Code: 201 Reponse-Size: 439 Response-Time: 153.394 ms
+
+[2023-11-04 11:40:04] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 255 Response-Time: 5.873 ms
+
+[2023-11-04 11:40:04] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 167 Response-Time: 6.124 ms
+
+[2023-11-04 11:40:04] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 3.275 ms
+
+[2023-11-04 11:40:04] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 2.250 ms
+
+[2023-11-04 11:40:08] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 174 Response-Time: 12.960 ms
+
+[2023-11-04 11:40:08] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 167 Response-Time: 7.287 ms
+
+[2023-11-04 11:40:12] Method: PUT URL: /transaction/earning/cancel/24 Status-Code: 500 Reponse-Size: 70 Response-Time: 8.916 ms
+
+[2023-11-04 11:40:18] Method: PUT URL: /transaction/earning/cancel/24 Status-Code: 500 Reponse-Size: 70 Response-Time: 17.449 ms
+
+[2023-11-04 11:40:53] Method: GET URL: /management/levelRanking Status-Code: 200 Reponse-Size: 2222 Response-Time: 10.574 ms
+
+[2023-11-04 11:40:53] Method: GET URL: /management/pointsRanking Status-Code: 200 Reponse-Size: 2054 Response-Time: 5.440 ms
+
+[2023-11-04 11:41:00] Method: GET URL: /profile/userLevel Status-Code: 200 Reponse-Size: 96 Response-Time: 14.592 ms
+
+[2023-11-04 11:41:00] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 63 Response-Time: 7.313 ms
+
+[2023-11-04 11:41:13] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 572 Response-Time: 73.529 ms
+
+[2023-11-04 11:41:13] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3781 Response-Time: 6.082 ms
+
+[2023-11-04 11:41:13] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 8.994 ms
+
+[2023-11-04 11:41:13] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 6.976 ms
+
+[2023-11-04 11:41:13] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2 Response-Time: 5.310 ms
+
+[2023-11-04 11:41:13] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 75 Response-Time: 4.341 ms
+
+[2023-11-04 11:41:13] Method: GET URL: /profile/userLevel Status-Code: 200 Reponse-Size: 96 Response-Time: 2.927 ms
+
+[2023-11-04 11:41:22] Method: GET URL: /bill/activeBills Status-Code: 200 Reponse-Size: 5074 Response-Time: 6.696 ms
+
+[2023-11-04 11:41:31] Method: PUT URL: /bill/cancel/5 Status-Code: 200 Reponse-Size: 568 Response-Time: 84.978 ms
+
+[2023-11-04 11:41:35] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 9.628 ms
+
+[2023-11-04 11:41:35] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 7.321 ms
+
+[2023-11-04 11:41:37] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 8008 Response-Time: 5.298 ms
+
+[2023-11-04 11:41:58] Method: PUT URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 485 Response-Time: 30.488 ms
+
+[2023-11-04 11:42:08] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 6.322 ms
+
+[2023-11-04 11:42:08] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 2.694 ms
+
+[2023-11-04 11:42:11] Method: GET URL: /bill/activeBills Status-Code: 200 Reponse-Size: 4708 Response-Time: 15.588 ms
+
+[2023-11-04 11:42:25] Method: PUT URL: /bill/cancel/4 Status-Code: 200 Reponse-Size: 2429 Response-Time: 52.988 ms
+
+[2023-11-04 11:42:32] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 3.605 ms
+
+[2023-11-04 11:42:32] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 2.683 ms
+
+[2023-11-04 11:43:37] Method: POST URL: /bill/create Status-Code: 201 Reponse-Size: 1062 Response-Time: 122.210 ms
+
+[2023-11-04 11:43:40] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3810 Response-Time: 8.663 ms
+
+[2023-11-04 11:43:40] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 270 Response-Time: 7.014 ms
+
+[2023-11-04 11:43:40] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 4.431 ms
+
+[2023-11-04 11:43:40] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 2.909 ms
+
+[2023-11-04 11:43:47] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 8960 Response-Time: 2.703 ms
+
+[2023-11-04 11:44:47] Method: PUT URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 484 Response-Time: 36.196 ms
+
+[2023-11-04 11:44:54] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3821 Response-Time: 2.304 ms
+
+[2023-11-04 11:44:54] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 4.036 ms
+
+[2023-11-04 11:44:54] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 2.405 ms
+
+[2023-11-04 11:44:54] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 531 Response-Time: 2.486 ms
+
+[2023-11-04 11:44:58] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 8698 Response-Time: 2.680 ms
+
+[2023-11-04 11:45:06] Method: PUT URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 486 Response-Time: 31.076 ms
+
+[2023-11-04 11:45:20] Method: GET URL: /bill/activeBills Status-Code: 200 Reponse-Size: 3541 Response-Time: 11.044 ms
+
+[2023-11-04 11:45:27] Method: PUT URL: /bill/cancel/6 Status-Code: 200 Reponse-Size: 1263 Response-Time: 71.796 ms
+
+[2023-11-04 11:45:29] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3829 Response-Time: 8.111 ms
+
+[2023-11-04 11:45:29] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 16.912 ms
+
+[2023-11-04 11:45:29] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 9.046 ms
+
+[2023-11-04 11:45:29] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 5.519 ms
+
+[2023-11-04 11:45:49] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 9.851 ms
+
+[2023-11-04 11:45:49] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 8.084 ms
+
+[2023-11-04 11:45:49] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 6.542 ms
+
+[2023-11-04 11:45:49] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 4.559 ms
+
+[2023-11-04 11:47:38] Method: POST URL: /bill/create Status-Code: 201 Reponse-Size: 1078 Response-Time: 38.767 ms
+
+[2023-11-04 11:48:02] Method: GET URL: /bill/activeBills Status-Code: 200 Reponse-Size: 3526 Response-Time: 11.988 ms
+
+[2023-11-04 11:48:14] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3828 Response-Time: 22.227 ms
+
+[2023-11-04 11:48:14] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 14.860 ms
+
+[2023-11-04 11:48:14] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 9.691 ms
+
+[2023-11-04 11:48:14] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 6.556 ms
+
+[2023-11-04 11:48:17] Method: GET URL: /bill/activeBills Status-Code: 200 Reponse-Size: 3526 Response-Time: 16.361 ms
+
+[2023-11-04 11:48:36] Method: GET URL: /goal/get Status-Code: 304 Reponse-Size: - Response-Time: 2.173 ms
+
+[2023-11-04 11:48:43] Method: PUT URL: /goal/recoverInvestment Status-Code: 200 Reponse-Size: 297 Response-Time: 43.596 ms
+
+[2023-11-04 11:48:47] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3837 Response-Time: 5.406 ms
+
+[2023-11-04 11:48:47] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 2.083 ms
+
+[2023-11-04 11:48:47] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 3.328 ms
+
+[2023-11-04 11:48:47] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 2.273 ms
+
+[2023-11-04 11:48:52] Method: GET URL: /goal/get Status-Code: 200 Reponse-Size: 686 Response-Time: 5.324 ms
+
+[2023-11-04 11:48:58] Method: PUT URL: /goal/recoverInvestment Status-Code: 200 Reponse-Size: 297 Response-Time: 42.694 ms
+
+[2023-11-04 11:49:00] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3828 Response-Time: 2.266 ms
+
+[2023-11-04 11:49:00] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 4.832 ms
+
+[2023-11-04 11:49:00] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 3.761 ms
+
+[2023-11-04 11:49:00] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 2.665 ms
+
+[2023-11-04 11:49:11] Method: GET URL: /goal/get Status-Code: 200 Reponse-Size: 686 Response-Time: 5.177 ms
+
+[2023-11-04 11:49:33] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 13.375 ms
+
+[2023-11-04 11:49:33] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 11.113 ms
+
+[2023-11-04 11:49:33] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 8.093 ms
+
+[2023-11-04 11:49:33] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 5.939 ms
+
+[2023-11-04 11:49:36] Method: GET URL: /goal/get Status-Code: 304 Reponse-Size: - Response-Time: 2.274 ms
+
+[2023-11-04 11:49:38] Method: PUT URL: /goal/cancel/6 Status-Code: 200 Reponse-Size: 322 Response-Time: 35.440 ms
+
+[2023-11-04 11:49:40] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3834 Response-Time: 5.669 ms
+
+[2023-11-04 11:49:40] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 5.446 ms
+
+[2023-11-04 11:49:40] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 4.375 ms
+
+[2023-11-04 11:49:40] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 2.729 ms
+
+[2023-11-04 11:50:21] Method: GET URL: /goal/get Status-Code: 200 Reponse-Size: 533 Response-Time: 3.359 ms
+
+[2023-11-04 11:50:35] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 6.976 ms
+
+[2023-11-04 11:50:35] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 5.956 ms
+
+[2023-11-04 11:50:35] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 4.883 ms
+
+[2023-11-04 11:50:35] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 3.368 ms
+
+[2023-11-04 15:35:13] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 50.675 ms
+
+[2023-11-04 15:35:13] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 8.096 ms
+
+[2023-11-04 15:35:13] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 21.453 ms
+
+[2023-11-04 15:35:13] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 19.455 ms
+
+[2023-11-04 15:35:13] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 14.325 ms
+
+[2023-11-04 15:35:13] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 75 Response-Time: 12.107 ms
+
+[2023-11-04 15:35:13] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 8.000 ms
+
+[2023-11-04 15:35:18] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 27.315 ms
+
+[2023-11-04 15:35:18] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 15.748 ms
+
+[2023-11-04 15:35:18] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 13.131 ms
+
+[2023-11-04 15:35:18] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 10.921 ms
+
+[2023-11-04 15:35:18] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 9.680 ms
+
+[2023-11-04 15:35:18] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 4.965 ms
+
+[2023-11-04 15:35:24] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 135 Response-Time: 6.581 ms
+
+[2023-11-04 15:35:42] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 93 Response-Time: 8.095 ms
+
+[2023-11-04 15:35:54] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 72 Response-Time: 103.454 ms
+
+[2023-11-04 15:36:11] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 72 Response-Time: 113.434 ms
+
+[2023-11-04 15:42:19] Method: POST URL: /authentication/signin Status-Code: 400 Reponse-Size: 67 Response-Time: 43.809 ms
+
+[2023-11-04 15:42:28] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 572 Response-Time: 82.595 ms
+
+[2023-11-04 15:42:29] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 44.781 ms
+
+[2023-11-04 15:42:29] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 27.618 ms
+
+[2023-11-04 15:42:29] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 21.965 ms
+
+[2023-11-04 15:42:29] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 16.968 ms
+
+[2023-11-04 15:42:29] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 14.150 ms
+
+[2023-11-04 15:42:29] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 4.215 ms
+
+[2023-11-04 15:45:52] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 25.964 ms
+
+[2023-11-04 15:45:52] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 17.008 ms
+
+[2023-11-04 15:45:52] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 12.922 ms
+
+[2023-11-04 15:45:52] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 12.090 ms
+
+[2023-11-04 15:45:52] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 8.430 ms
+
+[2023-11-04 15:45:52] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 2.350 ms
+
+[2023-11-04 15:49:23] Method: POST URL: /authentication/signin Status-Code: 200 Reponse-Size: 572 Response-Time: 66.500 ms
+
+[2023-11-04 15:49:24] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 3.902 ms
+
+[2023-11-04 15:49:24] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 6.521 ms
+
+[2023-11-04 15:49:24] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 6.829 ms
+
+[2023-11-04 15:49:24] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 8.180 ms
+
+[2023-11-04 15:49:24] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 6.212 ms
+
+[2023-11-04 15:49:24] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 4.107 ms
+
+[2023-11-04 15:49:45] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 12.704 ms
+
+[2023-11-04 15:49:45] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 5.686 ms
+
+[2023-11-04 15:49:45] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 8.969 ms
+
+[2023-11-04 15:49:45] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 6.749 ms
+
+[2023-11-04 15:49:45] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 5.832 ms
+
+[2023-11-04 15:49:45] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 4.926 ms
+
+[2023-11-04 15:49:45] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 4.244 ms
+
+[2023-11-04 15:50:02] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 11.522 ms
+
+[2023-11-04 15:50:02] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 10.076 ms
+
+[2023-11-04 15:50:02] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 9.997 ms
+
+[2023-11-04 15:50:02] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 8.052 ms
+
+[2023-11-04 15:50:16] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 4.210 ms
+
+[2023-11-04 15:50:16] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 7.025 ms
+
+[2023-11-04 15:50:16] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 5.164 ms
+
+[2023-11-04 15:50:16] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 4.154 ms
+
+[2023-11-04 15:50:36] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 5.462 ms
+
+[2023-11-04 15:50:36] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 7.262 ms
+
+[2023-11-04 15:50:36] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 6.729 ms
+
+[2023-11-04 15:50:36] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 5.158 ms
+
+[2023-11-04 15:51:35] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 37.035 ms
+
+[2023-11-04 15:51:35] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 30.564 ms
+
+[2023-11-04 15:51:35] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 26.440 ms
+
+[2023-11-04 15:51:35] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 17.937 ms
+
+[2023-11-04 15:51:46] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 6.926 ms
+
+[2023-11-04 15:51:46] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 8.324 ms
+
+[2023-11-04 15:51:46] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 7.897 ms
+
+[2023-11-04 15:51:46] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 4.984 ms
+
+[2023-11-04 15:51:57] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 19.310 ms
+
+[2023-11-04 15:51:57] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 14.152 ms
+
+[2023-11-04 15:51:57] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 10.794 ms
+
+[2023-11-04 15:51:57] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 6.179 ms
+
+[2023-11-04 15:52:30] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 37.356 ms
+
+[2023-11-04 15:52:30] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 32.512 ms
+
+[2023-11-04 15:52:30] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 21.590 ms
+
+[2023-11-04 15:52:30] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 15.821 ms
+
+[2023-11-04 15:53:03] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 7.750 ms
+
+[2023-11-04 15:53:03] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 6.372 ms
+
+[2023-11-04 15:53:03] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 5.063 ms
+
+[2023-11-04 15:53:03] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 4.394 ms
+
+[2023-11-04 15:53:11] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 12.073 ms
+
+[2023-11-04 15:53:11] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 8.799 ms
+
+[2023-11-04 15:53:11] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 7.936 ms
+
+[2023-11-04 15:53:11] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 6.680 ms
+
+[2023-11-04 15:57:27] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 17.668 ms
+
+[2023-11-04 15:57:27] Method: GET URL: /management/levelRanking Status-Code: 200 Reponse-Size: 2222 Response-Time: 7.936 ms
+
+[2023-11-04 15:59:39] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 9.503 ms
+
+[2023-11-04 15:59:39] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 6.852 ms
+
+[2023-11-04 15:59:39] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 5.812 ms
+
+[2023-11-04 15:59:39] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 4.915 ms
+
+[2023-11-04 15:59:39] Method: GET URL: /management/levelRanking Status-Code: 500 Reponse-Size: 70 Response-Time: 4.299 ms
+
+[2023-11-04 15:59:39] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 3.164 ms
+
+[2023-11-04 15:59:55] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 7.633 ms
+
+[2023-11-04 15:59:55] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 2.182 ms
+
+[2023-11-04 15:59:55] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 7.652 ms
+
+[2023-11-04 15:59:55] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 7.656 ms
+
+[2023-11-04 15:59:55] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 6.461 ms
+
+[2023-11-04 15:59:55] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 4.729 ms
+
+[2023-11-04 15:59:55] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3.214 ms
+
+[2023-11-04 15:59:59] Method: GET URL: /management/levelRanking Status-Code: 500 Reponse-Size: 70 Response-Time: 12.643 ms
+
+[2023-11-04 15:59:59] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 13.247 ms
+
+[2023-11-04 16:00:33] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 11.869 ms
+
+[2023-11-04 16:00:33] Method: GET URL: /transaction/lastActivities Status-Code: 304 Reponse-Size: - Response-Time: 5.317 ms
+
+[2023-11-04 16:00:33] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 6.482 ms
+
+[2023-11-04 16:00:33] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 788 Response-Time: 5.240 ms
+
+[2023-11-04 16:00:33] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 706 Response-Time: 3.103 ms
+
+[2023-11-04 16:00:33] Method: GET URL: /profile/userLevel Status-Code: 304 Reponse-Size: - Response-Time: 3.889 ms
+
+[2023-11-04 16:00:33] Method: GET URL: /profile/userFinance Status-Code: 304 Reponse-Size: - Response-Time: 2.702 ms
+
+[2023-11-04 16:02:47] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 329 Response-Time: 46.267 ms
+
+[2023-11-04 16:02:49] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 618 Response-Time: 9.390 ms
+
+[2023-11-04 16:03:58] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 29.132 ms
+
+[2023-11-04 16:03:58] Method: GET URL: /management/levelRanking Status-Code: 200 Reponse-Size: 2222 Response-Time: 50.927 ms
+
+[2023-11-04 16:03:59] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 329 Response-Time: 13.850 ms
+
+[2023-11-04 16:04:03] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 796 Response-Time: 23.926 ms
+
+[2023-11-04 16:04:49] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 796 Response-Time: 4.721 ms
+
+[2023-11-04 16:04:58] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1816 Response-Time: 6.608 ms
+
+[2023-11-04 16:05:06] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 796 Response-Time: 6.960 ms
+
+[2023-11-04 16:05:41] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 796 Response-Time: 17.066 ms
+
+[2023-11-04 16:06:01] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 796 Response-Time: 13.009 ms
+
+[2023-11-04 16:06:06] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1816 Response-Time: 4.605 ms
+
+[2023-11-04 16:06:11] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 796 Response-Time: 5.748 ms
+
+[2023-11-04 16:07:23] Method: POST URL: /transaction/earning/create Status-Code: 201 Reponse-Size: 451 Response-Time: 64.437 ms
+
+[2023-11-04 16:07:25] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 329 Response-Time: 5.032 ms
+
+[2023-11-04 16:07:27] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 856 Response-Time: 4.227 ms
+
+[2023-11-04 16:07:32] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 1876 Response-Time: 3.137 ms
+
+[2023-11-04 16:07:37] Method: POST URL: /management/getTransactions Status-Code: 200 Reponse-Size: 856 Response-Time: 6.255 ms
+
+[2023-11-04 16:08:48] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 9707 Response-Time: 5.853 ms
+
+[2023-11-04 16:10:52] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 9707 Response-Time: 5.959 ms
+
+[2023-11-04 16:11:22] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 9707 Response-Time: 3.383 ms
+
+[2023-11-04 16:11:45] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 9707 Response-Time: 4.069 ms
+
+[2023-11-04 16:13:26] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 9707 Response-Time: 3.683 ms
+
+[2023-11-04 16:14:56] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 9707 Response-Time: 3.601 ms
+
+[2023-11-04 16:15:00] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 9707 Response-Time: 3.653 ms
+
+[2023-11-04 16:16:44] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 9707 Response-Time: 13.694 ms
+
+[2023-11-04 16:19:29] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 9707 Response-Time: 3.359 ms
+
+[2023-11-04 16:20:18] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 9707 Response-Time: 4.038 ms
+
+[2023-11-04 16:20:24] Method: PUT URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 486 Response-Time: 53.336 ms
+
+[2023-11-04 16:20:42] Method: POST URL: /authentication/checkToken Status-Code: 200 Reponse-Size: 290 Response-Time: 10.159 ms
+
+[2023-11-04 16:20:43] Method: GET URL: /transaction/lastActivities Status-Code: 200 Reponse-Size: 3859 Response-Time: 10.357 ms
+
+[2023-11-04 16:20:43] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 1057 Response-Time: 10.245 ms
+
+[2023-11-04 16:20:43] Method: POST URL: /transaction/spending/get Status-Code: 200 Reponse-Size: 857 Response-Time: 9.078 ms
+
+[2023-11-04 16:20:43] Method: POST URL: /transaction/earning/get Status-Code: 200 Reponse-Size: 874 Response-Time: 7.493 ms
+
+[2023-11-04 16:20:43] Method: GET URL: /profile/userFinance Status-Code: 200 Reponse-Size: 76 Response-Time: 5.870 ms
+
+[2023-11-04 16:20:43] Method: GET URL: /profile/userLevel Status-Code: 200 Reponse-Size: 96 Response-Time: 2.321 ms
+
+[2023-11-04 16:20:49] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 9454 Response-Time: 4.825 ms
+
+[2023-11-04 16:20:54] Method: PUT URL: /bill/installment/pay Status-Code: 200 Reponse-Size: 486 Response-Time: 114.760 ms
+
+[2023-11-04 16:22:01] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 9201 Response-Time: 5.348 ms
+
+[2023-11-04 16:22:18] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 9201 Response-Time: 5.783 ms
+
+[2023-11-04 16:24:51] Method: GET URL: /management/levelRanking Status-Code: 304 Reponse-Size: - Response-Time: 42.724 ms
+
+[2023-11-04 16:24:51] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 34.325 ms
+
+[2023-11-04 16:24:57] Method: GET URL: /bill/activeBills Status-Code: 304 Reponse-Size: - Response-Time: 14.840 ms
+
+[2023-11-04 16:25:01] Method: PUT URL: /bill/cancel/7 Status-Code: 200 Reponse-Size: 1249 Response-Time: 60.091 ms
+
+[2023-11-04 16:25:07] Method: POST URL: /bill/getInstallments Status-Code: 500 Reponse-Size: 70 Response-Time: 6.774 ms
+

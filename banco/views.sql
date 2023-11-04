@@ -8,7 +8,7 @@ CREATE VIEW vw_level_ranking AS (
 		UserLevel AS ul
 	INNER JOIN
 		User AS u ON u.userId = ul.userId
-	ORDER BY ul.currentLevel DESC
+	ORDER BY ul.currentLevel DESC, ul.currentXp DESC
 );
 
 CREATE VIEW vw_points_ranking AS (
@@ -68,4 +68,5 @@ CREATE VIEW vw_installments AS
     FROM
         UserBills AS ub
             INNER JOIN
-        billinstallments AS bi ON ub.billId = bi.billId)
+        billinstallments AS bi ON ub.billId = bi.billId
+		WHERE ub.isCanceled = 0)

@@ -6128,3 +6128,31 @@
 
 [2023-11-04 16:25:07] Method: POST URL: /bill/getInstallments Status-Code: 500 Reponse-Size: 70 Response-Time: 6.774 ms
 
+[2023-11-04 16:26:35] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 330 Response-Time: 47.768 ms
+
+[2023-11-04 16:26:37] Method: POST URL: /bill/getInstallments Status-Code: 200 Reponse-Size: 2372 Response-Time: 26.014 ms
+
+[2023-11-04 16:37:35] Method: GET URL: /goal/get Status-Code: 304 Reponse-Size: - Response-Time: 19.996 ms
+
+[2023-11-04 16:37:44] Method: PUT URL: /goal/invest Status-Code: 200 Reponse-Size: 430 Response-Time: 77.906 ms
+
+[2023-11-04 16:37:53] Method: GET URL: /management/levelRanking Status-Code: 200 Reponse-Size: 2224 Response-Time: 7.566 ms
+
+[2023-11-04 16:37:53] Method: GET URL: /management/pointsRanking Status-Code: 304 Reponse-Size: - Response-Time: 6.678 ms
+
+[2023-11-04 16:38:53] Method: POST URL: /goal/create Status-Code: 201 Reponse-Size: 196 Response-Time: 51.825 ms
+
+[2023-11-04 16:38:58] Method: GET URL: /goal/get Status-Code: 200 Reponse-Size: 683 Response-Time: 2.420 ms
+
+[2023-11-04 16:39:06] Method: PUT URL: /goal/invest Status-Code: 200 Reponse-Size: 433 Response-Time: 25.517 ms
+
+[2023-11-04 16:39:51] Method: GET URL: /goal/get Status-Code: 200 Reponse-Size: 685 Response-Time: 2.792 ms
+
+[2023-11-04 16:40:13] Method: PUT URL: /goal/invest Status-Code: 200 Reponse-Size: 433 Response-Time: 35.684 ms
+
+[2023-11-04 16:42:01] Method: POST URL: /management/spendingsByCategory Status-Code: 200 Reponse-Size: 330 Response-Time: 17.086 ms
+
+[2023-11-04 16:42:04] Method: GET URL: /goal/get Status-Code: 200 Reponse-Size: 685 Response-Time: 5.576 ms
+
+[2023-11-04 16:42:13] Method: PUT URL: /goal/invest Status-Code: 200 Reponse-Size: 433 Response-Time: 40.001 ms
+
